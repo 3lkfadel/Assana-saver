@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Uji coba berakhir dalam {days} hari",
       "start_subscription": "Mulai berlangganan",
       "explore_business_features": "Jelajahi fitur Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

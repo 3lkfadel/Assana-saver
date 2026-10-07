@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Perioada de probă se încheie în {days, plural, one {# zi} other {# zile}}",
       "start_subscription": "Începe abonamentul",
       "explore_business_features": "Explorează funcțiile Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Пробний період закінчується через {days, plural, one {# день} few {# дні} other {# днів}}",
       "start_subscription": "Оформити підписку",
       "explore_business_features": "Ознайомитися з функціями Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

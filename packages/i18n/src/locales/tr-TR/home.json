@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Deneme {days} gün içinde sona eriyor",
       "start_subscription": "Aboneliği başlat",
       "explore_business_features": "Business özelliklerini keşfet"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

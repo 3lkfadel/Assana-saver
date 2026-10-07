@@ -72,6 +72,11 @@
       "trial_ends_in_days": "試用將在{days}天後結束",
       "start_subscription": "開始訂閱",
       "explore_business_features": "探索Business功能"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

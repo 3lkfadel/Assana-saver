@@ -72,6 +72,11 @@
       "trial_ends_in_days": "トライアル終了まであと{days}日",
       "start_subscription": "サブスクリプションを開始",
       "explore_business_features": "Business機能を探索"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

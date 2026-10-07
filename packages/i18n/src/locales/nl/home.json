@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Proefperiode eindigt over {days, plural, one {# dag} other {# dagen}}",
       "start_subscription": "Abonnement starten",
       "explore_business_features": "Business-functies ontdekken"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

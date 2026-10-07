@@ -11,6 +11,7 @@ import { useParams } from "next/navigation";
 import { WorkItemsOutline } from "@makeplane/propel/icons";
 import { Breadcrumbs } from "@plane/blocks/breadcrumb";
 import { Header } from "@plane/blocks/layout";
+import { useTranslation } from "@plane/i18n";
 // components
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 import { IssueDetailQuickActions } from "@/components/issues/issue-detail/issue-detail-quick-actions";
@@ -24,6 +25,7 @@ import { useProjectCrumbProps } from "@/components/breadcrumbs/use-project-crumb
 export const WorkItemDetailsHeader = observer(function WorkItemDetailsHeader() {
   // router
   const { workspaceSlug, workItem } = useParams();
+  const { t } = useTranslation();
   // store hooks
   const { getProjectById, loader } = useProject();
   const {
@@ -49,7 +51,7 @@ export const WorkItemDetailsHeader = observer(function WorkItemDetailsHeader() {
           <Breadcrumbs.Item
             component={
               <BreadcrumbLink
-                label="Work Items"
+                label={t("sidebar.work_items")}
                 href={`/${workspaceSlug}/projects/${projectId}/issues/`}
                 icon={<WorkItemsOutline className="h-4 w-4 text-tertiary" />}
               />

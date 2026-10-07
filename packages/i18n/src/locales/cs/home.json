@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Zkušební verze končí za {days, plural, one {# den} few {# dny} other {# dní}}",
       "start_subscription": "Zahájit předplatné",
       "explore_business_features": "Prozkoumat funkce Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

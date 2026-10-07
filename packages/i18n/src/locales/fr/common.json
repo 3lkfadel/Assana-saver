@@ -296,8 +296,8 @@
   "medium": "Moyen",
   "low": "Faible",
   "members": "Membres",
-  "assignee": "Acteur",
-  "assignees": "Acteurs",
+  "assignee": "Responsable",
+  "assignees": "Responsables",
   "subscriber": "{count, plural, one{# Abonné} other{# Abonnés}}",
   "you": "Vous",
   "labels": "Étiquettes",
@@ -440,8 +440,8 @@
     "admins": "Administrateurs",
     "users": "Utilisateurs",
     "guests": "Invités",
-    "assignees": "Acteurs",
-    "assignee": "Acteur",
+    "assignees": "Responsables",
+    "assignee": "Responsable",
     "created_by": "Créé par",
     "none": "Aucun",
     "link": "Lien",
@@ -874,5 +874,17 @@
       "short_description": "Exporter en json"
     }
   },
-  "labels_count": "{count, plural, one {# étiquette} many {# étiquettes} other {# étiquettes}}"
+  "labels_count": "{count, plural, one {# étiquette} many {# étiquettes} other {# étiquettes}}",
+  "infinity": {
+    "more": "Plus",
+    "hide": "Masquer",
+    "sign_in": "Se connecter",
+    "sign_up": "S’inscrire",
+    "auth": {
+      "sign_in_header": "Bon retour.",
+      "sign_in_sub_header": "Connectez-vous à Infinity Planning.",
+      "sign_up_header": "Bienvenue.",
+      "sign_up_sub_header": "Créez votre compte Infinity Planning."
+    }
+  }
 }

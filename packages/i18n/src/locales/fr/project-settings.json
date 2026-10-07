@@ -22,7 +22,7 @@
       "label": "Membres",
       "project_lead": "Chef de projet",
       "project_lead_description": "Sélectionnez le responsable du projet.",
-      "default_assignee": "Acteur par défaut",
+      "default_assignee": "Responsable par défaut",
       "default_assignee_description": "Sélectionnez l’attributaire par défaut du projet.",
       "project_subscribers": "Abonnés du projet",
       "project_subscribers_description": "Sélectionnez les membres qui recevront des notifications pour ce projet.",

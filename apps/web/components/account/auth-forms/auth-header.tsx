@@ -24,35 +24,10 @@ type TAuthHeader = {
   currentAuthStep: EAuthSteps;
 };
 
+// Translation keys of the headers, by mode (the same for every step).
 const Titles = {
-  [EAuthModes.SIGN_IN]: {
-    [EAuthSteps.EMAIL]: {
-      header: "Work in all dimensions.",
-      subHeader: "Welcome back to Infinity Planning.",
-    },
-    [EAuthSteps.PASSWORD]: {
-      header: "Work in all dimensions.",
-      subHeader: "Welcome back to Infinity Planning.",
-    },
-    [EAuthSteps.UNIQUE_CODE]: {
-      header: "Work in all dimensions.",
-      subHeader: "Welcome back to Infinity Planning.",
-    },
-  },
-  [EAuthModes.SIGN_UP]: {
-    [EAuthSteps.EMAIL]: {
-      header: "Work in all dimensions.",
-      subHeader: "Create your Infinity Planning account.",
-    },
-    [EAuthSteps.PASSWORD]: {
-      header: "Work in all dimensions.",
-      subHeader: "Create your Infinity Planning account.",
-    },
-    [EAuthSteps.UNIQUE_CODE]: {
-      header: "Work in all dimensions.",
-      subHeader: "Create your Infinity Planning account.",
-    },
-  },
+  [EAuthModes.SIGN_IN]: { header: "infinity.auth.sign_in_header", subHeader: "infinity.auth.sign_in_sub_header" },
+  [EAuthModes.SIGN_UP]: { header: "infinity.auth.sign_up_header", subHeader: "infinity.auth.sign_up_sub_header" },
 };
 
 const workSpaceService = new WorkspaceService();
@@ -87,14 +62,11 @@ export const AuthHeader = observer(function AuthHeader(props: TAuthHeader) {
             {workspace.name}
           </div>
         ),
-        subHeader:
-          mode == EAuthModes.SIGN_UP
-            ? "Create an account to start managing work with your team."
-            : "Log in to start managing work with your team.",
+        subHeader: mode == EAuthModes.SIGN_UP ? t("auth.sign_up.header.label") : t("auth.sign_in.header.label"),
       };
     }
 
-    return Titles[mode][step];
+    return { header: t(Titles[mode].header), subHeader: t(Titles[mode].subHeader) };
   };
 
   const { header, subHeader } = getHeaderSubHeader(currentAuthStep, authMode, invitation || undefined, invitationEmail);

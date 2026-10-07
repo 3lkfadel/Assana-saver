@@ -81,6 +81,14 @@
         "calendar": "Layout de Calendário",
         "spreadsheet": "Layout de Tabela",
         "gantt": "Layout de Cronograma"
+      },
+      "board_columns": {
+        "add_column": "Adicionar coluna",
+        "column_name": "Nome da coluna",
+        "category": "Categoria",
+        "created": "Coluna criada.",
+        "already_exists": "Já existe uma coluna com este nome.",
+        "create_error": "Não foi possível criar a coluna. Tente novamente."
       }
     },
     "states": {

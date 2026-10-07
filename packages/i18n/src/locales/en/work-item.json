@@ -81,6 +81,14 @@
         "calendar": "Calendar Layout",
         "spreadsheet": "Table Layout",
         "gantt": "Timeline Layout"
+      },
+      "board_columns": {
+        "add_column": "Add column",
+        "column_name": "Column name",
+        "category": "Category",
+        "created": "Column created.",
+        "already_exists": "A column with this name already exists.",
+        "create_error": "The column could not be created. Please try again."
       }
     },
     "states": {

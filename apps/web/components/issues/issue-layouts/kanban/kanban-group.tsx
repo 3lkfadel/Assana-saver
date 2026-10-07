@@ -46,6 +46,7 @@ import { GroupDragOverlay } from "../group-drag-overlay";
 import type { TRenderQuickActions } from "../list/list-view-types";
 import { KanbanQuickAddIssueButton, QuickAddIssueRoot } from "../quick-add";
 import { KanbanIssueBlocksList } from "./blocks-list";
+import { isKanbanColumnDrag } from "./draggable-column";
 
 interface IKanbanGroup {
   groupId: string;
@@ -135,6 +136,7 @@ export const KanbanGroup = observer(function KanbanGroup(props: IKanbanGroup) {
     return combine(
       dropTargetForElements({
         element,
+        canDrop: ({ source }) => !isKanbanColumnDrag(source.data),
         getData: () => ({ groupId, subGroupId: sub_group_id, columnId: `${groupId}__${sub_group_id}`, type: "COLUMN" }),
         onDragEnter: (payload) => {
           const source = getSourceFromDropPayload(payload);

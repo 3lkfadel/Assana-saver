@@ -81,6 +81,14 @@
         "calendar": "Bố cục lịch",
         "spreadsheet": "Bố cục bảng tính",
         "gantt": "Bố cục dòng thời gian"
+      },
+      "board_columns": {
+        "add_column": "Thêm cột",
+        "column_name": "Tên cột",
+        "category": "Danh mục",
+        "created": "Đã tạo cột.",
+        "already_exists": "Đã có một cột với tên này.",
+        "create_error": "Không thể tạo cột. Vui lòng thử lại."
       }
     },
     "states": {

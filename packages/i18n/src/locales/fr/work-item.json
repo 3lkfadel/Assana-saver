@@ -81,6 +81,14 @@
         "calendar": "Disposition en calendrier",
         "spreadsheet": "Disposition en tableau",
         "gantt": "Disposition en chronologie"
+      },
+      "board_columns": {
+        "add_column": "Ajouter une colonne",
+        "column_name": "Nom de la colonne",
+        "category": "Catégorie",
+        "created": "Colonne créée.",
+        "already_exists": "Une colonne portant ce nom existe déjà.",
+        "create_error": "Impossible de créer la colonne. Veuillez réessayer."
       }
     },
     "states": {

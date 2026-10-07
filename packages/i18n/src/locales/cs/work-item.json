@@ -81,6 +81,14 @@
         "calendar": "Kalendářové rozložení",
         "spreadsheet": "Tabulkové rozložení",
         "gantt": "Rozložení časové osy"
+      },
+      "board_columns": {
+        "add_column": "Přidat sloupec",
+        "column_name": "Název sloupce",
+        "category": "Kategorie",
+        "created": "Sloupec byl vytvořen.",
+        "already_exists": "Sloupec s tímto názvem již existuje.",
+        "create_error": "Sloupec se nepodařilo vytvořit. Zkuste to prosím znovu."
       }
     },
     "states": {

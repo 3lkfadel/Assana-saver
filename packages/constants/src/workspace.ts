@@ -83,6 +83,12 @@ export const ROLE = {
   [EUserWorkspaceRoles.ADMIN]: "Admin",
 };
 
+// Roles a member can be given. Infinity Planning has no Guest role: every member belongs to the group.
+export const ASSIGNABLE_ROLE = {
+  [EUserWorkspaceRoles.MEMBER]: ROLE[EUserWorkspaceRoles.MEMBER],
+  [EUserWorkspaceRoles.ADMIN]: ROLE[EUserWorkspaceRoles.ADMIN],
+};
+
 export const ROLE_DETAILS = {
   [EUserWorkspaceRoles.GUEST]: {
     i18n_title: "role_details.guest.title",

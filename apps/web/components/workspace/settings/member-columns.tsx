@@ -8,7 +8,7 @@ import { observer } from "mobx-react";
 import Link from "next/link";
 import { Controller, useForm } from "react-hook-form";
 // plane imports
-import { ROLE, EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
+import { ROLE, EUserPermissions, EUserPermissionsLevel, ASSIGNABLE_ROLE } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 import { DeactivatedUserOutline, DeleteOutline, MoreHorizontalOutline } from "@makeplane/propel/icons";
 import { Badge } from "@makeplane/propel/components/badge";
@@ -41,7 +41,7 @@ type NameProps = {
 
 type TRoleOption = { key: EUserPermissions; label: string };
 
-const ROLE_OPTIONS: TRoleOption[] = Object.entries(ROLE).map(([key, label]) => ({
+const ROLE_OPTIONS: TRoleOption[] = Object.entries(ASSIGNABLE_ROLE).map(([key, label]) => ({
   key: Number(key) as EUserPermissions,
   label,
 }));

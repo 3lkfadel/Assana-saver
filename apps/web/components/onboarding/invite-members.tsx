@@ -21,7 +21,7 @@ import { AddOutline, CloseCircleOutline } from "@makeplane/propel/icons";
 import { Field } from "@makeplane/propel/components/field";
 import { Input, InputGroup } from "@makeplane/propel/components/input";
 import type { EUserPermissions } from "@plane/constants";
-import { ROLE, ROLE_DETAILS } from "@plane/constants";
+import { ROLE, ROLE_DETAILS, ASSIGNABLE_ROLE } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 // types
 import { Button } from "@makeplane/propel/components/button";
@@ -72,11 +72,13 @@ type TRoleOption = { key: EUserPermissions; i18n_title: string; i18n_description
 
 // services
 const workspaceService = new WorkspaceService();
-const roleOptions: TRoleOption[] = Object.entries(ROLE_DETAILS).map(([key, details]) => ({
-  key: parseInt(key) as EUserPermissions,
-  i18n_title: details.i18n_title,
-  i18n_description: details.i18n_description,
-}));
+const roleOptions: TRoleOption[] = Object.entries(ROLE_DETAILS)
+  .filter(([key]) => key in ASSIGNABLE_ROLE)
+  .map(([key, details]) => ({
+    key: parseInt(key) as EUserPermissions,
+    i18n_title: details.i18n_title,
+    i18n_description: details.i18n_description,
+  }));
 // legacy role picker opened at bottom-end (right-column trigger), so align the panel to its end edge
 const ROLE_SELECT_PLACEMENT = { side: "bottom", align: "end" } as const;
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;

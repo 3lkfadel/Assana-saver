@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { observer } from "mobx-react";
 import { useForm, Controller, useFieldArray } from "react-hook-form";
 // plane imports
-import { ROLE, EUserPermissions } from "@plane/constants";
+import { ROLE, EUserPermissions, ASSIGNABLE_ROLE } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 import { Button } from "@makeplane/propel/components/button";
 import { AddOutline, ChevronDownOutline, CloseOutline } from "@makeplane/propel/icons";
@@ -56,7 +56,7 @@ type TRoleOption = {
 const defaultValues: FormValues = {
   members: [
     {
-      role: 5,
+      role: 15,
       member_id: "",
     },
   ],
@@ -109,6 +109,7 @@ export const SendProjectInvitationModal = observer(function SendProjectInvitatio
           type: "success",
           message: "Members added successfully.",
         });
+        return undefined;
       })
       .catch((error) => {
         console.error(error);
@@ -129,7 +130,7 @@ export const SendProjectInvitationModal = observer(function SendProjectInvitatio
 
   const appendField = () => {
     append({
-      role: 5,
+      role: 15,
       member_id: "",
     });
   };
@@ -138,7 +139,7 @@ export const SendProjectInvitationModal = observer(function SendProjectInvitatio
     if (fields.length === 0) {
       append([
         {
-          role: 5,
+          role: 15,
           member_id: "",
         },
       ]);
@@ -147,14 +148,16 @@ export const SendProjectInvitationModal = observer(function SendProjectInvitatio
 
   const checkCurrentOptionWorkspaceRole = (value: string) => {
     const currentMemberWorkspaceRole = getWorkspaceMemberDetails(value)?.role;
-    if (!value || !currentMemberWorkspaceRole) return ROLE;
+    if (!value || !currentMemberWorkspaceRole) return ASSIGNABLE_ROLE;
 
     const isGuestOROwner = [EUserPermissions.ADMIN, EUserPermissions.GUEST].includes(
       currentMemberWorkspaceRole as EUserPermissions
     );
 
     return Object.fromEntries(
-      Object.entries(ROLE).filter(([key]) => !isGuestOROwner || [currentMemberWorkspaceRole].includes(parseInt(key)))
+      Object.entries(ASSIGNABLE_ROLE).filter(
+        ([key]) => !isGuestOROwner || [currentMemberWorkspaceRole].includes(parseInt(key))
+      )
     );
   };
 

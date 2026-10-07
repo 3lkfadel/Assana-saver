@@ -8,7 +8,7 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // plane imports
-import { ROLE, EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
+import { ROLE, EUserPermissions, EUserPermissionsLevel, ASSIGNABLE_ROLE } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 import { ChevronDownOutline, DeleteOutline, LinkOutline, MoreHorizontalOutline } from "@makeplane/propel/icons";
 import { Icon } from "@makeplane/propel/components/icon";
@@ -62,7 +62,7 @@ export const WorkspaceInvitationsListItem = observer(function WorkspaceInvitatio
     EUserPermissionsLevel.WORKSPACE
   );
   // non-admins can only assign roles up to their own
-  const roleOptions: TRoleOption[] = Object.entries(ROLE)
+  const roleOptions: TRoleOption[] = Object.entries(ASSIGNABLE_ROLE)
     .map(([key, label]) => ({ key: parseInt(key, 10), label }))
     .filter(
       (role) =>

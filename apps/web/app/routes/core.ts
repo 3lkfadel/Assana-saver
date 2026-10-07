@@ -295,14 +295,6 @@ export const coreRoutes: RouteConfigEntry[] = [
             ),
             // Project Features
             route(
-              ":workspaceSlug/settings/projects/:projectId/features/cycles",
-              "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/features/cycles/page.tsx"
-            ),
-            route(
-              ":workspaceSlug/settings/projects/:projectId/features/modules",
-              "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/features/modules/page.tsx"
-            ),
-            route(
               ":workspaceSlug/settings/projects/:projectId/features/views",
               "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/features/views/page.tsx"
             ),
@@ -323,11 +315,6 @@ export const coreRoutes: RouteConfigEntry[] = [
             route(
               ":workspaceSlug/settings/projects/:projectId/labels",
               "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/labels/page.tsx"
-            ),
-            // Project Estimates
-            route(
-              ":workspaceSlug/settings/projects/:projectId/estimates",
-              "./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/estimates/page.tsx"
             ),
             // Project Automations
             layout("./(all)/[workspaceSlug]/(settings)/settings/projects/[projectId]/automations/layout.tsx", [

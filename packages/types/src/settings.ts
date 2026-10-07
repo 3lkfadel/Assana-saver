@@ -22,14 +22,11 @@ export type TWorkspaceSettingsItem = {
 export type TProjectSettingsTabs =
   | "general"
   | "members"
-  | "features_cycles"
-  | "features_modules"
   | "features_views"
   | "features_pages"
   | "features_intake"
   | "states"
   | "labels"
-  | "estimates"
   | "automations";
 export type TProjectSettingsItem = {
   key: TProjectSettingsTabs;

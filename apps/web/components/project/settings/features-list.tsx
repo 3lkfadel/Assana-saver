@@ -8,7 +8,6 @@ import { observer } from "mobx-react";
 // plane imports
 import { useTranslation } from "@plane/i18n";
 import { setPromiseToast } from "@plane/blocks/toast";
-import { Tooltip } from "@makeplane/propel/components/tooltip";
 import type { IProject } from "@plane/types";
 import { CyclesOutline, IntakeOutline, ModuleOutline, PagesOutline, ViewsOutline } from "@makeplane/propel/icons";
 // components
@@ -16,8 +15,6 @@ import { SettingsBoxedControlItem } from "@/components/settings/boxed-control-it
 import { SettingsHeading } from "@/components/settings/heading";
 // hooks
 import { useProject } from "@/hooks/store/use-project";
-// plane web imports
-import { UpgradeBadge } from "@/components/workspace/upgrade-badge";
 // local imports
 import { ProjectFeatureToggle } from "./helper";
 
@@ -113,16 +110,7 @@ export const ProjectFeaturesList = observer(function ProjectFeaturesList(props: 
           {Object.entries(PROJECT_FEATURES_LIST).map(([featureItemKey, featureItem]) => (
             <div key={featureItemKey}>
               <SettingsBoxedControlItem
-                title={
-                  <span className="flex items-center gap-2">
-                    {t(featureItem.key)}
-                    {featureItem.isPro && (
-                      <Tooltip label="Pro feature">
-                        <UpgradeBadge className="rounded-sm" />
-                      </Tooltip>
-                    )}
-                  </span>
-                }
+                title={<span className="flex items-center gap-2">{t(featureItem.key)}</span>}
                 description={t(`${featureItem.key}_description`)}
                 control={
                   <ProjectFeatureToggle

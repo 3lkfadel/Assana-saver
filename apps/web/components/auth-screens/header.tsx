@@ -69,8 +69,9 @@ export function AuthHeaderBase(props: TAuthHeaderBase) {
   return (
     <>
       <PageHead title={pageTitle + " - Infinity Planning"} />
-      <div className="sticky top-0 flex w-full flex-shrink-0 items-center justify-between gap-6">
-        <Link href="/">
+      <div className="sticky top-0 flex w-full flex-shrink-0 items-center justify-between gap-6 lg:justify-end">
+        {/* On wide screens the brand panel shows the logo. */}
+        <Link href="/" className="lg:hidden">
           <PlaneLockup height={30} width={125} className="text-primary" />
         </Link>
         {additionalAction}

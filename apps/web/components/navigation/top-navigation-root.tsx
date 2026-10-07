@@ -7,6 +7,7 @@
 // components
 import { observer } from "mobx-react";
 import { useParams, usePathname } from "next/navigation";
+import { PlaneLogo } from "@plane/blocks/icons";
 import { cn } from "@plane/utils";
 import { TopNavPowerK } from "@/components/navigation";
 import { HelpMenuRoot } from "@/components/workspace/sidebar/help-section/root";
@@ -44,12 +45,13 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
 
   return (
     <div
-      className={cn("z-[27] flex min-h-10 w-full items-center bg-canvas px-3.5 transition-all duration-300", {
+      className={cn("ip-nav z-[27] flex min-h-10 w-full items-center bg-canvas px-3.5 transition-all duration-300", {
         "px-2": !showLabel,
       })}
     >
       {/* Workspace Menu */}
-      <div className="flex-1 shrink-0">
+      <div className="flex flex-1 shrink-0 items-center gap-3">
+        <PlaneLogo width={27} height={14} className="shrink-0" />
         <WorkspaceMenuRoot variant="top-navigation" />
       </div>
       {/* Power K Search */}

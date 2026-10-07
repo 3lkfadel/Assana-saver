@@ -6,7 +6,7 @@
 from rest_framework import serializers
 
 # Module imports
-from .base import BaseSerializer, DynamicBaseSerializer
+from .base import BaseSerializer, DynamicBaseSerializer, NoGuestRoleMixin
 from .user import UserLiteSerializer, UserAdminLiteSerializer
 
 
@@ -90,7 +90,7 @@ class WorkspaceLiteSerializer(BaseSerializer):
         read_only_fields = fields
 
 
-class WorkSpaceMemberSerializer(DynamicBaseSerializer):
+class WorkSpaceMemberSerializer(NoGuestRoleMixin, DynamicBaseSerializer):
     member = UserLiteSerializer(read_only=True)
 
     class Meta:
@@ -114,7 +114,7 @@ class WorkspaceMemberAdminSerializer(DynamicBaseSerializer):
         fields = "__all__"
 
 
-class WorkSpaceMemberInviteSerializer(BaseSerializer):
+class WorkSpaceMemberInviteSerializer(NoGuestRoleMixin, BaseSerializer):
     workspace = WorkspaceLiteSerializer(read_only=True)
     invite_link = serializers.SerializerMethodField()
 

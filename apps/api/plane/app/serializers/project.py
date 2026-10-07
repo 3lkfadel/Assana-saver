@@ -9,7 +9,7 @@ from rest_framework import serializers
 import re
 
 # Module imports
-from .base import BaseSerializer, DynamicBaseSerializer
+from .base import BaseSerializer, DynamicBaseSerializer, NoGuestRoleMixin
 from django.db.models import Max
 from plane.app.serializers.workspace import WorkspaceLiteSerializer
 from plane.app.serializers.user import UserLiteSerializer, UserAdminLiteSerializer
@@ -22,6 +22,7 @@ from plane.db.models import (
     ProjectPublicMember,
     IssueSequence,
 )
+from plane.utils.disabled_features import DISABLED_PROJECT_FIELDS
 from plane.utils.content_validator import (
     validate_html_content,
 )
@@ -34,7 +35,7 @@ class ProjectSerializer(BaseSerializer):
     class Meta:
         model = Project
         fields = "__all__"
-        read_only_fields = ["workspace", "deleted_at"]
+        read_only_fields = ["workspace", "deleted_at", *DISABLED_PROJECT_FIELDS]
 
     def validate_name(self, name):
         project_id = self.instance.id if self.instance else None
@@ -153,7 +154,7 @@ class ProjectDetailSerializer(BaseSerializer):
         fields = "__all__"
 
 
-class ProjectMemberSerializer(BaseSerializer):
+class ProjectMemberSerializer(NoGuestRoleMixin, BaseSerializer):
     workspace = WorkspaceLiteSerializer(read_only=True)
     project = ProjectLiteSerializer(read_only=True)
     member = UserLiteSerializer(read_only=True)
@@ -194,7 +195,7 @@ class ProjectMemberRoleSerializer(DynamicBaseSerializer):
         read_only_fields = ["original_role", "created_at"]
 
 
-class ProjectMemberInviteSerializer(BaseSerializer):
+class ProjectMemberInviteSerializer(NoGuestRoleMixin, BaseSerializer):
     project = ProjectLiteSerializer(read_only=True)
     workspace = WorkspaceLiteSerializer(read_only=True)
 

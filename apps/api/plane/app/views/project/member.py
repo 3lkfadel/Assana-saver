@@ -21,6 +21,7 @@ from plane.app.permissions import WorkspaceUserPermission
 from plane.db.models import Project, ProjectMember, ProjectUserProperty, WorkspaceMember
 from plane.bgtasks.project_add_user_email_task import project_add_user_email
 from plane.utils.host import base_host
+from plane.utils.disabled_features import GUEST_ROLE_DISABLED_ERROR, is_guest_role
 from plane.app.permissions.base import allow_permission, ROLE
 
 
@@ -57,6 +58,9 @@ class ProjectMemberViewSet(BaseViewSet):
                 {"error": "At least one member is required"},
                 status=status.HTTP_400_BAD_REQUEST,
             )
+
+        if any(is_guest_role(member.get("role")) for member in members):
+            return Response({"error": GUEST_ROLE_DISABLED_ERROR}, status=status.HTTP_400_BAD_REQUEST)
 
         # Initialize the bulk arrays
         bulk_project_members = []
@@ -246,6 +250,9 @@ class ProjectMemberViewSet(BaseViewSet):
                 )
 
             new_role = int(request.data.get("role"))
+
+            if is_guest_role(new_role):
+                return Response({"error": GUEST_ROLE_DISABLED_ERROR}, status=status.HTTP_400_BAD_REQUEST)
 
             # Cannot assign a role equal to or higher than your own
             if new_role >= requested_project_member.role and not is_workspace_admin:

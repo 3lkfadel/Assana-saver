@@ -11,6 +11,7 @@ from rest_framework import serializers
 from plane.db.models import WorkspaceMemberInvite
 from .base import BaseSerializer
 from plane.app.permissions.base import ROLE
+from plane.utils.disabled_features import GUEST_ROLE_DISABLED_ERROR, is_guest_role
 
 
 class WorkspaceInviteSerializer(BaseSerializer):
@@ -46,7 +47,9 @@ class WorkspaceInviteSerializer(BaseSerializer):
         return value
 
     def validate_role(self, value):
-        if value not in [ROLE.ADMIN.value, ROLE.MEMBER.value, ROLE.GUEST.value]:
+        if is_guest_role(value):
+            raise serializers.ValidationError(GUEST_ROLE_DISABLED_ERROR, code="GUEST_ROLE_DISABLED")
+        if value not in [ROLE.ADMIN.value, ROLE.MEMBER.value]:
             raise serializers.ValidationError("Invalid role", code="INVALID_WORKSPACE_MEMBER_ROLE")
         return value
 

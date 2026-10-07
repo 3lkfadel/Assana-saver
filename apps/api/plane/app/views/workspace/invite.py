@@ -30,6 +30,7 @@ from plane.bgtasks.workspace_invitation_task import workspace_invitation
 from plane.db.models import User, Workspace, WorkspaceMember, WorkspaceMemberInvite
 from plane.utils.cache import invalidate_cache, invalidate_cache_directly
 from plane.utils.host import base_host
+from plane.utils.disabled_features import DEFAULT_MEMBER_ROLE, GUEST_ROLE_DISABLED_ERROR, is_guest_role
 from .. import BaseViewSet
 
 
@@ -55,11 +56,14 @@ class WorkspaceInvitationsViewset(BaseViewSet):
         if not emails:
             return Response({"error": "Emails are required"}, status=status.HTTP_400_BAD_REQUEST)
 
+        if any(is_guest_role(email.get("role")) for email in emails):
+            return Response({"error": GUEST_ROLE_DISABLED_ERROR}, status=status.HTTP_400_BAD_REQUEST)
+
         # check for role level of the requesting user
         requesting_user = WorkspaceMember.objects.get(workspace__slug=slug, member=request.user, is_active=True)
 
         # Check if any invited user has an higher role
-        if len([email for email in emails if int(email.get("role", 5)) > requesting_user.role]):
+        if len([email for email in emails if int(email.get("role", DEFAULT_MEMBER_ROLE)) > requesting_user.role]):
             return Response(
                 {"error": "You cannot invite a user with higher role"},
                 status=status.HTTP_400_BAD_REQUEST,
@@ -97,7 +101,7 @@ class WorkspaceInvitationsViewset(BaseViewSet):
                             settings.SECRET_KEY,
                             algorithm="HS256",
                         ),
-                        role=email.get("role", 5),
+                        role=email.get("role", DEFAULT_MEMBER_ROLE),
                         created_by=request.user,
                     )
                 )

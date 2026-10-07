@@ -1,0 +1,75 @@
+# Infinity Planning
+
+Outil interne de gestion du travail d'Infinity Africa Group. Il reproduit les fonctionnalités d'Asana et repose sur un fork de Plane (dépôt `Assana-saver`). L'interface utilise le vocabulaire d'Asana, en français et en anglais.
+
+## Langage
+
+### Travail
+
+**Tâche** :
+L'unité de travail : un nom, une description, un responsable au plus, des dates, des collaborateurs. Elle appartient à zéro, un ou plusieurs projets ; elle n'a pas de projet d'origine.
+_Éviter_ : work item, issue, ticket
+
+**Identifiant de tâche** :
+Le code court et permanent d'une tâche, unique dans l'espace de travail (`T-1234`), indépendant de ses projets.
+_Éviter_ : clé projet, `PROJ-123`
+
+**Sous-tâche** :
+Une tâche rattachée à une tâche parente, sans limite de profondeur. Elle n'appartient à aucun projet tant qu'on ne l'y ajoute pas explicitement.
+_Éviter_ : sub-issue, sub-work item
+
+**Jalon** :
+Une tâche d'un type particulier qui marque une étape datée d'un projet. Elle a une seule date et s'affiche en losange sur la timeline.
+_Éviter_ : milestone, livrable
+
+**Dépendance** :
+Le lien entre deux tâches selon lequel l'une (bloquée) ne peut pas avancer avant que l'autre (bloquante) soit terminée.
+_Éviter_ : relation, blocker
+
+**Champ personnalisé** :
+Une propriété ajoutée aux tâches d'un projet, d'un type donné (liste, liste multiple, texte, nombre, date, personne, référence). Il est défini une fois dans la bibliothèque de l'organisation et réutilisable dans plusieurs projets.
+_Éviter_ : propriété, custom property, attribut
+
+**Terminée** :
+L'état binaire d'une tâche, coché ou non. L'avancement détaillé passe par les sections ou par un champ personnalisé, pas par cet état.
+_Éviter_ : état, state, statut (pour désigner la complétion)
+
+### Organisation
+
+**Organisation** :
+L'espace de travail unique du groupe, qui contient toutes les équipes, tous les projets et toutes les personnes.
+_Éviter_ : workspace, espace de travail (en interface), groupe
+
+**Équipe** :
+Un ensemble de personnes qui possède des projets au sein de l'organisation. Chaque filiale du groupe est représentée par au moins une équipe.
+_Éviter_ : filiale (en interface), teamspace, département
+
+**Confidentialité d'équipe** :
+Le niveau de visibilité d'une équipe pour le reste de l'organisation : publique (ses projets publics sont visibles de tous), sur demande (on demande à la rejoindre, valeur par défaut) ou privée (invisible pour les non-membres).
+_Éviter_ : cloisonnement, accès
+
+**Projet** :
+Un ensemble de tâches rangées en sections et consultées à travers des vues (liste, tableau, timeline, calendrier).
+_Éviter_ : board
+
+**Section** :
+Un groupe ordonné de tâches propre à un projet. Il s'affiche comme en-tête en vue liste et comme colonne en vue tableau.
+_Éviter_ : colonne, état, statut, groupe
+
+**Appartenance** :
+Le lien entre une tâche et un projet. Une tâche a une appartenance par projet qui la contient, et chaque appartenance place la tâche dans une section de ce projet.
+_Éviter_ : multi-homing (en interface), lien, copie
+
+### Personnes
+
+**Membre** :
+Une personne du groupe, invitée dans l'organisation avec son adresse `@infinity-africa.com`. Il n'existe pas d'invités extérieurs.
+_Éviter_ : utilisateur, invité, guest
+
+**Responsable** :
+La seule personne chargée d'une tâche. Une tâche a zéro ou un responsable, jamais plusieurs.
+_Éviter_ : assigné(s), assignee, owner
+
+**Collaborateur** :
+Une personne qui suit une tâche et reçoit ses notifications, sans en être responsable.
+_Éviter_ : abonné, follower, subscriber, watcher

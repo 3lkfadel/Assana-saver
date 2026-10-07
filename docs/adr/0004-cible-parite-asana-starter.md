@@ -1,0 +1,3 @@
+# Cible prioritaire : la parité avec l'offre Asana Starter
+
+L'objectif affiché est de reproduire Asana, mais le groupe Infinity Africa est abonné à l'offre Starter : l'inventaire du 2026-10-07 a montré que l'API refuse l'accès aux objectifs (« premium ») et aux portefeuilles (« Business ou Enterprise »). La cible prioritaire est donc de remplacer ce que le groupe utilise et paie aujourd'hui, c'est-à-dire les fonctionnalités Starter. Les fonctions Advanced et Enterprise (objectifs, portefeuilles, charge de travail, approbations, proofing, SSO SAML, SCIM, journal d'audit) ne sont pas oubliées : elles viennent après le remplacement d'Asana, comme un bonus.

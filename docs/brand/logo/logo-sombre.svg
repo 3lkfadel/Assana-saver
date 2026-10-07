@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 48" role="img" aria-label="Infinity Planning">
+  <g transform="translate(0 4) scale(0.2198)">
+  <defs>
+    <linearGradient id="ip-logo-dark-l" x1="0" y1="0" x2="172" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0.27" stop-color="#F5F9FA"/><stop offset="1" stop-color="#F5F9FA" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ip-logo-dark-r" x1="347" y1="0" x2="175" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0.27" stop-color="#F5F9FA"/><stop offset="1" stop-color="#F5F9FA" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <polygon points="0,0 172,56 0,140" fill="url(#ip-logo-dark-l)"/>
+  <polygon points="347,182 175,126 347,40" fill="url(#ip-logo-dark-r)"/>
+  <polygon points="0,110 347,0 347,71 0,182" fill="#F5F9FA"/>
+  </g>
+  <text x="88" y="33" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="600" letter-spacing="-0.4" fill="#F5F9FA">Infinity <tspan font-weight="400">Planning</tspan></text>
+</svg>

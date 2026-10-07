@@ -1,6 +1,6 @@
 {
-  "name": "Plane",
-  "short_name": "Plane",
+  "name": "Infinity Planning",
+  "short_name": "Infinity Planning",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
@@ -19,8 +19,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#2A2D2F",
+  "background_color": "#F5F9FA",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"

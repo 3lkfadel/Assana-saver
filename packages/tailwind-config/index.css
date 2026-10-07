@@ -14,6 +14,49 @@
  * utilities emit. propel's CSS does not import tailwindcss itself.
  */
 @import "@makeplane/propel/styles";
+
+/*
+ * Infinity Planning brand (docs/brand/charte.md): propel's blue brand scale is replaced by a
+ * cool grey scale whose default is the group anthracite #2A2D2F, so buttons, navigation and
+ * selection are anthracite. The group carmine is kept for brand moments (logo) and is not a token.
+ * Custom themes still win: they set --brand-* inline on <html>.
+ */
+@layer base {
+  :root,
+  :host {
+    --brand-50: oklch(0.985 0.008 230);
+    --brand-100: oklch(0.968 0.008 230);
+    --brand-200: oklch(0.94 0.008 230);
+    --brand-300: oklch(0.9 0.008 230);
+    --brand-400: oklch(0.84 0.008 230);
+    --brand-500: oklch(0.76 0.008 230);
+    --brand-600: oklch(0.66 0.008 230);
+    --brand-700: oklch(0.55 0.008 230);
+    --brand-800: oklch(0.43 0.008 230);
+    --brand-900: oklch(0.25 0.008 230);
+    --brand-1000: oklch(0.21 0.008 230);
+    --brand-1100: oklch(0.18 0.008 230);
+    --brand-1200: oklch(0.15 0.008 230);
+    --brand-default: oklch(0.2967 0.0053 229.9);
+
+    @variant dark {
+      --brand-50: oklch(0.17 0.015 220);
+      --brand-100: oklch(0.2 0.015 220);
+      --brand-200: oklch(0.25 0.015 220);
+      --brand-300: oklch(0.31 0.015 220);
+      --brand-400: oklch(0.38 0.015 220);
+      --brand-500: oklch(0.44 0.015 220);
+      --brand-600: oklch(0.55 0.015 220);
+      --brand-700: oklch(0.66 0.015 220);
+      --brand-800: oklch(0.74 0.015 220);
+      --brand-900: oklch(0.87 0.015 220);
+      --brand-1000: oklch(0.93 0.015 220);
+      --brand-1100: oklch(0.965 0.015 220);
+      --brand-1200: oklch(0.985 0.015 220);
+      --brand-default: oklch(0.5 0.02 220);
+    }
+  }
+}
 @source "../**/*.{ts,tsx}";
 
 * {

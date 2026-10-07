@@ -78,11 +78,11 @@ export const SetPasswordForm = observer(function SetPasswordForm() {
 
   const isButtonDisabled = useMemo(
     () =>
-      !!passwordFormData.password &&
-      getPasswordStrength(passwordFormData.password) === E_PASSWORD_STRENGTH.STRENGTH_VALID &&
-      passwordFormData.password === passwordFormData.confirm_password
-        ? false
-        : true,
+      !(
+        !!passwordFormData.password &&
+        getPasswordStrength(passwordFormData.password) === E_PASSWORD_STRENGTH.STRENGTH_VALID &&
+        passwordFormData.password === passwordFormData.confirm_password
+      ),
     [passwordFormData]
   );
 
@@ -112,7 +112,7 @@ export const SetPasswordForm = observer(function SetPasswordForm() {
 
   return (
     <FormContainer>
-      <AuthFormHeader title="Set password" description="Create a new password." />
+      <AuthFormHeader title={t("auth.set_password.title")} description={t("auth.set_password.description")} />
       <form className="space-y-4" onSubmit={(e) => handleSubmit(e)}>
         <div className="space-y-1">
           <label className="text-13 font-medium text-tertiary" htmlFor="email">
@@ -148,6 +148,8 @@ export const SetPasswordForm = observer(function SetPasswordForm() {
               onFocus={() => setIsPasswordInputFocused(true)}
               onBlur={() => setIsPasswordInputFocused(false)}
               autoComplete="new-password"
+              // The password field is the only field left on this step.
+              // oxlint-disable-next-line jsx-a11y/no-autofocus
               autoFocus
             />
             <button

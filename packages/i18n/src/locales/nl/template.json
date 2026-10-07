@@ -162,7 +162,7 @@
           },
           "website": {
             "label": "Website-URL",
-            "placeholder": "https://plane.so",
+            "placeholder": "https://infinity-africa.com",
             "validation": {
               "invalid": "Ongeldige URL",
               "maxLength": "URL moet minder dan 800 tekens zijn"
@@ -178,7 +178,7 @@
           },
           "contact_email": {
             "label": "Contact-e-mail",
-            "placeholder": "help@plane.so",
+            "placeholder": "support@infinity-africa.com",
             "validation": {
               "invalid": "Ongeldig e-mailadres",
               "maxLength": "Contact-e-mail moet minder dan 255 tekens zijn"
@@ -186,7 +186,7 @@
           },
           "privacy_policy_url": {
             "label": "Koppeling naar je privacybeleid",
-            "placeholder": "https://planes.so/privacy-policy",
+            "placeholder": "https://infinity-africa.com/confidentialite",
             "validation": {
               "invalid": "Ongeldige URL",
               "maxLength": "URL moet minder dan 800 tekens zijn"
@@ -194,7 +194,7 @@
           },
           "terms_of_service_url": {
             "label": "Koppeling naar je gebruiksvoorwaarden",
-            "placeholder": "https://planes.so/terms-of-use",
+            "placeholder": "https://infinity-africa.com/conditions",
             "validation": {
               "invalid": "Ongeldige URL",
               "maxLength": "URL moet minder dan 800 tekens zijn"

@@ -373,6 +373,11 @@
           "message": "發生錯誤。"
         }
       }
+    },
+    "not_a_member": {
+      "title": "無權存取",
+      "description": "您不是此工作區的成員。請向工作區管理員申請邀請，或查看您待處理的邀請。",
+      "check_pending_invites": "查看待處理的邀請"
     }
   }
 }

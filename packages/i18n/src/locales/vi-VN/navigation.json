@@ -28,7 +28,21 @@
     "pi_chat": "Infinity Planning AI",
     "epics": "Epics",
     "upgrade_plan": "Nâng cấp gói",
-    "plane_pro": "Plane Pro",
-    "business": "Doanh nghiệp"
+    "plane_pro": "Infinity Planning",
+    "business": "Doanh nghiệp",
+    "rename_folder": "Đổi tên thư mục"
+  },
+  "top_navigation": {
+    "search_commands": "Tìm kiếm lệnh..."
+  },
+  "app_rail": {
+    "icon_only": "Chỉ biểu tượng",
+    "icon_with_name": "Biểu tượng kèm tên",
+    "dock": "Cố định thanh ứng dụng",
+    "undock": "Bỏ cố định thanh ứng dụng"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Ẩn trong menu Thêm",
+    "show": "Hiển thị"
   }
 }

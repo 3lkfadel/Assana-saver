@@ -29,6 +29,20 @@
     "epics": "Epiks",
     "upgrade_plan": "Apgreyd plen",
     "plane_pro": "Pleyn Pro",
-    "business": "Biznis"
+    "business": "Biznis",
+    "rename_folder": "Klasörü yeniden adlandır"
+  },
+  "top_navigation": {
+    "search_commands": "Komut ara..."
+  },
+  "app_rail": {
+    "icon_only": "Yalnızca simge",
+    "icon_with_name": "Ad ile simge",
+    "dock": "Uygulama çubuğunu sabitle",
+    "undock": "Uygulama çubuğunu serbest bırak"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Daha fazla menüsünde gizle",
+    "show": "Göster"
   }
 }

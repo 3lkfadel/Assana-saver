@@ -373,6 +373,11 @@
           "message": "Etwas ist schief gelaufen."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Nicht berechtigt",
+      "description": "Sie sind kein Mitglied dieses Arbeitsbereichs. Bitten Sie einen Administrator des Arbeitsbereichs um eine Einladung oder prüfen Sie Ihre ausstehenden Einladungen.",
+      "check_pending_invites": "Ausstehende Einladungen anzeigen"
     }
   }
 }

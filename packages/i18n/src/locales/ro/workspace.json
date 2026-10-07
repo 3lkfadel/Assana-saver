@@ -373,6 +373,11 @@
           "message": "Ceva nu a funcționat."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Neautorizat",
+      "description": "Nu sunteți membru al acestui spațiu de lucru. Cereți o invitație unui administrator al spațiului de lucru sau verificați invitațiile în așteptare.",
+      "check_pending_invites": "Vedeți invitațiile în așteptare"
     }
   }
 }

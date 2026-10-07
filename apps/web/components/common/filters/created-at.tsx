@@ -6,6 +6,7 @@
 
 import React, { useState } from "react";
 import { observer } from "mobx-react";
+import { useTranslation } from "@plane/i18n";
 // plane imports
 import { DATE_BEFORE_FILTER_OPTIONS } from "@plane/constants";
 import { isInDateFormat } from "@plane/utils";
@@ -20,6 +21,7 @@ type Props = {
 };
 
 export const FilterCreatedDate = observer(function FilterCreatedDate(props: Props) {
+  const { t } = useTranslation();
   const { appliedFilters, handleUpdate, searchQuery } = props;
 
   const [previewEnabled, setPreviewEnabled] = useState(true);
@@ -33,7 +35,7 @@ export const FilterCreatedDate = observer(function FilterCreatedDate(props: Prop
 
   const isCustomDateSelected = () => {
     const isValidDateSelected = appliedFilters?.filter((f) => isInDateFormat(f.split(";")[0])) || [];
-    return isValidDateSelected.length > 0 ? true : false;
+    return isValidDateSelected.length > 0;
   };
   const handleCustomDate = () => {
     if (isCustomDateSelected()) {
@@ -49,11 +51,11 @@ export const FilterCreatedDate = observer(function FilterCreatedDate(props: Prop
           handleClose={() => setIsDateFilterModalOpen(false)}
           isOpen={isDateFilterModalOpen}
           onSelect={(val) => handleUpdate(val)}
-          title="Created date"
+          title={t("workspace_projects.sort.created_at")}
         />
       )}
       <FilterHeader
-        title={`Created date${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
+        title={`${t("workspace_projects.sort.created_at")}${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
         isPreviewEnabled={previewEnabled}
         handleIsPreviewEnabled={() => setPreviewEnabled(!previewEnabled)}
       />
@@ -64,16 +66,21 @@ export const FilterCreatedDate = observer(function FilterCreatedDate(props: Prop
               {filteredOptions.map((option) => (
                 <FilterOption
                   key={option.value}
-                  isChecked={appliedFilters?.includes(option.value) ? true : false}
+                  isChecked={Boolean(appliedFilters?.includes(option.value))}
                   onClick={() => handleUpdate(option.value)}
                   title={option.name}
                   multiple
                 />
               ))}
-              <FilterOption isChecked={isCustomDateSelected()} onClick={handleCustomDate} title="Custom" multiple />
+              <FilterOption
+                isChecked={isCustomDateSelected()}
+                onClick={handleCustomDate}
+                title={t("notification.snooze.custom")}
+                multiple
+              />
             </>
           ) : (
-            <p className="text-11 text-placeholder italic">No matches found</p>
+            <p className="text-11 text-placeholder italic">{t("common.search.no_matches_found")}</p>
           )}
         </div>
       )}

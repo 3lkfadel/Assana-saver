@@ -373,6 +373,11 @@
           "message": "Terjadi kesalahan."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Tidak diizinkan",
+      "description": "Anda bukan anggota ruang kerja ini. Mintalah undangan kepada admin ruang kerja atau periksa undangan Anda yang tertunda.",
+      "check_pending_invites": "Lihat undangan tertunda"
     }
   }
 }

@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Untergeordnete Elemente anzeigen",
         "show_empty_groups": "Leere Gruppen anzeigen"
-      }
+      },
+      "sub_group_by": "Untergruppieren nach"
     },
     "layouts": {
       "ordered_by_label": "Dieses Layout wird sortiert nach",
@@ -268,6 +269,10 @@
       "click_to_downvote": "Klicken zum Runterstimmen",
       "click_to_view_upvotes": "Klicken um Hochstimmen anzuzeigen",
       "click_to_view_downvotes": "Klicken um Runterstimmen anzuzeigen"
+    },
+    "view_not_found": {
+      "title": "Ansicht existiert nicht",
+      "description": "Die gesuchte Ansicht existiert nicht oder Sie haben keine Berechtigung, sie anzuzeigen."
     }
   },
   "sub_work_item": {

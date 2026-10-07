@@ -28,7 +28,21 @@
     "pi_chat": "Infinity Planning AI",
     "epics": "Epiche",
     "upgrade_plan": "Piano di aggiornamento",
-    "plane_pro": "Plane Pro",
-    "business": "Business"
+    "plane_pro": "Infinity Planning",
+    "business": "Business",
+    "rename_folder": "Rinomina cartella"
+  },
+  "top_navigation": {
+    "search_commands": "Cerca comandi..."
+  },
+  "app_rail": {
+    "icon_only": "Solo icona",
+    "icon_with_name": "Icona con nome",
+    "dock": "Ancora la barra delle app",
+    "undock": "Sgancia la barra delle app"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Nascondi nel menu Altro",
+    "show": "Mostra"
   }
 }

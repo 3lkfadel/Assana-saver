@@ -118,6 +118,7 @@ export function NameColumn(props: NameProps) {
 }
 
 export const AccountTypeColumn = observer(function AccountTypeColumn(props: AccountTypeProps) {
+  const { t } = useTranslation();
   const { rowData, workspaceSlug } = props;
   // form info
   const { control } = useForm();
@@ -164,7 +165,7 @@ export const AccountTypeColumn = observer(function AccountTypeColumn(props: Acco
 
                     setToast({
                       type: "error",
-                      title: "Error!",
+                      title: t("toast.error"),
                       message: errorString ?? "An error occurred while updating member role. Please try again.",
                     });
                   });

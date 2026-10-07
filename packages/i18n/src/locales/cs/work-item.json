@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Zobrazit podřízené položky",
         "show_empty_groups": "Zobrazit prázdné skupiny"
-      }
+      },
+      "sub_group_by": "Podseskupit podle"
     },
     "layouts": {
       "ordered_by_label": "Toto rozložení je řazeno podle",
@@ -268,6 +269,10 @@
       "click_to_downvote": "Klikněte pro hlasování dolů",
       "click_to_view_upvotes": "Klikněte pro zobrazení hlasů nahoru",
       "click_to_view_downvotes": "Klikněte pro zobrazení hlasů dolů"
+    },
+    "view_not_found": {
+      "title": "Zobrazení neexistuje",
+      "description": "Hledané zobrazení neexistuje nebo k němu nemáte oprávnění."
     }
   },
   "sub_work_item": {

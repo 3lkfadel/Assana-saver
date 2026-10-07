@@ -29,6 +29,20 @@
     "epics": "Epiky",
     "upgrade_plan": "Apgrejd plán",
     "plane_pro": "Plejn Pro",
-    "business": "Biznis"
+    "business": "Biznis",
+    "rename_folder": "Premenovať priečinok"
+  },
+  "top_navigation": {
+    "search_commands": "Hľadať príkazy..."
+  },
+  "app_rail": {
+    "icon_only": "Iba ikona",
+    "icon_with_name": "Ikona s názvom",
+    "dock": "Ukotviť panel aplikácií",
+    "undock": "Uvoľniť panel aplikácií"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Skryť v ponuke Ďalšie",
+    "show": "Zobraziť"
   }
 }

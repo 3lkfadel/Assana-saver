@@ -373,6 +373,11 @@
           "message": "Bir şeyler ters gitti."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Yetkiniz yok",
+      "description": "Bu çalışma alanının üyesi değilsiniz. Bir çalışma alanı yöneticisinden davet isteyin veya bekleyen davetlerinizi kontrol edin.",
+      "check_pending_invites": "Bekleyen davetleri gör"
     }
   }
 }

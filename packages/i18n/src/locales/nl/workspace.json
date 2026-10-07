@@ -373,6 +373,11 @@
           "message": "Er ging iets mis."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Geen toegang",
+      "description": "U bent geen lid van deze werkruimte. Vraag een beheerder van de werkruimte om een uitnodiging of bekijk uw openstaande uitnodigingen.",
+      "check_pending_invites": "Openstaande uitnodigingen bekijken"
     }
   }
 }

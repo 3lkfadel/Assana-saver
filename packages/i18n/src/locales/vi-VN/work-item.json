@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Hiển thị mục công việc con",
         "show_empty_groups": "Hiển thị nhóm trống"
-      }
+      },
+      "sub_group_by": "Nhóm con theo"
     },
     "layouts": {
       "ordered_by_label": "Bố cục này được sắp xếp theo",
@@ -268,6 +269,10 @@
       "click_to_downvote": "Nhấp để bỏ phiếu chống",
       "click_to_view_upvotes": "Nhấp để xem phiếu thuận",
       "click_to_view_downvotes": "Nhấp để xem phiếu chống"
+    },
+    "view_not_found": {
+      "title": "Chế độ xem không tồn tại",
+      "description": "Chế độ xem bạn đang tìm không tồn tại hoặc bạn không có quyền xem."
     }
   },
   "sub_work_item": {

@@ -29,6 +29,20 @@
     "epics": "Эпики",
     "upgrade_plan": "Апгрейд план",
     "plane_pro": "Плейн Про",
-    "business": "Бизнес"
+    "business": "Бизнес",
+    "rename_folder": "Переименовать папку"
+  },
+  "top_navigation": {
+    "search_commands": "Поиск команд..."
+  },
+  "app_rail": {
+    "icon_only": "Только значок",
+    "icon_with_name": "Значок с названием",
+    "dock": "Закрепить панель приложений",
+    "undock": "Открепить панель приложений"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Скрыть в меню «Ещё»",
+    "show": "Показать"
   }
 }

@@ -7,6 +7,7 @@
 import { useMemo, useState } from "react";
 import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
+import { useTranslation } from "@plane/i18n";
 // plane ui
 import { Avatar } from "@makeplane/propel/components/avatar";
 import { Loader } from "@plane/blocks/skeleton";
@@ -26,6 +27,7 @@ type Props = {
 };
 
 export const FilterMentions = observer(function FilterMentions(props: Props) {
+  const { t } = useTranslation();
   const { appliedFilters, handleUpdate, memberIds, searchQuery } = props;
   // states
   const [itemsToRender, setItemsToRender] = useState(5);
@@ -75,7 +77,7 @@ export const FilterMentions = observer(function FilterMentions(props: Props) {
                   return (
                     <FilterOption
                       key={`mentions-${member.id}`}
-                      isChecked={appliedFilters?.includes(member.id) ? true : false}
+                      isChecked={Boolean(appliedFilters?.includes(member.id))}
                       onClick={() => handleUpdate(member.id)}
                       icon={
                         <Avatar
@@ -100,7 +102,7 @@ export const FilterMentions = observer(function FilterMentions(props: Props) {
                 )}
               </>
             ) : (
-              <p className="text-11 text-placeholder italic">No matches found</p>
+              <p className="text-11 text-placeholder italic">{t("common.search.no_matches_found")}</p>
             )
           ) : (
             <Loader className="space-y-2">

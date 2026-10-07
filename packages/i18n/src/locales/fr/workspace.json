@@ -373,6 +373,11 @@
           "message": "Une erreur s'est produite."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Accès non autorisé",
+      "description": "Vous n’êtes pas membre de cet espace de travail. Demandez une invitation à un administrateur de l’espace ou consultez vos invitations en attente.",
+      "check_pending_invites": "Voir les invitations en attente"
     }
   }
 }

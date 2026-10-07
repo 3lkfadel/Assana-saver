@@ -373,6 +373,11 @@
           "message": "出了些问题。"
         }
       }
+    },
+    "not_a_member": {
+      "title": "无权访问",
+      "description": "您不是此工作区的成员。请向工作区管理员申请邀请，或查看您待处理的邀请。",
+      "check_pending_invites": "查看待处理的邀请"
     }
   }
 }

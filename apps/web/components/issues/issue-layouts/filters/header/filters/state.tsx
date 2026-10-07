@@ -7,6 +7,7 @@
 import React, { useMemo, useState } from "react";
 import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
+import { useTranslation } from "@plane/i18n";
 import { EIconSize } from "@plane/constants";
 import { StateGroupIcon } from "@plane/blocks/icons";
 import type { IState } from "@plane/types";
@@ -24,6 +25,7 @@ type Props = {
 };
 
 export const FilterState = observer(function FilterState(props: Props) {
+  const { t } = useTranslation();
   const { appliedFilters, handleUpdate, searchQuery, states } = props;
 
   const [itemsToRender, setItemsToRender] = useState(5);
@@ -60,7 +62,7 @@ export const FilterState = observer(function FilterState(props: Props) {
                 {sortedOptions.slice(0, itemsToRender).map((state) => (
                   <FilterOption
                     key={state.id}
-                    isChecked={appliedFilters?.includes(state.id) ? true : false}
+                    isChecked={Boolean(appliedFilters?.includes(state.id))}
                     onClick={() => handleUpdate(state.id)}
                     icon={
                       <StateGroupIcon
@@ -84,7 +86,7 @@ export const FilterState = observer(function FilterState(props: Props) {
                 )}
               </>
             ) : (
-              <p className="text-11 text-placeholder italic">No matches found</p>
+              <p className="text-11 text-placeholder italic">{t("common.search.no_matches_found")}</p>
             )
           ) : (
             <Loader className="space-y-2">

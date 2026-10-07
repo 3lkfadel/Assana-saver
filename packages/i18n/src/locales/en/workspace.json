@@ -373,6 +373,11 @@
           "message": "Something went wrong."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Not authorized",
+      "description": "You're not a member of this workspace. Ask a workspace admin for an invitation or check your pending invitations.",
+      "check_pending_invites": "Check pending invites"
     }
   }
 }

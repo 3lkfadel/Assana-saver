@@ -10,6 +10,7 @@ import { useParams, useSearchParams } from "next/navigation";
 import useSWR from "swr";
 // plane imports
 import { ISSUE_DISPLAY_FILTERS_BY_PAGE } from "@plane/constants";
+import { useTranslation } from "@plane/i18n";
 import { EmptyStateDetailed } from "@plane/blocks/empty-state";
 import type { EIssueLayoutTypes } from "@plane/types";
 import { EIssuesStoreType, STATIC_VIEW_TYPES } from "@plane/types";
@@ -33,6 +34,7 @@ type Props = {
 };
 
 export const AllIssueLayoutRoot = observer(function AllIssueLayoutRoot(props: Props) {
+  const { t } = useTranslation();
   const { isDefaultView, isLoading = false, toggleLoading } = props;
   // router
   const router = useAppRouter();
@@ -115,12 +117,12 @@ export const AllIssueLayoutRoot = observer(function AllIssueLayoutRoot(props: Pr
   if (!isLoading && !globalViewsLoading && !issuesLoading && !viewDetails && !isDefaultView) {
     return (
       <EmptyStateDetailed
-        title="View does not exist"
-        description="The view you are looking for does not exist or you don't have permission to view it."
+        title={t("issue.view_not_found.title")}
+        description={t("issue.view_not_found.description")}
         assetKey="view"
         actions={[
           {
-            label: "Go to All work items",
+            label: t("default_global_view.all_issues"),
             onClick: () => router.push(`/${workspaceSlug}/workspace-views/all-issues`),
             variant: "primary",
           },

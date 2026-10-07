@@ -373,6 +373,11 @@
           "message": "Niečo sa pokazilo."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Bez oprávnenia",
+      "description": "Nie ste členom tohto pracovného priestoru. Požiadajte správcu pracovného priestoru o pozvánku alebo skontrolujte svoje čakajúce pozvánky.",
+      "check_pending_invites": "Zobraziť čakajúce pozvánky"
     }
   }
 }

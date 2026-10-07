@@ -28,7 +28,21 @@
     "pi_chat": "Infinity Planning AI",
     "epics": "Epics",
     "upgrade_plan": "Upgrade plan",
-    "plane_pro": "Plane Pro",
-    "business": "Business"
+    "plane_pro": "Infinity Planning",
+    "business": "Business",
+    "rename_folder": "საქაღალდის გადარქმევა"
+  },
+  "top_navigation": {
+    "search_commands": "ბრძანებების ძიება..."
+  },
+  "app_rail": {
+    "icon_only": "მხოლოდ ხატულა",
+    "icon_with_name": "ხატულა სახელით",
+    "dock": "აპლიკაციების ზოლის მიმაგრება",
+    "undock": "აპლიკაციების ზოლის მოხსნა"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "„მეტი“ მენიუში დამალვა",
+    "show": "ჩვენება"
   }
 }

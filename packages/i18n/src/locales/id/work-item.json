@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Tampilkan sub-item kerja",
         "show_empty_groups": "Tampilkan grup kosong"
-      }
+      },
+      "sub_group_by": "Subkelompokkan menurut"
     },
     "layouts": {
       "ordered_by_label": "Tata letak ini diurutkan berdasarkan",
@@ -268,6 +269,10 @@
       "click_to_downvote": "Klik untuk memberi suara turun",
       "click_to_view_upvotes": "Klik untuk melihat suara naik",
       "click_to_view_downvotes": "Klik untuk melihat suara turun"
+    },
+    "view_not_found": {
+      "title": "Tampilan tidak ada",
+      "description": "Tampilan yang Anda cari tidak ada atau Anda tidak memiliki izin untuk melihatnya."
     }
   },
   "sub_work_item": {

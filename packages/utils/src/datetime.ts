@@ -5,7 +5,34 @@
  */
 
 import { differenceInDays, format, formatDistanceToNow, isAfter, isEqual, isValid, parseISO } from "date-fns";
+import type { Locale } from "date-fns";
+import { fr } from "date-fns/locale/fr";
 import { isNumber } from "lodash-es";
+
+// Display language of the dates: English month order, or French day-first order with French names.
+let dateLocale: Locale | undefined;
+
+// French order of the display formats used below ("07 oct. 2026" instead of "Oct 07, 2026").
+const FRENCH_FORMATS: Record<string, string> = {
+  "MMM dd, yyyy": "dd MMM yyyy",
+  "MMM dd": "dd MMM",
+  "MMM, yyyy": "MMM yyyy",
+  "hh:mm a": "HH:mm",
+};
+
+/**
+ * @description Sets the language of the dates this module displays. Call it when the interface language changes.
+ * @param {string} language interface language code, e.g. "fr" or "en"
+ */
+export const setDateLocale = (language: string): void => {
+  dateLocale = language === "fr" ? fr : undefined;
+};
+
+/** Formats a date for display in the current date language. Payload dates must use `format` directly. */
+const formatForDisplay = (date: Date, formatToken: string): string =>
+  dateLocale
+    ? format(date, FRENCH_FORMATS[formatToken] ?? formatToken, { locale: dateLocale })
+    : format(date, formatToken);
 
 // Format Date Helpers
 /**
@@ -29,10 +56,10 @@ export const renderFormattedDate = (
   let formattedDate;
   try {
     // Format the date in the format provided or default format (MMM dd, yyyy)
-    formattedDate = format(parsedDate, formatToken);
+    formattedDate = formatForDisplay(parsedDate, formatToken);
   } catch (_e) {
     // Format the date in format (MMM dd, yyyy) in case of any error
-    formattedDate = format(parsedDate, "MMM dd, yyyy");
+    formattedDate = formatForDisplay(parsedDate, "MMM dd, yyyy");
   }
   return formattedDate;
 };
@@ -51,7 +78,7 @@ export const renderFormattedDateWithoutYear = (date: string | Date): string => {
   // Check if the parsed date is valid before formatting
   if (!isValid(parsedDate)) return ""; // Return empty string for invalid dates
   // Format the date in short format (MMM dd)
-  const formattedDate = format(parsedDate, "MMM dd");
+  const formattedDate = formatForDisplay(parsedDate, "MMM dd");
   return formattedDate;
 };
 
@@ -91,7 +118,7 @@ export const renderFormattedTime = (date: string | Date, timeFormat: "12-hour" |
   if (!isValid(parsedDate)) return ""; // Return empty string for invalid dates
   // Format the date in 12 hour format if in12HourFormat is true
   if (timeFormat === "12-hour") {
-    const formattedTime = format(parsedDate, "hh:mm a");
+    const formattedTime = formatForDisplay(parsedDate, "hh:mm a");
     return formattedTime;
   }
   // Format the date in 24 hour format
@@ -175,7 +202,7 @@ export const calculateTimeAgo = (time: string | number | Date | null): string =>
   // return if undefined
   if (!parsedTime) return ""; // Return empty string for invalid dates
   // Format the time in the form of amount of time passed since the event happened
-  const distance = formatDistanceToNow(parsedTime, { addSuffix: true });
+  const distance = formatDistanceToNow(parsedTime, { addSuffix: true, locale: dateLocale });
   return distance;
 };
 
@@ -284,7 +311,7 @@ export const getDate = (date: string | Date | undefined | null): Date | undefine
   try {
     if (!date || date === "") return;
 
-    if (typeof date !== "string" && !(date instanceof String)) return date;
+    if (typeof date !== "string") return date;
 
     const [yearString, monthString, dayString] = date.substring(0, 10).split("-");
     const year = parseInt(yearString);
@@ -400,7 +427,7 @@ export const generateDateArray = (startDate: string | Date, endDate: string | Da
   const dateArray = [];
 
   // Use a while loop to generate dates between the range
-  while (start <= end) {
+  while (start.getTime() <= end.getTime()) {
     // Push the current date (converted to ISO string for consistency)
     dateArray.push({
       date: new Date(start).toISOString().split("T")[0],
@@ -500,12 +527,12 @@ export const formatDateRange = (
 
   // If only start date is provided
   if (parsedStartDate && !parsedEndDate) {
-    return format(parsedStartDate, "MMM dd, yyyy");
+    return formatForDisplay(parsedStartDate, "MMM dd, yyyy");
   }
 
   // If only end date is provided
   if (!parsedStartDate && parsedEndDate) {
-    return format(parsedEndDate, "MMM dd, yyyy");
+    return formatForDisplay(parsedEndDate, "MMM dd, yyyy");
   }
 
   // If both dates are provided
@@ -519,19 +546,22 @@ export const formatDateRange = (
     if (startYear === endYear && startMonth === endMonth) {
       const startDay = format(parsedStartDate, "dd");
       const endDay = format(parsedEndDate, "dd");
-      return `${format(parsedStartDate, "MMM")} ${startDay} - ${endDay}, ${startYear}`;
+      const month = formatForDisplay(parsedStartDate, "MMM");
+      if (dateLocale) return `${startDay} - ${endDay} ${month} ${startYear}`;
+      return `${month} ${startDay} - ${endDay}, ${startYear}`;
     }
 
     // Same year, different month
     if (startYear === endYear) {
-      const startFormatted = format(parsedStartDate, "MMM dd");
-      const endFormatted = format(parsedEndDate, "MMM dd");
+      const startFormatted = formatForDisplay(parsedStartDate, "MMM dd");
+      const endFormatted = formatForDisplay(parsedEndDate, "MMM dd");
+      if (dateLocale) return `${startFormatted} - ${endFormatted} ${startYear}`;
       return `${startFormatted} - ${endFormatted}, ${startYear}`;
     }
 
     // Different year
-    const startFormatted = format(parsedStartDate, "MMM dd, yyyy");
-    const endFormatted = format(parsedEndDate, "MMM dd, yyyy");
+    const startFormatted = formatForDisplay(parsedStartDate, "MMM dd, yyyy");
+    const endFormatted = formatForDisplay(parsedEndDate, "MMM dd, yyyy");
     return `${startFormatted} - ${endFormatted}`;
   }
 

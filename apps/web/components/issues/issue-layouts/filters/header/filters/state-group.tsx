@@ -6,6 +6,7 @@
 
 import React, { useState } from "react";
 import { observer } from "mobx-react";
+import { useTranslation } from "@plane/i18n";
 // plane imports
 import { STATE_GROUPS } from "@plane/constants";
 import { StateGroupIcon } from "@plane/blocks/icons";
@@ -19,6 +20,7 @@ type Props = {
 };
 
 export const FilterStateGroup = observer(function FilterStateGroup(props: Props) {
+  const { t } = useTranslation();
   const { appliedFilters, handleUpdate, searchQuery } = props;
 
   const [itemsToRender, setItemsToRender] = useState(5);
@@ -49,7 +51,7 @@ export const FilterStateGroup = observer(function FilterStateGroup(props: Props)
               {filteredOptions.slice(0, itemsToRender).map((stateGroup) => (
                 <FilterOption
                   key={stateGroup.key}
-                  isChecked={appliedFilters?.includes(stateGroup.key) ? true : false}
+                  isChecked={Boolean(appliedFilters?.includes(stateGroup.key))}
                   onClick={() => handleUpdate(stateGroup.key)}
                   icon={<StateGroupIcon stateGroup={stateGroup.key} />}
                   title={stateGroup.label}
@@ -66,7 +68,7 @@ export const FilterStateGroup = observer(function FilterStateGroup(props: Props)
               )}
             </>
           ) : (
-            <p className="text-11 text-placeholder italic">No matches found</p>
+            <p className="text-11 text-placeholder italic">{t("common.search.no_matches_found")}</p>
           )}
         </div>
       )}

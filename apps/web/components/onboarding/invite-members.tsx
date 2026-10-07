@@ -228,6 +228,7 @@ const InviteMemberInput = observer(function InviteMemberInput(props: InviteMembe
 });
 
 export function InviteMembers(props: Props) {
+  const { t } = useTranslation();
   const { finishOnboarding, workspace } = props;
 
   const [isInvitationDisabled, setIsInvitationDisabled] = useState(true);
@@ -266,7 +267,7 @@ export function InviteMembers(props: Props) {
       .then(async () => {
         setToast({
           type: "success",
-          title: "Success!",
+          title: t("toast.success"),
           message: "Invitations sent successfully.",
         });
         await nextStep();
@@ -275,7 +276,7 @@ export function InviteMembers(props: Props) {
       .catch((err) => {
         setToast({
           type: "error",
-          title: "Error!",
+          title: t("toast.error"),
           message: err?.error,
         });
       });

@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "サブ作業項目を表示",
         "show_empty_groups": "空のグループを表示"
-      }
+      },
+      "sub_group_by": "サブグループ化"
     },
     "layouts": {
       "ordered_by_label": "このレイアウトは次の順序で並べ替えられています：",
@@ -268,6 +269,10 @@
       "click_to_downvote": "クリックして反対票を投じる",
       "click_to_view_upvotes": "クリックして賛成票を表示",
       "click_to_view_downvotes": "クリックして反対票を表示"
+    },
+    "view_not_found": {
+      "title": "ビューが存在しません",
+      "description": "お探しのビューは存在しないか、表示する権限がありません。"
     }
   },
   "sub_work_item": {

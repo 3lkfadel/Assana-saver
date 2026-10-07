@@ -373,6 +373,11 @@
           "message": "Qualcosa è andato storto."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Non autorizzato",
+      "description": "Non è membro di questo spazio di lavoro. Chieda un invito a un amministratore dello spazio di lavoro o controlli i suoi inviti in sospeso.",
+      "check_pending_invites": "Vedi inviti in sospeso"
     }
   }
 }

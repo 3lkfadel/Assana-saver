@@ -9,6 +9,7 @@ import { observer } from "mobx-react";
 import { useParams, usePathname } from "next/navigation";
 import { PlaneLogo } from "@plane/blocks/icons";
 import { cn } from "@plane/utils";
+import { useTranslation } from "@plane/i18n";
 import { TopNavPowerK } from "@/components/navigation";
 import { HelpMenuRoot } from "@/components/workspace/sidebar/help-section/root";
 import { UserMenuRoot } from "@/components/workspace/sidebar/user-menu-root";
@@ -21,6 +22,7 @@ import useSWR from "swr";
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
 
 export const TopNavigationRoot = observer(function TopNavigationRoot() {
+  const { t } = useTranslation();
   // router
   const { workspaceSlug } = useParams();
   const pathname = usePathname();
@@ -60,7 +62,7 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
       </div>
       {/* Additional Actions */}
       <div className="flex flex-1 shrink-0 items-center justify-end gap-1">
-        <Tooltip label="Inbox" side="bottom">
+        <Tooltip label={t("sidebar.inbox")} side="bottom">
           <AppSidebarItem
             variant="link"
             item={{

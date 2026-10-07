@@ -373,6 +373,11 @@
           "message": "Coś poszło nie tak."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Brak uprawnień",
+      "description": "To konto nie należy do tego obszaru roboczego. Zaproszenie można uzyskać od administratora obszaru roboczego lub sprawdzić oczekujące zaproszenia.",
+      "check_pending_invites": "Sprawdź oczekujące zaproszenia"
     }
   }
 }

@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Show sub-work items",
         "show_empty_groups": "Show empty groups"
-      }
+      },
+      "sub_group_by": "Sub-group by"
     },
     "layouts": {
       "ordered_by_label": "This layout is ordered by",
@@ -268,6 +269,10 @@
       "click_to_downvote": "Click to downvote",
       "click_to_view_upvotes": "Click to view upvotes",
       "click_to_view_downvotes": "Click to view downvotes"
+    },
+    "view_not_found": {
+      "title": "View does not exist",
+      "description": "The view you are looking for does not exist or you don't have permission to view it."
     }
   },
   "sub_work_item": {

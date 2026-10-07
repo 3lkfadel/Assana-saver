@@ -42,7 +42,7 @@ function AutomationSettingsPage({ params }: Route.ComponentProps) {
     } catch {
       setToast({
         type: "error",
-        title: "Error!",
+        title: t("toast.error"),
         message: "Something went wrong. Please try again.",
       });
     }

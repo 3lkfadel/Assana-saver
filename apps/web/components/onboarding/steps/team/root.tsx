@@ -224,6 +224,7 @@ const InviteMemberInput = observer(function InviteMemberInput(props: InviteMembe
 });
 
 export const InviteTeamStep = observer(function InviteTeamStep(props: Props) {
+  const { t } = useTranslation();
   const { handleStepChange } = props;
 
   const [isInvitationDisabled, setIsInvitationDisabled] = useState(true);
@@ -266,7 +267,7 @@ export const InviteTeamStep = observer(function InviteTeamStep(props: Props) {
       .then(async () => {
         setToast({
           type: "success",
-          title: "Success!",
+          title: t("toast.success"),
           message: "Invitations sent successfully.",
         });
         await nextStep();
@@ -275,7 +276,7 @@ export const InviteTeamStep = observer(function InviteTeamStep(props: Props) {
       .catch((err) => {
         setToast({
           type: "error",
-          title: "Error!",
+          title: t("toast.error"),
           message: err?.error,
         });
       });

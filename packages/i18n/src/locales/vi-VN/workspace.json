@@ -373,6 +373,11 @@
           "message": "Đã xảy ra lỗi."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Không có quyền truy cập",
+      "description": "Bạn không phải là thành viên của không gian làm việc này. Hãy yêu cầu quản trị viên không gian làm việc gửi lời mời hoặc kiểm tra các lời mời đang chờ.",
+      "check_pending_invites": "Xem lời mời đang chờ"
     }
   }
 }

@@ -11,6 +11,7 @@ import { useParams } from "next/navigation";
 // hooks
 import { CloseOutline, SearchOutline } from "@makeplane/propel/icons";
 import { cn } from "@plane/utils";
+import { useTranslation } from "@plane/i18n";
 // power-k
 import type { TPowerKCommandConfig, TPowerKContext } from "@/components/power-k/core/types";
 import { ProjectsAppPowerKCommandsList } from "@/components/power-k/ui/modal/commands-list";
@@ -22,6 +23,7 @@ import { useAppRouter } from "@/hooks/use-app-router";
 import { useExpandableSearch } from "@/hooks/use-expandable-search";
 
 export const TopNavPowerK = observer(() => {
+  const { t } = useTranslation();
   // router
   const router = useAppRouter();
   const params = useParams();
@@ -101,7 +103,7 @@ export const TopNavPowerK = observer(() => {
     return () => {
       setTopNavInputRef(null);
     };
-  }, [setTopNavInputRef]);
+  }, [setTopNavInputRef, inputRef]);
 
   const handleClear = () => {
     setSearchTerm("");
@@ -203,7 +205,7 @@ export const TopNavPowerK = observer(() => {
         return;
       }
     },
-    [searchTerm, activePage, context, shouldShowContextBasedActions, setActivePage, closePanel]
+    [searchTerm, activePage, context, shouldShowContextBasedActions, setActivePage, closePanel, isOpen, containerRef]
   );
 
   return (
@@ -213,15 +215,13 @@ export const TopNavPowerK = observer(() => {
           "w-[554px]": isOpen,
         })}
       >
-        <div
+        <label
           className={cn(
             "flex h-7 w-full items-center rounded-lg border border-subtle-1 bg-layer-2 p-2 transition-colors duration-200",
             {
               "bg-layer-1": isOpen,
             }
           )}
-          onClick={() => inputRef.current?.focus()}
-          role="button"
         >
           <SearchOutline className="mr-2 size-3.5 shrink-0 text-placeholder" />
           <input
@@ -235,7 +235,7 @@ export const TopNavPowerK = observer(() => {
             onMouseDown={handleMouseDown}
             onFocus={handleFocus}
             onKeyDown={handleKeyDown}
-            placeholder="Search commands..."
+            placeholder={t("top_navigation.search_commands")}
             className="placeholder-text-placeholder min-w-0 flex-1 bg-transparent text-13 text-primary outline-none"
           />
           {searchTerm && (
@@ -243,7 +243,7 @@ export const TopNavPowerK = observer(() => {
               <CloseOutline className="size-3.5 text-placeholder hover:text-primary" />
             </button>
           )}
-        </div>
+        </label>
       </div>
       <div
         className={cn(

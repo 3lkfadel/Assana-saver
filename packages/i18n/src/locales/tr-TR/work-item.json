@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Alt iş öğelerini göster",
         "show_empty_groups": "Boş grupları göster"
-      }
+      },
+      "sub_group_by": "Alt gruplama ölçütü"
     },
     "layouts": {
       "ordered_by_label": "Bu düzen şu şekilde sıralanmıştır",
@@ -268,6 +269,10 @@
       "click_to_downvote": "Olumsuz oy vermek için tıklayın",
       "click_to_view_upvotes": "Olumlu oyları görüntülemek için tıklayın",
       "click_to_view_downvotes": "Olumsuz oyları görüntülemek için tıklayın"
+    },
+    "view_not_found": {
+      "title": "Görünüm mevcut değil",
+      "description": "Aradığınız görünüm mevcut değil veya görüntüleme izniniz yok."
     }
   },
   "sub_work_item": {

@@ -373,6 +373,11 @@
           "message": "Algo deu errado."
         }
       }
+    },
+    "not_a_member": {
+      "title": "Não autorizado",
+      "description": "Você não é membro deste espaço de trabalho. Peça um convite a um administrador do espaço de trabalho ou verifique seus convites pendentes.",
+      "check_pending_invites": "Ver convites pendentes"
     }
   }
 }

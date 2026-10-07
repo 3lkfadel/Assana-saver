@@ -373,6 +373,11 @@
           "message": "Algo salió mal."
         }
       }
+    },
+    "not_a_member": {
+      "title": "No autorizado",
+      "description": "No es miembro de este espacio de trabajo. Solicite una invitación a un administrador del espacio de trabajo o revise sus invitaciones pendientes.",
+      "check_pending_invites": "Ver invitaciones pendientes"
     }
   }
 }

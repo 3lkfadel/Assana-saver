@@ -29,6 +29,20 @@
     "epics": "史詩",
     "upgrade_plan": "升級方案",
     "plane_pro": "平面專業版",
-    "business": "商業"
+    "business": "商業",
+    "rename_folder": "重新命名資料夾"
+  },
+  "top_navigation": {
+    "search_commands": "搜尋命令…"
+  },
+  "app_rail": {
+    "icon_only": "僅圖示",
+    "icon_with_name": "圖示和名稱",
+    "dock": "固定應用程式列",
+    "undock": "取消固定應用程式列"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "在「更多」選單中隱藏",
+    "show": "顯示"
   }
 }

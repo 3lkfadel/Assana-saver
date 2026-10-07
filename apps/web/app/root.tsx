@@ -30,6 +30,7 @@ import { CustomErrorComponent } from "./error";
 /* oxlint-disable import/no-unassigned-import */
 import "@fontsource-variable/inter";
 import interVariableWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import "@fontsource-variable/jost";
 import "@fontsource/material-symbols-rounded";
 import "@fontsource/ibm-plex-mono";
 /* oxlint-enable import/no-unassigned-import */

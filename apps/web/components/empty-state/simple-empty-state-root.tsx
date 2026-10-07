@@ -7,6 +7,8 @@
 import { observer } from "mobx-react";
 // utils
 import { cn } from "@plane/utils";
+// local imports
+import { InfinityEmptyMark } from "./infinity-empty-mark";
 
 type EmptyStateSize = "sm" | "lg";
 
@@ -41,7 +43,7 @@ export const SimpleEmptyState = observer(function SimpleEmptyState(props: Props)
     <div className="flex flex-col items-center gap-2.5 text-center">
       {assetPath && (
         <div className={sizeConfig[size].container}>
-          <img src={assetPath} alt={title} className="h-full w-full object-contain" />
+          <InfinityEmptyMark variant="mark" className="h-full w-full" />
         </div>
       )}
 

@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Trial ends in {days, plural, one {# day} other {# days}}",
       "start_subscription": "Start subscription",
       "explore_business_features": "Explore Business features"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

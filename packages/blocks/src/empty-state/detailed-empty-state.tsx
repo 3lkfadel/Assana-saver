@@ -65,7 +65,7 @@ export function EmptyStateDetailed({
         >
           {(title || description) && (
             <div className="flex flex-col gap-2">
-              {title && <h3 className="text-h6-semibold leading-7 text-primary">{title}</h3>}
+              {title && <h3 className="font-heading text-h5-medium leading-7 tracking-tight text-primary">{title}</h3>}
               {description && <p className="text-body-xs-regular leading-5 text-tertiary">{description}</p>}
             </div>
           )}

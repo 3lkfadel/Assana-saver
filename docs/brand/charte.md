@@ -36,5 +36,8 @@ Relevée le 2026-10-07 sur [infinity-africa.com](https://infinity-africa.com/) (
 
 - **Logo** : le symbole Infinity du groupe suivi de « Planning » (ou « Infinity Planning ») en Inter, redessiné en SVG en deux versions, pour fond clair et pour fond sombre. À faire valider par la communication du groupe si elle encadre l'usage du symbole.
 - **Couleur principale** : anthracite `#2A2D2F` pour les boutons, la navigation et la sélection. Le carmin `#DC143C` est réservé aux moments de marque (logo, page de connexion, célébration de tâche terminée). Les alertes (retard, erreur, suppression) utilisent un rouge distinct du carmin.
-- **Police** : Inter partout. Century Gothic n'est pas intégrée.
+- **Police** : Jost (libre, géométrique, proche de Century Gothic) pour les titres, le message d'accueil, le fil d'Ariane et l'écran de connexion ; Inter pour le texte courant et les listes denses. Century Gothic n'est pas intégrée.
+- **Formes** : coins de 8 px pour les contrôles et de 12 px pour les cartes ; ombres teintées anthracite.
+- **Navigation** : cadre anthracite ; l'élément actif est une pastille blanc givré (`ip-nav-on`, générée par `tools/brand/build-nav-theme.mjs`).
+- **États vides** : le symbole Infinity aux couleurs d'illustration du thème (pervenche douce `#D5D6F4`, gris cadet) remplace les illustrations de Plane.
 - **Thème** : clair par défaut, avec un thème sombre « Infinity » au choix.

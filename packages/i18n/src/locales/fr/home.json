@@ -72,6 +72,11 @@
       "trial_ends_in_days": "L'essai se termine dans {days, plural, one {# jour} other {# jours}}",
       "start_subscription": "Démarrer l'abonnement",
       "explore_business_features": "Explorer les fonctionnalités Business"
+    },
+    "greeting": {
+      "morning": "Bonjour, {name}",
+      "afternoon": "Bon après-midi, {name}",
+      "evening": "Bonsoir, {name}"
     }
   }
 }

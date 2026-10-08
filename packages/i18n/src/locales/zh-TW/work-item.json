@@ -82,6 +82,14 @@
         "calendar": "日曆版面配置",
         "spreadsheet": "試算表版面配置",
         "gantt": "甘特圖版面配置"
+      },
+      "board_columns": {
+        "add_column": "新增欄",
+        "column_name": "欄名稱",
+        "category": "類別",
+        "created": "已建立欄。",
+        "already_exists": "已存在同名的欄。",
+        "create_error": "無法建立欄，請再試一次。"
       }
     },
     "states": {

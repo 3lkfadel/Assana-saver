@@ -245,7 +245,7 @@
   "full_changelog": "전체 변경 로그",
   "support": "지원",
   "forum": "Forum",
-  "powered_by_plane_pages": "Infinity Planning 제공",
+  "powered_by_plane_pages": "Infinity Planning Pages 제공",
   "please_select_at_least_one_invitation": "최소 하나의 초대를 선택하세요.",
   "please_select_at_least_one_invitation_description": "작업 공간에 참여하려면 최소 하나의 초대를 선택하세요.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "누군가가 작업 공간에 참여하도록 초대했습니다",
@@ -885,6 +885,52 @@
       "sign_in_sub_header": "Sign in to Infinity Planning.",
       "sign_up_header": "Welcome.",
       "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "AI 어시스턴트",
+    "open": "AI 어시스턴트 열기",
+    "subtitle": "프로젝트의 진행 상황, 마감일, 업무량에 대해 질문할 수 있습니다.",
+    "placeholder": "프로젝트에 대해 질문하세요…",
+    "send": "보내기",
+    "stop": "중지",
+    "new_conversation": "새 대화",
+    "close": "닫기",
+    "read_only_note": "읽기 전용: 어시스턴트는 프로젝트를 조회만 하며 변경하지 않습니다.",
+    "context_work_item": "이 작업 항목에 대해",
+    "context_project": "이 프로젝트에 대해",
+    "suggestions": {
+      "overdue": "마감일이 지난 작업 항목은 무엇인가요?",
+      "workload": "진행 중인 작업 항목이 가장 많은 사람은 누구인가요?",
+      "projects": "내 프로젝트 현황을 요약해 주세요."
+    },
+    "actions": {
+      "work_item": "AI에게 묻기",
+      "project": "지연 보고서 (AI)"
+    },
+    "prompts": {
+      "work_item": "이 작업 항목의 현황은 어떤가요? 마감일을 지켰나요?",
+      "project": "이 프로젝트의 현황을 요약해 주세요: 진행 상황, 지연, 관련자."
+    },
+    "tools": {
+      "list_projects": "프로젝트 목록을 불러오는 중…",
+      "search_work_items": "작업 항목을 검색하는 중…",
+      "get_work_item": "작업 항목을 읽는 중…",
+      "project_progress": "프로젝트 진행률을 계산하는 중…",
+      "deadline_report": "마감일을 확인하는 중…",
+      "member_workload": "업무량을 측정하는 중…",
+      "default": "데이터를 조회하는 중…"
+    },
+    "errors": {
+      "refusal": "어시스턴트가 이 요청을 거절했습니다. 다르게 표현해 보십시오.",
+      "truncated": "답변이 너무 길어 잘렸습니다. 더 구체적으로 질문해 주십시오.",
+      "too_many_steps": "질문에 너무 많은 조회가 필요했습니다. 더 구체적으로 질문해 주십시오.",
+      "invalid_api_key": "Anthropic API 키가 유효하지 않습니다. 인스턴스 관리자에게 업데이트를 요청하십시오.",
+      "permission_denied": "Anthropic API 키에 이 모델에 대한 액세스 권한이 없습니다.",
+      "model_not_found": "구성된 Claude 모델이 존재하지 않습니다. 인스턴스 관리자에게 확인을 요청하십시오.",
+      "rate_limited": "현재 Claude에 대한 요청이 너무 많습니다. 잠시 후 다시 시도하십시오.",
+      "connection_error": "Claude에 연결할 수 없습니다. 서버의 인터넷 연결을 확인하십시오.",
+      "generic": "오류가 발생했습니다. 다시 시도하십시오."
     }
   }
 }

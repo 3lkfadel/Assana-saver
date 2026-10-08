@@ -82,6 +82,14 @@
         "calendar": "Agendaweergave",
         "spreadsheet": "Tabelweergave",
         "gantt": "Tijdlijnweergave"
+      },
+      "board_columns": {
+        "add_column": "Kolom toevoegen",
+        "column_name": "Kolomnaam",
+        "category": "Categorie",
+        "created": "Kolom aangemaakt.",
+        "already_exists": "Er bestaat al een kolom met deze naam.",
+        "create_error": "De kolom kon niet worden aangemaakt. Probeer het opnieuw."
       }
     },
     "states": {

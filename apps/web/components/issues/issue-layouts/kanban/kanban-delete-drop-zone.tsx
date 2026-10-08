@@ -12,6 +12,7 @@ import { observer } from "mobx-react";
 import { useKanbanView } from "@/hooks/store/use-kanban-view";
 // helpers
 import { getSourceFromDropPayload } from "../utils";
+import { isKanbanColumnDrag } from "./draggable-column";
 
 type Props = {
   onRequestDelete: (workItemId: string | undefined) => void;
@@ -33,6 +34,7 @@ export const KanbanDeleteDropZone = observer(function KanbanDeleteDropZone({ onR
     return combine(
       dropTargetForElements({
         element,
+        canDrop: ({ source }) => !isKanbanColumnDrag(source.data),
         getData: () => ({ columnId: "issue-trash-box", groupId: "issue-trash-box", type: "DELETE" }),
         onDragEnter: () => setIsDragOverDelete(true),
         onDragLeave: () => setIsDragOverDelete(false),

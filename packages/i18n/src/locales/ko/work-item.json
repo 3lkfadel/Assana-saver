@@ -82,6 +82,14 @@
         "calendar": "캘린더 레이아웃",
         "spreadsheet": "테이블 레이아웃",
         "gantt": "타임라인 레이아웃"
+      },
+      "board_columns": {
+        "add_column": "열 추가",
+        "column_name": "열 이름",
+        "category": "카테고리",
+        "created": "열이 생성되었습니다.",
+        "already_exists": "이 이름의 열이 이미 존재합니다.",
+        "create_error": "열을 생성할 수 없습니다. 다시 시도해 주십시오."
       }
     },
     "states": {

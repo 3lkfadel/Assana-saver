@@ -308,7 +308,8 @@ export function InviteMembers(props: Props) {
           <div className="mx-auto w-4/5 space-y-1 py-4 text-center">
             <h3 className="text-24 font-bold text-primary">Invite your teammates</h3>
             <p className="font-medium text-placeholder">
-              Work in Infinity Planning happens best with your team. Invite them now to get the most out of it.
+              Work in Infinity Planning happens best with your team. Invite them now to use Infinity Planning to its
+              potential.
             </p>
           </div>
           <form

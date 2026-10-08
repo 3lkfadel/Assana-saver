@@ -245,7 +245,7 @@
   "full_changelog": "Changelog completo",
   "support": "Supporto",
   "forum": "Forum",
-  "powered_by_plane_pages": "Supportato da Infinity Planning",
+  "powered_by_plane_pages": "Supportato da Infinity Planning Pages",
   "please_select_at_least_one_invitation": "Seleziona almeno un invito.",
   "please_select_at_least_one_invitation_description": "Seleziona almeno un invito per unirti allo spazio di lavoro.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "Abbiamo notato che qualcuno ti ha invitato a unirti a uno spazio di lavoro",
@@ -885,6 +885,52 @@
       "sign_in_sub_header": "Sign in to Infinity Planning.",
       "sign_up_header": "Welcome.",
       "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "Assistente IA",
+    "open": "Apri l'assistente IA",
+    "subtitle": "Faccia domande su avanzamento, scadenze e carico di lavoro dei Suoi progetti.",
+    "placeholder": "Faccia una domanda sui Suoi progetti…",
+    "send": "Invia",
+    "stop": "Interrompi",
+    "new_conversation": "Nuova conversazione",
+    "close": "Chiudi",
+    "read_only_note": "Sola lettura: l'assistente consulta i Suoi progetti ma non li modifica mai.",
+    "context_work_item": "Su questo elemento di lavoro",
+    "context_project": "Su questo progetto",
+    "suggestions": {
+      "overdue": "Quali elementi di lavoro sono in ritardo?",
+      "workload": "Chi ha più elementi di lavoro aperti?",
+      "projects": "Mi dia un aggiornamento sui miei progetti."
+    },
+    "actions": {
+      "work_item": "Chiedi all'IA",
+      "project": "Report ritardi (IA)"
+    },
+    "prompts": {
+      "work_item": "Qual è lo stato di questo elemento di lavoro? Ha rispettato la scadenza?",
+      "project": "Mi dia un aggiornamento su questo progetto: avanzamento, ritardi e persone coinvolte."
+    },
+    "tools": {
+      "list_projects": "Elenco dei Suoi progetti…",
+      "search_work_items": "Ricerca degli elementi di lavoro…",
+      "get_work_item": "Lettura dell'elemento di lavoro…",
+      "project_progress": "Calcolo dell'avanzamento del progetto…",
+      "deadline_report": "Verifica delle scadenze…",
+      "member_workload": "Misurazione del carico di lavoro…",
+      "default": "Consultazione dei Suoi dati…"
+    },
+    "errors": {
+      "refusal": "L'assistente ha rifiutato questa richiesta. Provi a riformularla.",
+      "truncated": "La risposta era troppo lunga ed è stata troncata. Faccia una domanda più specifica.",
+      "too_many_steps": "La domanda ha richiesto troppe ricerche. Faccia una domanda più specifica.",
+      "invalid_api_key": "La chiave API di Anthropic non è valida. Chieda a un amministratore dell'istanza di aggiornarla.",
+      "permission_denied": "La chiave API di Anthropic non ha accesso a questo modello.",
+      "model_not_found": "Il modello Claude configurato non esiste. Chieda a un amministratore dell'istanza di verificarlo.",
+      "rate_limited": "Troppe richieste a Claude in questo momento. Riprovi tra poco.",
+      "connection_error": "Impossibile raggiungere Claude. Verifichi la connessione Internet del server.",
+      "generic": "Si è verificato un errore. Riprovi."
     }
   }
 }

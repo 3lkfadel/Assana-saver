@@ -82,6 +82,14 @@
         "calendar": "Tata Letak Kalender",
         "spreadsheet": "Tata Letak Tabel",
         "gantt": "Tata Letak Garis Waktu"
+      },
+      "board_columns": {
+        "add_column": "Tambah kolom",
+        "column_name": "Nama kolom",
+        "category": "Kategori",
+        "created": "Kolom dibuat.",
+        "already_exists": "Kolom dengan nama ini sudah ada.",
+        "create_error": "Kolom tidak dapat dibuat. Silakan coba lagi."
       }
     },
     "states": {

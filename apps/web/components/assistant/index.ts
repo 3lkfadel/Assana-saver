@@ -4,6 +4,5 @@
  * See the LICENSE file for details.
  */
 
-export function AuthFooter() {
-  return null;
-}
+export * from "./quick-action";
+export * from "./trigger";

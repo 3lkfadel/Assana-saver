@@ -43,17 +43,17 @@ export const AdminSidebarHelpSection = observer(function AdminSidebarHelpSection
               className={`relative flex items-center gap-1 rounded-sm bg-layer-1 px-2 py-1 text-body-xs-medium whitespace-nowrap text-secondary`}
             >
               <NewTabOutline width={14} height={14} />
-              {!isSidebarCollapsed && "Open Infinity Planning"}
+              {!isSidebarCollapsed && "Redirect to Infinity Planning"}
             </a>
           </>
         ) : (
-          <Tooltip label="Open Infinity Planning" side="right">
+          <Tooltip label="Redirect to Infinity Planning" side="right">
             <a
               href={redirectionLink}
               className={`relative flex items-center gap-1 rounded-sm bg-layer-1 px-2 py-1 text-body-xs-medium whitespace-nowrap text-secondary`}
             >
               <NewTabOutline width={14} height={14} />
-              {!isSidebarCollapsed && "Open Infinity Planning"}
+              {!isSidebarCollapsed && "Redirect to Infinity Planning"}
             </a>
           </Tooltip>
         )}

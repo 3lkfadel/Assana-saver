@@ -245,7 +245,7 @@
   "full_changelog": "完整更新日志",
   "support": "支持",
   "forum": "Forum",
-  "powered_by_plane_pages": "由Infinity Planning提供支持",
+  "powered_by_plane_pages": "由Infinity Planning Pages提供支持",
   "please_select_at_least_one_invitation": "请至少选择一个邀请。",
   "please_select_at_least_one_invitation_description": "请至少选择一个加入工作区的邀请。",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "我们看到有人邀请您加入工作区",
@@ -885,6 +885,52 @@
       "sign_in_sub_header": "Sign in to Infinity Planning.",
       "sign_up_header": "Welcome.",
       "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "AI 助手",
+    "open": "打开 AI 助手",
+    "subtitle": "询问项目的进度、截止日期和工作量。",
+    "placeholder": "就您的项目提出问题…",
+    "send": "发送",
+    "stop": "停止",
+    "new_conversation": "新对话",
+    "close": "关闭",
+    "read_only_note": "只读：助手只会查看您的项目，不会进行任何修改。",
+    "context_work_item": "关于此工作项",
+    "context_project": "关于此项目",
+    "suggestions": {
+      "overdue": "哪些工作项已逾期？",
+      "workload": "谁的未完成工作项最多？",
+      "projects": "请为我总结项目的现状。"
+    },
+    "actions": {
+      "work_item": "询问 AI",
+      "project": "延期报告（AI）"
+    },
+    "prompts": {
+      "work_item": "此工作项的进展如何？是否按期完成？",
+      "project": "请总结此项目的现状：进度、延期情况及相关人员。"
+    },
+    "tools": {
+      "list_projects": "正在列出您的项目…",
+      "search_work_items": "正在搜索工作项…",
+      "get_work_item": "正在读取工作项…",
+      "project_progress": "正在计算项目进度…",
+      "deadline_report": "正在检查截止日期…",
+      "member_workload": "正在统计工作量…",
+      "default": "正在查询您的数据…"
+    },
+    "errors": {
+      "refusal": "助手拒绝了此请求，请尝试换一种说法。",
+      "truncated": "回答过长已被截断，请提出更具体的问题。",
+      "too_many_steps": "该问题需要的查询过多，请提出更具体的问题。",
+      "invalid_api_key": "Anthropic API 密钥无效，请联系实例管理员更新。",
+      "permission_denied": "Anthropic API 密钥无权访问此模型。",
+      "model_not_found": "所配置的 Claude 模型不存在，请联系实例管理员检查。",
+      "rate_limited": "当前对 Claude 的请求过多，请稍后重试。",
+      "connection_error": "无法连接到 Claude，请检查服务器的网络连接。",
+      "generic": "出现错误，请重试。"
     }
   }
 }

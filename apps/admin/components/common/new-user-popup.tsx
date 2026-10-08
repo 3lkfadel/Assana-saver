@@ -29,7 +29,7 @@ export const NewUserPopup = observer(function NewUserPopup() {
         <div className="grow">
           <div className="text-14 font-semibold">Create workspace</div>
           <div className="py-2 text-13 font-medium text-tertiary">
-            Instance setup done! Welcome to the Infinity Planning instance portal. Start your journey by creating your
+            Instance setup done! Welcome to Infinity Planning instance portal. Start your journey with by creating your
             first workspace.
           </div>
           <div className="flex items-center gap-4 pt-2">

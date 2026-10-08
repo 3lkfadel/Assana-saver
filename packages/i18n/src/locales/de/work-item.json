@@ -82,6 +82,14 @@
         "calendar": "Kalenderlayout",
         "spreadsheet": "Tabellenlayout",
         "gantt": "Zeitachsenlayout"
+      },
+      "board_columns": {
+        "add_column": "Spalte hinzufügen",
+        "column_name": "Spaltenname",
+        "category": "Kategorie",
+        "created": "Spalte erstellt.",
+        "already_exists": "Eine Spalte mit diesem Namen existiert bereits.",
+        "create_error": "Die Spalte konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
       }
     },
     "states": {

@@ -173,6 +173,6 @@ const InstanceAuthenticationPage = observer(function InstanceAuthenticationPage(
   );
 });
 
-export const meta: Route.MetaFunction = () => [{ title: "Authentication Settings - Infinity Planning" }];
+export const meta: Route.MetaFunction = () => [{ title: "Authentication Settings - Infinity Planning Web" }];
 
 export default InstanceAuthenticationPage;

@@ -82,6 +82,14 @@
         "calendar": "Układ kalendarza",
         "spreadsheet": "Układ arkusza",
         "gantt": "Układ osi czasu"
+      },
+      "board_columns": {
+        "add_column": "Dodaj kolumnę",
+        "column_name": "Nazwa kolumny",
+        "category": "Kategoria",
+        "created": "Kolumna została utworzona.",
+        "already_exists": "Kolumna o tej nazwie już istnieje.",
+        "create_error": "Nie udało się utworzyć kolumny. Prosimy spróbować ponownie."
       }
     },
     "states": {

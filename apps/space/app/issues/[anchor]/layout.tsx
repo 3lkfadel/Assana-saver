@@ -20,7 +20,8 @@ import { useIssueFilter } from "@/hooks/store/use-issue-filter";
 import type { Route } from "./+types/layout";
 
 const DEFAULT_TITLE = "Infinity Planning";
-const DEFAULT_DESCRIPTION = "Published with Infinity Planning, the work management tool of Infinity Africa Group.";
+const DEFAULT_DESCRIPTION =
+  "Made with Infinity Planning, an AI-powered work management platform with publishing capabilities.";
 
 interface IssueMetadata {
   name?: string;

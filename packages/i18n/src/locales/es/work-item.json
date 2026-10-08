@@ -82,6 +82,14 @@
         "calendar": "Diseño de calendario",
         "spreadsheet": "Diseño de tabla",
         "gantt": "Diseño de línea de tiempo"
+      },
+      "board_columns": {
+        "add_column": "Agregar columna",
+        "column_name": "Nombre de la columna",
+        "category": "Categoría",
+        "created": "Columna creada.",
+        "already_exists": "Ya existe una columna con este nombre.",
+        "create_error": "No se pudo crear la columna. Inténtelo de nuevo."
       }
     },
     "states": {

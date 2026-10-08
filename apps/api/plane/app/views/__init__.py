@@ -179,6 +179,7 @@ from .search.base import GlobalSearchEndpoint, SearchEndpoint
 from .search.issue import IssueSearchEndpoint
 
 
+from .assistant.base import AssistantChatEndpoint, AssistantStatusEndpoint
 from .external.base import (
     GPTIntegrationEndpoint,
     UnsplashEndpoint,

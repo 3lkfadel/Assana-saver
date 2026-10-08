@@ -886,5 +886,51 @@
       "sign_up_header": "Bienvenue.",
       "sign_up_sub_header": "Créez votre compte Infinity Planning."
     }
+  },
+  "assistant": {
+    "title": "Assistant IA",
+    "open": "Ouvrir l'assistant IA",
+    "subtitle": "Posez vos questions sur l'avancement, les échéances et la charge de vos projets.",
+    "placeholder": "Posez une question sur vos projets…",
+    "send": "Envoyer",
+    "stop": "Arrêter",
+    "new_conversation": "Nouvelle conversation",
+    "close": "Fermer",
+    "read_only_note": "Lecture seule : l'assistant consulte vos projets mais ne les modifie jamais.",
+    "context_work_item": "À propos de cet élément de travail",
+    "context_project": "À propos de ce projet",
+    "suggestions": {
+      "overdue": "Quels éléments de travail sont en retard ?",
+      "workload": "Qui a le plus d'éléments de travail ouverts ?",
+      "projects": "Faites-moi un point sur mes projets."
+    },
+    "actions": {
+      "work_item": "Demander à l'IA",
+      "project": "Rapport des retards (IA)"
+    },
+    "prompts": {
+      "work_item": "Où en est cet élément de travail ? A-t-il respecté son échéance ?",
+      "project": "Faites le point sur ce projet : avancement, retards et personnes concernées."
+    },
+    "tools": {
+      "list_projects": "Liste de vos projets…",
+      "search_work_items": "Recherche des éléments de travail…",
+      "get_work_item": "Lecture de l'élément de travail…",
+      "project_progress": "Calcul de l'avancement du projet…",
+      "deadline_report": "Vérification des échéances…",
+      "member_workload": "Mesure de la charge de travail…",
+      "default": "Recherche dans vos données…"
+    },
+    "errors": {
+      "refusal": "L'assistant a refusé cette demande. Essayez de la reformuler.",
+      "truncated": "La réponse était trop longue et a été coupée. Posez une question plus précise.",
+      "too_many_steps": "La question a nécessité trop de recherches. Posez une question plus précise.",
+      "invalid_api_key": "La clé API Anthropic n'est pas valide. Demandez à un administrateur de l'instance de la mettre à jour.",
+      "permission_denied": "La clé API Anthropic n'a pas accès à ce modèle.",
+      "model_not_found": "Le modèle Claude configuré n'existe pas. Demandez à un administrateur de l'instance de le vérifier.",
+      "rate_limited": "Trop de requêtes vers Claude pour le moment. Réessayez dans un instant.",
+      "connection_error": "Impossible de joindre Claude. Vérifiez la connexion Internet du serveur.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    }
   }
 }

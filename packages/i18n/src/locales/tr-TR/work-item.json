@@ -82,6 +82,14 @@
         "calendar": "Takvim Düzeni",
         "spreadsheet": "Tablo Düzeni",
         "gantt": "Zaman Çizelgesi Düzeni"
+      },
+      "board_columns": {
+        "add_column": "Sütun ekle",
+        "column_name": "Sütun adı",
+        "category": "Kategori",
+        "created": "Sütun oluşturuldu.",
+        "already_exists": "Bu ada sahip bir sütun zaten var.",
+        "create_error": "Sütun oluşturulamadı. Lütfen tekrar deneyin."
       }
     },
     "states": {

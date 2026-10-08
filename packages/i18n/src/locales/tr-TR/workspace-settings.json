@@ -3,7 +3,7 @@
     "label": "Çalışma Alanı Ayarları",
     "page_label": "{workspace} - Genel ayarlar",
     "key_created": "Anahtar oluşturuldu",
-    "copy_key": "Bu gizli anahtarı Infinity Planning'e kopyalayıp kaydedin. Kapat düğmesine bastıktan sonra bu anahtarı göremezsiniz. Anahtar içeren bir CSV dosyası indirildi.",
+    "copy_key": "Bu gizli anahtarı Infinity Planning Pages'e kopyalayıp kaydedin. Kapat düğmesine bastıktan sonra bu anahtarı göremezsiniz. Anahtar içeren bir CSV dosyası indirildi.",
     "token_copied": "Token panoya kopyalandı.",
     "settings": {
       "general": {

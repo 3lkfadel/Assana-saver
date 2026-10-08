@@ -20,6 +20,8 @@ import { AppSidebarItem } from "@/components/sidebar/sidebar-item";
 import { InboxOutline } from "@makeplane/propel/icons";
 import useSWR from "swr";
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
+// local imports
+import { AssistantTrigger } from "@/components/assistant";
 
 export const TopNavigationRoot = observer(function TopNavigationRoot() {
   const { t } = useTranslation();
@@ -62,6 +64,7 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
       </div>
       {/* Additional Actions */}
       <div className="flex flex-1 shrink-0 items-center justify-end gap-1">
+        <AssistantTrigger />
         <Tooltip label={t("sidebar.inbox")} side="bottom">
           <AppSidebarItem
             variant="link"

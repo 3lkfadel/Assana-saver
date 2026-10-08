@@ -82,6 +82,14 @@
         "calendar": "日历布局",
         "spreadsheet": "表格布局",
         "gantt": "时间线布局"
+      },
+      "board_columns": {
+        "add_column": "添加列",
+        "column_name": "列名称",
+        "category": "类别",
+        "created": "列已创建。",
+        "already_exists": "已存在同名的列。",
+        "create_error": "无法创建列，请重试。"
       }
     },
     "states": {

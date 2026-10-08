@@ -30,6 +30,7 @@ import { useProject } from "@/hooks/store/use-project";
 import { useUser } from "@/hooks/store/user";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 // local imports
+import { AssistantQuickAction } from "@/components/assistant";
 import { IssueSubscription } from "../issue-detail/subscription";
 import { WorkItemDetailQuickActions } from "../issue-layouts/quick-action-dropdowns";
 import { NameDescriptionUpdateStatus } from "../issue-update-status";
@@ -128,6 +129,7 @@ export const IssuePeekOverviewHeader = observer(function IssuePeekOverviewHeader
   const handleCopyText = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     e.preventDefault();
+    // oxlint-disable-next-line promise/always-return
     copyUrlToClipboard(workItemLink).then(() => {
       setToast({
         type: "success",
@@ -141,6 +143,7 @@ export const IssuePeekOverviewHeader = observer(function IssuePeekOverviewHeader
     try {
       const deleteIssue = issueDetails?.archived_at ? removeArchivedIssue : removeIssue;
 
+      // oxlint-disable-next-line promise/always-return
       return deleteIssue(workspaceSlug, projectId, issueId).then(() => {
         setPeekIssue(undefined);
       });
@@ -215,6 +218,7 @@ export const IssuePeekOverviewHeader = observer(function IssuePeekOverviewHeader
               aria-label={t("common.actions.copy_link")}
             />
           </Tooltip>
+          <AssistantQuickAction workspaceSlug={workspaceSlug} context={{ work_item_id: issueId }} />
           {issueDetails && (
             <WorkItemDetailQuickActions
               parentRef={parentRef}

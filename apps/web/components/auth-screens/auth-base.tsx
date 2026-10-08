@@ -7,7 +7,6 @@
 import React from "react";
 import { AuthRoot } from "@/components/account/auth-forms/auth-root";
 import type { EAuthModes } from "@/helpers/authentication.helper";
-import { AuthFooter } from "./footer";
 import { AuthHeader } from "./header";
 import { AuthScreenLayout } from "./layout";
 
@@ -20,7 +19,6 @@ export function AuthBase({ authType }: AuthBaseProps) {
     <AuthScreenLayout>
       <AuthHeader type={authType} />
       <AuthRoot authMode={authType} />
-      <AuthFooter />
     </AuthScreenLayout>
   );
 }

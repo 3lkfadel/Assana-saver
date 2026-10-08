@@ -245,7 +245,7 @@
   "full_changelog": "Úplný změnový protokol",
   "support": "Podpora",
   "forum": "Forum",
-  "powered_by_plane_pages": "Poháněno Infinity Planning",
+  "powered_by_plane_pages": "Poháněno Infinity Planning Pages",
   "please_select_at_least_one_invitation": "Vyberte alespoň jednu pozvánku.",
   "please_select_at_least_one_invitation_description": "Vyberte alespoň jednu pozvánku pro připojení k pracovnímu prostoru.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "Vidíme, že vás někdo pozval do pracovního prostoru",
@@ -885,6 +885,52 @@
       "sign_in_sub_header": "Sign in to Infinity Planning.",
       "sign_up_header": "Welcome.",
       "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "Asistent AI",
+    "open": "Otevřít asistenta AI",
+    "subtitle": "Ptejte se na postup, termíny a vytížení ve vašich projektech.",
+    "placeholder": "Položte otázku k vašim projektům…",
+    "send": "Odeslat",
+    "stop": "Zastavit",
+    "new_conversation": "Nová konverzace",
+    "close": "Zavřít",
+    "read_only_note": "Pouze pro čtení: asistent vaše projekty prohlíží, ale nikdy je nemění.",
+    "context_work_item": "K této pracovní položce",
+    "context_project": "K tomuto projektu",
+    "suggestions": {
+      "overdue": "Které pracovní položky jsou po termínu?",
+      "workload": "Kdo má nejvíce otevřených pracovních položek?",
+      "projects": "Shrňte mi stav mých projektů."
+    },
+    "actions": {
+      "work_item": "Zeptat se AI",
+      "project": "Přehled zpoždění (AI)"
+    },
+    "prompts": {
+      "work_item": "Jaký je stav této pracovní položky? Byl dodržen termín?",
+      "project": "Shrňte stav tohoto projektu: postup, zpoždění a dotčené osoby."
+    },
+    "tools": {
+      "list_projects": "Načítání vašich projektů…",
+      "search_work_items": "Vyhledávání pracovních položek…",
+      "get_work_item": "Čtení pracovní položky…",
+      "project_progress": "Výpočet postupu projektu…",
+      "deadline_report": "Kontrola termínů…",
+      "member_workload": "Měření vytížení…",
+      "default": "Vyhledávání ve vašich datech…"
+    },
+    "errors": {
+      "refusal": "Asistent tento požadavek odmítl. Zkuste ho přeformulovat.",
+      "truncated": "Odpověď byla příliš dlouhá a byla zkrácena. Položte konkrétnější otázku.",
+      "too_many_steps": "Otázka vyžadovala příliš mnoho vyhledávání. Položte konkrétnější otázku.",
+      "invalid_api_key": "Klíč API Anthropic je neplatný. Požádejte správce instance o jeho aktualizaci.",
+      "permission_denied": "Klíč API Anthropic nemá přístup k tomuto modelu.",
+      "model_not_found": "Nastavený model Claude neexistuje. Požádejte správce instance o kontrolu.",
+      "rate_limited": "Příliš mnoho požadavků na Claude. Zkuste to prosím za chvíli znovu.",
+      "connection_error": "Claude není dostupný. Zkontrolujte internetové připojení serveru.",
+      "generic": "Něco se pokazilo. Zkuste to prosím znovu."
     }
   }
 }

@@ -27,7 +27,7 @@ const Titles: TAuthHeaderDetails = {
   },
   [EAuthModes.SIGN_UP]: {
     header: "View, comment, and do more",
-    subHeader: "Sign up or log in to work with Infinity Planning work items and pages.",
+    subHeader: "Sign up or log in to work with Infinity Planning work items and Pages.",
   },
 };
 

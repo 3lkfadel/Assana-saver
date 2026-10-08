@@ -21,6 +21,7 @@ import { Header } from "@plane/blocks/layout";
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 import { CountChip } from "@/components/common/count-chip";
 // constants
+import { AssistantQuickAction } from "@/components/assistant";
 import { HeaderFilters } from "@/components/issues/filters";
 // helpers
 // hooks
@@ -110,6 +111,12 @@ export const IssuesHeader = observer(function IssuesHeader() {
         )}
       </Header.LeftItem>
       <Header.RightItem>
+        {workspaceSlug && projectId && (
+          <AssistantQuickAction
+            workspaceSlug={workspaceSlug.toString()}
+            context={{ project_id: projectId.toString() }}
+          />
+        )}
         <div className="hidden gap-2 md:flex">
           <HeaderFilters
             projectId={projectId}

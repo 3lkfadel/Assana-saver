@@ -82,6 +82,14 @@
         "calendar": "Kalendárové rozloženie",
         "spreadsheet": "Tabuľkové rozloženie",
         "gantt": "Rozloženie časovej osi"
+      },
+      "board_columns": {
+        "add_column": "Pridať stĺpec",
+        "column_name": "Názov stĺpca",
+        "category": "Kategória",
+        "created": "Stĺpec bol vytvorený.",
+        "already_exists": "Stĺpec s týmto názvom už existuje.",
+        "create_error": "Stĺpec sa nepodarilo vytvoriť. Skúste to prosím znova."
       }
     },
     "states": {

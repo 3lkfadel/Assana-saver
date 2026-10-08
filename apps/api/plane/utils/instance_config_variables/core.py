@@ -241,6 +241,21 @@ llm_config_variables = [
     },
 ]
 
+ai_assistant_config_variables = [
+    {
+        "key": "ANTHROPIC_API_KEY",
+        "value": os.environ.get("ANTHROPIC_API_KEY"),
+        "category": "AI_ASSISTANT",
+        "is_encrypted": True,
+    },
+    {
+        "key": "ANTHROPIC_MODEL",
+        "value": os.environ.get("ANTHROPIC_MODEL", "claude-opus-5-5"),
+        "category": "AI_ASSISTANT",
+        "is_encrypted": False,
+    },
+]
+
 unsplash_config_variables = [
     {
         "key": "UNSPLASH_ACCESS_KEY",
@@ -259,5 +274,6 @@ core_config_variables = [
     *gitea_config_variables,
     *smtp_config_variables,
     *llm_config_variables,
+    *ai_assistant_config_variables,
     *unsplash_config_variables,
 ]

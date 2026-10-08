@@ -82,6 +82,14 @@
         "calendar": "カレンダーレイアウト",
         "spreadsheet": "テーブルレイアウト",
         "gantt": "タイムラインレイアウト"
+      },
+      "board_columns": {
+        "add_column": "列を追加",
+        "column_name": "列名",
+        "category": "カテゴリー",
+        "created": "列を作成しました。",
+        "already_exists": "この名前の列はすでに存在します。",
+        "create_error": "列を作成できませんでした。もう一度お試しください。"
       }
     },
     "states": {

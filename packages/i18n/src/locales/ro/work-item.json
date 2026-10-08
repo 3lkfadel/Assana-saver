@@ -82,6 +82,14 @@
         "calendar": "Vizualizare tip Calendar",
         "spreadsheet": "Vizualizare tip Tabel",
         "gantt": "Vizualizare tip Cronologic"
+      },
+      "board_columns": {
+        "add_column": "Adăugați o coloană",
+        "column_name": "Numele coloanei",
+        "category": "Categorie",
+        "created": "Coloana a fost creată.",
+        "already_exists": "Există deja o coloană cu acest nume.",
+        "create_error": "Coloana nu a putut fi creată. Vă rugăm să încercați din nou."
       }
     },
     "states": {

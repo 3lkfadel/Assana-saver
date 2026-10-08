@@ -3,7 +3,7 @@
     "label": "Werkruimte-instellingen",
     "page_label": "{workspace} - Algemene instellingen",
     "key_created": "Sleutel aangemaakt",
-    "copy_key": "Kopieer en bewaar deze geheime sleutel in Infinity Planning. Je kunt deze sleutel niet meer zien nadat je op Sluiten klikt. Er is een CSV-bestand met de sleutel gedownload.",
+    "copy_key": "Kopieer en bewaar deze geheime sleutel in Infinity Planning Pages. Je kunt deze sleutel niet meer zien nadat je op Sluiten klikt. Er is een CSV-bestand met de sleutel gedownload.",
     "token_copied": "Token gekopieerd naar klembord.",
     "settings": {
       "general": {

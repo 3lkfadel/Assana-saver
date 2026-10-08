@@ -10,6 +10,10 @@
 import { cleanup } from "@testing-library/react";
 import { afterEach, beforeEach } from "vitest";
 
+// The apps default to French; the tests assert the English copy. `@plane/i18n` reads this key
+// (LANGUAGE_STORAGE_KEY) when the test files first import it, after this setup file has run.
+window.localStorage.setItem("userLanguage", "en");
+
 /**
  * jsdom implements neither observer API. Base UI's floating positioning needs a `ResizeObserver`
  * that merely exists, while the Select's paging sentinel needs an `IntersectionObserver` that

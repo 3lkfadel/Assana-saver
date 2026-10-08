@@ -108,6 +108,7 @@ export const CustomFieldForm = observer(function CustomFieldForm(props: TCustomF
         <div className="flex flex-col gap-1 text-12 text-secondary">
           {t("custom_fields.type")}
           <Select<TCustomFieldType>
+            items={Object.fromEntries(CUSTOM_FIELD_TYPES.map((type) => [type, t(`custom_fields.types.${type}`)]))}
             value={fieldType}
             onValueChange={(next) => next && setFieldType(next)}
             disabled={!!field}

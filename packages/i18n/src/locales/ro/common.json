@@ -874,5 +874,51 @@
       "short_description": "Exportă ca JSON"
     }
   },
-  "labels_count": "{count, plural, one {# etichetă} few {# etichete} other {# de etichete}}"
+  "labels_count": "{count, plural, one {# etichetă} few {# etichete} other {# de etichete}}",
+  "assistant": {
+    "title": "Asistent AI",
+    "open": "Deschideți asistentul AI",
+    "subtitle": "Puneți întrebări despre progresul, termenele și volumul de muncă din proiectele dumneavoastră.",
+    "placeholder": "Puneți o întrebare despre proiectele dumneavoastră…",
+    "send": "Trimiteți",
+    "stop": "Opriți",
+    "new_conversation": "Conversație nouă",
+    "close": "Închideți",
+    "read_only_note": "Doar citire: asistentul consultă proiectele dumneavoastră, dar nu le modifică niciodată.",
+    "context_work_item": "Despre această activitate",
+    "context_project": "Despre acest proiect",
+    "suggestions": {
+      "overdue": "Ce activități sunt întârziate?",
+      "workload": "Cine are cele mai multe activități deschise?",
+      "projects": "Prezentați-mi stadiul proiectelor mele."
+    },
+    "actions": {
+      "work_item": "Întrebați AI",
+      "project": "Raport de întârzieri (AI)"
+    },
+    "prompts": {
+      "work_item": "Care este stadiul acestei activități? A respectat termenul?",
+      "project": "Prezentați stadiul acestui proiect: progres, întârzieri și persoanele implicate."
+    },
+    "tools": {
+      "list_projects": "Se listează proiectele…",
+      "search_work_items": "Se caută activitățile…",
+      "get_work_item": "Se citește activitatea…",
+      "project_progress": "Se calculează progresul proiectului…",
+      "deadline_report": "Se verifică termenele…",
+      "member_workload": "Se măsoară volumul de muncă…",
+      "default": "Se caută în datele dumneavoastră…"
+    },
+    "errors": {
+      "refusal": "Asistentul a refuzat această cerere. Încercați să o reformulați.",
+      "truncated": "Răspunsul a fost prea lung și a fost trunchiat. Puneți o întrebare mai precisă.",
+      "too_many_steps": "Întrebarea a necesitat prea multe căutări. Puneți o întrebare mai precisă.",
+      "invalid_api_key": "Cheia API Anthropic nu este validă. Cereți unui administrator al instanței să o actualizeze.",
+      "permission_denied": "Cheia API Anthropic nu are acces la acest model.",
+      "model_not_found": "Modelul Claude configurat nu există. Cereți unui administrator al instanței să îl verifice.",
+      "rate_limited": "Prea multe cereri către Claude în acest moment. Încercați din nou în câteva clipe.",
+      "connection_error": "Claude nu poate fi contactat. Verificați conexiunea la internet a serverului.",
+      "generic": "A apărut o eroare. Vă rugăm să încercați din nou."
+    }
+  }
 }

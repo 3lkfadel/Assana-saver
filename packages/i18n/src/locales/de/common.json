@@ -874,5 +874,51 @@
       "short_description": "Als JSON exportieren"
     }
   },
-  "labels_count": "{count, plural, one {# Label} other {# Labels}}"
+  "labels_count": "{count, plural, one {# Label} other {# Labels}}",
+  "assistant": {
+    "title": "KI-Assistent",
+    "open": "KI-Assistent öffnen",
+    "subtitle": "Fragen zu Fortschritt, Fristen und Auslastung Ihrer Projekte stellen.",
+    "placeholder": "Eine Frage zu Ihren Projekten stellen…",
+    "send": "Senden",
+    "stop": "Stoppen",
+    "new_conversation": "Neue Unterhaltung",
+    "close": "Schließen",
+    "read_only_note": "Nur Lesezugriff: Der Assistent liest Ihre Projekte, ändert sie aber nie.",
+    "context_work_item": "Zu diesem Arbeitselement",
+    "context_project": "Zu diesem Projekt",
+    "suggestions": {
+      "overdue": "Welche Arbeitselemente sind überfällig?",
+      "workload": "Wer hat die meisten offenen Arbeitselemente?",
+      "projects": "Geben Sie mir einen Statusbericht zu meinen Projekten."
+    },
+    "actions": {
+      "work_item": "KI fragen",
+      "project": "KI-Verzugsbericht"
+    },
+    "prompts": {
+      "work_item": "Wie ist der Stand dieses Arbeitselements? Wurde die Frist eingehalten?",
+      "project": "Geben Sie mir einen Statusbericht zu diesem Projekt: Fortschritt, Verzögerungen und betroffene Personen."
+    },
+    "tools": {
+      "list_projects": "Projekte werden aufgelistet…",
+      "search_work_items": "Arbeitselemente werden gesucht…",
+      "get_work_item": "Arbeitselement wird gelesen…",
+      "project_progress": "Projektfortschritt wird berechnet…",
+      "deadline_report": "Fristen werden geprüft…",
+      "member_workload": "Auslastung wird ermittelt…",
+      "default": "Daten werden abgerufen…"
+    },
+    "errors": {
+      "refusal": "Der Assistent hat diese Anfrage abgelehnt. Bitte formulieren Sie sie um.",
+      "truncated": "Die Antwort war zu lang und wurde abgeschnitten. Bitte stellen Sie eine genauere Frage.",
+      "too_many_steps": "Die Frage erforderte zu viele Abfragen. Bitte stellen Sie eine genauere Frage.",
+      "invalid_api_key": "Der Anthropic-API-Schlüssel ist ungültig. Bitten Sie einen Instanzadministrator, ihn zu aktualisieren.",
+      "permission_denied": "Der Anthropic-API-Schlüssel hat keinen Zugriff auf dieses Modell.",
+      "model_not_found": "Das konfigurierte Claude-Modell existiert nicht. Bitten Sie einen Instanzadministrator, es zu prüfen.",
+      "rate_limited": "Zu viele Anfragen an Claude. Bitte versuchen Sie es gleich noch einmal.",
+      "connection_error": "Claude ist nicht erreichbar. Bitte prüfen Sie die Internetverbindung des Servers.",
+      "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  }
 }

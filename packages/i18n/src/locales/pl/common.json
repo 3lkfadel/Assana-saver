@@ -874,5 +874,51 @@
       "short_description": "Eksportuj jako JSON"
     }
   },
-  "labels_count": "{count, plural, one {# etykieta} few {# etykiety} many {# etykiet} other {# etykiety}}"
+  "labels_count": "{count, plural, one {# etykieta} few {# etykiety} many {# etykiet} other {# etykiety}}",
+  "assistant": {
+    "title": "Asystent AI",
+    "open": "Otwórz asystenta AI",
+    "subtitle": "Pytania o postępy, terminy i obciążenie w projektach.",
+    "placeholder": "Pytanie dotyczące projektów…",
+    "send": "Wyślij",
+    "stop": "Zatrzymaj",
+    "new_conversation": "Nowa rozmowa",
+    "close": "Zamknij",
+    "read_only_note": "Tylko do odczytu: asystent przegląda projekty, ale nigdy ich nie zmienia.",
+    "context_work_item": "Dotyczy tego elementu pracy",
+    "context_project": "Dotyczy tego projektu",
+    "suggestions": {
+      "overdue": "Które elementy pracy są opóźnione?",
+      "workload": "Kto ma najwięcej otwartych elementów pracy?",
+      "projects": "Proszę o podsumowanie stanu moich projektów."
+    },
+    "actions": {
+      "work_item": "Zapytaj AI",
+      "project": "Raport opóźnień (AI)"
+    },
+    "prompts": {
+      "work_item": "Jaki jest stan tego elementu pracy? Czy termin został dotrzymany?",
+      "project": "Proszę o podsumowanie tego projektu: postępy, opóźnienia i osoby, których dotyczą."
+    },
+    "tools": {
+      "list_projects": "Pobieranie listy projektów…",
+      "search_work_items": "Wyszukiwanie elementów pracy…",
+      "get_work_item": "Odczytywanie elementu pracy…",
+      "project_progress": "Obliczanie postępu projektu…",
+      "deadline_report": "Sprawdzanie terminów…",
+      "member_workload": "Mierzenie obciążenia…",
+      "default": "Wyszukiwanie danych…"
+    },
+    "errors": {
+      "refusal": "Asystent odrzucił to zapytanie. Prosimy spróbować je przeformułować.",
+      "truncated": "Odpowiedź była zbyt długa i została ucięta. Prosimy zadać bardziej szczegółowe pytanie.",
+      "too_many_steps": "Pytanie wymagało zbyt wielu wyszukiwań. Prosimy zadać bardziej szczegółowe pytanie.",
+      "invalid_api_key": "Klucz API Anthropic jest nieprawidłowy. Prosimy poprosić administratora instancji o jego aktualizację.",
+      "permission_denied": "Klucz API Anthropic nie ma dostępu do tego modelu.",
+      "model_not_found": "Skonfigurowany model Claude nie istnieje. Prosimy poprosić administratora instancji o sprawdzenie.",
+      "rate_limited": "Zbyt wiele zapytań do Claude w tej chwili. Prosimy spróbować ponownie za chwilę.",
+      "connection_error": "Nie można połączyć się z Claude. Prosimy sprawdzić połączenie internetowe serwera.",
+      "generic": "Wystąpił błąd. Prosimy spróbować ponownie."
+    }
+  }
 }

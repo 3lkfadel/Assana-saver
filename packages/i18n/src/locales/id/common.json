@@ -874,5 +874,51 @@
       "short_description": "Ekspor sebagai json"
     }
   },
-  "labels_count": "{count, plural, one {# label} other {# label}}"
+  "labels_count": "{count, plural, one {# label} other {# label}}",
+  "assistant": {
+    "title": "Asisten AI",
+    "open": "Buka asisten AI",
+    "subtitle": "Tanyakan tentang kemajuan, tenggat, dan beban kerja proyek Anda.",
+    "placeholder": "Ajukan pertanyaan tentang proyek Anda…",
+    "send": "Kirim",
+    "stop": "Hentikan",
+    "new_conversation": "Percakapan baru",
+    "close": "Tutup",
+    "read_only_note": "Hanya baca: asisten melihat proyek Anda tetapi tidak pernah mengubahnya.",
+    "context_work_item": "Tentang item kerja ini",
+    "context_project": "Tentang proyek ini",
+    "suggestions": {
+      "overdue": "Item kerja mana yang terlambat?",
+      "workload": "Siapa yang memiliki item kerja terbuka terbanyak?",
+      "projects": "Berikan ringkasan status proyek saya."
+    },
+    "actions": {
+      "work_item": "Tanya AI",
+      "project": "Laporan keterlambatan (AI)"
+    },
+    "prompts": {
+      "work_item": "Bagaimana status item kerja ini? Apakah tenggatnya terpenuhi?",
+      "project": "Berikan ringkasan status proyek ini: kemajuan, keterlambatan, dan orang yang terlibat."
+    },
+    "tools": {
+      "list_projects": "Menampilkan daftar proyek Anda…",
+      "search_work_items": "Mencari item kerja…",
+      "get_work_item": "Membaca item kerja…",
+      "project_progress": "Menghitung kemajuan proyek…",
+      "deadline_report": "Memeriksa tenggat…",
+      "member_workload": "Mengukur beban kerja…",
+      "default": "Mencari data Anda…"
+    },
+    "errors": {
+      "refusal": "Asisten menolak permintaan ini. Coba ubah kalimatnya.",
+      "truncated": "Jawaban terlalu panjang dan terpotong. Ajukan pertanyaan yang lebih spesifik.",
+      "too_many_steps": "Pertanyaan memerlukan terlalu banyak pencarian. Ajukan pertanyaan yang lebih spesifik.",
+      "invalid_api_key": "Kunci API Anthropic tidak valid. Minta admin instans untuk memperbaruinya.",
+      "permission_denied": "Kunci API Anthropic tidak memiliki akses ke model ini.",
+      "model_not_found": "Model Claude yang dikonfigurasi tidak ada. Minta admin instans untuk memeriksanya.",
+      "rate_limited": "Terlalu banyak permintaan ke Claude saat ini. Silakan coba lagi sebentar lagi.",
+      "connection_error": "Tidak dapat terhubung ke Claude. Periksa koneksi internet server.",
+      "generic": "Terjadi kesalahan. Silakan coba lagi."
+    }
+  }
 }

@@ -874,5 +874,51 @@
       "short_description": "Exportar como JSON"
     }
   },
-  "labels_count": "{count, plural, one {# etiqueta} many {# etiquetas} other {# etiquetas}}"
+  "labels_count": "{count, plural, one {# etiqueta} many {# etiquetas} other {# etiquetas}}",
+  "assistant": {
+    "title": "Assistente de IA",
+    "open": "Abrir o assistente de IA",
+    "subtitle": "Pergunte sobre o andamento, os prazos e a carga de trabalho dos seus projetos.",
+    "placeholder": "Faça uma pergunta sobre seus projetos…",
+    "send": "Enviar",
+    "stop": "Parar",
+    "new_conversation": "Nova conversa",
+    "close": "Fechar",
+    "read_only_note": "Somente leitura: o assistente consulta seus projetos, mas nunca os altera.",
+    "context_work_item": "Sobre este item de trabalho",
+    "context_project": "Sobre este projeto",
+    "suggestions": {
+      "overdue": "Quais itens de trabalho estão atrasados?",
+      "workload": "Quem tem mais itens de trabalho em aberto?",
+      "projects": "Faça um resumo do status dos meus projetos."
+    },
+    "actions": {
+      "work_item": "Perguntar à IA",
+      "project": "Relatório de atrasos (IA)"
+    },
+    "prompts": {
+      "work_item": "Qual é o status deste item de trabalho? O prazo foi cumprido?",
+      "project": "Faça um resumo deste projeto: andamento, atrasos e pessoas envolvidas."
+    },
+    "tools": {
+      "list_projects": "Listando seus projetos…",
+      "search_work_items": "Buscando itens de trabalho…",
+      "get_work_item": "Lendo o item de trabalho…",
+      "project_progress": "Calculando o andamento do projeto…",
+      "deadline_report": "Verificando os prazos…",
+      "member_workload": "Medindo a carga de trabalho…",
+      "default": "Consultando seus dados…"
+    },
+    "errors": {
+      "refusal": "O assistente recusou esta solicitação. Tente reformulá-la.",
+      "truncated": "A resposta ficou longa demais e foi cortada. Faça uma pergunta mais específica.",
+      "too_many_steps": "A pergunta exigiu consultas demais. Faça uma pergunta mais específica.",
+      "invalid_api_key": "A chave de API da Anthropic é inválida. Peça a um administrador da instância para atualizá-la.",
+      "permission_denied": "A chave de API da Anthropic não tem acesso a este modelo.",
+      "model_not_found": "O modelo Claude configurado não existe. Peça a um administrador da instância para verificá-lo.",
+      "rate_limited": "Muitas solicitações ao Claude no momento. Tente novamente em instantes.",
+      "connection_error": "Não foi possível conectar ao Claude. Verifique a conexão de internet do servidor.",
+      "generic": "Algo deu errado. Tente novamente."
+    }
+  }
 }

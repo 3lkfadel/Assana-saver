@@ -34,6 +34,8 @@ export function InstanceAIForm(props: IInstanceAIForm) {
     defaultValues: {
       LLM_API_KEY: config["LLM_API_KEY"],
       LLM_MODEL: config["LLM_MODEL"],
+      ANTHROPIC_API_KEY: config["ANTHROPIC_API_KEY"],
+      ANTHROPIC_MODEL: config["ANTHROPIC_MODEL"],
     },
   });
 
@@ -84,6 +86,64 @@ export function InstanceAIForm(props: IInstanceAIForm) {
     },
   ];
 
+  // Claude powers the read-only project assistant (workspace admins and project admins).
+  const assistantFormFields: TControllerInputFormField<AIFormValues>[] = [
+    {
+      key: "ANTHROPIC_MODEL",
+      type: "text",
+      label: "Claude model",
+      description: (
+        <>
+          Leave empty to use claude-opus-5-5.{" "}
+          <a
+            href="https://platform.claude.com/docs/en/about-claude/models/overview"
+            target="_blank"
+            className="text-accent-primary hover:underline"
+            rel="noreferrer"
+            aria-label="Claude models documentation"
+          >
+            Learn more
+          </a>
+        </>
+      ),
+      placeholder: "claude-opus-5-5",
+      error: Boolean(errors.ANTHROPIC_MODEL),
+      required: false,
+    },
+    {
+      key: "ANTHROPIC_API_KEY",
+      type: "password",
+      label: "Anthropic API key",
+      description: (
+        <>
+          Create a key in the{" "}
+          <a
+            href="https://platform.claude.com/settings/keys"
+            target="_blank"
+            className="text-accent-primary hover:underline"
+            rel="noreferrer"
+            aria-label="Claude Console API keys page"
+          >
+            Claude Console.
+          </a>
+        </>
+      ),
+      placeholder: "sk-ant-api03-...",
+      error: Boolean(errors.ANTHROPIC_API_KEY),
+      required: false,
+    },
+  ];
+
+  const sections = [
+    { title: "OpenAI", description: "If you use ChatGPT, this is for you.", fields: aiFormFields },
+    {
+      title: "Claude (Anthropic)",
+      description:
+        "Powers the project assistant: workspace admins and project admins can ask about progress and deadlines.",
+      fields: assistantFormFields,
+    },
+  ];
+
   const onSubmit = async (formData: AIFormValues) => {
     const payload: Partial<AIFormValues> = { ...formData };
 
@@ -100,27 +160,29 @@ export function InstanceAIForm(props: IInstanceAIForm) {
 
   return (
     <div className="space-y-8">
-      <div className="space-y-3">
-        <div>
-          <div className="pb-1 text-18 font-medium text-primary">OpenAI</div>
-          <div className="text-13 font-regular text-tertiary">If you use ChatGPT, this is for you.</div>
+      {sections.map((section) => (
+        <div key={section.title} className="space-y-3">
+          <div>
+            <div className="pb-1 text-18 font-medium text-primary">{section.title}</div>
+            <div className="text-13 font-regular text-tertiary">{section.description}</div>
+          </div>
+          <div className="grid-col grid w-full grid-cols-1 items-center justify-between gap-x-12 gap-y-8 lg:grid-cols-3">
+            {section.fields.map((field) => (
+              <ControllerInput
+                key={field.key}
+                control={control}
+                type={field.type}
+                name={field.key}
+                label={field.label}
+                description={field.description}
+                placeholder={field.placeholder}
+                error={field.error}
+                required={field.required}
+              />
+            ))}
+          </div>
         </div>
-        <div className="grid-col grid w-full grid-cols-1 items-center justify-between gap-x-12 gap-y-8 lg:grid-cols-3">
-          {aiFormFields.map((field) => (
-            <ControllerInput
-              key={field.key}
-              control={control}
-              type={field.type}
-              name={field.key}
-              label={field.label}
-              description={field.description}
-              placeholder={field.placeholder}
-              error={field.error}
-              required={field.required}
-            />
-          ))}
-        </div>
-      </div>
+      ))}
 
       <div className="flex flex-col items-start gap-4">
         <Button

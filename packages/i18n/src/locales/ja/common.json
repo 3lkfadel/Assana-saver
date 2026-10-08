@@ -874,5 +874,51 @@
       "short_description": "JSONとしてエクスポート"
     }
   },
-  "labels_count": "{count, plural, one {#件のラベル} other {#件のラベル}}"
+  "labels_count": "{count, plural, one {#件のラベル} other {#件のラベル}}",
+  "assistant": {
+    "title": "AI アシスタント",
+    "open": "AI アシスタントを開く",
+    "subtitle": "プロジェクトの進捗、期限、作業負荷について質問できます。",
+    "placeholder": "プロジェクトについて質問してください…",
+    "send": "送信",
+    "stop": "停止",
+    "new_conversation": "新しい会話",
+    "close": "閉じる",
+    "read_only_note": "読み取り専用：アシスタントはプロジェクトを参照しますが、変更することはありません。",
+    "context_work_item": "この作業項目について",
+    "context_project": "このプロジェクトについて",
+    "suggestions": {
+      "overdue": "期限を過ぎている作業項目はどれですか？",
+      "workload": "未完了の作業項目が最も多いのは誰ですか？",
+      "projects": "プロジェクトの状況をまとめてください。"
+    },
+    "actions": {
+      "work_item": "AI に質問",
+      "project": "遅延レポート（AI）"
+    },
+    "prompts": {
+      "work_item": "この作業項目の状況はどうですか？期限は守られましたか？",
+      "project": "このプロジェクトの状況をまとめてください：進捗、遅延、関係者。"
+    },
+    "tools": {
+      "list_projects": "プロジェクトを一覧表示しています…",
+      "search_work_items": "作業項目を検索しています…",
+      "get_work_item": "作業項目を読み込んでいます…",
+      "project_progress": "プロジェクトの進捗を計算しています…",
+      "deadline_report": "期限を確認しています…",
+      "member_workload": "作業負荷を集計しています…",
+      "default": "データを検索しています…"
+    },
+    "errors": {
+      "refusal": "アシスタントはこのリクエストを辞退しました。言い換えてお試しください。",
+      "truncated": "回答が長すぎたため途中で切れました。より具体的に質問してください。",
+      "too_many_steps": "質問に必要な検索が多すぎました。より具体的に質問してください。",
+      "invalid_api_key": "Anthropic API キーが無効です。インスタンス管理者に更新を依頼してください。",
+      "permission_denied": "Anthropic API キーにこのモデルへのアクセス権がありません。",
+      "model_not_found": "設定された Claude モデルが存在しません。インスタンス管理者に確認を依頼してください。",
+      "rate_limited": "現在 Claude へのリクエストが多すぎます。しばらくしてから再度お試しください。",
+      "connection_error": "Claude に接続できません。サーバーのインターネット接続を確認してください。",
+      "generic": "エラーが発生しました。もう一度お試しください。"
+    }
+  }
 }

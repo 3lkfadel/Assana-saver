@@ -874,5 +874,51 @@
       "short_description": "Exporteren als json"
     }
   },
-  "labels_count": "{count, plural, one {# label} other {# labels}}"
+  "labels_count": "{count, plural, one {# label} other {# labels}}",
+  "assistant": {
+    "title": "AI-assistent",
+    "open": "AI-assistent openen",
+    "subtitle": "Stel vragen over de voortgang, deadlines en werkdruk van uw projecten.",
+    "placeholder": "Stel een vraag over uw projecten…",
+    "send": "Verzenden",
+    "stop": "Stoppen",
+    "new_conversation": "Nieuw gesprek",
+    "close": "Sluiten",
+    "read_only_note": "Alleen-lezen: de assistent raadpleegt uw projecten maar wijzigt ze nooit.",
+    "context_work_item": "Over dit werkitem",
+    "context_project": "Over dit project",
+    "suggestions": {
+      "overdue": "Welke werkitems zijn te laat?",
+      "workload": "Wie heeft de meeste openstaande werkitems?",
+      "projects": "Geef mij een statusoverzicht van mijn projecten."
+    },
+    "actions": {
+      "work_item": "AI vragen",
+      "project": "AI-vertragingsrapport"
+    },
+    "prompts": {
+      "work_item": "Wat is de status van dit werkitem? Is de deadline gehaald?",
+      "project": "Geef mij een statusoverzicht van dit project: voortgang, vertragingen en betrokken personen."
+    },
+    "tools": {
+      "list_projects": "Uw projecten worden opgehaald…",
+      "search_work_items": "Werkitems worden gezocht…",
+      "get_work_item": "Werkitem wordt gelezen…",
+      "project_progress": "Projectvoortgang wordt berekend…",
+      "deadline_report": "Deadlines worden gecontroleerd…",
+      "member_workload": "Werkdruk wordt gemeten…",
+      "default": "Uw gegevens worden opgezocht…"
+    },
+    "errors": {
+      "refusal": "De assistent heeft dit verzoek geweigerd. Probeer het anders te formuleren.",
+      "truncated": "Het antwoord was te lang en is afgebroken. Stel een specifiekere vraag.",
+      "too_many_steps": "De vraag vereiste te veel zoekopdrachten. Stel een specifiekere vraag.",
+      "invalid_api_key": "De Anthropic-API-sleutel is ongeldig. Vraag een instantiebeheerder om deze bij te werken.",
+      "permission_denied": "De Anthropic-API-sleutel heeft geen toegang tot dit model.",
+      "model_not_found": "Het geconfigureerde Claude-model bestaat niet. Vraag een instantiebeheerder om dit te controleren.",
+      "rate_limited": "Te veel verzoeken aan Claude op dit moment. Probeer het zo opnieuw.",
+      "connection_error": "Claude is niet bereikbaar. Controleer de internetverbinding van de server.",
+      "generic": "Er is iets misgegaan. Probeer het opnieuw."
+    }
+  }
 }

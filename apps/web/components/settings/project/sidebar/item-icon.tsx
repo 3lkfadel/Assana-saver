@@ -8,6 +8,7 @@ import type { LucideIcon } from "lucide-react";
 import {
   IntakeOutline,
   LabelsOutline,
+  PropertiesOutline,
   MembersOutline,
   PagesOutline,
   StateOutline,
@@ -28,5 +29,6 @@ export const PROJECT_SETTINGS_ICONS: Record<TProjectSettingsTabs, LucideIcon | R
   features_intake: IntakeOutline,
   states: StateOutline,
   labels: LabelsOutline,
+  custom_fields: PropertiesOutline,
   automations: TriggerOutline,
 };

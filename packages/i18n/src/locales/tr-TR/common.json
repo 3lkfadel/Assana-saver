@@ -932,5 +932,51 @@
       "connection_error": "Claude'a ulaşılamadı. Lütfen sunucunun internet bağlantısını kontrol edin.",
       "generic": "Bir hata oluştu. Lütfen tekrar deneyin."
     }
+  },
+  "custom_fields": {
+    "title": "Özel alanlar",
+    "description": "Bütçe, dalga veya evet/hayır yanıtı gibi ek bilgileri izlemek için bu projenin iş öğelerine alanlar ekleyin. Alanlar kuruluşun kitaplığından gelir ve başka projelerde yeniden kullanılabilir.",
+    "add": "Alan ekle",
+    "create": "Yeni alan oluştur",
+    "empty": "Bu projede henüz özel alan yok.",
+    "edit": "Alanı düzenle",
+    "remove_from_project": "Projeden kaldır",
+    "delete": "Kitaplıktan sil",
+    "delete_confirm": "\"{name}\" kuruluş kitaplığından silinsin mi? Tüm projelerden kaldırılacak ve değerleri kaybolacak.",
+    "name": "Alan adı",
+    "type": "Tür",
+    "options": "Seçenekler",
+    "add_option": "Seçenek ekle",
+    "remove_option": "Seçeneği kaldır",
+    "option_placeholder": "Seçenek adı",
+    "option_color": "Seçenek rengi",
+    "precision": "Ondalık basamak",
+    "save": "Kaydet",
+    "empty_value": "Boş",
+    "types": {
+      "text": "Metin",
+      "number": "Sayı",
+      "date": "Tarih",
+      "single_select": "Tekli seçim",
+      "multi_select": "Çoklu seçim",
+      "people": "Kişiler"
+    },
+    "errors": {
+      "name_required": "Ad zorunludur.",
+      "options_required": "En az bir seçenek ekleyin.",
+      "duplicate": "Bu ada sahip bir alan zaten var.",
+      "save": "Alan kaydedilemedi. Lütfen tekrar deneyin.",
+      "value": "Bu değer kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "toasts": {
+      "added": "Alan projeye eklendi.",
+      "removed": "Alan projeden kaldırıldı.",
+      "deleted": "Alan silindi.",
+      "saved": "Alan kaydedildi."
+    },
+    "activity": {
+      "set": "{field} alanını {value} olarak ayarladı",
+      "cleared": "{field} alanını temizledi"
+    }
   }
 }

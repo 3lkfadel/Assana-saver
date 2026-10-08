@@ -21,6 +21,8 @@ import { CommandPaletteStore } from "@/store/base-command-palette.store";
 import { WorkspaceRootStore } from "@/store/workspace";
 import type { IAssistantStore } from "./assistant.store";
 import { AssistantStore } from "./assistant.store";
+import type { ICustomFieldStore } from "./custom-field.store";
+import { CustomFieldStore } from "./custom-field.store";
 import type { ITimelineStore } from "./timeline/timeline.store";
 import { TimeLineStore } from "./timeline/timeline.store";
 // stores
@@ -106,6 +108,7 @@ export class CoreRootStore {
   powerK: IPowerKStore;
   timelineStore: ITimelineStore;
   assistant: IAssistantStore;
+  customField: ICustomFieldStore;
 
   constructor() {
     this.router = new RouterStore();
@@ -139,6 +142,7 @@ export class CoreRootStore {
     this.powerK = new PowerKStore();
     this.timelineStore = new TimeLineStore(this);
     this.assistant = new AssistantStore();
+    this.customField = new CustomFieldStore();
   }
 
   resetOnSignOut() {
@@ -174,6 +178,7 @@ export class CoreRootStore {
     this.powerK = new PowerKStore();
     this.timelineStore = new TimeLineStore(this);
     this.assistant = new AssistantStore();
+    this.customField = new CustomFieldStore();
   }
 }
 

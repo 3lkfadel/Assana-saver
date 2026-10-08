@@ -932,5 +932,51 @@
       "connection_error": "Nie można połączyć się z Claude. Prosimy sprawdzić połączenie internetowe serwera.",
       "generic": "Wystąpił błąd. Prosimy spróbować ponownie."
     }
+  },
+  "custom_fields": {
+    "title": "Pola niestandardowe",
+    "description": "Pola można dodawać do elementów pracy tego projektu, aby śledzić dodatkowe informacje, takie jak budżet, fala czy odpowiedź tak/nie. Pola pochodzą z biblioteki organizacji i można ich używać w innych projektach.",
+    "add": "Dodaj pole",
+    "create": "Utwórz nowe pole",
+    "empty": "Ten projekt nie ma jeszcze pól niestandardowych.",
+    "edit": "Edytuj pole",
+    "remove_from_project": "Usuń z projektu",
+    "delete": "Usuń z biblioteki",
+    "delete_confirm": "Usunąć „{name}” z biblioteki organizacji? Pole zostanie usunięte ze wszystkich projektów, a jego wartości zostaną utracone.",
+    "name": "Nazwa pola",
+    "type": "Typ",
+    "options": "Opcje",
+    "add_option": "Dodaj opcję",
+    "remove_option": "Usuń opcję",
+    "option_placeholder": "Nazwa opcji",
+    "option_color": "Kolor opcji",
+    "precision": "Miejsca dziesiętne",
+    "save": "Zapisz",
+    "empty_value": "Puste",
+    "types": {
+      "text": "Tekst",
+      "number": "Liczba",
+      "date": "Data",
+      "single_select": "Pojedynczy wybór",
+      "multi_select": "Wielokrotny wybór",
+      "people": "Osoby"
+    },
+    "errors": {
+      "name_required": "Nazwa jest wymagana.",
+      "options_required": "Należy dodać co najmniej jedną opcję.",
+      "duplicate": "Pole o tej nazwie już istnieje.",
+      "save": "Nie udało się zapisać pola. Prosimy spróbować ponownie.",
+      "value": "Nie udało się zapisać tej wartości. Prosimy spróbować ponownie."
+    },
+    "toasts": {
+      "added": "Pole dodane do projektu.",
+      "removed": "Pole usunięte z projektu.",
+      "deleted": "Pole usunięte.",
+      "saved": "Pole zapisane."
+    },
+    "activity": {
+      "set": "ustawił(a) {field} na {value}",
+      "cleared": "wyczyścił(a) {field}"
+    }
   }
 }

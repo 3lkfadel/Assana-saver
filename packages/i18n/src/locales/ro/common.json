@@ -932,5 +932,51 @@
       "connection_error": "Claude nu poate fi contactat. Verificați conexiunea la internet a serverului.",
       "generic": "A apărut o eroare. Vă rugăm să încercați din nou."
     }
+  },
+  "custom_fields": {
+    "title": "Câmpuri personalizate",
+    "description": "Adăugați câmpuri la activitățile acestui proiect pentru a urmări informații suplimentare, precum un buget, un val sau un răspuns da/nu. Câmpurile provin din biblioteca organizației și pot fi reutilizate în alte proiecte.",
+    "add": "Adăugați un câmp",
+    "create": "Creați un câmp nou",
+    "empty": "Acest proiect nu are încă niciun câmp personalizat.",
+    "edit": "Editați câmpul",
+    "remove_from_project": "Eliminați din proiect",
+    "delete": "Ștergeți din bibliotecă",
+    "delete_confirm": "Ștergeți „{name}” din biblioteca organizației? Câmpul va fi eliminat din toate proiectele, iar valorile sale vor fi pierdute.",
+    "name": "Numele câmpului",
+    "type": "Tip",
+    "options": "Opțiuni",
+    "add_option": "Adăugați o opțiune",
+    "remove_option": "Eliminați opțiunea",
+    "option_placeholder": "Numele opțiunii",
+    "option_color": "Culoarea opțiunii",
+    "precision": "Zecimale",
+    "save": "Salvați",
+    "empty_value": "Gol",
+    "types": {
+      "text": "Text",
+      "number": "Număr",
+      "date": "Dată",
+      "single_select": "Selecție unică",
+      "multi_select": "Selecție multiplă",
+      "people": "Persoane"
+    },
+    "errors": {
+      "name_required": "Numele este obligatoriu.",
+      "options_required": "Adăugați cel puțin o opțiune.",
+      "duplicate": "Există deja un câmp cu acest nume.",
+      "save": "Câmpul nu a putut fi salvat. Vă rugăm să încercați din nou.",
+      "value": "Această valoare nu a putut fi salvată. Vă rugăm să încercați din nou."
+    },
+    "toasts": {
+      "added": "Câmp adăugat la proiect.",
+      "removed": "Câmp eliminat din proiect.",
+      "deleted": "Câmp șters.",
+      "saved": "Câmp salvat."
+    },
+    "activity": {
+      "set": "a setat {field} la {value}",
+      "cleared": "a golit {field}"
+    }
   }
 }

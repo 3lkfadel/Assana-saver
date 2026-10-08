@@ -932,5 +932,51 @@
       "connection_error": "Não foi possível conectar ao Claude. Verifique a conexão de internet do servidor.",
       "generic": "Algo deu errado. Tente novamente."
     }
+  },
+  "custom_fields": {
+    "title": "Campos personalizados",
+    "description": "Adicione campos aos itens de trabalho deste projeto para acompanhar informações extras, como um orçamento, uma onda ou uma resposta sim/não. Os campos vêm da biblioteca da organização e podem ser reutilizados em outros projetos.",
+    "add": "Adicionar campo",
+    "create": "Criar um novo campo",
+    "empty": "Ainda não há campos personalizados neste projeto.",
+    "edit": "Editar campo",
+    "remove_from_project": "Remover do projeto",
+    "delete": "Excluir da biblioteca",
+    "delete_confirm": "Excluir \"{name}\" da biblioteca da organização? Ele será removido de todos os projetos e seus valores serão perdidos.",
+    "name": "Nome do campo",
+    "type": "Tipo",
+    "options": "Opções",
+    "add_option": "Adicionar uma opção",
+    "remove_option": "Remover opção",
+    "option_placeholder": "Nome da opção",
+    "option_color": "Cor da opção",
+    "precision": "Casas decimais",
+    "save": "Salvar",
+    "empty_value": "Vazio",
+    "types": {
+      "text": "Texto",
+      "number": "Número",
+      "date": "Data",
+      "single_select": "Seleção única",
+      "multi_select": "Seleção múltipla",
+      "people": "Pessoas"
+    },
+    "errors": {
+      "name_required": "O nome é obrigatório.",
+      "options_required": "Adicione pelo menos uma opção.",
+      "duplicate": "Já existe um campo com este nome.",
+      "save": "Não foi possível salvar o campo. Tente novamente.",
+      "value": "Não foi possível salvar este valor. Tente novamente."
+    },
+    "toasts": {
+      "added": "Campo adicionado ao projeto.",
+      "removed": "Campo removido do projeto.",
+      "deleted": "Campo excluído.",
+      "saved": "Campo salvo."
+    },
+    "activity": {
+      "set": "definiu {field} como {value}",
+      "cleared": "limpou {field}"
+    }
   }
 }

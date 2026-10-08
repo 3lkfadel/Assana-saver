@@ -3,6 +3,12 @@
 # See the LICENSE file for details.
 
 from .base import BaseSerializer
+from .custom_field import (
+    CustomFieldOptionSerializer,
+    CustomFieldSerializer,
+    IssueCustomFieldValueSerializer,
+    ProjectCustomFieldSerializer,
+)
 from .user import (
     UserSerializer,
     UserLiteSerializer,

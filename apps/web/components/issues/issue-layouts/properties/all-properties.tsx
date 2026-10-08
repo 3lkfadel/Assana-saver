@@ -43,6 +43,7 @@ import { useAppRouter } from "@/hooks/use-app-router";
 import { useIssueStoreType } from "@/hooks/use-issue-layout-store";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 // local components
+import { IssueCustomFieldChips } from "@/components/custom-fields";
 import { IssueLabelChips } from "./label-chips";
 import { IssuePropertyLabels } from "./labels";
 import { WithDisplayPropertiesHOC } from "./with-display-properties-HOC";
@@ -522,6 +523,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
           />
         )}
       </WithDisplayPropertiesHOC>
+
+      {/* custom fields: values only, on compact board cards */}
+      {compact && !isEpic && issue.project_id && (
+        <IssueCustomFieldChips projectId={issue.project_id} issueId={issue.id} />
+      )}
     </div>
   );
 });

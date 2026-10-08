@@ -932,5 +932,51 @@
       "connection_error": "Claude is niet bereikbaar. Controleer de internetverbinding van de server.",
       "generic": "Er is iets misgegaan. Probeer het opnieuw."
     }
+  },
+  "custom_fields": {
+    "title": "Aangepaste velden",
+    "description": "Voeg velden toe aan de werkitems van dit project om extra informatie bij te houden, zoals een budget, een golf of een ja/nee-antwoord. Velden komen uit de bibliotheek van de organisatie en kunnen in andere projecten worden hergebruikt.",
+    "add": "Veld toevoegen",
+    "create": "Nieuw veld maken",
+    "empty": "Nog geen aangepaste velden in dit project.",
+    "edit": "Veld bewerken",
+    "remove_from_project": "Uit project verwijderen",
+    "delete": "Uit bibliotheek verwijderen",
+    "delete_confirm": "\"{name}\" uit de bibliotheek van de organisatie verwijderen? Het veld wordt uit alle projecten verwijderd en de waarden gaan verloren.",
+    "name": "Veldnaam",
+    "type": "Type",
+    "options": "Opties",
+    "add_option": "Optie toevoegen",
+    "remove_option": "Optie verwijderen",
+    "option_placeholder": "Naam van de optie",
+    "option_color": "Kleur van de optie",
+    "precision": "Decimalen",
+    "save": "Opslaan",
+    "empty_value": "Leeg",
+    "types": {
+      "text": "Tekst",
+      "number": "Getal",
+      "date": "Datum",
+      "single_select": "Enkele keuze",
+      "multi_select": "Meerkeuze",
+      "people": "Personen"
+    },
+    "errors": {
+      "name_required": "Een naam is verplicht.",
+      "options_required": "Voeg ten minste één optie toe.",
+      "duplicate": "Er bestaat al een veld met deze naam.",
+      "save": "Het veld kon niet worden opgeslagen. Probeer het opnieuw.",
+      "value": "Deze waarde kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "toasts": {
+      "added": "Veld aan het project toegevoegd.",
+      "removed": "Veld uit het project verwijderd.",
+      "deleted": "Veld verwijderd.",
+      "saved": "Veld opgeslagen."
+    },
+    "activity": {
+      "set": "heeft {field} ingesteld op {value}",
+      "cleared": "heeft {field} gewist"
+    }
   }
 }

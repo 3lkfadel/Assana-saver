@@ -932,5 +932,51 @@
       "connection_error": "Không thể kết nối tới Claude. Hãy kiểm tra kết nối Internet của máy chủ.",
       "generic": "Đã xảy ra lỗi. Vui lòng thử lại."
     }
+  },
+  "custom_fields": {
+    "title": "Trường tùy chỉnh",
+    "description": "Thêm trường vào các mục công việc của dự án này để theo dõi thông tin bổ sung, như ngân sách, đợt hoặc câu trả lời có/không. Các trường lấy từ thư viện của tổ chức và có thể dùng lại trong các dự án khác.",
+    "add": "Thêm trường",
+    "create": "Tạo trường mới",
+    "empty": "Dự án này chưa có trường tùy chỉnh nào.",
+    "edit": "Sửa trường",
+    "remove_from_project": "Gỡ khỏi dự án",
+    "delete": "Xóa khỏi thư viện",
+    "delete_confirm": "Xóa \"{name}\" khỏi thư viện của tổ chức? Trường sẽ bị gỡ khỏi mọi dự án và các giá trị sẽ bị mất.",
+    "name": "Tên trường",
+    "type": "Loại",
+    "options": "Tùy chọn",
+    "add_option": "Thêm tùy chọn",
+    "remove_option": "Gỡ tùy chọn",
+    "option_placeholder": "Tên tùy chọn",
+    "option_color": "Màu tùy chọn",
+    "precision": "Số chữ số thập phân",
+    "save": "Lưu",
+    "empty_value": "Trống",
+    "types": {
+      "text": "Văn bản",
+      "number": "Số",
+      "date": "Ngày",
+      "single_select": "Chọn một",
+      "multi_select": "Chọn nhiều",
+      "people": "Người"
+    },
+    "errors": {
+      "name_required": "Tên là bắt buộc.",
+      "options_required": "Hãy thêm ít nhất một tùy chọn.",
+      "duplicate": "Đã có trường với tên này.",
+      "save": "Không thể lưu trường. Vui lòng thử lại.",
+      "value": "Không thể lưu giá trị này. Vui lòng thử lại."
+    },
+    "toasts": {
+      "added": "Đã thêm trường vào dự án.",
+      "removed": "Đã gỡ trường khỏi dự án.",
+      "deleted": "Đã xóa trường.",
+      "saved": "Đã lưu trường."
+    },
+    "activity": {
+      "set": "đã đặt {field} thành {value}",
+      "cleared": "đã xóa giá trị {field}"
+    }
   }
 }

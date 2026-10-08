@@ -932,5 +932,51 @@
       "connection_error": "Claude není dostupný. Zkontrolujte internetové připojení serveru.",
       "generic": "Něco se pokazilo. Zkuste to prosím znovu."
     }
+  },
+  "custom_fields": {
+    "title": "Vlastní pole",
+    "description": "Přidejte k pracovním položkám tohoto projektu pole pro sledování dalších informací, například rozpočtu, vlny nebo odpovědi ano/ne. Pole pocházejí z knihovny organizace a lze je znovu použít v dalších projektech.",
+    "add": "Přidat pole",
+    "create": "Vytvořit nové pole",
+    "empty": "V tomto projektu zatím nejsou žádná vlastní pole.",
+    "edit": "Upravit pole",
+    "remove_from_project": "Odebrat z projektu",
+    "delete": "Smazat z knihovny",
+    "delete_confirm": "Smazat „{name}“ z knihovny organizace? Pole bude odebráno ze všech projektů a jeho hodnoty budou ztraceny.",
+    "name": "Název pole",
+    "type": "Typ",
+    "options": "Možnosti",
+    "add_option": "Přidat možnost",
+    "remove_option": "Odebrat možnost",
+    "option_placeholder": "Název možnosti",
+    "option_color": "Barva možnosti",
+    "precision": "Desetinná místa",
+    "save": "Uložit",
+    "empty_value": "Prázdné",
+    "types": {
+      "text": "Text",
+      "number": "Číslo",
+      "date": "Datum",
+      "single_select": "Jednoduchý výběr",
+      "multi_select": "Vícenásobný výběr",
+      "people": "Osoby"
+    },
+    "errors": {
+      "name_required": "Název je povinný.",
+      "options_required": "Přidejte alespoň jednu možnost.",
+      "duplicate": "Pole s tímto názvem již existuje.",
+      "save": "Pole se nepodařilo uložit. Zkuste to prosím znovu.",
+      "value": "Tuto hodnotu se nepodařilo uložit. Zkuste to prosím znovu."
+    },
+    "toasts": {
+      "added": "Pole bylo přidáno do projektu.",
+      "removed": "Pole bylo odebráno z projektu.",
+      "deleted": "Pole bylo smazáno.",
+      "saved": "Pole bylo uloženo."
+    },
+    "activity": {
+      "set": "nastavil(a) {field} na {value}",
+      "cleared": "vymazal(a) {field}"
+    }
   }
 }

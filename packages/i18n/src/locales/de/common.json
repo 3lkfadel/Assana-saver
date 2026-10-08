@@ -932,5 +932,51 @@
       "connection_error": "Claude ist nicht erreichbar. Bitte prüfen Sie die Internetverbindung des Servers.",
       "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
     }
+  },
+  "custom_fields": {
+    "title": "Benutzerdefinierte Felder",
+    "description": "Fügen Sie den Arbeitselementen dieses Projekts Felder hinzu, um zusätzliche Informationen zu erfassen, etwa ein Budget, eine Welle oder eine Ja/Nein-Antwort. Die Felder stammen aus der Bibliothek der Organisation und können in anderen Projekten wiederverwendet werden.",
+    "add": "Feld hinzufügen",
+    "create": "Neues Feld erstellen",
+    "empty": "Noch keine benutzerdefinierten Felder in diesem Projekt.",
+    "edit": "Feld bearbeiten",
+    "remove_from_project": "Aus dem Projekt entfernen",
+    "delete": "Aus der Bibliothek löschen",
+    "delete_confirm": "„{name}“ aus der Bibliothek der Organisation löschen? Das Feld wird aus allen Projekten entfernt und seine Werte gehen verloren.",
+    "name": "Feldname",
+    "type": "Typ",
+    "options": "Optionen",
+    "add_option": "Option hinzufügen",
+    "remove_option": "Option entfernen",
+    "option_placeholder": "Name der Option",
+    "option_color": "Farbe der Option",
+    "precision": "Dezimalstellen",
+    "save": "Speichern",
+    "empty_value": "Leer",
+    "types": {
+      "text": "Text",
+      "number": "Zahl",
+      "date": "Datum",
+      "single_select": "Einfachauswahl",
+      "multi_select": "Mehrfachauswahl",
+      "people": "Personen"
+    },
+    "errors": {
+      "name_required": "Ein Name ist erforderlich.",
+      "options_required": "Mindestens eine Option hinzufügen.",
+      "duplicate": "Ein Feld mit diesem Namen existiert bereits.",
+      "save": "Das Feld konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+      "value": "Dieser Wert konnte nicht gespeichert werden. Bitte versuchen Sie es erneut."
+    },
+    "toasts": {
+      "added": "Feld zum Projekt hinzugefügt.",
+      "removed": "Feld aus dem Projekt entfernt.",
+      "deleted": "Feld gelöscht.",
+      "saved": "Feld gespeichert."
+    },
+    "activity": {
+      "set": "hat {field} auf {value} gesetzt",
+      "cleared": "hat {field} geleert"
+    }
   }
 }

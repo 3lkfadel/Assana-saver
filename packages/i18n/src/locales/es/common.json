@@ -932,5 +932,51 @@
       "connection_error": "No se pudo conectar con Claude. Compruebe la conexión a Internet del servidor.",
       "generic": "Se produjo un error. Inténtelo de nuevo."
     }
+  },
+  "custom_fields": {
+    "title": "Campos personalizados",
+    "description": "Agregue campos a los elementos de trabajo de este proyecto para registrar información adicional, como un presupuesto, una ola o una respuesta sí/no. Los campos provienen de la biblioteca de la organización y pueden reutilizarse en otros proyectos.",
+    "add": "Agregar campo",
+    "create": "Crear un campo nuevo",
+    "empty": "Aún no hay campos personalizados en este proyecto.",
+    "edit": "Editar campo",
+    "remove_from_project": "Quitar del proyecto",
+    "delete": "Eliminar de la biblioteca",
+    "delete_confirm": "¿Eliminar «{name}» de la biblioteca de la organización? Se quitará de todos los proyectos y se perderán sus valores.",
+    "name": "Nombre del campo",
+    "type": "Tipo",
+    "options": "Opciones",
+    "add_option": "Agregar una opción",
+    "remove_option": "Quitar opción",
+    "option_placeholder": "Nombre de la opción",
+    "option_color": "Color de la opción",
+    "precision": "Decimales",
+    "save": "Guardar",
+    "empty_value": "Vacío",
+    "types": {
+      "text": "Texto",
+      "number": "Número",
+      "date": "Fecha",
+      "single_select": "Selección única",
+      "multi_select": "Selección múltiple",
+      "people": "Personas"
+    },
+    "errors": {
+      "name_required": "El nombre es obligatorio.",
+      "options_required": "Agregue al menos una opción.",
+      "duplicate": "Ya existe un campo con este nombre.",
+      "save": "No se pudo guardar el campo. Inténtelo de nuevo.",
+      "value": "No se pudo guardar este valor. Inténtelo de nuevo."
+    },
+    "toasts": {
+      "added": "Campo agregado al proyecto.",
+      "removed": "Campo quitado del proyecto.",
+      "deleted": "Campo eliminado.",
+      "saved": "Campo guardado."
+    },
+    "activity": {
+      "set": "estableció {field} en {value}",
+      "cleared": "vació {field}"
+    }
   }
 }

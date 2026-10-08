@@ -932,5 +932,51 @@
       "connection_error": "Could not reach Claude. Check the server's internet connection.",
       "generic": "Something went wrong. Try again."
     }
+  },
+  "custom_fields": {
+    "title": "Custom fields",
+    "description": "Add fields to this project's work items to track extra information, such as a budget, a wave or a yes/no answer. Fields come from the organization library and can be reused in other projects.",
+    "add": "Add field",
+    "create": "Create a new field",
+    "empty": "No custom field in this project yet.",
+    "edit": "Edit field",
+    "remove_from_project": "Remove from project",
+    "delete": "Delete from library",
+    "delete_confirm": "Delete \"{name}\" from the organization library? It will be removed from every project and its values will be lost.",
+    "name": "Field name",
+    "type": "Type",
+    "options": "Options",
+    "add_option": "Add an option",
+    "remove_option": "Remove option",
+    "option_placeholder": "Option name",
+    "option_color": "Option color",
+    "precision": "Decimal places",
+    "save": "Save",
+    "empty_value": "Empty",
+    "types": {
+      "text": "Text",
+      "number": "Number",
+      "date": "Date",
+      "single_select": "Single select",
+      "multi_select": "Multi select",
+      "people": "People"
+    },
+    "errors": {
+      "name_required": "A name is required.",
+      "options_required": "Add at least one option.",
+      "duplicate": "A field with this name already exists.",
+      "save": "The field could not be saved. Please try again.",
+      "value": "This value could not be saved. Please try again."
+    },
+    "toasts": {
+      "added": "Field added to the project.",
+      "removed": "Field removed from the project.",
+      "deleted": "Field deleted.",
+      "saved": "Field saved."
+    },
+    "activity": {
+      "set": "set {field} to {value}",
+      "cleared": "cleared {field}"
+    }
   }
 }

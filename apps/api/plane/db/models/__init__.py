@@ -84,6 +84,13 @@ from .issue_type import IssueType
 from .recent_visit import UserRecentVisit
 
 from .label import Label
+from .custom_field import (
+    CustomField,
+    CustomFieldOption,
+    CustomFieldType,
+    IssueCustomFieldValue,
+    ProjectCustomField,
+)
 
 from .device import Device, DeviceSession
 

@@ -932,5 +932,51 @@
       "connection_error": "Impossibile raggiungere Claude. Verifichi la connessione Internet del server.",
       "generic": "Si è verificato un errore. Riprovi."
     }
+  },
+  "custom_fields": {
+    "title": "Campi personalizzati",
+    "description": "Aggiunga campi agli elementi di lavoro di questo progetto per tenere traccia di informazioni aggiuntive, come un budget, un'ondata o una risposta sì/no. I campi provengono dalla libreria dell'organizzazione e possono essere riutilizzati in altri progetti.",
+    "add": "Aggiungi campo",
+    "create": "Crea un nuovo campo",
+    "empty": "Nessun campo personalizzato in questo progetto.",
+    "edit": "Modifica campo",
+    "remove_from_project": "Rimuovi dal progetto",
+    "delete": "Elimina dalla libreria",
+    "delete_confirm": "Eliminare «{name}» dalla libreria dell'organizzazione? Verrà rimosso da tutti i progetti e i suoi valori andranno persi.",
+    "name": "Nome del campo",
+    "type": "Tipo",
+    "options": "Opzioni",
+    "add_option": "Aggiungi un'opzione",
+    "remove_option": "Rimuovi opzione",
+    "option_placeholder": "Nome dell'opzione",
+    "option_color": "Colore dell'opzione",
+    "precision": "Cifre decimali",
+    "save": "Salva",
+    "empty_value": "Vuoto",
+    "types": {
+      "text": "Testo",
+      "number": "Numero",
+      "date": "Data",
+      "single_select": "Selezione singola",
+      "multi_select": "Selezione multipla",
+      "people": "Persone"
+    },
+    "errors": {
+      "name_required": "Il nome è obbligatorio.",
+      "options_required": "Aggiunga almeno un'opzione.",
+      "duplicate": "Esiste già un campo con questo nome.",
+      "save": "Impossibile salvare il campo. Riprovi.",
+      "value": "Impossibile salvare questo valore. Riprovi."
+    },
+    "toasts": {
+      "added": "Campo aggiunto al progetto.",
+      "removed": "Campo rimosso dal progetto.",
+      "deleted": "Campo eliminato.",
+      "saved": "Campo salvato."
+    },
+    "activity": {
+      "set": "ha impostato {field} su {value}",
+      "cleared": "ha svuotato {field}"
+    }
   }
 }

@@ -932,5 +932,51 @@
       "connection_error": "Claude nie je dostupný. Skontrolujte internetové pripojenie servera.",
       "generic": "Niečo sa pokazilo. Skúste to prosím znova."
     }
+  },
+  "custom_fields": {
+    "title": "Vlastné polia",
+    "description": "Pridajte k pracovným položkám tohto projektu polia na sledovanie ďalších informácií, napríklad rozpočtu, vlny alebo odpovede áno/nie. Polia pochádzajú z knižnice organizácie a možno ich znova použiť v ďalších projektoch.",
+    "add": "Pridať pole",
+    "create": "Vytvoriť nové pole",
+    "empty": "V tomto projekte zatiaľ nie sú žiadne vlastné polia.",
+    "edit": "Upraviť pole",
+    "remove_from_project": "Odobrať z projektu",
+    "delete": "Odstrániť z knižnice",
+    "delete_confirm": "Odstrániť „{name}“ z knižnice organizácie? Pole bude odobraté zo všetkých projektov a jeho hodnoty sa stratia.",
+    "name": "Názov poľa",
+    "type": "Typ",
+    "options": "Možnosti",
+    "add_option": "Pridať možnosť",
+    "remove_option": "Odobrať možnosť",
+    "option_placeholder": "Názov možnosti",
+    "option_color": "Farba možnosti",
+    "precision": "Desatinné miesta",
+    "save": "Uložiť",
+    "empty_value": "Prázdne",
+    "types": {
+      "text": "Text",
+      "number": "Číslo",
+      "date": "Dátum",
+      "single_select": "Jednoduchý výber",
+      "multi_select": "Viacnásobný výber",
+      "people": "Osoby"
+    },
+    "errors": {
+      "name_required": "Názov je povinný.",
+      "options_required": "Pridajte aspoň jednu možnosť.",
+      "duplicate": "Pole s týmto názvom už existuje.",
+      "save": "Pole sa nepodarilo uložiť. Skúste to prosím znova.",
+      "value": "Túto hodnotu sa nepodarilo uložiť. Skúste to prosím znova."
+    },
+    "toasts": {
+      "added": "Pole bolo pridané do projektu.",
+      "removed": "Pole bolo odobraté z projektu.",
+      "deleted": "Pole bolo odstránené.",
+      "saved": "Pole bolo uložené."
+    },
+    "activity": {
+      "set": "nastavil(a) {field} na {value}",
+      "cleared": "vymazal(a) {field}"
+    }
   }
 }

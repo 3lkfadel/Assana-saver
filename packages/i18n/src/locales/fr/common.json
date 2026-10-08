@@ -932,5 +932,51 @@
       "connection_error": "Impossible de joindre Claude. Vérifiez la connexion Internet du serveur.",
       "generic": "Une erreur s'est produite. Veuillez réessayer."
     }
+  },
+  "custom_fields": {
+    "title": "Champs personnalisés",
+    "description": "Ajoutez des champs aux éléments de travail de ce projet pour suivre des informations supplémentaires, comme un budget, une vague ou une réponse oui/non. Les champs viennent de la bibliothèque de l'organisation et peuvent être réutilisés dans d'autres projets.",
+    "add": "Ajouter un champ",
+    "create": "Créer un nouveau champ",
+    "empty": "Aucun champ personnalisé dans ce projet pour le moment.",
+    "edit": "Modifier le champ",
+    "remove_from_project": "Retirer du projet",
+    "delete": "Supprimer de la bibliothèque",
+    "delete_confirm": "Supprimer « {name} » de la bibliothèque de l'organisation ? Il sera retiré de tous les projets et ses valeurs seront perdues.",
+    "name": "Nom du champ",
+    "type": "Type",
+    "options": "Options",
+    "add_option": "Ajouter une option",
+    "remove_option": "Retirer l'option",
+    "option_placeholder": "Nom de l'option",
+    "option_color": "Couleur de l'option",
+    "precision": "Décimales",
+    "save": "Enregistrer",
+    "empty_value": "Vide",
+    "types": {
+      "text": "Texte",
+      "number": "Nombre",
+      "date": "Date",
+      "single_select": "Liste à choix unique",
+      "multi_select": "Liste à choix multiples",
+      "people": "Personnes"
+    },
+    "errors": {
+      "name_required": "Le nom est obligatoire.",
+      "options_required": "Ajoutez au moins une option.",
+      "duplicate": "Un champ portant ce nom existe déjà.",
+      "save": "Impossible d'enregistrer le champ. Veuillez réessayer.",
+      "value": "Impossible d'enregistrer cette valeur. Veuillez réessayer."
+    },
+    "toasts": {
+      "added": "Champ ajouté au projet.",
+      "removed": "Champ retiré du projet.",
+      "deleted": "Champ supprimé.",
+      "saved": "Champ enregistré."
+    },
+    "activity": {
+      "set": "a défini {field} sur {value}",
+      "cleared": "a vidé {field}"
+    }
   }
 }

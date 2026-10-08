@@ -932,5 +932,51 @@
       "connection_error": "無法連線到 Claude，請檢查伺服器的網路連線。",
       "generic": "發生錯誤，請再試一次。"
     }
+  },
+  "custom_fields": {
+    "title": "自訂欄位",
+    "description": "為此專案的工作事項新增欄位，以記錄預算、梯次或是/否答覆等額外資訊。欄位來自組織的欄位庫，可在其他專案中重複使用。",
+    "add": "新增欄位",
+    "create": "建立欄位",
+    "empty": "此專案尚無自訂欄位。",
+    "edit": "編輯欄位",
+    "remove_from_project": "從專案中移除",
+    "delete": "從欄位庫中刪除",
+    "delete_confirm": "要從組織欄位庫中刪除「{name}」嗎？它將從所有專案中移除，其值也會遺失。",
+    "name": "欄位名稱",
+    "type": "類型",
+    "options": "選項",
+    "add_option": "新增選項",
+    "remove_option": "移除選項",
+    "option_placeholder": "選項名稱",
+    "option_color": "選項顏色",
+    "precision": "小數位數",
+    "save": "儲存",
+    "empty_value": "空白",
+    "types": {
+      "text": "文字",
+      "number": "數字",
+      "date": "日期",
+      "single_select": "單選",
+      "multi_select": "多選",
+      "people": "人員"
+    },
+    "errors": {
+      "name_required": "名稱為必填。",
+      "options_required": "請至少新增一個選項。",
+      "duplicate": "已存在同名欄位。",
+      "save": "無法儲存欄位，請再試一次。",
+      "value": "無法儲存此值，請再試一次。"
+    },
+    "toasts": {
+      "added": "已將欄位新增至專案。",
+      "removed": "已從專案中移除欄位。",
+      "deleted": "已刪除欄位。",
+      "saved": "已儲存欄位。"
+    },
+    "activity": {
+      "set": "將 {field} 設為 {value}",
+      "cleared": "清除了 {field}"
+    }
   }
 }

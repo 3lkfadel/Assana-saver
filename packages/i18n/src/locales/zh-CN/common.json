@@ -932,5 +932,51 @@
       "connection_error": "无法连接到 Claude，请检查服务器的网络连接。",
       "generic": "出现错误，请重试。"
     }
+  },
+  "custom_fields": {
+    "title": "自定义字段",
+    "description": "为此项目的工作项添加字段，以记录预算、批次或是/否答复等额外信息。字段来自组织的字段库，可在其他项目中重复使用。",
+    "add": "添加字段",
+    "create": "新建字段",
+    "empty": "此项目还没有自定义字段。",
+    "edit": "编辑字段",
+    "remove_from_project": "从项目中移除",
+    "delete": "从字段库中删除",
+    "delete_confirm": "要从组织字段库中删除“{name}”吗？它将从所有项目中移除，其值也会丢失。",
+    "name": "字段名称",
+    "type": "类型",
+    "options": "选项",
+    "add_option": "添加选项",
+    "remove_option": "移除选项",
+    "option_placeholder": "选项名称",
+    "option_color": "选项颜色",
+    "precision": "小数位数",
+    "save": "保存",
+    "empty_value": "空",
+    "types": {
+      "text": "文本",
+      "number": "数字",
+      "date": "日期",
+      "single_select": "单选",
+      "multi_select": "多选",
+      "people": "人员"
+    },
+    "errors": {
+      "name_required": "名称为必填项。",
+      "options_required": "请至少添加一个选项。",
+      "duplicate": "已存在同名字段。",
+      "save": "无法保存字段，请重试。",
+      "value": "无法保存此值，请重试。"
+    },
+    "toasts": {
+      "added": "已将字段添加到项目。",
+      "removed": "已从项目中移除字段。",
+      "deleted": "已删除字段。",
+      "saved": "已保存字段。"
+    },
+    "activity": {
+      "set": "将 {field} 设置为 {value}",
+      "cleared": "清空了 {field}"
+    }
   }
 }

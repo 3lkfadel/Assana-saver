@@ -180,6 +180,14 @@ from .search.issue import IssueSearchEndpoint
 
 
 from .assistant.base import AssistantChatEndpoint, AssistantStatusEndpoint
+from .custom_field.base import (
+    IssueCustomFieldValueEndpoint,
+    ProjectCustomFieldDetailEndpoint,
+    ProjectCustomFieldEndpoint,
+    ProjectCustomFieldValueEndpoint,
+    WorkspaceCustomFieldDetailEndpoint,
+    WorkspaceCustomFieldEndpoint,
+)
 from .external.base import (
     GPTIntegrationEndpoint,
     UnsplashEndpoint,

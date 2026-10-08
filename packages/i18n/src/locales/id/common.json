@@ -932,5 +932,51 @@
       "connection_error": "Tidak dapat terhubung ke Claude. Periksa koneksi internet server.",
       "generic": "Terjadi kesalahan. Silakan coba lagi."
     }
+  },
+  "custom_fields": {
+    "title": "Bidang khusus",
+    "description": "Tambahkan bidang ke item kerja proyek ini untuk mencatat informasi tambahan, seperti anggaran, gelombang, atau jawaban ya/tidak. Bidang berasal dari pustaka organisasi dan dapat digunakan kembali di proyek lain.",
+    "add": "Tambah bidang",
+    "create": "Buat bidang baru",
+    "empty": "Belum ada bidang khusus di proyek ini.",
+    "edit": "Edit bidang",
+    "remove_from_project": "Hapus dari proyek",
+    "delete": "Hapus dari pustaka",
+    "delete_confirm": "Hapus \"{name}\" dari pustaka organisasi? Bidang ini akan dihapus dari semua proyek dan nilainya akan hilang.",
+    "name": "Nama bidang",
+    "type": "Jenis",
+    "options": "Opsi",
+    "add_option": "Tambah opsi",
+    "remove_option": "Hapus opsi",
+    "option_placeholder": "Nama opsi",
+    "option_color": "Warna opsi",
+    "precision": "Angka desimal",
+    "save": "Simpan",
+    "empty_value": "Kosong",
+    "types": {
+      "text": "Teks",
+      "number": "Angka",
+      "date": "Tanggal",
+      "single_select": "Pilihan tunggal",
+      "multi_select": "Pilihan ganda",
+      "people": "Orang"
+    },
+    "errors": {
+      "name_required": "Nama wajib diisi.",
+      "options_required": "Tambahkan setidaknya satu opsi.",
+      "duplicate": "Bidang dengan nama ini sudah ada.",
+      "save": "Bidang tidak dapat disimpan. Silakan coba lagi.",
+      "value": "Nilai ini tidak dapat disimpan. Silakan coba lagi."
+    },
+    "toasts": {
+      "added": "Bidang ditambahkan ke proyek.",
+      "removed": "Bidang dihapus dari proyek.",
+      "deleted": "Bidang dihapus.",
+      "saved": "Bidang disimpan."
+    },
+    "activity": {
+      "set": "mengatur {field} menjadi {value}",
+      "cleared": "mengosongkan {field}"
+    }
   }
 }

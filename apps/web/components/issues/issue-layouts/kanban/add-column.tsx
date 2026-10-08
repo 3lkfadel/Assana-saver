@@ -100,7 +100,16 @@ export const KanbanAddColumn = observer(function KanbanAddColumn(props: TKanbanA
           aria-label={t("issue.layouts.board_columns.column_name")}
         />
       </InputGroup>
-      <Select<TStateGroups> value={group} onValueChange={(next) => next && setGroup(next)}>
+      <Select<TStateGroups>
+        items={Object.fromEntries(
+          Object.values(STATE_GROUPS).map((stateGroup) => [
+            stateGroup.key,
+            t(`workspace_projects.state.${stateGroup.key}`),
+          ])
+        )}
+        value={group}
+        onValueChange={(next) => next && setGroup(next)}
+      >
         <SelectTrigger size="md" aria-label={t("issue.layouts.board_columns.category")} />
         <SelectContent side="bottom" align="start">
           <SelectList>

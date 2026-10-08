@@ -10,6 +10,40 @@
 import { cleanup } from "@testing-library/react";
 import { afterEach, beforeEach } from "vitest";
 
+/**
+ * Node 25+ defines its own `localStorage` / `sessionStorage` globals. They shadow jsdom's and have no
+ * `getItem` unless Node runs with `--localstorage-file`, which breaks modules that read storage on
+ * import (`@plane/i18n` reads the saved language). Put a working in-memory Storage back in that case;
+ * on Node 22 jsdom's storage works and this is a no-op.
+ */
+class MemoryStorage implements Storage {
+  private items = new Map<string, string>();
+  get length(): number {
+    return this.items.size;
+  }
+  clear(): void {
+    this.items.clear();
+  }
+  getItem(key: string): string | null {
+    return this.items.get(key) ?? null;
+  }
+  key(index: number): string | null {
+    return [...this.items.keys()][index] ?? null;
+  }
+  removeItem(key: string): void {
+    this.items.delete(key);
+  }
+  setItem(key: string, value: string): void {
+    this.items.set(key, String(value));
+  }
+}
+
+for (const name of ["localStorage", "sessionStorage"] as const) {
+  if (typeof globalThis[name]?.getItem !== "function") {
+    Object.defineProperty(globalThis, name, { value: new MemoryStorage(), configurable: true, writable: true });
+  }
+}
+
 // The apps default to French; the tests assert the English copy. `@plane/i18n` reads this key
 // (LANGUAGE_STORAGE_KEY) when the test files first import it, after this setup file has run.
 window.localStorage.setItem("userLanguage", "en");

@@ -1,0 +1,32 @@
+# Type checks and tests for what this push changes, before it reaches GitHub.
+# Skip once with `git push --no-verify`, or the API suite with SKIP_API_TESTS=1.
+
+zero=0000000000000000000000000000000000000000
+changed=""
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue # branch deletion
+  if [ "$remote_sha" = "$zero" ] || ! git cat-file -e "$remote_sha" 2>/dev/null; then
+    base=$(git merge-base "$local_sha" origin/main 2>/dev/null) || continue
+  else
+    base=$remote_sha
+  fi
+  changed="$changed
+$(git diff --name-only "$base" "$local_sha")"
+done
+
+changed=$(echo "$changed" | grep -v '^$')
+[ -z "$changed" ] && exit 0
+
+if echo "$changed" | grep -qvE '^(apps/api/|docs/|.*\.md$)'; then
+  echo "pre-push: type checks and unit tests of the affected packages"
+  pnpm turbo run check:types test --filter="...[${base:-origin/main}]" --output-logs=errors-only || exit 1
+fi
+
+if echo "$changed" | grep -q '^apps/api/' && [ "$SKIP_API_TESTS" != "1" ]; then
+  echo "pre-push: API test suite (Docker)"
+  compose="docker compose -f docker-compose-test.yml -p asana-saver-hooks"
+  $compose run --rm --build api-tests pytest -q -p no:cacheprovider
+  status=$?
+  $compose down -v --remove-orphans >/dev/null 2>&1
+  [ $status -eq 0 ] || exit 1
+fi

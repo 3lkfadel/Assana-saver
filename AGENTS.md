@@ -22,6 +22,16 @@
 - **Testing**: All features require unit tests, use existing test framework per package
 - **Components**: Primitives come from the published `@makeplane/propel` npm package (`@makeplane/propel/components/*`, `elements/*`, `icons`); composite/Plane-specific components live in `@plane/blocks` (`packages/blocks`, subpath imports only, e.g. `@plane/blocks/toast`)
 
+## Git hooks (Husky)
+
+Installed by `pnpm install` (`prepare` script), defined in `.husky/`:
+
+- `pre-commit`: oxfmt and `oxlint --deny-warnings` on staged files (lint-staged); `check:sync` of `@plane/i18n` when a locale file is staged.
+- `commit-msg`: conventional commits via commitlint (`commitlint.config.mjs`), e.g. `feat(i18n): translate the sign-in headers`.
+- `pre-push`: `check:types` and `test` of the packages affected by the pushed commits (and their dependents); the API pytest suite in Docker when `apps/api/` changed (`SKIP_API_TESTS=1` to skip it).
+
+`git push --no-verify` bypasses them; CI remains the gate.
+
 ## Backend tests (Docker)
 
 The Django/pytest suite for `apps/api` runs in an isolated stack defined by `docker-compose-test.yml` at the repo root.

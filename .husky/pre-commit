@@ -1,1 +1,6 @@
 pnpm lint-staged
+
+# A translation key must exist in every locale.
+if git diff --cached --name-only | grep -q '^packages/i18n/src/locales/'; then
+  pnpm --filter @plane/i18n check:sync
+fi

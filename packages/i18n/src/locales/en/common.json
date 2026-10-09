@@ -978,5 +978,67 @@
       "set": "set {field} to {value}",
       "cleared": "cleared {field}"
     }
+  },
+  "steering": {
+    "save": "Save",
+    "rename": "Rename",
+    "delete_confirm": "Delete \"{name}\"?",
+    "referential": {
+      "title": "Group referential",
+      "description": "The branches, entities and categories of the Group, and who reads the steering space. Every project is carried by one entity.",
+      "empty": "The referential is empty.",
+      "bootstrap": "Load the Group referential",
+      "bootstrap_hint": "Creates the 8 branches, 21 entities and 4 categories of the specification. You can change them afterwards.",
+      "bootstrapped": "Group referential loaded.",
+      "read_only": "Only the CEO, the Presidency Cabinet and workspace admins can change the referential."
+    },
+    "branches": {
+      "title": "Branches and entities",
+      "description": "Each entity belongs to one branch. To move an entity, choose another branch.",
+      "add": "Add branch",
+      "placeholder": "New branch",
+      "entity_count": "{count, plural, one {# entity} other {# entities}}"
+    },
+    "entities": {
+      "placeholder": "New entity",
+      "move": "Move to another branch"
+    },
+    "categories": {
+      "title": "Categories",
+      "description": "Categories classify work items in the steering space.",
+      "add": "Add category",
+      "placeholder": "New category",
+      "empty": "No category yet."
+    },
+    "profiles": {
+      "title": "Steering profiles",
+      "description": "A profile sets what a person sees in the steering space: the whole Group, one branch or one entity.",
+      "empty": "No profile yet.",
+      "member": "Person",
+      "role": "Profile",
+      "scope": "Branch or entity",
+      "add": "Add profile",
+      "whole_group": "Whole Group",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Presidency Cabinet",
+        "branch_director": "Branch director",
+        "entity_manager": "Entity manager"
+      }
+    },
+    "project_entity": {
+      "title": "Carrying entity",
+      "description": "The Group entity that carries this project in the steering space.",
+      "placeholder": "Choose an entity",
+      "saved": "Carrying entity saved.",
+      "no_referential": "Set up the Group referential first."
+    },
+    "errors": {
+      "save": "The change could not be saved.",
+      "duplicate": "This name is already used.",
+      "branch_not_empty": "Move or delete the entities of this branch first.",
+      "entity_in_use": "Projects are carried by this entity. Assign them to another entity first.",
+      "profile": "The profile could not be added. This person may already have it."
+    }
   }
 }

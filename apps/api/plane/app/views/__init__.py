@@ -247,3 +247,16 @@ from .notification.base import MarkAllReadNotificationViewSet
 from .user.base import AccountEndpoint, ProfileEndpoint, UserSessionEndpoint
 
 from .timezone.base import TimezoneEndpoint
+from .steering.base import (
+    ProjectSteeringEndpoint,
+    SteeringBootstrapEndpoint,
+    SteeringBranchDetailEndpoint,
+    SteeringBranchEndpoint,
+    SteeringCategoryDetailEndpoint,
+    SteeringCategoryEndpoint,
+    SteeringEntityDetailEndpoint,
+    SteeringEntityEndpoint,
+    SteeringProfileDetailEndpoint,
+    SteeringProfileEndpoint,
+    SteeringReferentialEndpoint,
+)

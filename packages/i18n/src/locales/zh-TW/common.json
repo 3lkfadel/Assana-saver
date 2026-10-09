@@ -978,5 +978,67 @@
       "set": "將 {field} 設為 {value}",
       "cleared": "清除了 {field}"
     }
+  },
+  "steering": {
+    "save": "儲存",
+    "rename": "重新命名",
+    "delete_confirm": "刪除「{name}」？",
+    "referential": {
+      "title": "集團基礎資料",
+      "description": "集團的業務板塊、單位和類別，以及檢視管理儀表板的人員。每個專案由一個單位負責。",
+      "empty": "基礎資料為空。",
+      "bootstrap": "載入集團基礎資料",
+      "bootstrap_hint": "建立需求規格書中的 8 個業務板塊、21 個單位和 4 個類別。之後可以修改。",
+      "bootstrapped": "集團基礎資料已載入。",
+      "read_only": "只有執行長、總裁辦公室和工作區管理員可以修改基礎資料。"
+    },
+    "branches": {
+      "title": "業務板塊和單位",
+      "description": "每個單位屬於一個業務板塊。要移動單位，請選擇其他業務板塊。",
+      "add": "新增業務板塊",
+      "placeholder": "新業務板塊",
+      "entity_count": "{count, plural, one {# 個單位} other {# 個單位}}"
+    },
+    "entities": {
+      "placeholder": "新單位",
+      "move": "移至其他業務板塊"
+    },
+    "categories": {
+      "title": "類別",
+      "description": "類別用於在管理儀表板中為工作項目分類。",
+      "add": "新增類別",
+      "placeholder": "新類別",
+      "empty": "尚無類別。"
+    },
+    "profiles": {
+      "title": "管理角色",
+      "description": "角色決定一個人在管理儀表板中能看到的範圍：整個集團、一個業務板塊或一個單位。",
+      "empty": "尚無角色。",
+      "member": "人員",
+      "role": "角色",
+      "scope": "業務板塊或單位",
+      "add": "新增角色",
+      "whole_group": "整個集團",
+      "roles": {
+        "ceo": "執行長",
+        "cabinet": "總裁辦公室",
+        "branch_director": "板塊負責人",
+        "entity_manager": "單位負責人"
+      }
+    },
+    "project_entity": {
+      "title": "負責單位",
+      "description": "在管理儀表板中負責此專案的集團單位。",
+      "placeholder": "選擇單位",
+      "saved": "負責單位已儲存。",
+      "no_referential": "請先設定集團基礎資料。"
+    },
+    "errors": {
+      "save": "無法儲存變更。",
+      "duplicate": "此名稱已被使用。",
+      "branch_not_empty": "請先移動或刪除此業務板塊的單位。",
+      "entity_in_use": "此單位負責專案。請先將這些專案指派給其他單位。",
+      "profile": "無法新增角色。此人可能已擁有該角色。"
+    }
   }
 }

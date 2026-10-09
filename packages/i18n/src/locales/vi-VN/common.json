@@ -978,5 +978,67 @@
       "set": "đã đặt {field} thành {value}",
       "cleared": "đã xóa giá trị {field}"
     }
+  },
+  "steering": {
+    "save": "Lưu",
+    "rename": "Đổi tên",
+    "delete_confirm": "Xóa “{name}”?",
+    "referential": {
+      "title": "Danh mục Tập đoàn",
+      "description": "Các khối, đơn vị và danh mục của Tập đoàn, cùng những người xem không gian điều hành. Mỗi dự án do một đơn vị phụ trách.",
+      "empty": "Danh mục đang trống.",
+      "bootstrap": "Tải danh mục Tập đoàn",
+      "bootstrap_hint": "Tạo 8 khối, 21 đơn vị và 4 danh mục theo tài liệu yêu cầu. Bạn có thể thay đổi sau.",
+      "bootstrapped": "Đã tải danh mục Tập đoàn.",
+      "read_only": "Chỉ Tổng giám đốc, Văn phòng Chủ tịch và quản trị viên không gian làm việc mới có thể thay đổi danh mục."
+    },
+    "branches": {
+      "title": "Khối và đơn vị",
+      "description": "Mỗi đơn vị thuộc một khối. Để chuyển một đơn vị, hãy chọn khối khác.",
+      "add": "Thêm khối",
+      "placeholder": "Khối mới",
+      "entity_count": "{count, plural, one {# đơn vị} other {# đơn vị}}"
+    },
+    "entities": {
+      "placeholder": "Đơn vị mới",
+      "move": "Chuyển sang khối khác"
+    },
+    "categories": {
+      "title": "Danh mục",
+      "description": "Danh mục dùng để phân loại các mục công việc trong không gian điều hành.",
+      "add": "Thêm danh mục",
+      "placeholder": "Danh mục mới",
+      "empty": "Chưa có danh mục nào."
+    },
+    "profiles": {
+      "title": "Hồ sơ điều hành",
+      "description": "Hồ sơ xác định những gì một người thấy trong không gian điều hành: toàn Tập đoàn, một khối hoặc một đơn vị.",
+      "empty": "Chưa có hồ sơ nào.",
+      "member": "Người",
+      "role": "Hồ sơ",
+      "scope": "Khối hoặc đơn vị",
+      "add": "Thêm hồ sơ",
+      "whole_group": "Toàn Tập đoàn",
+      "roles": {
+        "ceo": "Tổng giám đốc",
+        "cabinet": "Văn phòng Chủ tịch",
+        "branch_director": "Giám đốc khối",
+        "entity_manager": "Phụ trách đơn vị"
+      }
+    },
+    "project_entity": {
+      "title": "Đơn vị phụ trách",
+      "description": "Đơn vị của Tập đoàn phụ trách dự án này trong không gian điều hành.",
+      "placeholder": "Chọn một đơn vị",
+      "saved": "Đã lưu đơn vị phụ trách.",
+      "no_referential": "Hãy thiết lập danh mục Tập đoàn trước."
+    },
+    "errors": {
+      "save": "Không thể lưu thay đổi.",
+      "duplicate": "Tên này đã được sử dụng.",
+      "branch_not_empty": "Hãy chuyển hoặc xóa các đơn vị của khối này trước.",
+      "entity_in_use": "Đơn vị này đang phụ trách dự án. Hãy giao các dự án đó cho đơn vị khác trước.",
+      "profile": "Không thể thêm hồ sơ. Có thể người này đã có hồ sơ đó."
+    }
   }
 }

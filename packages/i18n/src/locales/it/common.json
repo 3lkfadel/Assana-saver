@@ -978,5 +978,67 @@
       "set": "ha impostato {field} su {value}",
       "cleared": "ha svuotato {field}"
     }
+  },
+  "steering": {
+    "save": "Salva",
+    "rename": "Rinomina",
+    "delete_confirm": "Eliminare «{name}»?",
+    "referential": {
+      "title": "Referenziale del Gruppo",
+      "description": "Le divisioni, le entità e le categorie del Gruppo, e le persone che consultano lo spazio di controllo direzionale. Ogni progetto è gestito da un'entità.",
+      "empty": "Il referenziale è vuoto.",
+      "bootstrap": "Carica il referenziale del Gruppo",
+      "bootstrap_hint": "Crea le 8 divisioni, le 21 entità e le 4 categorie del capitolato. Potrà modificarle in seguito.",
+      "bootstrapped": "Referenziale del Gruppo caricato.",
+      "read_only": "Solo il CEO, il Gabinetto della Presidenza e gli amministratori dello spazio di lavoro possono modificare il referenziale."
+    },
+    "branches": {
+      "title": "Divisioni ed entità",
+      "description": "Ogni entità appartiene a una divisione. Per spostare un'entità, scelga un'altra divisione.",
+      "add": "Aggiungi divisione",
+      "placeholder": "Nuova divisione",
+      "entity_count": "{count, plural, one {# entità} many {# entità} other {# entità}}"
+    },
+    "entities": {
+      "placeholder": "Nuova entità",
+      "move": "Sposta in un'altra divisione"
+    },
+    "categories": {
+      "title": "Categorie",
+      "description": "Le categorie classificano gli elementi di lavoro nello spazio di controllo direzionale.",
+      "add": "Aggiungi categoria",
+      "placeholder": "Nuova categoria",
+      "empty": "Ancora nessuna categoria."
+    },
+    "profiles": {
+      "title": "Profili di controllo",
+      "description": "Un profilo definisce cosa vede una persona nello spazio di controllo direzionale: tutto il Gruppo, una divisione o un'entità.",
+      "empty": "Ancora nessun profilo.",
+      "member": "Persona",
+      "role": "Profilo",
+      "scope": "Divisione o entità",
+      "add": "Aggiungi profilo",
+      "whole_group": "Tutto il Gruppo",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Gabinetto della Presidenza",
+        "branch_director": "Direttore di divisione",
+        "entity_manager": "Responsabile di entità"
+      }
+    },
+    "project_entity": {
+      "title": "Entità responsabile",
+      "description": "L'entità del Gruppo che gestisce questo progetto nello spazio di controllo direzionale.",
+      "placeholder": "Scegli un'entità",
+      "saved": "Entità responsabile salvata.",
+      "no_referential": "Configuri prima il referenziale del Gruppo."
+    },
+    "errors": {
+      "save": "Non è stato possibile salvare la modifica.",
+      "duplicate": "Questo nome è già in uso.",
+      "branch_not_empty": "Sposti o elimini prima le entità di questa divisione.",
+      "entity_in_use": "Questa entità gestisce dei progetti. Li assegni prima a un'altra entità.",
+      "profile": "Non è stato possibile aggiungere il profilo. Questa persona potrebbe già averlo."
+    }
   }
 }

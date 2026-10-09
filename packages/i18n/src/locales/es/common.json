@@ -978,5 +978,67 @@
       "set": "estableció {field} en {value}",
       "cleared": "vació {field}"
     }
+  },
+  "steering": {
+    "save": "Guardar",
+    "rename": "Renombrar",
+    "delete_confirm": "¿Eliminar «{name}»?",
+    "referential": {
+      "title": "Referencial del Grupo",
+      "description": "Las divisiones, entidades y categorías del Grupo, y las personas que consultan el espacio de seguimiento directivo. Cada proyecto lo lleva una entidad.",
+      "empty": "El referencial está vacío.",
+      "bootstrap": "Cargar el referencial del Grupo",
+      "bootstrap_hint": "Crea las 8 divisiones, 21 entidades y 4 categorías del pliego de condiciones. Puede modificarlas después.",
+      "bootstrapped": "Referencial del Grupo cargado.",
+      "read_only": "Solo el CEO, el Gabinete de la Presidencia y los administradores del espacio de trabajo pueden modificar el referencial."
+    },
+    "branches": {
+      "title": "Divisiones y entidades",
+      "description": "Cada entidad pertenece a una división. Para mover una entidad, elija otra división.",
+      "add": "Añadir división",
+      "placeholder": "Nueva división",
+      "entity_count": "{count, plural, one {# entidad} other {# entidades}}"
+    },
+    "entities": {
+      "placeholder": "Nueva entidad",
+      "move": "Mover a otra división"
+    },
+    "categories": {
+      "title": "Categorías",
+      "description": "Las categorías clasifican los elementos de trabajo en el espacio de seguimiento directivo.",
+      "add": "Añadir categoría",
+      "placeholder": "Nueva categoría",
+      "empty": "Todavía no hay categorías."
+    },
+    "profiles": {
+      "title": "Perfiles de seguimiento",
+      "description": "Un perfil define lo que una persona ve en el espacio de seguimiento directivo: todo el Grupo, una división o una entidad.",
+      "empty": "Todavía no hay perfiles.",
+      "member": "Persona",
+      "role": "Perfil",
+      "scope": "División o entidad",
+      "add": "Añadir perfil",
+      "whole_group": "Todo el Grupo",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Gabinete de la Presidencia",
+        "branch_director": "Director de división",
+        "entity_manager": "Responsable de entidad"
+      }
+    },
+    "project_entity": {
+      "title": "Entidad responsable",
+      "description": "La entidad del Grupo que lleva este proyecto en el espacio de seguimiento directivo.",
+      "placeholder": "Elegir una entidad",
+      "saved": "Entidad responsable guardada.",
+      "no_referential": "Configure primero el referencial del Grupo."
+    },
+    "errors": {
+      "save": "No se pudo guardar el cambio.",
+      "duplicate": "Este nombre ya está en uso.",
+      "branch_not_empty": "Mueva o elimine primero las entidades de esta división.",
+      "entity_in_use": "Esta entidad lleva proyectos. Asígnelos primero a otra entidad.",
+      "profile": "No se pudo añadir el perfil. Puede que esta persona ya lo tenga."
+    }
   }
 }

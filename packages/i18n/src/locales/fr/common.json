@@ -978,5 +978,67 @@
       "set": "a défini {field} sur {value}",
       "cleared": "a vidé {field}"
     }
+  },
+  "steering": {
+    "save": "Enregistrer",
+    "rename": "Renommer",
+    "delete_confirm": "Supprimer « {name} » ?",
+    "referential": {
+      "title": "Référentiel du Groupe",
+      "description": "Les pôles, entités et catégories du Groupe, et les personnes qui consultent l'espace de pilotage. Chaque projet est porté par une entité.",
+      "empty": "Le référentiel est vide.",
+      "bootstrap": "Charger le référentiel du Groupe",
+      "bootstrap_hint": "Crée les 8 pôles, 21 entités et 4 catégories du cahier des charges. Vous pourrez les modifier ensuite.",
+      "bootstrapped": "Référentiel du Groupe chargé.",
+      "read_only": "Seuls le PDG, le Cabinet de la Présidence et les administrateurs de l'espace de travail peuvent modifier le référentiel."
+    },
+    "branches": {
+      "title": "Pôles et entités",
+      "description": "Chaque entité appartient à un pôle. Pour déplacer une entité, choisissez un autre pôle.",
+      "add": "Ajouter un pôle",
+      "placeholder": "Nouveau pôle",
+      "entity_count": "{count, plural, one {# entité} many {# entités} other {# entités}}"
+    },
+    "entities": {
+      "placeholder": "Nouvelle entité",
+      "move": "Déplacer vers un autre pôle"
+    },
+    "categories": {
+      "title": "Catégories",
+      "description": "Les catégories classent les éléments de travail dans l'espace de pilotage.",
+      "add": "Ajouter une catégorie",
+      "placeholder": "Nouvelle catégorie",
+      "empty": "Aucune catégorie pour le moment."
+    },
+    "profiles": {
+      "title": "Profils de pilotage",
+      "description": "Un profil définit ce qu'une personne voit dans l'espace de pilotage : tout le Groupe, un pôle ou une entité.",
+      "empty": "Aucun profil pour le moment.",
+      "member": "Personne",
+      "role": "Profil",
+      "scope": "Pôle ou entité",
+      "add": "Ajouter un profil",
+      "whole_group": "Tout le Groupe",
+      "roles": {
+        "ceo": "PDG",
+        "cabinet": "Cabinet de la Présidence",
+        "branch_director": "Directeur de pôle",
+        "entity_manager": "Responsable d'entité"
+      }
+    },
+    "project_entity": {
+      "title": "Entité porteuse",
+      "description": "L'entité du Groupe qui porte ce projet dans l'espace de pilotage.",
+      "placeholder": "Choisir une entité",
+      "saved": "Entité porteuse enregistrée.",
+      "no_referential": "Configurez d'abord le référentiel du Groupe."
+    },
+    "errors": {
+      "save": "La modification n'a pas pu être enregistrée.",
+      "duplicate": "Ce nom est déjà utilisé.",
+      "branch_not_empty": "Déplacez ou supprimez d'abord les entités de ce pôle.",
+      "entity_in_use": "Des projets sont portés par cette entité. Rattachez-les d'abord à une autre entité.",
+      "profile": "Le profil n'a pas pu être ajouté. Cette personne l'a peut-être déjà."
+    }
   }
 }

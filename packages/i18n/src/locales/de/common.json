@@ -978,5 +978,67 @@
       "set": "hat {field} auf {value} gesetzt",
       "cleared": "hat {field} geleert"
     }
+  },
+  "steering": {
+    "save": "Speichern",
+    "rename": "Umbenennen",
+    "delete_confirm": "„{name}“ löschen?",
+    "referential": {
+      "title": "Gruppenreferenz",
+      "description": "Die Geschäftsbereiche, Einheiten und Kategorien der Gruppe sowie die Personen, die den Steuerungsbereich lesen. Jedes Projekt wird von einer Einheit getragen.",
+      "empty": "Die Referenz ist leer.",
+      "bootstrap": "Gruppenreferenz laden",
+      "bootstrap_hint": "Legt die 8 Geschäftsbereiche, 21 Einheiten und 4 Kategorien des Lastenhefts an. Sie können sie anschließend ändern.",
+      "bootstrapped": "Gruppenreferenz geladen.",
+      "read_only": "Nur der CEO, das Büro des Präsidenten und die Workspace-Administratoren können die Referenz ändern."
+    },
+    "branches": {
+      "title": "Geschäftsbereiche und Einheiten",
+      "description": "Jede Einheit gehört zu einem Geschäftsbereich. Um eine Einheit zu verschieben, wählen Sie einen anderen Geschäftsbereich.",
+      "add": "Geschäftsbereich hinzufügen",
+      "placeholder": "Neuer Geschäftsbereich",
+      "entity_count": "{count, plural, one {# Einheit} other {# Einheiten}}"
+    },
+    "entities": {
+      "placeholder": "Neue Einheit",
+      "move": "In einen anderen Geschäftsbereich verschieben"
+    },
+    "categories": {
+      "title": "Kategorien",
+      "description": "Kategorien ordnen die Arbeitselemente im Steuerungsbereich.",
+      "add": "Kategorie hinzufügen",
+      "placeholder": "Neue Kategorie",
+      "empty": "Noch keine Kategorie."
+    },
+    "profiles": {
+      "title": "Steuerungsprofile",
+      "description": "Ein Profil legt fest, was eine Person im Steuerungsbereich sieht: die ganze Gruppe, einen Geschäftsbereich oder eine Einheit.",
+      "empty": "Noch kein Profil.",
+      "member": "Person",
+      "role": "Profil",
+      "scope": "Geschäftsbereich oder Einheit",
+      "add": "Profil hinzufügen",
+      "whole_group": "Ganze Gruppe",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Büro des Präsidenten",
+        "branch_director": "Leiter des Geschäftsbereichs",
+        "entity_manager": "Leiter der Einheit"
+      }
+    },
+    "project_entity": {
+      "title": "Tragende Einheit",
+      "description": "Die Einheit der Gruppe, die dieses Projekt im Steuerungsbereich trägt.",
+      "placeholder": "Einheit auswählen",
+      "saved": "Tragende Einheit gespeichert.",
+      "no_referential": "Richten Sie zuerst die Gruppenreferenz ein."
+    },
+    "errors": {
+      "save": "Die Änderung konnte nicht gespeichert werden.",
+      "duplicate": "Dieser Name wird bereits verwendet.",
+      "branch_not_empty": "Verschieben oder löschen Sie zuerst die Einheiten dieses Geschäftsbereichs.",
+      "entity_in_use": "Diese Einheit trägt Projekte. Ordnen Sie sie zuerst einer anderen Einheit zu.",
+      "profile": "Das Profil konnte nicht hinzugefügt werden. Diese Person hat es möglicherweise bereits."
+    }
   }
 }

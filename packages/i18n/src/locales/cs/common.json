@@ -978,5 +978,67 @@
       "set": "nastavil(a) {field} na {value}",
       "cleared": "vymazal(a) {field}"
     }
+  },
+  "steering": {
+    "save": "Uložit",
+    "rename": "Přejmenovat",
+    "delete_confirm": "Smazat „{name}“?",
+    "referential": {
+      "title": "Referenční údaje skupiny",
+      "description": "Divize, jednotky a kategorie skupiny a lidé, kteří čtou řídicí přehled. Každý projekt nese jedna jednotka.",
+      "empty": "Referenční údaje jsou prázdné.",
+      "bootstrap": "Načíst referenční údaje skupiny",
+      "bootstrap_hint": "Vytvoří 8 divizí, 21 jednotek a 4 kategorie ze zadávací dokumentace. Později je můžete upravit.",
+      "bootstrapped": "Referenční údaje skupiny byly načteny.",
+      "read_only": "Referenční údaje mohou měnit jen generální ředitel, kancelář předsedy a správci pracovního prostoru."
+    },
+    "branches": {
+      "title": "Divize a jednotky",
+      "description": "Každá jednotka patří do jedné divize. Jednotku přesunete výběrem jiné divize.",
+      "add": "Přidat divizi",
+      "placeholder": "Nová divize",
+      "entity_count": "{count, plural, one {# jednotka} few {# jednotky} many {# jednotky} other {# jednotek}}"
+    },
+    "entities": {
+      "placeholder": "Nová jednotka",
+      "move": "Přesunout do jiné divize"
+    },
+    "categories": {
+      "title": "Kategorie",
+      "description": "Kategorie třídí pracovní položky v řídicím přehledu.",
+      "add": "Přidat kategorii",
+      "placeholder": "Nová kategorie",
+      "empty": "Zatím žádná kategorie."
+    },
+    "profiles": {
+      "title": "Řídicí profily",
+      "description": "Profil určuje, co osoba v řídicím přehledu vidí: celou skupinu, jednu divizi nebo jednu jednotku.",
+      "empty": "Zatím žádný profil.",
+      "member": "Osoba",
+      "role": "Profil",
+      "scope": "Divize nebo jednotka",
+      "add": "Přidat profil",
+      "whole_group": "Celá skupina",
+      "roles": {
+        "ceo": "Generální ředitel",
+        "cabinet": "Kancelář předsedy",
+        "branch_director": "Ředitel divize",
+        "entity_manager": "Vedoucí jednotky"
+      }
+    },
+    "project_entity": {
+      "title": "Nesoucí jednotka",
+      "description": "Jednotka skupiny, která nese tento projekt v řídicím přehledu.",
+      "placeholder": "Vyberte jednotku",
+      "saved": "Nesoucí jednotka byla uložena.",
+      "no_referential": "Nejprve nastavte referenční údaje skupiny."
+    },
+    "errors": {
+      "save": "Změnu se nepodařilo uložit.",
+      "duplicate": "Tento název se již používá.",
+      "branch_not_empty": "Nejprve přesuňte nebo smažte jednotky této divize.",
+      "entity_in_use": "Tato jednotka nese projekty. Nejprve je přiřaďte jiné jednotce.",
+      "profile": "Profil se nepodařilo přidat. Tato osoba ho možná již má."
+    }
   }
 }

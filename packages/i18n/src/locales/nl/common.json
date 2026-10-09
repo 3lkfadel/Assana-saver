@@ -978,5 +978,67 @@
       "set": "heeft {field} ingesteld op {value}",
       "cleared": "heeft {field} gewist"
     }
+  },
+  "steering": {
+    "save": "Opslaan",
+    "rename": "Hernoemen",
+    "delete_confirm": "‘{name}’ verwijderen?",
+    "referential": {
+      "title": "Groepsreferentie",
+      "description": "De divisies, eenheden en categorieën van de Groep, en wie de sturingsomgeving raadpleegt. Elk project wordt gedragen door één eenheid.",
+      "empty": "De referentie is leeg.",
+      "bootstrap": "Groepsreferentie laden",
+      "bootstrap_hint": "Maakt de 8 divisies, 21 eenheden en 4 categorieën uit het lastenboek aan. U kunt ze daarna wijzigen.",
+      "bootstrapped": "Groepsreferentie geladen.",
+      "read_only": "Alleen de CEO, het Kabinet van de voorzitter en de beheerders van de werkruimte kunnen de referentie wijzigen."
+    },
+    "branches": {
+      "title": "Divisies en eenheden",
+      "description": "Elke eenheid hoort bij één divisie. Kies een andere divisie om een eenheid te verplaatsen.",
+      "add": "Divisie toevoegen",
+      "placeholder": "Nieuwe divisie",
+      "entity_count": "{count, plural, one {# eenheid} other {# eenheden}}"
+    },
+    "entities": {
+      "placeholder": "Nieuwe eenheid",
+      "move": "Naar een andere divisie verplaatsen"
+    },
+    "categories": {
+      "title": "Categorieën",
+      "description": "Categorieën delen de werkitems in de sturingsomgeving in.",
+      "add": "Categorie toevoegen",
+      "placeholder": "Nieuwe categorie",
+      "empty": "Nog geen categorie."
+    },
+    "profiles": {
+      "title": "Sturingsprofielen",
+      "description": "Een profiel bepaalt wat iemand in de sturingsomgeving ziet: de hele Groep, één divisie of één eenheid.",
+      "empty": "Nog geen profiel.",
+      "member": "Persoon",
+      "role": "Profiel",
+      "scope": "Divisie of eenheid",
+      "add": "Profiel toevoegen",
+      "whole_group": "Hele Groep",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Kabinet van de voorzitter",
+        "branch_director": "Divisiedirecteur",
+        "entity_manager": "Verantwoordelijke van de eenheid"
+      }
+    },
+    "project_entity": {
+      "title": "Dragende eenheid",
+      "description": "De eenheid van de Groep die dit project in de sturingsomgeving draagt.",
+      "placeholder": "Kies een eenheid",
+      "saved": "Dragende eenheid opgeslagen.",
+      "no_referential": "Stel eerst de groepsreferentie in."
+    },
+    "errors": {
+      "save": "De wijziging kon niet worden opgeslagen.",
+      "duplicate": "Deze naam is al in gebruik.",
+      "branch_not_empty": "Verplaats of verwijder eerst de eenheden van deze divisie.",
+      "entity_in_use": "Deze eenheid draagt projecten. Wijs ze eerst toe aan een andere eenheid.",
+      "profile": "Het profiel kon niet worden toegevoegd. Deze persoon heeft het misschien al."
+    }
   }
 }

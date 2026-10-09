@@ -84,6 +84,14 @@ from .issue_type import IssueType
 from .recent_visit import UserRecentVisit
 
 from .label import Label
+from .steering import (
+    Branch,
+    Entity,
+    ProjectSteering,
+    SteeringCategory,
+    SteeringProfile,
+    SteeringProfileRole,
+)
 from .custom_field import (
     CustomField,
     CustomFieldOption,

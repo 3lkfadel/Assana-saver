@@ -117,7 +117,16 @@ async def test_get_task_reads_custom_fields_comments_and_subtasks(api, call):
     )
     subtasks = api.get(f"{WS}/work-items/").respond(json=page([query_item(13, "Chiffrer", parent="t-12")]))
     api.get(f"{WS}/projects/p-iat/work-items/t-12/comments/").respond(
-        json=page([{"actor": "u-me", "created_at": "2026-10-08T10:00:00Z", "comment_html": "<p>Vu avec le client</p>"}])
+        json=page(
+            [
+                {
+                    "id": "c-1",
+                    "actor": "u-me",
+                    "created_at": "2026-10-08T10:00:00Z",
+                    "comment_html": "<p>Vu avec le client</p>",
+                }
+            ]
+        )
     )
 
     result = await call("get_task", task="iat-12")
@@ -130,7 +139,9 @@ async def test_get_task_reads_custom_fields_comments_and_subtasks(api, call):
     assert result["custom_fields"] == {"Budget": 1500.5, "Vague": "Vague 2"}
     assert [task["identifier"] for task in result["subtasks"]] == ["IAT-13"]
     assert subtasks.calls.last.request.url.params["parent"] == "t-12"
-    assert result["comments"] == [{"author": "Awa", "date": "2026-10-08T10:00:00Z", "text": "Vu avec le client"}]
+    assert result["comments"] == [
+        {"id": "c-1", "author": "Awa", "date": "2026-10-08T10:00:00Z", "text": "Vu avec le client"}
+    ]
 
 
 async def test_bad_task_identifier(api, call_error):

@@ -19,12 +19,24 @@ SETTINGS = Settings(api_url="http://api.test", web_url="https://plan.test", work
 ME = {"id": "u-me", "display_name": "Awa", "email": "awa@infinity-africa.com"}
 PROJECT = {"id": "p-iat", "identifier": "IAT", "name": "Infinity Africa Tech", "description": "", "archived_at": None}
 STATES = [
-    {"id": "s-todo", "name": "À faire", "group": "unstarted", "sequence": 1},
+    {"id": "s-todo", "name": "À faire", "group": "unstarted", "sequence": 1, "default": True},
     {"id": "s-done", "name": "Terminé", "group": "completed", "sequence": 2},
 ]
 MEMBERS = [
-    {"id": "u-me", "display_name": "Awa", "email": "awa@infinity-africa.com", "is_active": True},
-    {"id": "u-kofi", "display_name": "Kofi", "email": "kofi@infinity-africa.com", "is_active": True},
+    {
+        "id": "u-me",
+        "membership_id": "m-me",
+        "display_name": "Awa",
+        "email": "awa@infinity-africa.com",
+        "is_active": True,
+    },
+    {
+        "id": "u-kofi",
+        "membership_id": "m-kofi",
+        "display_name": "Kofi",
+        "email": "kofi@infinity-africa.com",
+        "is_active": True,
+    },
 ]
 LABELS = [{"id": "l-client", "name": "Client"}]
 BUDGET = {"id": "cf-budget", "name": "Budget", "field_type": "number", "options": []}

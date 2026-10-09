@@ -160,6 +160,15 @@ class ProjectMemberListCreateAPIEndpoint(BaseAPIView):
     def post(self, request, slug, project_id):
         serializer = ProjectMemberSerializer(data=request.data, context={"slug": slug})
         serializer.is_valid(raise_exception=True)
+        # A member removed earlier keeps an inactive membership: bring it back
+        removed = ProjectMember.objects.filter(
+            project_id=project_id, member=serializer.validated_data["member"], is_active=False
+        ).first()
+        if removed:
+            removed.is_active = True
+            removed.role = serializer.validated_data.get("role", removed.role)
+            removed.save(update_fields=["is_active", "role", "updated_at"])
+            return Response(ProjectMemberSerializer(removed).data, status=status.HTTP_201_CREATED)
         serializer.save(project_id=project_id)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 

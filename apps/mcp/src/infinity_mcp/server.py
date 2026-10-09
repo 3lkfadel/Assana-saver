@@ -4,7 +4,9 @@ from fastmcp import FastMCP
 
 from .auth import InfinityTokenVerifier
 from .deps import Deps
+from .tools.admin import register_admin_tools
 from .tools.read import register_read_tools
+from .tools.write import register_write_tools
 
 INSTRUCTIONS = """\
 Infinity Planning is the organisation's work management tool, modelled on Asana.
@@ -17,6 +19,9 @@ Infinity Planning is the organisation's work management tool, modelled on Asana.
 - Everything is done with the connected person's own permissions: a refusal means they lack access.
 - Call whoami for today's date before working with relative dates, and get_project before creating
   or changing tasks, to use the exact names of sections, labels, people and custom field options.
+- Create or change several tasks in one call (create_tasks, update_tasks take lists).
+- Before a large batch of changes, show the user what you will do. Before deleting a task or a comment,
+  removing a project member, or removing custom field options, ask the user to confirm.
 """
 
 
@@ -25,4 +30,6 @@ def create_server(deps: Deps, *, authenticate: bool = True) -> FastMCP:
     auth = InfinityTokenVerifier(deps.settings, deps.transport) if authenticate else None
     mcp = FastMCP(name="Infinity Planning", instructions=INSTRUCTIONS, auth=auth)
     register_read_tools(mcp, deps)
+    register_write_tools(mcp, deps)
+    register_admin_tools(mcp, deps)
     return mcp

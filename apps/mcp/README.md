@@ -4,6 +4,8 @@ Lets Claude (Claude Code, Claude Desktop) read and update Infinity Planning with
 
 ## Tools
 
+Read (`readOnlyHint`):
+
 | Tool               | What it does                                                                            |
 | ------------------ | --------------------------------------------------------------------------------------- |
 | `whoami`           | Connected person, organisation, today's date                                            |
@@ -14,7 +16,26 @@ Lets Claude (Claude Code, Claude Desktop) read and update Infinity Planning with
 | `get_task`         | One task in full: description, custom fields, subtasks, comments, history               |
 | `project_overview` | Open/done counts, overdue tasks, due this week, workload by person and section          |
 
-All tools are read-only for now; write tools come next.
+Tasks:
+
+| Tool                            | What it does                                                                                               |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `create_tasks`                  | Up to 100 tasks in a project, all or nothing, with section, assignee, dates, labels, parent, custom fields |
+| `update_tasks`                  | Up to 100 tasks: any field, completion, custom fields                                                      |
+| `add_comment`                   | Comment on a task                                                                                          |
+| `delete_comment`, `delete_task` | Destructive (`destructiveHint`): Claude is told to ask for confirmation                                    |
+
+Administration (with the person's rights: project admin for most):
+
+| Tool                                                                     | What it does                                                          |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| `create_project`, `update_project`                                       | Projects                                                              |
+| `create_section`, `rename_section`, `create_label`                       | Sections and labels of a project                                      |
+| `create_custom_field`, `update_custom_field`                             | Organisation's custom field library (removing options is destructive) |
+| `add_custom_field_to_project`, `remove_custom_field_from_project`        | Fields shown on a project (values are kept)                           |
+| `add_project_member`, `set_project_member_role`, `remove_project_member` | Project members                                                       |
+
+Tools take names (projects, sections, labels, people, custom fields and options) and turn them into ids; an unknown name fails before anything is written, listing the valid ones. Not exposed on purpose: deleting projects or custom fields, organisation-level invitations and roles, cycles, modules and estimates.
 
 ## Configuration
 

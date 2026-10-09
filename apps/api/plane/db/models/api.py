@@ -20,6 +20,12 @@ def generate_token():
     return "plane_api_" + uuid4().hex
 
 
+class APITokenClient(models.TextChoices):
+    """The client a token was issued for; its changes are marked "via" that client in the task history."""
+
+    CLAUDE = "claude", "Claude"
+
+
 class APIToken(BaseModel):
     # Meta information
     label = models.CharField(max_length=255, default=generate_label_token)
@@ -37,6 +43,7 @@ class APIToken(BaseModel):
     expired_at = models.DateTimeField(blank=True, null=True)
     is_service = models.BooleanField(default=False)
     allowed_rate_limit = models.CharField(max_length=255, default="60/min")
+    client = models.CharField(max_length=50, choices=APITokenClient.choices, blank=True, default="")
 
     class Meta:
         verbose_name = "API Token"

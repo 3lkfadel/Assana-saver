@@ -23,6 +23,12 @@ class ApiKeyRateThrottle(SimpleRateThrottle):
         return f"{self.scope}:{api_key}"
 
     def allow_request(self, request, view):
+        # Tokens issued for a client (Claude) make many small calls per user request
+        api_token = getattr(request, "api_token", None)
+        if api_token is not None and api_token.client:
+            self.rate = settings.CLIENT_API_KEY_RATE_LIMIT
+            self.num_requests, self.duration = self.parse_rate(self.rate)
+
         allowed = super().allow_request(request, view)
 
         if allowed:

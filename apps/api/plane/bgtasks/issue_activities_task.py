@@ -1513,6 +1513,7 @@ def issue_activity(
     notification=False,
     origin=None,
     intake=None,
+    via="",
 ):
     try:
         issue_activities = []
@@ -1581,6 +1582,12 @@ def issue_activity(
             )
 
         # Save all the values to database
+        if via:
+            for activity in issue_activities:
+                activity.via = via
+            # create_issue_activity saves its "created" row itself, to keep the work item's creation date
+            if type == "issue.activity.created":
+                IssueActivity.objects.filter(issue_id=issue_id, verb="created", epoch=epoch).update(via=via)
         issue_activities_created = IssueActivity.objects.bulk_create(issue_activities)
 
         if notification:

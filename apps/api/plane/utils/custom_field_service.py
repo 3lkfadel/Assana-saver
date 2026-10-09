@@ -238,12 +238,13 @@ def attached_project_fields(project_id) -> Dict[str, CustomField]:
 
 
 def set_issue_custom_field_value(
-    issue: Issue, field: CustomField, raw_value: Any, actor: User
+    issue: Issue, field: CustomField, raw_value: Any, actor: User, via: str = ""
 ) -> Optional[IssueCustomFieldValue]:
     """
     Set (or clear, with an empty value) the task's value for ``field`` and record it in the task's
-    history. The field must be attached to the task's project. Returns the stored value, or None when
-    cleared. Raises ``CustomFieldValueError`` when the value does not match the field type.
+    history, marked with the client it came ``via``. The field must be attached to the task's project.
+    Returns the stored value, or None when cleared. Raises ``CustomFieldValueError`` when the value
+    does not match the field type.
     """
     value = clean_custom_field_value(field, raw_value)
     current = IssueCustomFieldValue.objects.filter(issue=issue, custom_field=field).first()
@@ -275,5 +276,6 @@ def set_issue_custom_field_value(
             new_value=display_custom_field_value(field, value),
             comment=field.name,
             epoch=int(time.time()),
+            via=via,
         )
     return result

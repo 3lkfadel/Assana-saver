@@ -23,6 +23,7 @@ class APITokenSerializer(BaseSerializer):
             "last_used",
             "user_type",
             "allowed_rate_limit",
+            "client",
         ]
 
 

@@ -257,7 +257,9 @@ class WorkItemCustomFieldValueAPIEndpoint(BaseAPIView):
             return _error("This field is not part of the project.", status.HTTP_404_NOT_FOUND)
         issue = Issue.issue_objects.get(workspace__slug=slug, project_id=project_id, pk=issue_id)
         try:
-            result = set_issue_custom_field_value(issue, field, request.data["value"], request.user)
+            result = set_issue_custom_field_value(
+                issue, field, request.data["value"], request.user, via=self.activity_via
+            )
         except CustomFieldValueError as error:
             return _error(str(error))
         return Response(

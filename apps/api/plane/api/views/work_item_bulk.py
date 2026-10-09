@@ -108,6 +108,7 @@ class WorkItemBulkAPIEndpoint(BaseAPIView):
     def _track(self, request, slug, project_id, issue_id, requested_data, current_instance):
         origin = base_host(request=request, is_app=True)
         issue_activity.delay(
+            via=self.activity_via,
             type="issue.activity.updated" if current_instance else "issue.activity.created",
             requested_data=json.dumps(requested_data, cls=DjangoJSONEncoder),
             actor_id=str(request.user.id),
@@ -173,7 +174,7 @@ class WorkItemBulkAPIEndpoint(BaseAPIView):
                 issue.created_by_id = request.user.id
                 issue.save(update_fields=["created_by"])
                 for field, value in custom_values.items():
-                    set_issue_custom_field_value(issue, field, value, request.user)
+                    set_issue_custom_field_value(issue, field, value, request.user, via=self.activity_via)
                 created.append((issue.id, data))
 
         for issue_id, data in created:
@@ -239,7 +240,7 @@ class WorkItemBulkAPIEndpoint(BaseAPIView):
                 if data:
                     serializer.save()
                 for field, value in custom_values.items():
-                    set_issue_custom_field_value(issue, field, value, request.user)
+                    set_issue_custom_field_value(issue, field, value, request.user, via=self.activity_via)
 
         for issue, _, data, _, current_instance in prepared:
             if data:

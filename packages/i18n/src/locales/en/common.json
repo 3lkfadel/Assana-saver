@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Move or delete the entities of this branch first.",
       "entity_in_use": "Projects are carried by this entity. Assign them to another entity first.",
       "profile": "The profile could not be added. This person may already have it."
+    },
+    "task": {
+      "section": "Steering",
+      "incomplete": "Incomplete record: {fields}",
+      "empty": "Empty",
+      "project_entity": "{name} (project's entity)",
+      "situation_placeholder": "Add a status update",
+      "situation_updated": "Updated on {date}",
+      "fields": {
+        "entity": "Entity",
+        "category": "Category",
+        "assignee": "Assignee",
+        "supervisor": "Supervisor",
+        "approver": "Approver",
+        "priority": "Priority",
+        "target_date": "Deadline",
+        "status": "Status",
+        "progress": "Progress",
+        "waiting_for": "Waiting for",
+        "waiting_since": "Waiting since",
+        "risk_nature": "Risk if blocked",
+        "risk_effective_date": "Risk effective date",
+        "risk_description": "Risk description",
+        "closure": "Closure",
+        "closure_date": "Closure date",
+        "closure_comment": "Closure comment",
+        "situation": "Status update"
+      },
+      "status": {
+        "to_start": "To start",
+        "in_progress": "In progress",
+        "in_validation": "In validation",
+        "waiting": "Waiting",
+        "done": "Done",
+        "cancelled": "Cancelled"
+      },
+      "waiting_for": {
+        "internal": "Internal",
+        "client_partner": "Client / partner",
+        "regulatory": "Regulatory"
+      },
+      "risk": {
+        "financial": "Financial",
+        "regulatory": "Regulatory",
+        "legal": "Legal",
+        "schedule": "Schedule",
+        "reputation": "Reputation",
+        "governance": "Governance",
+        "hr": "HR",
+        "operational": "Operational"
+      },
+      "dialog": {
+        "waiting_title": "Put the work item on hold",
+        "waiting_description": "Say what the work item is waiting for.",
+        "done_title": "Close the work item",
+        "done_description": "A closure needs its effective date and a comment. Progress moves to 100%."
+      },
+      "activity": {
+        "set": "set {field} to {value}",
+        "cleared": "cleared {field}"
+      },
+      "errors": {
+        "save": "The steering record could not be saved.",
+        "progress": "Progress is a whole number from 0 to 100."
+      }
     }
   }
 }

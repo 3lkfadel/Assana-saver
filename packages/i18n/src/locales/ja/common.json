@@ -1039,6 +1039,71 @@
       "branch_not_empty": "先にこの事業部門の組織を移動または削除してください。",
       "entity_in_use": "この組織が担当するプロジェクトがあります。先に別の組織に割り当ててください。",
       "profile": "プロファイルを追加できませんでした。このユーザーはすでに持っている可能性があります。"
+    },
+    "task": {
+      "section": "経営管理",
+      "incomplete": "未入力の項目があります：{fields}",
+      "empty": "未設定",
+      "project_entity": "{name}（プロジェクトの組織）",
+      "situation_placeholder": "現況を追加",
+      "situation_updated": "{date} に更新",
+      "fields": {
+        "entity": "組織",
+        "category": "カテゴリー",
+        "assignee": "担当者",
+        "supervisor": "監督者",
+        "approver": "承認者",
+        "priority": "優先度",
+        "target_date": "期限",
+        "status": "ステータス",
+        "progress": "進捗",
+        "waiting_for": "待機理由",
+        "waiting_since": "待機開始日",
+        "risk_nature": "ブロック時のリスク",
+        "risk_effective_date": "リスク発生日",
+        "risk_description": "リスクの説明",
+        "closure": "完了処理",
+        "closure_date": "完了日",
+        "closure_comment": "完了コメント",
+        "situation": "現況"
+      },
+      "status": {
+        "to_start": "未着手",
+        "in_progress": "進行中",
+        "in_validation": "承認待ち",
+        "waiting": "待機中",
+        "done": "完了",
+        "cancelled": "中止"
+      },
+      "waiting_for": {
+        "internal": "社内",
+        "client_partner": "顧客・パートナー",
+        "regulatory": "規制"
+      },
+      "risk": {
+        "financial": "財務",
+        "regulatory": "規制",
+        "legal": "法務",
+        "schedule": "スケジュール",
+        "reputation": "評判",
+        "governance": "ガバナンス",
+        "hr": "人事",
+        "operational": "業務"
+      },
+      "dialog": {
+        "waiting_title": "作業項目を待機中にする",
+        "waiting_description": "作業項目が何を待っているかを入力してください。",
+        "done_title": "作業項目を完了する",
+        "done_description": "完了には実際の日付とコメントが必要です。進捗は 100% になります。"
+      },
+      "activity": {
+        "set": "{field} を {value} に設定しました",
+        "cleared": "{field} をクリアしました"
+      },
+      "errors": {
+        "save": "経営管理の記録を保存できませんでした。",
+        "progress": "進捗は 0 から 100 の整数です。"
+      }
     }
   }
 }

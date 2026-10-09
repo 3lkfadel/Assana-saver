@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Déplacez ou supprimez d'abord les entités de ce pôle.",
       "entity_in_use": "Des projets sont portés par cette entité. Rattachez-les d'abord à une autre entité.",
       "profile": "Le profil n'a pas pu être ajouté. Cette personne l'a peut-être déjà."
+    },
+    "task": {
+      "section": "Pilotage",
+      "incomplete": "Fiche incomplète : {fields}",
+      "empty": "Vide",
+      "project_entity": "{name} (entité du projet)",
+      "situation_placeholder": "Ajouter un point de situation",
+      "situation_updated": "Mis à jour le {date}",
+      "fields": {
+        "entity": "Entité",
+        "category": "Catégorie",
+        "assignee": "Responsable",
+        "supervisor": "Superviseur",
+        "approver": "Approbateur",
+        "priority": "Priorité",
+        "target_date": "Échéance",
+        "status": "Statut",
+        "progress": "Avancement",
+        "waiting_for": "En attente de",
+        "waiting_since": "En attente depuis",
+        "risk_nature": "Risque en cas de blocage",
+        "risk_effective_date": "Date d'effet du risque",
+        "risk_description": "Description du risque",
+        "closure": "Clôture",
+        "closure_date": "Date de clôture",
+        "closure_comment": "Commentaire de clôture",
+        "situation": "Point de situation"
+      },
+      "status": {
+        "to_start": "À démarrer",
+        "in_progress": "En cours",
+        "in_validation": "En validation",
+        "waiting": "En attente",
+        "done": "Terminé",
+        "cancelled": "Annulé"
+      },
+      "waiting_for": {
+        "internal": "Interne",
+        "client_partner": "Client / partenaire",
+        "regulatory": "Réglementaire"
+      },
+      "risk": {
+        "financial": "Financier",
+        "regulatory": "Réglementaire",
+        "legal": "Juridique",
+        "schedule": "Calendrier",
+        "reputation": "Réputation",
+        "governance": "Gouvernance",
+        "hr": "RH",
+        "operational": "Opérationnel"
+      },
+      "dialog": {
+        "waiting_title": "Mettre la tâche en attente",
+        "waiting_description": "Indiquez ce que la tâche attend.",
+        "done_title": "Terminer la tâche",
+        "done_description": "La clôture demande sa date effective et un commentaire. L'avancement passe à 100 %."
+      },
+      "activity": {
+        "set": "a défini {field} sur {value}",
+        "cleared": "a vidé {field}"
+      },
+      "errors": {
+        "save": "La fiche de pilotage n'a pas pu être enregistrée.",
+        "progress": "L'avancement est un nombre entier de 0 à 100."
+      }
     }
   }
 }

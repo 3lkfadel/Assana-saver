@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Mutați sau ștergeți mai întâi entitățile acestei divizii.",
       "entity_in_use": "Această entitate gestionează proiecte. Atribuiți-le mai întâi altei entități.",
       "profile": "Profilul nu a putut fi adăugat. Este posibil ca această persoană să îl aibă deja."
+    },
+    "task": {
+      "section": "Coordonare",
+      "incomplete": "Fișă incompletă: {fields}",
+      "empty": "Gol",
+      "project_entity": "{name} (entitatea proiectului)",
+      "situation_placeholder": "Adăugați un punct de situație",
+      "situation_updated": "Actualizat la {date}",
+      "fields": {
+        "entity": "Entitate",
+        "category": "Categorie",
+        "assignee": "Responsabil",
+        "supervisor": "Supervizor",
+        "approver": "Aprobator",
+        "priority": "Prioritate",
+        "target_date": "Termen",
+        "status": "Stare",
+        "progress": "Progres",
+        "waiting_for": "În așteptarea",
+        "waiting_since": "În așteptare din",
+        "risk_nature": "Risc în caz de blocaj",
+        "risk_effective_date": "Data de efect a riscului",
+        "risk_description": "Descrierea riscului",
+        "closure": "Închidere",
+        "closure_date": "Data închiderii",
+        "closure_comment": "Comentariu de închidere",
+        "situation": "Punct de situație"
+      },
+      "status": {
+        "to_start": "De început",
+        "in_progress": "În curs",
+        "in_validation": "În validare",
+        "waiting": "În așteptare",
+        "done": "Finalizat",
+        "cancelled": "Anulat"
+      },
+      "waiting_for": {
+        "internal": "Intern",
+        "client_partner": "Client / partener",
+        "regulatory": "Reglementar"
+      },
+      "risk": {
+        "financial": "Financiar",
+        "regulatory": "Reglementar",
+        "legal": "Juridic",
+        "schedule": "Calendar",
+        "reputation": "Reputație",
+        "governance": "Guvernanță",
+        "hr": "Resurse umane",
+        "operational": "Operațional"
+      },
+      "dialog": {
+        "waiting_title": "Puneți elementul de lucru în așteptare",
+        "waiting_description": "Indicați ce așteaptă elementul de lucru.",
+        "done_title": "Finalizați elementul de lucru",
+        "done_description": "Închiderea necesită data efectivă și un comentariu. Progresul trece la 100%."
+      },
+      "activity": {
+        "set": "a setat {field} la {value}",
+        "cleared": "a golit {field}"
+      },
+      "errors": {
+        "save": "Fișa de coordonare nu a putut fi salvată.",
+        "progress": "Progresul este un număr întreg de la 0 la 100."
+      }
     }
   }
 }

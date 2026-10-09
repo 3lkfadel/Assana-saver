@@ -5,6 +5,7 @@
 from django.urls import path
 
 from plane.app.views import (
+    IssueSteeringEndpoint,
     ProjectSteeringEndpoint,
     SteeringBootstrapEndpoint,
     SteeringBranchDetailEndpoint,
@@ -57,5 +58,10 @@ urlpatterns = [
         "workspaces/<str:slug>/projects/<uuid:project_id>/steering/",
         ProjectSteeringEndpoint.as_view(),
         name="project-steering",
+    ),
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/issues/<uuid:issue_id>/steering/",
+        IssueSteeringEndpoint.as_view(),
+        name="issue-steering",
     ),
 ]

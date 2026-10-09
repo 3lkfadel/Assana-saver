@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Mueva o elimine primero las entidades de esta división.",
       "entity_in_use": "Esta entidad lleva proyectos. Asígnelos primero a otra entidad.",
       "profile": "No se pudo añadir el perfil. Puede que esta persona ya lo tenga."
+    },
+    "task": {
+      "section": "Seguimiento",
+      "incomplete": "Ficha incompleta: {fields}",
+      "empty": "Vacío",
+      "project_entity": "{name} (entidad del proyecto)",
+      "situation_placeholder": "Añadir un punto de situación",
+      "situation_updated": "Actualizado el {date}",
+      "fields": {
+        "entity": "Entidad",
+        "category": "Categoría",
+        "assignee": "Responsable",
+        "supervisor": "Supervisor",
+        "approver": "Aprobador",
+        "priority": "Prioridad",
+        "target_date": "Fecha límite",
+        "status": "Estado",
+        "progress": "Avance",
+        "waiting_for": "En espera de",
+        "waiting_since": "En espera desde",
+        "risk_nature": "Riesgo en caso de bloqueo",
+        "risk_effective_date": "Fecha de efecto del riesgo",
+        "risk_description": "Descripción del riesgo",
+        "closure": "Cierre",
+        "closure_date": "Fecha de cierre",
+        "closure_comment": "Comentario de cierre",
+        "situation": "Punto de situación"
+      },
+      "status": {
+        "to_start": "Por iniciar",
+        "in_progress": "En curso",
+        "in_validation": "En validación",
+        "waiting": "En espera",
+        "done": "Terminado",
+        "cancelled": "Cancelado"
+      },
+      "waiting_for": {
+        "internal": "Interno",
+        "client_partner": "Cliente / socio",
+        "regulatory": "Regulatorio"
+      },
+      "risk": {
+        "financial": "Financiero",
+        "regulatory": "Regulatorio",
+        "legal": "Jurídico",
+        "schedule": "Calendario",
+        "reputation": "Reputación",
+        "governance": "Gobernanza",
+        "hr": "RR. HH.",
+        "operational": "Operativo"
+      },
+      "dialog": {
+        "waiting_title": "Poner el elemento de trabajo en espera",
+        "waiting_description": "Indique qué espera el elemento de trabajo.",
+        "done_title": "Terminar el elemento de trabajo",
+        "done_description": "El cierre requiere su fecha efectiva y un comentario. El avance pasa al 100 %."
+      },
+      "activity": {
+        "set": "estableció {field} en {value}",
+        "cleared": "vació {field}"
+      },
+      "errors": {
+        "save": "No se pudo guardar la ficha de seguimiento.",
+        "progress": "El avance es un número entero de 0 a 100."
+      }
     }
   }
 }

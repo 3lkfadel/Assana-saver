@@ -127,3 +127,72 @@ class SteeringProfile(BaseModel):
             )
         ]
         db_table = "steering_profiles"
+
+
+class SteeringStatus(models.TextChoices):
+    """The six statuses of a work item in the steering space (cahier des charges §4)."""
+
+    TO_START = "to_start", "À démarrer"
+    IN_PROGRESS = "in_progress", "En cours"
+    IN_VALIDATION = "in_validation", "En validation"
+    WAITING = "waiting", "En attente"
+    DONE = "done", "Terminé"
+    CANCELLED = "cancelled", "Annulé"
+
+
+CLOSED_STEERING_STATUSES = (SteeringStatus.DONE, SteeringStatus.CANCELLED)
+
+
+class SteeringWaitingFor(models.TextChoices):
+    INTERNAL = "internal", "Interne"
+    CLIENT_PARTNER = "client_partner", "Client / partenaire"
+    REGULATORY = "regulatory", "Réglementaire"
+
+
+class SteeringRiskNature(models.TextChoices):
+    FINANCIAL = "financial", "Financier"
+    REGULATORY = "regulatory", "Réglementaire"
+    LEGAL = "legal", "Juridique"
+    SCHEDULE = "schedule", "Calendrier"
+    REPUTATION = "reputation", "Réputation"
+    GOVERNANCE = "governance", "Gouvernance"
+    HR = "hr", "RH"
+    OPERATIONAL = "operational", "Opérationnel"
+
+
+class IssueSteering(BaseModel):
+    """
+    The steering record of a work item (§4). The fields Plane already has stay on the work item:
+    project, assignee (responsable), priority and target date (deadline). A missing record reads as
+    « À démarrer », 0 %, carried by the project's entity.
+    """
+
+    issue = models.OneToOneField("db.Issue", on_delete=models.CASCADE, related_name="steering")
+    project = models.ForeignKey("db.Project", on_delete=models.CASCADE, related_name="issue_steerings")
+    workspace = models.ForeignKey("db.Workspace", on_delete=models.CASCADE, related_name="issue_steerings")
+    # Null: carried by the project's entity.
+    entity = models.ForeignKey(Entity, on_delete=models.PROTECT, null=True, blank=True, related_name="issues")
+    category = models.ForeignKey(
+        SteeringCategory, on_delete=models.PROTECT, null=True, blank=True, related_name="issues"
+    )
+    supervisor = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True, related_name="supervised_steerings"
+    )
+    approver = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True, related_name="approved_steerings"
+    )
+    status = models.CharField(max_length=20, choices=SteeringStatus.choices, default=SteeringStatus.TO_START)
+    progress = models.PositiveSmallIntegerField(default=0)
+    waiting_for = models.CharField(max_length=20, choices=SteeringWaitingFor.choices, blank=True, default="")
+    # Last change of the status or of « En attente de » (§4 « En attente depuis »).
+    waiting_since = models.DateTimeField(null=True, blank=True)
+    risk_nature = models.CharField(max_length=20, choices=SteeringRiskNature.choices, blank=True, default="")
+    risk_effective_date = models.DateField(null=True, blank=True)
+    risk_description = models.TextField(blank=True, default="")
+    closure_date = models.DateField(null=True, blank=True)
+    closure_comment = models.TextField(blank=True, default="")
+    situation = models.TextField(blank=True, default="")
+    situation_updated_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        db_table = "issue_steerings"

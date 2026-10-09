@@ -1039,6 +1039,71 @@
       "branch_not_empty": "ჯერ გადაიტანეთ ან წაშალეთ ამ მიმართულების ერთეულები.",
       "entity_in_use": "ეს ერთეული პროექტებს უძღვება. ჯერ სხვა ერთეულს მიაკუთვნეთ ისინი.",
       "profile": "პროფილის დამატება ვერ მოხერხდა. შესაძლოა, ამ პირს ის უკვე აქვს."
+    },
+    "task": {
+      "section": "მართვა",
+      "incomplete": "არასრული ჩანაწერი: {fields}",
+      "empty": "ცარიელი",
+      "project_entity": "{name} (პროექტის ერთეული)",
+      "situation_placeholder": "მიმდინარე მდგომარეობის დამატება",
+      "situation_updated": "განახლდა {date}",
+      "fields": {
+        "entity": "ერთეული",
+        "category": "კატეგორია",
+        "assignee": "პასუხისმგებელი",
+        "supervisor": "ზედამხედველი",
+        "approver": "დამმტკიცებელი",
+        "priority": "პრიორიტეტი",
+        "target_date": "ვადა",
+        "status": "სტატუსი",
+        "progress": "პროგრესი",
+        "waiting_for": "ელოდება",
+        "waiting_since": "ელოდება თარიღიდან",
+        "risk_nature": "დაბლოკვის რისკი",
+        "risk_effective_date": "რისკის დადგომის თარიღი",
+        "risk_description": "რისკის აღწერა",
+        "closure": "დახურვა",
+        "closure_date": "დახურვის თარიღი",
+        "closure_comment": "დახურვის კომენტარი",
+        "situation": "მიმდინარე მდგომარეობა"
+      },
+      "status": {
+        "to_start": "დასაწყები",
+        "in_progress": "მიმდინარე",
+        "in_validation": "დამტკიცების პროცესში",
+        "waiting": "მოლოდინში",
+        "done": "დასრულებული",
+        "cancelled": "გაუქმებული"
+      },
+      "waiting_for": {
+        "internal": "შიდა",
+        "client_partner": "კლიენტი / პარტნიორი",
+        "regulatory": "მარეგულირებელი"
+      },
+      "risk": {
+        "financial": "ფინანსური",
+        "regulatory": "მარეგულირებელი",
+        "legal": "იურიდიული",
+        "schedule": "ვადები",
+        "reputation": "რეპუტაციული",
+        "governance": "მმართველობითი",
+        "hr": "HR",
+        "operational": "ოპერაციული"
+      },
+      "dialog": {
+        "waiting_title": "სამუშაო ელემენტის მოლოდინში გადაყვანა",
+        "waiting_description": "მიუთითეთ, რას ელოდება სამუშაო ელემენტი.",
+        "done_title": "სამუშაო ელემენტის დასრულება",
+        "done_description": "დახურვას სჭირდება ფაქტობრივი თარიღი და კომენტარი. პროგრესი გახდება 100%."
+      },
+      "activity": {
+        "set": "დააყენა {field}: {value}",
+        "cleared": "გაასუფთავა {field}"
+      },
+      "errors": {
+        "save": "მართვის ჩანაწერის შენახვა ვერ მოხერხდა.",
+        "progress": "პროგრესი არის მთელი რიცხვი 0-დან 100-მდე."
+      }
     }
   }
 }

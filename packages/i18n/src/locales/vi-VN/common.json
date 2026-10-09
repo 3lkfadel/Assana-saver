@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Hãy chuyển hoặc xóa các đơn vị của khối này trước.",
       "entity_in_use": "Đơn vị này đang phụ trách dự án. Hãy giao các dự án đó cho đơn vị khác trước.",
       "profile": "Không thể thêm hồ sơ. Có thể người này đã có hồ sơ đó."
+    },
+    "task": {
+      "section": "Điều hành",
+      "incomplete": "Hồ sơ chưa đầy đủ: {fields}",
+      "empty": "Trống",
+      "project_entity": "{name} (đơn vị của dự án)",
+      "situation_placeholder": "Thêm cập nhật tình hình",
+      "situation_updated": "Cập nhật ngày {date}",
+      "fields": {
+        "entity": "Đơn vị",
+        "category": "Danh mục",
+        "assignee": "Người phụ trách",
+        "supervisor": "Người giám sát",
+        "approver": "Người phê duyệt",
+        "priority": "Mức ưu tiên",
+        "target_date": "Hạn chót",
+        "status": "Trạng thái",
+        "progress": "Tiến độ",
+        "waiting_for": "Đang chờ",
+        "waiting_since": "Chờ từ",
+        "risk_nature": "Rủi ro khi bị chặn",
+        "risk_effective_date": "Ngày rủi ro có hiệu lực",
+        "risk_description": "Mô tả rủi ro",
+        "closure": "Đóng",
+        "closure_date": "Ngày đóng",
+        "closure_comment": "Nhận xét khi đóng",
+        "situation": "Cập nhật tình hình"
+      },
+      "status": {
+        "to_start": "Chưa bắt đầu",
+        "in_progress": "Đang thực hiện",
+        "in_validation": "Đang phê duyệt",
+        "waiting": "Đang chờ",
+        "done": "Hoàn thành",
+        "cancelled": "Đã hủy"
+      },
+      "waiting_for": {
+        "internal": "Nội bộ",
+        "client_partner": "Khách hàng / đối tác",
+        "regulatory": "Quy định"
+      },
+      "risk": {
+        "financial": "Tài chính",
+        "regulatory": "Quy định",
+        "legal": "Pháp lý",
+        "schedule": "Tiến độ thời gian",
+        "reputation": "Uy tín",
+        "governance": "Quản trị",
+        "hr": "Nhân sự",
+        "operational": "Vận hành"
+      },
+      "dialog": {
+        "waiting_title": "Chuyển mục công việc sang chờ",
+        "waiting_description": "Cho biết mục công việc đang chờ điều gì.",
+        "done_title": "Hoàn thành mục công việc",
+        "done_description": "Việc đóng cần ngày thực tế và nhận xét. Tiến độ chuyển thành 100%."
+      },
+      "activity": {
+        "set": "đã đặt {field} thành {value}",
+        "cleared": "đã xóa {field}"
+      },
+      "errors": {
+        "save": "Không thể lưu hồ sơ điều hành.",
+        "progress": "Tiến độ là số nguyên từ 0 đến 100."
+      }
     }
   }
 }

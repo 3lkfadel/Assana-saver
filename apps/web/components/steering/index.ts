@@ -4,5 +4,6 @@
  * See the LICENSE file for details.
  */
 
+export * from "./issue-steering-properties";
 export * from "./project-entity-setting";
 export * from "./referential-settings";

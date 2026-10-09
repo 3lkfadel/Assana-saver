@@ -54,6 +54,96 @@ export type TSteeringProfilePayload = {
   entity_id?: string;
 };
 
+export type TSteeringStatus = "to_start" | "in_progress" | "in_validation" | "waiting" | "done" | "cancelled";
+
+export const STEERING_STATUSES: TSteeringStatus[] = [
+  "to_start",
+  "in_progress",
+  "in_validation",
+  "waiting",
+  "done",
+  "cancelled",
+];
+
+export type TSteeringWaitingFor = "internal" | "client_partner" | "regulatory";
+
+export const STEERING_WAITING_FOR: TSteeringWaitingFor[] = ["internal", "client_partner", "regulatory"];
+
+export type TSteeringRiskNature =
+  | "financial"
+  | "regulatory"
+  | "legal"
+  | "schedule"
+  | "reputation"
+  | "governance"
+  | "hr"
+  | "operational";
+
+export const STEERING_RISK_NATURES: TSteeringRiskNature[] = [
+  "financial",
+  "regulatory",
+  "legal",
+  "schedule",
+  "reputation",
+  "governance",
+  "hr",
+  "operational",
+];
+
+/** Required §4 fields the work item does not carry yet. */
+export type TSteeringMissingField =
+  | "entity"
+  | "category"
+  | "assignee"
+  | "supervisor"
+  | "approver"
+  | "priority"
+  | "target_date"
+  | "waiting_for"
+  | "closure";
+
+export type TIssueSteering = {
+  issue_id: string;
+  /** null: carried by the project's entity. */
+  entity_id: string | null;
+  project_entity_id: string | null;
+  category_id: string | null;
+  supervisor_id: string | null;
+  approver_id: string | null;
+  status: TSteeringStatus;
+  progress: number;
+  waiting_for: TSteeringWaitingFor | null;
+  waiting_since: string | null;
+  risk_nature: TSteeringRiskNature | null;
+  risk_effective_date: string | null;
+  risk_description: string;
+  closure_date: string | null;
+  closure_comment: string;
+  situation: string;
+  situation_updated_at: string | null;
+  updated_at: string | null;
+  missing: TSteeringMissingField[];
+};
+
+export type TIssueSteeringPayload = Partial<
+  Pick<
+    TIssueSteering,
+    | "entity_id"
+    | "category_id"
+    | "supervisor_id"
+    | "approver_id"
+    | "status"
+    | "progress"
+    | "waiting_for"
+    | "risk_nature"
+    | "risk_effective_date"
+    | "risk_description"
+    | "closure_date"
+    | "closure_comment"
+    | "situation"
+  >
+>;
+
 export class SteeringService extends APIService {
   constructor() {
     super(API_BASE_URL);
@@ -134,6 +224,21 @@ export class SteeringService extends APIService {
   setProjectEntity(workspaceSlug: string, projectId: string, entityId: string): Promise<{ entity_id: string }> {
     return this.unwrap(
       this.put(`/api/workspaces/${workspaceSlug}/projects/${projectId}/steering/`, { entity_id: entityId })
+    );
+  }
+
+  getIssueSteering(workspaceSlug: string, projectId: string, issueId: string): Promise<TIssueSteering> {
+    return this.unwrap(this.get(`/api/workspaces/${workspaceSlug}/projects/${projectId}/issues/${issueId}/steering/`));
+  }
+
+  updateIssueSteering(
+    workspaceSlug: string,
+    projectId: string,
+    issueId: string,
+    data: TIssueSteeringPayload
+  ): Promise<TIssueSteering> {
+    return this.unwrap(
+      this.patch(`/api/workspaces/${workspaceSlug}/projects/${projectId}/issues/${issueId}/steering/`, data)
     );
   }
 }

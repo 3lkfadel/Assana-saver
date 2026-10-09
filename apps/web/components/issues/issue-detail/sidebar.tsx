@@ -39,6 +39,7 @@ import { useUserProfile } from "@/hooks/store/user";
 // components
 import { IssueParentSelectRoot } from "@/components/issues/parent-select-root";
 import { IssueCustomFieldProperties } from "@/components/custom-fields";
+import { IssueSteeringProperties } from "@/components/steering";
 import { SidebarPropertyListItem } from "@/components/common/layout/sidebar/property-list-item";
 import { IssueCycleSelect } from "./cycle-select";
 import { IssueLabel } from "./label";
@@ -240,6 +241,12 @@ export const IssueDetailsSidebar = observer(function IssueDetailsSidebar(props: 
               />
             </SidebarPropertyListItem>
             <IssueCustomFieldProperties
+              workspaceSlug={workspaceSlug}
+              projectId={projectId}
+              issueId={issueId}
+              disabled={!isEditable}
+            />
+            <IssueSteeringProperties
               workspaceSlug={workspaceSlug}
               projectId={projectId}
               issueId={issueId}

@@ -1039,6 +1039,71 @@
       "branch_not_empty": "請先移動或刪除此業務板塊的單位。",
       "entity_in_use": "此單位負責專案。請先將這些專案指派給其他單位。",
       "profile": "無法新增角色。此人可能已擁有該角色。"
+    },
+    "task": {
+      "section": "經營管理",
+      "incomplete": "資料不完整：{fields}",
+      "empty": "空",
+      "project_entity": "{name}（專案所屬單位）",
+      "situation_placeholder": "新增最新進展",
+      "situation_updated": "更新於 {date}",
+      "fields": {
+        "entity": "單位",
+        "category": "類別",
+        "assignee": "負責人",
+        "supervisor": "監督人",
+        "approver": "核准人",
+        "priority": "優先順序",
+        "target_date": "截止日期",
+        "status": "狀態",
+        "progress": "進度",
+        "waiting_for": "等待對象",
+        "waiting_since": "等待開始於",
+        "risk_nature": "受阻風險",
+        "risk_effective_date": "風險生效日期",
+        "risk_description": "風險描述",
+        "closure": "結案",
+        "closure_date": "結案日期",
+        "closure_comment": "結案說明",
+        "situation": "最新進展"
+      },
+      "status": {
+        "to_start": "待啟動",
+        "in_progress": "進行中",
+        "in_validation": "核准中",
+        "waiting": "等待中",
+        "done": "已完成",
+        "cancelled": "已取消"
+      },
+      "waiting_for": {
+        "internal": "內部",
+        "client_partner": "客戶 / 合作夥伴",
+        "regulatory": "法規"
+      },
+      "risk": {
+        "financial": "財務",
+        "regulatory": "法規",
+        "legal": "法律",
+        "schedule": "時程",
+        "reputation": "聲譽",
+        "governance": "治理",
+        "hr": "人力資源",
+        "operational": "營運"
+      },
+      "dialog": {
+        "waiting_title": "將工作項目設為等待",
+        "waiting_description": "請說明工作項目在等待什麼。",
+        "done_title": "完成工作項目",
+        "done_description": "結案需要實際日期和說明。進度將變為 100%。"
+      },
+      "activity": {
+        "set": "將 {field} 設為 {value}",
+        "cleared": "清除了 {field}"
+      },
+      "errors": {
+        "save": "無法儲存管理記錄。",
+        "progress": "進度是 0 到 100 之間的整數。"
+      }
     }
   }
 }

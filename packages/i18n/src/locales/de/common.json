@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Verschieben oder löschen Sie zuerst die Einheiten dieses Geschäftsbereichs.",
       "entity_in_use": "Diese Einheit trägt Projekte. Ordnen Sie sie zuerst einer anderen Einheit zu.",
       "profile": "Das Profil konnte nicht hinzugefügt werden. Diese Person hat es möglicherweise bereits."
+    },
+    "task": {
+      "section": "Steuerung",
+      "incomplete": "Unvollständiger Datensatz: {fields}",
+      "empty": "Leer",
+      "project_entity": "{name} (Einheit des Projekts)",
+      "situation_placeholder": "Lagebericht hinzufügen",
+      "situation_updated": "Aktualisiert am {date}",
+      "fields": {
+        "entity": "Einheit",
+        "category": "Kategorie",
+        "assignee": "Verantwortlich",
+        "supervisor": "Supervisor",
+        "approver": "Genehmiger",
+        "priority": "Priorität",
+        "target_date": "Frist",
+        "status": "Status",
+        "progress": "Fortschritt",
+        "waiting_for": "Wartet auf",
+        "waiting_since": "Wartet seit",
+        "risk_nature": "Risiko bei Blockade",
+        "risk_effective_date": "Eintrittsdatum des Risikos",
+        "risk_description": "Beschreibung des Risikos",
+        "closure": "Abschluss",
+        "closure_date": "Abschlussdatum",
+        "closure_comment": "Abschlusskommentar",
+        "situation": "Lagebericht"
+      },
+      "status": {
+        "to_start": "Zu starten",
+        "in_progress": "In Bearbeitung",
+        "in_validation": "In Prüfung",
+        "waiting": "Wartend",
+        "done": "Erledigt",
+        "cancelled": "Abgebrochen"
+      },
+      "waiting_for": {
+        "internal": "Intern",
+        "client_partner": "Kunde / Partner",
+        "regulatory": "Regulatorisch"
+      },
+      "risk": {
+        "financial": "Finanziell",
+        "regulatory": "Regulatorisch",
+        "legal": "Rechtlich",
+        "schedule": "Zeitplan",
+        "reputation": "Reputation",
+        "governance": "Governance",
+        "hr": "Personal",
+        "operational": "Operativ"
+      },
+      "dialog": {
+        "waiting_title": "Arbeitselement zurückstellen",
+        "waiting_description": "Geben Sie an, worauf das Arbeitselement wartet.",
+        "done_title": "Arbeitselement abschließen",
+        "done_description": "Ein Abschluss braucht sein tatsächliches Datum und einen Kommentar. Der Fortschritt springt auf 100 %."
+      },
+      "activity": {
+        "set": "hat {field} auf {value} gesetzt",
+        "cleared": "hat {field} geleert"
+      },
+      "errors": {
+        "save": "Der Steuerungsdatensatz konnte nicht gespeichert werden.",
+        "progress": "Der Fortschritt ist eine ganze Zahl von 0 bis 100."
+      }
     }
   }
 }

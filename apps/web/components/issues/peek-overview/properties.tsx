@@ -31,6 +31,7 @@ import { PrioritySelect } from "@/components/dropdowns/priority/priority-select"
 import { StateSelect } from "@/components/dropdowns/state/state-select";
 import { SidebarPropertyListItem } from "@/components/common/layout/sidebar/property-list-item";
 import { IssueCustomFieldProperties } from "@/components/custom-fields";
+import { IssueSteeringProperties } from "@/components/steering";
 // helpers
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useMember } from "@/hooks/store/use-member";
@@ -234,6 +235,12 @@ export const PeekOverviewProperties = observer(function PeekOverviewProperties(p
         </SidebarPropertyListItem>
 
         <IssueCustomFieldProperties
+          workspaceSlug={workspaceSlug}
+          projectId={projectId}
+          issueId={issueId}
+          disabled={disabled}
+        />
+        <IssueSteeringProperties
           workspaceSlug={workspaceSlug}
           projectId={projectId}
           issueId={issueId}

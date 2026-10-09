@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Verplaats of verwijder eerst de eenheden van deze divisie.",
       "entity_in_use": "Deze eenheid draagt projecten. Wijs ze eerst toe aan een andere eenheid.",
       "profile": "Het profiel kon niet worden toegevoegd. Deze persoon heeft het misschien al."
+    },
+    "task": {
+      "section": "Sturing",
+      "incomplete": "Onvolledige fiche: {fields}",
+      "empty": "Leeg",
+      "project_entity": "{name} (eenheid van het project)",
+      "situation_placeholder": "Stand van zaken toevoegen",
+      "situation_updated": "Bijgewerkt op {date}",
+      "fields": {
+        "entity": "Eenheid",
+        "category": "Categorie",
+        "assignee": "Verantwoordelijke",
+        "supervisor": "Supervisor",
+        "approver": "Goedkeurder",
+        "priority": "Prioriteit",
+        "target_date": "Deadline",
+        "status": "Status",
+        "progress": "Voortgang",
+        "waiting_for": "Wacht op",
+        "waiting_since": "Wacht sinds",
+        "risk_nature": "Risico bij blokkade",
+        "risk_effective_date": "Ingangsdatum van het risico",
+        "risk_description": "Beschrijving van het risico",
+        "closure": "Afsluiting",
+        "closure_date": "Afsluitdatum",
+        "closure_comment": "Afsluitopmerking",
+        "situation": "Stand van zaken"
+      },
+      "status": {
+        "to_start": "Te starten",
+        "in_progress": "Bezig",
+        "in_validation": "In validatie",
+        "waiting": "Wachtend",
+        "done": "Afgerond",
+        "cancelled": "Geannuleerd"
+      },
+      "waiting_for": {
+        "internal": "Intern",
+        "client_partner": "Klant / partner",
+        "regulatory": "Regelgevend"
+      },
+      "risk": {
+        "financial": "Financieel",
+        "regulatory": "Regelgevend",
+        "legal": "Juridisch",
+        "schedule": "Planning",
+        "reputation": "Reputatie",
+        "governance": "Governance",
+        "hr": "HR",
+        "operational": "Operationeel"
+      },
+      "dialog": {
+        "waiting_title": "Werkitem in de wacht zetten",
+        "waiting_description": "Geef aan waarop het werkitem wacht.",
+        "done_title": "Werkitem afronden",
+        "done_description": "Een afsluiting vraagt de werkelijke datum en een opmerking. De voortgang gaat naar 100%."
+      },
+      "activity": {
+        "set": "heeft {field} ingesteld op {value}",
+        "cleared": "heeft {field} leeggemaakt"
+      },
+      "errors": {
+        "save": "De sturingsfiche kon niet worden opgeslagen.",
+        "progress": "De voortgang is een geheel getal van 0 tot 100."
+      }
     }
   }
 }

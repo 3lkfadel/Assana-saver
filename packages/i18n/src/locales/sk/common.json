@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Najprv presuňte alebo odstráňte jednotky tejto divízie.",
       "entity_in_use": "Táto jednotka nesie projekty. Najprv ich priraďte inej jednotke.",
       "profile": "Profil sa nepodarilo pridať. Táto osoba ho možno už má."
+    },
+    "task": {
+      "section": "Riadenie",
+      "incomplete": "Neúplný záznam: {fields}",
+      "empty": "Prázdne",
+      "project_entity": "{name} (jednotka projektu)",
+      "situation_placeholder": "Pridať stav veci",
+      "situation_updated": "Aktualizované {date}",
+      "fields": {
+        "entity": "Jednotka",
+        "category": "Kategória",
+        "assignee": "Zodpovedná osoba",
+        "supervisor": "Supervízor",
+        "approver": "Schvaľovateľ",
+        "priority": "Priorita",
+        "target_date": "Termín",
+        "status": "Stav",
+        "progress": "Postup",
+        "waiting_for": "Čaká na",
+        "waiting_since": "Čaká od",
+        "risk_nature": "Riziko pri zablokovaní",
+        "risk_effective_date": "Dátum účinnosti rizika",
+        "risk_description": "Popis rizika",
+        "closure": "Uzavretie",
+        "closure_date": "Dátum uzavretia",
+        "closure_comment": "Komentár k uzavretiu",
+        "situation": "Stav veci"
+      },
+      "status": {
+        "to_start": "Na začatie",
+        "in_progress": "Prebieha",
+        "in_validation": "V schvaľovaní",
+        "waiting": "Čaká",
+        "done": "Hotovo",
+        "cancelled": "Zrušené"
+      },
+      "waiting_for": {
+        "internal": "Interné",
+        "client_partner": "Klient / partner",
+        "regulatory": "Regulačné"
+      },
+      "risk": {
+        "financial": "Finančné",
+        "regulatory": "Regulačné",
+        "legal": "Právne",
+        "schedule": "Harmonogram",
+        "reputation": "Reputácia",
+        "governance": "Správa a riadenie",
+        "hr": "Ľudské zdroje",
+        "operational": "Prevádzkové"
+      },
+      "dialog": {
+        "waiting_title": "Odložiť pracovnú položku",
+        "waiting_description": "Uveďte, na čo pracovná položka čaká.",
+        "done_title": "Dokončiť pracovnú položku",
+        "done_description": "Uzavretie vyžaduje skutočný dátum a komentár. Postup sa nastaví na 100 %."
+      },
+      "activity": {
+        "set": "nastavil(a) {field} na {value}",
+        "cleared": "vymazal(a) {field}"
+      },
+      "errors": {
+        "save": "Riadiaci záznam sa nepodarilo uložiť.",
+        "progress": "Postup je celé číslo od 0 do 100."
+      }
     }
   }
 }

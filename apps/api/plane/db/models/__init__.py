@@ -85,12 +85,17 @@ from .recent_visit import UserRecentVisit
 
 from .label import Label
 from .steering import (
+    CLOSED_STEERING_STATUSES,
     Branch,
     Entity,
+    IssueSteering,
     ProjectSteering,
     SteeringCategory,
     SteeringProfile,
     SteeringProfileRole,
+    SteeringRiskNature,
+    SteeringStatus,
+    SteeringWaitingFor,
 )
 from .custom_field import (
     CustomField,

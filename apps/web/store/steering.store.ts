@@ -9,6 +9,8 @@ import { action, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
 // services
 import type {
+  TIssueSteering,
+  TIssueSteeringPayload,
   TSteeringBranch,
   TSteeringEntity,
   TSteeringProfile,
@@ -25,6 +27,7 @@ export interface ISteeringStore {
   referentialMap: Record<string, TSteeringReferential>;
   profileMap: Record<string, TSteeringProfile[]>;
   projectEntityMap: Record<string, string | null>;
+  issueSteeringMap: Record<string, TIssueSteering>;
   // computed functions
   getReferential: (workspaceSlug: string) => TSteeringReferential | undefined;
   getBranchEntities: (workspaceSlug: string, branchId: string) => TSteeringEntity[];
@@ -46,6 +49,13 @@ export interface ISteeringStore {
   deleteProfile: (workspaceSlug: string, profileId: string) => Promise<void>;
   fetchProjectEntity: (workspaceSlug: string, projectId: string) => Promise<string | null>;
   setProjectEntity: (workspaceSlug: string, projectId: string, entityId: string) => Promise<void>;
+  fetchIssueSteering: (workspaceSlug: string, projectId: string, issueId: string) => Promise<TIssueSteering>;
+  updateIssueSteering: (
+    workspaceSlug: string,
+    projectId: string,
+    issueId: string,
+    data: TIssueSteeringPayload
+  ) => Promise<TIssueSteering>;
 }
 
 export class SteeringStore implements ISteeringStore {
@@ -53,6 +63,7 @@ export class SteeringStore implements ISteeringStore {
   referentialMap: Record<string, TSteeringReferential> = {};
   profileMap: Record<string, TSteeringProfile[]> = {};
   projectEntityMap: Record<string, string | null> = {};
+  issueSteeringMap: Record<string, TIssueSteering> = {};
   // services
   private service = new SteeringService();
 
@@ -61,6 +72,7 @@ export class SteeringStore implements ISteeringStore {
       referentialMap: observable,
       profileMap: observable,
       projectEntityMap: observable,
+      issueSteeringMap: observable,
       fetchReferential: action,
       bootstrap: action,
       createBranch: action,
@@ -77,6 +89,8 @@ export class SteeringStore implements ISteeringStore {
       deleteProfile: action,
       fetchProjectEntity: action,
       setProjectEntity: action,
+      fetchIssueSteering: action,
+      updateIssueSteering: action,
     });
   }
 
@@ -217,5 +231,27 @@ export class SteeringStore implements ISteeringStore {
     runInAction(() => {
       this.projectEntityMap[projectId] = entity_id;
     });
+  };
+
+  fetchIssueSteering = async (workspaceSlug: string, projectId: string, issueId: string) => {
+    const steering = await this.service.getIssueSteering(workspaceSlug, projectId, issueId);
+    runInAction(() => {
+      this.issueSteeringMap[issueId] = steering;
+    });
+    return steering;
+  };
+
+  /** The server applies the §4 rules (100 % when done, cause cleared when no longer waiting): keep its answer. */
+  updateIssueSteering = async (
+    workspaceSlug: string,
+    projectId: string,
+    issueId: string,
+    data: TIssueSteeringPayload
+  ) => {
+    const steering = await this.service.updateIssueSteering(workspaceSlug, projectId, issueId, data);
+    runInAction(() => {
+      this.issueSteeringMap[issueId] = steering;
+    });
+    return steering;
   };
 }

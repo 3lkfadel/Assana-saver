@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Najpierw przenieś lub usuń podmioty tego pionu.",
       "entity_in_use": "Ten podmiot prowadzi projekty. Najpierw przypisz je do innego podmiotu.",
       "profile": "Nie udało się dodać profilu. Ta osoba może już go mieć."
+    },
+    "task": {
+      "section": "Zarządzanie",
+      "incomplete": "Niekompletna karta: {fields}",
+      "empty": "Puste",
+      "project_entity": "{name} (podmiot projektu)",
+      "situation_placeholder": "Dodaj stan sprawy",
+      "situation_updated": "Zaktualizowano {date}",
+      "fields": {
+        "entity": "Podmiot",
+        "category": "Kategoria",
+        "assignee": "Odpowiedzialny",
+        "supervisor": "Nadzorujący",
+        "approver": "Zatwierdzający",
+        "priority": "Priorytet",
+        "target_date": "Termin",
+        "status": "Status",
+        "progress": "Postęp",
+        "waiting_for": "Oczekuje na",
+        "waiting_since": "Oczekuje od",
+        "risk_nature": "Ryzyko w razie blokady",
+        "risk_effective_date": "Data wystąpienia ryzyka",
+        "risk_description": "Opis ryzyka",
+        "closure": "Zamknięcie",
+        "closure_date": "Data zamknięcia",
+        "closure_comment": "Komentarz do zamknięcia",
+        "situation": "Stan sprawy"
+      },
+      "status": {
+        "to_start": "Do rozpoczęcia",
+        "in_progress": "W toku",
+        "in_validation": "W zatwierdzaniu",
+        "waiting": "Oczekuje",
+        "done": "Zakończone",
+        "cancelled": "Anulowane"
+      },
+      "waiting_for": {
+        "internal": "Wewnętrzne",
+        "client_partner": "Klient / partner",
+        "regulatory": "Regulacyjne"
+      },
+      "risk": {
+        "financial": "Finansowe",
+        "regulatory": "Regulacyjne",
+        "legal": "Prawne",
+        "schedule": "Harmonogram",
+        "reputation": "Reputacja",
+        "governance": "Ład korporacyjny",
+        "hr": "Kadry",
+        "operational": "Operacyjne"
+      },
+      "dialog": {
+        "waiting_title": "Wstrzymaj element pracy",
+        "waiting_description": "Wskaż, na co czeka element pracy.",
+        "done_title": "Zakończ element pracy",
+        "done_description": "Zamknięcie wymaga faktycznej daty i komentarza. Postęp zmienia się na 100%."
+      },
+      "activity": {
+        "set": "ustawił(a) {field} na {value}",
+        "cleared": "wyczyścił(a) {field}"
+      },
+      "errors": {
+        "save": "Nie udało się zapisać karty zarządczej.",
+        "progress": "Postęp to liczba całkowita od 0 do 100."
+      }
     }
   }
 }

@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Önce bu iş kolunun birimlerini taşıyın veya silin.",
       "entity_in_use": "Bu birim projeler yürütüyor. Önce bunları başka bir birime atayın.",
       "profile": "Profil eklenemedi. Bu kişide zaten olabilir."
+    },
+    "task": {
+      "section": "Yönetim",
+      "incomplete": "Eksik kayıt: {fields}",
+      "empty": "Boş",
+      "project_entity": "{name} (projenin birimi)",
+      "situation_placeholder": "Durum notu ekle",
+      "situation_updated": "{date} tarihinde güncellendi",
+      "fields": {
+        "entity": "Birim",
+        "category": "Kategori",
+        "assignee": "Sorumlu",
+        "supervisor": "Denetçi",
+        "approver": "Onaylayan",
+        "priority": "Öncelik",
+        "target_date": "Son tarih",
+        "status": "Durum",
+        "progress": "İlerleme",
+        "waiting_for": "Beklenen",
+        "waiting_since": "Bekleme başlangıcı",
+        "risk_nature": "Engellenme riski",
+        "risk_effective_date": "Riskin gerçekleşme tarihi",
+        "risk_description": "Risk açıklaması",
+        "closure": "Kapanış",
+        "closure_date": "Kapanış tarihi",
+        "closure_comment": "Kapanış yorumu",
+        "situation": "Durum notu"
+      },
+      "status": {
+        "to_start": "Başlanacak",
+        "in_progress": "Devam ediyor",
+        "in_validation": "Onayda",
+        "waiting": "Beklemede",
+        "done": "Tamamlandı",
+        "cancelled": "İptal edildi"
+      },
+      "waiting_for": {
+        "internal": "Dahili",
+        "client_partner": "Müşteri / iş ortağı",
+        "regulatory": "Mevzuat"
+      },
+      "risk": {
+        "financial": "Finansal",
+        "regulatory": "Mevzuat",
+        "legal": "Hukuki",
+        "schedule": "Takvim",
+        "reputation": "İtibar",
+        "governance": "Yönetişim",
+        "hr": "İK",
+        "operational": "Operasyonel"
+      },
+      "dialog": {
+        "waiting_title": "İş öğesini beklemeye al",
+        "waiting_description": "İş öğesinin neyi beklediğini belirtin.",
+        "done_title": "İş öğesini tamamla",
+        "done_description": "Kapanış için gerçek tarih ve yorum gerekir. İlerleme %100 olur."
+      },
+      "activity": {
+        "set": "{field} değerini {value} olarak ayarladı",
+        "cleared": "{field} değerini temizledi"
+      },
+      "errors": {
+        "save": "Yönetim kaydı kaydedilemedi.",
+        "progress": "İlerleme 0 ile 100 arasında bir tam sayıdır."
+      }
     }
   }
 }

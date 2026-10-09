@@ -5,6 +5,7 @@
 """Group referential (branches, entities, categories), steering profiles and project entities."""
 
 # Python imports
+import time
 from typing import Any, Dict, Optional
 
 # Django imports
@@ -20,6 +21,9 @@ from plane.app.permissions import ROLE, allow_permission
 from plane.db.models import (
     Branch,
     Entity,
+    Issue,
+    IssueActivity,
+    IssueSteering,
     Project,
     ProjectMember,
     ProjectSteering,
@@ -28,6 +32,13 @@ from plane.db.models import (
     SteeringProfileRole,
     Workspace,
     WorkspaceMember,
+)
+from plane.utils.steering import (
+    SteeringValueError,
+    apply_steering_changes,
+    clean_steering_changes,
+    display_steering_value,
+    missing_steering_fields,
 )
 
 from ..base import BaseAPIView
@@ -281,8 +292,11 @@ class SteeringEntityDetailEndpoint(SteeringAdminView):
         if not self.is_referential_admin:
             return self.forbidden()
         entity = Entity.objects.get(workspace=self.workspace, pk=pk)
-        if ProjectSteering.objects.filter(entity=entity).exists():
-            return _error("Projects are carried by this entity: assign them to another entity first.")
+        if (
+            ProjectSteering.objects.filter(entity=entity).exists()
+            or IssueSteering.objects.filter(entity=entity).exists()
+        ):
+            return _error("Projects or work items are carried by this entity: assign them to another entity first.")
         with transaction.atomic():
             entity.profiles.all().delete()
             entity.delete()
@@ -327,7 +341,10 @@ class SteeringCategoryDetailEndpoint(SteeringAdminView):
     def delete(self, request, slug, pk):
         if not self.is_referential_admin:
             return self.forbidden()
-        SteeringCategory.objects.get(workspace=self.workspace, pk=pk).delete()
+        category = SteeringCategory.objects.get(workspace=self.workspace, pk=pk)
+        if IssueSteering.objects.filter(category=category).exists():
+            return _error("Work items use this category: change their category first.")
+        category.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
@@ -402,3 +419,78 @@ class ProjectSteeringEndpoint(BaseAPIView):
         else:
             ProjectSteering.objects.create(project=project, workspace=project.workspace, entity=entity)
         return Response({"entity_id": str(entity.id)}, status=status.HTTP_200_OK)
+
+
+def _issue_steering_payload(issue: Issue, steering: Optional[IssueSteering]) -> Dict[str, Any]:
+    project_entity_id = (
+        ProjectSteering.objects.filter(project_id=issue.project_id).values_list("entity_id", flat=True).first()
+    )
+    record = steering or IssueSteering(issue=issue)
+
+    def as_text(value):
+        return str(value) if value else None
+
+    return {
+        "issue_id": str(issue.id),
+        "entity_id": as_text(record.entity_id),
+        "project_entity_id": as_text(project_entity_id),
+        "category_id": as_text(record.category_id),
+        "supervisor_id": as_text(record.supervisor_id),
+        "approver_id": as_text(record.approver_id),
+        "status": record.status,
+        "progress": record.progress,
+        "waiting_for": record.waiting_for or None,
+        "waiting_since": record.waiting_since,
+        "risk_nature": record.risk_nature or None,
+        "risk_effective_date": record.risk_effective_date,
+        "risk_description": record.risk_description,
+        "closure_date": record.closure_date,
+        "closure_comment": record.closure_comment,
+        "situation": record.situation,
+        "situation_updated_at": record.situation_updated_at,
+        "updated_at": steering.updated_at if steering else None,
+        "missing": missing_steering_fields(issue, steering, project_entity_id),
+    }
+
+
+class IssueSteeringEndpoint(BaseAPIView):
+    """The steering record of a work item (§4), edited from the work item and kept in its history."""
+
+    @allow_permission([ROLE.ADMIN, ROLE.MEMBER])
+    def get(self, request, slug, project_id, issue_id):
+        issue = Issue.issue_objects.get(project_id=project_id, pk=issue_id)
+        steering = IssueSteering.objects.filter(issue=issue).first()
+        return Response(_issue_steering_payload(issue, steering), status=status.HTTP_200_OK)
+
+    @allow_permission([ROLE.ADMIN, ROLE.MEMBER])
+    def patch(self, request, slug, project_id, issue_id):
+        issue = Issue.issue_objects.get(project_id=project_id, pk=issue_id)
+        steering = IssueSteering.objects.filter(issue=issue).first() or IssueSteering(
+            issue=issue, project_id=project_id, workspace_id=issue.workspace_id
+        )
+        try:
+            changes = clean_steering_changes(request.data, issue.workspace_id)
+            changed = apply_steering_changes(steering, changes)
+        except SteeringValueError as error:
+            return _error(str(error))
+
+        if changed or steering._state.adding:
+            epoch = int(time.time())
+            with transaction.atomic():
+                steering.save()
+                IssueActivity.objects.bulk_create(
+                    IssueActivity(
+                        issue=issue,
+                        project_id=project_id,
+                        workspace_id=issue.workspace_id,
+                        actor=request.user,
+                        verb="updated",
+                        field="steering",
+                        old_value=display_steering_value(key, old),
+                        new_value=display_steering_value(key, new),
+                        comment=key,
+                        epoch=epoch,
+                    )
+                    for key, old, new in changed
+                )
+        return Response(_issue_steering_payload(issue, steering), status=status.HTTP_200_OK)

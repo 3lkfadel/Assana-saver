@@ -1039,6 +1039,71 @@
       "branch_not_empty": "Pindahkan atau hapus entitas di divisi ini terlebih dahulu.",
       "entity_in_use": "Entitas ini menjalankan proyek. Tetapkan proyek tersebut ke entitas lain terlebih dahulu.",
       "profile": "Profil tidak dapat ditambahkan. Orang ini mungkin sudah memilikinya."
+    },
+    "task": {
+      "section": "Pemantauan",
+      "incomplete": "Data belum lengkap: {fields}",
+      "empty": "Kosong",
+      "project_entity": "{name} (entitas proyek)",
+      "situation_placeholder": "Tambahkan perkembangan terkini",
+      "situation_updated": "Diperbarui pada {date}",
+      "fields": {
+        "entity": "Entitas",
+        "category": "Kategori",
+        "assignee": "Penanggung jawab",
+        "supervisor": "Supervisor",
+        "approver": "Pemberi persetujuan",
+        "priority": "Prioritas",
+        "target_date": "Tenggat",
+        "status": "Status",
+        "progress": "Kemajuan",
+        "waiting_for": "Menunggu",
+        "waiting_since": "Menunggu sejak",
+        "risk_nature": "Risiko jika terhambat",
+        "risk_effective_date": "Tanggal berlaku risiko",
+        "risk_description": "Deskripsi risiko",
+        "closure": "Penutupan",
+        "closure_date": "Tanggal penutupan",
+        "closure_comment": "Komentar penutupan",
+        "situation": "Perkembangan terkini"
+      },
+      "status": {
+        "to_start": "Belum dimulai",
+        "in_progress": "Sedang berjalan",
+        "in_validation": "Dalam validasi",
+        "waiting": "Menunggu",
+        "done": "Selesai",
+        "cancelled": "Dibatalkan"
+      },
+      "waiting_for": {
+        "internal": "Internal",
+        "client_partner": "Klien / mitra",
+        "regulatory": "Regulasi"
+      },
+      "risk": {
+        "financial": "Keuangan",
+        "regulatory": "Regulasi",
+        "legal": "Hukum",
+        "schedule": "Jadwal",
+        "reputation": "Reputasi",
+        "governance": "Tata kelola",
+        "hr": "SDM",
+        "operational": "Operasional"
+      },
+      "dialog": {
+        "waiting_title": "Tunda item kerja",
+        "waiting_description": "Sebutkan apa yang ditunggu item kerja.",
+        "done_title": "Selesaikan item kerja",
+        "done_description": "Penutupan memerlukan tanggal efektif dan komentar. Kemajuan menjadi 100%."
+      },
+      "activity": {
+        "set": "mengatur {field} menjadi {value}",
+        "cleared": "mengosongkan {field}"
+      },
+      "errors": {
+        "save": "Data pemantauan tidak dapat disimpan.",
+        "progress": "Kemajuan adalah bilangan bulat dari 0 sampai 100."
+      }
     }
   }
 }

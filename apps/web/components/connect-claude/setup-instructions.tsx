@@ -10,6 +10,8 @@ import { MCP_URL } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 import { setToast } from "@plane/blocks/toast";
 import { copyTextToClipboard } from "@plane/utils";
+// hooks
+import { usePlatformOS } from "@/hooks/use-platform-os";
 
 export const TOKEN_PLACEHOLDER = "YOUR_TOKEN";
 const SERVER_NAME = "infinity-planning";
@@ -28,7 +30,7 @@ export const getClaudeCodeCommand = (mcpUrl: string, token: string): string =>
 const DESKTOP_PATH = "/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin";
 
 /** Claude Desktop reaches a remote server through the mcp-remote bridge, which adds the token header. */
-export const getClaudeDesktopConfig = (mcpUrl: string, token: string): string =>
+export const getClaudeDesktopConfig = (mcpUrl: string, token: string, platform: string): string =>
   JSON.stringify(
     {
       mcpServers: {
@@ -42,7 +44,8 @@ export const getClaudeDesktopConfig = (mcpUrl: string, token: string): string =>
             "--header",
             "Authorization:${AUTH_HEADER}",
           ],
-          env: { AUTH_HEADER: `Bearer ${token}`, PATH: DESKTOP_PATH },
+          // Windows keeps its own PATH, where the Node.js installer adds npx
+          env: { AUTH_HEADER: `Bearer ${token}`, ...(platform === "Windows" ? {} : { PATH: DESKTOP_PATH }) },
         },
       },
     },
@@ -83,6 +86,7 @@ type TSetupInstructionsProps = {
 
 export function ClaudeSetupInstructions({ token }: TSetupInstructionsProps) {
   const { t } = useTranslation();
+  const { platform } = usePlatformOS();
   const mcpUrl = getMcpUrl();
   const value = token ?? TOKEN_PLACEHOLDER;
 
@@ -103,7 +107,7 @@ export function ClaudeSetupInstructions({ token }: TSetupInstructionsProps) {
         <p className="text-body-xs-regular text-tertiary">
           {t("account_settings.connect_claude.claude_desktop_description")}
         </p>
-        <CopyableCode code={getClaudeDesktopConfig(mcpUrl, value)} />
+        <CopyableCode code={getClaudeDesktopConfig(mcpUrl, value, platform)} />
       </section>
     </div>
   );

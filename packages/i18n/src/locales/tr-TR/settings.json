@@ -65,6 +65,30 @@
       "title": "Bağlantılar",
       "heading": "Bağlantılar",
       "description": "Çalışma alanı bağlantı ayarlarınızı yönetin."
+    },
+    "connect_claude": {
+      "title": "Claude'u bağlayın",
+      "description": "Claude Code ve Claude Desktop'ın görevlerinizi kendi izinlerinizle okumasına ve güncellemesine izin verin.",
+      "validity": "Token geçerliliği",
+      "validity_30": "30 gün",
+      "validity_90": "90 gün",
+      "validity_365": "1 yıl",
+      "validity_none": "Süresiz",
+      "generate": "Token oluşturun",
+      "token_title": "Claude tokeniniz",
+      "token_warning": "Şimdi kopyalayın: tekrar gösterilmeyecek.",
+      "placeholder_hint": "Bir token oluşturun: aşağıdaki komutlarda YOUR_TOKEN yerine geçecek.",
+      "claude_code_description": "Bu komutu bir terminalde çalıştırın.",
+      "claude_desktop_description": "Claude Desktop'ın geliştirici ayarlarında claude_desktop_config.json dosyasını düzenleyin, bu sunucuyu ekleyin ve Claude Desktop'ı yeniden başlatın. Node.js yüklü olmalıdır.",
+      "copy": "Kopyala",
+      "copied": "Panoya kopyalandı.",
+      "tokens": "Claude tokenleri",
+      "no_tokens": "Henüz Claude tokeni yok.",
+      "expires_on": "{date} tarihinde sona eriyor",
+      "expires_soon": "{date} tarihinde sona eriyor: bu tarihten önce yeni bir token oluşturun.",
+      "never_expires": "Süresi dolmaz",
+      "expired": "Süresi doldu",
+      "revoke": "İptal et"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Aktivite",
       "preferences": "Tercihler",
       "notifications": "Bildirimler",
+      "connect-claude": "Claude'u bağlayın",
       "api-tokens": "Kişisel Erişim Tokenları",
       "connections": "Bağlantılar"
     },

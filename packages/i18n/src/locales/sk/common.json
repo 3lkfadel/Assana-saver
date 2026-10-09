@@ -978,5 +978,6 @@
       "set": "nastavil(a) {field} na {value}",
       "cleared": "vymazal(a) {field}"
     }
-  }
+  },
+  "activity_via_claude": "cez Claude"
 }

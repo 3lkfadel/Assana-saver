@@ -978,5 +978,6 @@
       "set": "a setat {field} la {value}",
       "cleared": "a golit {field}"
     }
-  }
+  },
+  "activity_via_claude": "prin Claude"
 }

@@ -65,6 +65,30 @@
       "title": "Connessioni",
       "heading": "Connessioni",
       "description": "Gestisci le impostazioni delle connessioni del tuo spazio di lavoro."
+    },
+    "connect_claude": {
+      "title": "Connetti Claude",
+      "description": "Consenta a Claude Code e Claude Desktop di consultare e modificare le Sue attività, con i Suoi permessi.",
+      "validity": "Validità del token",
+      "validity_30": "30 giorni",
+      "validity_90": "90 giorni",
+      "validity_365": "1 anno",
+      "validity_none": "Nessuna scadenza",
+      "generate": "Genera un token",
+      "token_title": "Il Suo token Claude",
+      "token_warning": "Lo copi ora: non verrà più mostrato.",
+      "placeholder_hint": "Generi un token: sostituirà YOUR_TOKEN nei comandi seguenti.",
+      "claude_code_description": "Esegua questo comando in un terminale.",
+      "claude_desktop_description": "Nelle impostazioni sviluppatore di Claude Desktop, modifichi claude_desktop_config.json, aggiunga questo server e riavvii Claude Desktop. Node.js deve essere installato.",
+      "copy": "Copia",
+      "copied": "Copiato negli appunti.",
+      "tokens": "Token Claude",
+      "no_tokens": "Nessun token Claude per ora.",
+      "expires_on": "Scade il {date}",
+      "expires_soon": "Scade il {date}: generi un nuovo token prima di allora.",
+      "never_expires": "Non scade mai",
+      "expired": "Scaduto",
+      "revoke": "Revoca"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Attività",
       "preferences": "Preferenze",
       "notifications": "Notifiche",
+      "connect-claude": "Connetti Claude",
       "api-tokens": "Token di accesso personali",
       "connections": "Connessioni"
     },

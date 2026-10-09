@@ -978,5 +978,6 @@
       "set": "ustawił(a) {field} na {value}",
       "cleared": "wyczyścił(a) {field}"
     }
-  }
+  },
+  "activity_via_claude": "przez Claude"
 }

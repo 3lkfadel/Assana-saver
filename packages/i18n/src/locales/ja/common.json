@@ -978,5 +978,6 @@
       "set": "が {field} を {value} に設定しました",
       "cleared": "が {field} をクリアしました"
     }
-  }
+  },
+  "activity_via_claude": "Claude 経由"
 }

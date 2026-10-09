@@ -978,5 +978,6 @@
       "set": "დააყენა {field}: {value}",
       "cleared": "გაასუფთავა {field}"
     }
-  }
+  },
+  "activity_via_claude": "Claude-ის მეშვეობით"
 }

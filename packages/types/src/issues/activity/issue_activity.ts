@@ -37,6 +37,8 @@ export type TIssueActivity = {
   old_identifier: string | undefined;
   new_identifier: string | undefined;
   epoch: number;
+  /** Client the change was made through, e.g. "claude"; empty when made in the app */
+  via?: string;
   issue_comment: string | null;
   source_data: {
     source: EInboxIssueSource;

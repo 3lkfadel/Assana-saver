@@ -65,6 +65,30 @@
       "title": "接続",
       "heading": "接続",
       "description": "ワークスペースの接続設定を管理します。"
+    },
+    "connect_claude": {
+      "title": "Claude と連携",
+      "description": "Claude Code と Claude Desktop が、あなたの権限でタスクを参照・更新できるようにします。",
+      "validity": "トークンの有効期間",
+      "validity_30": "30 日",
+      "validity_90": "90 日",
+      "validity_365": "1 年",
+      "validity_none": "無期限",
+      "generate": "トークンを生成",
+      "token_title": "Claude 用トークン",
+      "token_warning": "今すぐコピーしてください。再表示されません。",
+      "placeholder_hint": "トークンを生成すると、下のコマンドの YOUR_TOKEN が置き換わります。",
+      "claude_code_description": "ターミナルでこのコマンドを実行してください。",
+      "claude_desktop_description": "Claude Desktop の開発者設定で claude_desktop_config.json を編集し、このサーバーを追加してから Claude Desktop を再起動してください。Node.js のインストールが必要です。",
+      "copy": "コピー",
+      "copied": "クリップボードにコピーしました。",
+      "tokens": "Claude 用トークン",
+      "no_tokens": "Claude 用トークンはまだありません。",
+      "expires_on": "{date} に期限切れ",
+      "expires_soon": "{date} に期限切れになります。それまでに新しいトークンを生成してください。",
+      "never_expires": "無期限",
+      "expired": "期限切れ",
+      "revoke": "取り消す"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "アクティビティ",
       "preferences": "環境設定",
       "notifications": "通知",
+      "connect-claude": "Claude と連携",
       "api-tokens": "個人アクセストークン",
       "connections": "接続"
     },

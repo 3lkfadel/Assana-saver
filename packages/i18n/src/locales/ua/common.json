@@ -978,5 +978,6 @@
       "set": "встановив(ла) {field}: {value}",
       "cleared": "очистив(ла) {field}"
     }
-  }
+  },
+  "activity_via_claude": "через Claude"
 }

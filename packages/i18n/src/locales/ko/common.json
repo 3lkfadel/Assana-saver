@@ -978,5 +978,6 @@
       "set": "님이 {field}을(를) {value}(으)로 설정했습니다",
       "cleared": "님이 {field}을(를) 비웠습니다"
     }
-  }
+  },
+  "activity_via_claude": "Claude를 통해"
 }

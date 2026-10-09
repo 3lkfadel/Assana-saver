@@ -978,5 +978,6 @@
       "set": "definiu {field} como {value}",
       "cleared": "limpou {field}"
     }
-  }
+  },
+  "activity_via_claude": "via Claude"
 }

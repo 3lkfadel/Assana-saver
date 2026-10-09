@@ -65,6 +65,30 @@
       "title": "Połączenia",
       "heading": "Połączenia",
       "description": "Zarządzaj ustawieniami połączeń przestrzeni roboczej."
+    },
+    "connect_claude": {
+      "title": "Połącz Claude",
+      "description": "Pozwól, aby Claude Code i Claude Desktop odczytywały i aktualizowały zadania z Twoimi uprawnieniami.",
+      "validity": "Ważność tokenu",
+      "validity_30": "30 dni",
+      "validity_90": "90 dni",
+      "validity_365": "1 rok",
+      "validity_none": "Bez wygaśnięcia",
+      "generate": "Wygeneruj token",
+      "token_title": "Token Claude",
+      "token_warning": "Skopiuj go teraz: nie zostanie ponownie wyświetlony.",
+      "placeholder_hint": "Wygeneruj token: zastąpi YOUR_TOKEN w poniższych poleceniach.",
+      "claude_code_description": "Uruchom to polecenie w terminalu.",
+      "claude_desktop_description": "W ustawieniach dewelopera Claude Desktop edytuj plik claude_desktop_config.json, dodaj ten serwer i uruchom ponownie Claude Desktop. Wymagane jest zainstalowane Node.js.",
+      "copy": "Kopiuj",
+      "copied": "Skopiowano do schowka.",
+      "tokens": "Tokeny Claude",
+      "no_tokens": "Brak tokenów Claude.",
+      "expires_on": "Wygasa {date}",
+      "expires_soon": "Wygasa {date}: przed tą datą wygeneruj nowy token.",
+      "never_expires": "Nigdy nie wygasa",
+      "expired": "Wygasł",
+      "revoke": "Unieważnij"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Aktywność",
       "preferences": "Preferencje",
       "notifications": "Powiadomienia",
+      "connect-claude": "Połącz Claude",
       "api-tokens": "Osobiste tokeny dostępu",
       "connections": "Połączenia"
     },

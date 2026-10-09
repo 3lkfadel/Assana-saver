@@ -978,5 +978,6 @@
       "set": "hat {field} auf {value} gesetzt",
       "cleared": "hat {field} geleert"
     }
-  }
+  },
+  "activity_via_claude": "über Claude"
 }

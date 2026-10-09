@@ -5,7 +5,7 @@
  */
 
 import { API_BASE_URL } from "@plane/constants";
-import type { IApiToken } from "@plane/types";
+import type { IApiToken, TApiTokenClient } from "@plane/types";
 import { APIService } from "../api.service";
 
 export class APITokenService extends APIService {
@@ -48,6 +48,21 @@ export class APITokenService extends APIService {
    */
   async create(data: Partial<IApiToken>): Promise<IApiToken> {
     return this.post(`/api/users/api-tokens/`, data)
+      .then((response) => response?.data)
+      .catch((error) => {
+        throw error?.response?.data;
+      });
+  }
+
+  /**
+   * Creates a token for a client such as Claude; its changes show "via" that client in the task history
+   * @param {TApiTokenClient} client - The client the token is for
+   * @param {number | null} expiresInDays - 30, 90 or 365 days, or null for a token that never expires
+   * @returns {Promise<IApiToken>} The new token, the only response that includes its secret
+   * @throws {Error} Throws response data if the request fails
+   */
+  async createClientToken(client: TApiTokenClient, expiresInDays: number | null): Promise<IApiToken> {
+    return this.post(`/api/users/api-tokens/`, { client, expires_in_days: expiresInDays })
       .then((response) => response?.data)
       .catch((error) => {
         throw error?.response?.data;

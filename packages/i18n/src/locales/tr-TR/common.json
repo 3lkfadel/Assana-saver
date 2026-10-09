@@ -978,5 +978,6 @@
       "set": "{field} alanını {value} olarak ayarladı",
       "cleared": "{field} alanını temizledi"
     }
-  }
+  },
+  "activity_via_claude": "Claude üzerinden"
 }

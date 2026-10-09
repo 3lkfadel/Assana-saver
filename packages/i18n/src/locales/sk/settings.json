@@ -65,6 +65,30 @@
       "title": "Prepojenia",
       "heading": "Prepojenia",
       "description": "Spravujte nastavenia prepojení svojho pracovného priestoru."
+    },
+    "connect_claude": {
+      "title": "Pripojiť Claude",
+      "description": "Umožnite aplikáciám Claude Code a Claude Desktop čítať a upravovať vaše úlohy s vašimi vlastnými oprávneniami.",
+      "validity": "Platnosť tokenu",
+      "validity_30": "30 dní",
+      "validity_90": "90 dní",
+      "validity_365": "1 rok",
+      "validity_none": "Bez vypršania",
+      "generate": "Vygenerovať token",
+      "token_title": "Váš token pre Claude",
+      "token_warning": "Skopírujte ho hneď: znova sa nezobrazí.",
+      "placeholder_hint": "Vygenerujte token: nahradí YOUR_TOKEN v príkazoch nižšie.",
+      "claude_code_description": "Spustite tento príkaz v termináli.",
+      "claude_desktop_description": "V nastaveniach pre vývojárov v Claude Desktop upravte súbor claude_desktop_config.json, pridajte tento server a reštartujte Claude Desktop. Musí byť nainštalovaný Node.js.",
+      "copy": "Kopírovať",
+      "copied": "Skopírované do schránky.",
+      "tokens": "Tokeny pre Claude",
+      "no_tokens": "Zatiaľ žiadny token pre Claude.",
+      "expires_on": "Vyprší {date}",
+      "expires_soon": "Vyprší {date}: dovtedy vygenerujte nový token.",
+      "never_expires": "Nikdy nevyprší",
+      "expired": "Vypršal",
+      "revoke": "Odvolať"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Aktivita",
       "preferences": "Predvoľby",
       "notifications": "Oznámenia",
+      "connect-claude": "Pripojiť Claude",
       "api-tokens": "Osobné prístupové tokeny",
       "connections": "Pripojenia"
     },

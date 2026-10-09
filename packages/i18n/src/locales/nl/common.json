@@ -978,5 +978,6 @@
       "set": "heeft {field} ingesteld op {value}",
       "cleared": "heeft {field} gewist"
     }
-  }
+  },
+  "activity_via_claude": "via Claude"
 }

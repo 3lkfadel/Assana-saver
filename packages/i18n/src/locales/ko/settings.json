@@ -65,6 +65,30 @@
       "title": "커넥션",
       "heading": "커넥션",
       "description": "작업 공간 연결 설정을 관리하세요."
+    },
+    "connect_claude": {
+      "title": "Claude 연결",
+      "description": "Claude Code와 Claude Desktop이 본인의 권한으로 작업을 조회하고 수정할 수 있도록 합니다.",
+      "validity": "토큰 유효 기간",
+      "validity_30": "30일",
+      "validity_90": "90일",
+      "validity_365": "1년",
+      "validity_none": "만료 없음",
+      "generate": "토큰 생성",
+      "token_title": "Claude 토큰",
+      "token_warning": "지금 복사하십시오. 다시 표시되지 않습니다.",
+      "placeholder_hint": "토큰을 생성하면 아래 명령의 YOUR_TOKEN이 대체됩니다.",
+      "claude_code_description": "터미널에서 이 명령을 실행하십시오.",
+      "claude_desktop_description": "Claude Desktop의 개발자 설정에서 claude_desktop_config.json을 편집하여 이 서버를 추가한 다음 Claude Desktop을 다시 시작하십시오. Node.js가 설치되어 있어야 합니다.",
+      "copy": "복사",
+      "copied": "클립보드에 복사했습니다.",
+      "tokens": "Claude 토큰",
+      "no_tokens": "아직 Claude 토큰이 없습니다.",
+      "expires_on": "{date}에 만료",
+      "expires_soon": "{date}에 만료됩니다. 그 전에 새 토큰을 생성하십시오.",
+      "never_expires": "만료되지 않음",
+      "expired": "만료됨",
+      "revoke": "취소"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "활동",
       "preferences": "환경 설정",
       "notifications": "알림",
+      "connect-claude": "Claude 연결",
       "api-tokens": "퍼스널 액세스 토큰",
       "connections": "커넥션"
     },

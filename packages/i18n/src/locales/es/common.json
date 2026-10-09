@@ -978,5 +978,6 @@
       "set": "estableció {field} en {value}",
       "cleared": "vació {field}"
     }
-  }
+  },
+  "activity_via_claude": "vía Claude"
 }

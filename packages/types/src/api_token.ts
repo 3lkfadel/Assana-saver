@@ -4,6 +4,9 @@
  * See the LICENSE file for details.
  */
 
+/** Client a token was issued for; its changes show "via" that client in the task history */
+export type TApiTokenClient = "" | "claude";
+
 export interface IApiToken {
   created_at: string;
   created_by: string;
@@ -19,4 +22,5 @@ export interface IApiToken {
   user_type: number;
   token?: string;
   workspace: string;
+  client: TApiTokenClient;
 }

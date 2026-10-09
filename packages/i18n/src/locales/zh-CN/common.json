@@ -978,5 +978,6 @@
       "set": "将 {field} 设置为 {value}",
       "cleared": "清空了 {field}"
     }
-  }
+  },
+  "activity_via_claude": "通过 Claude"
 }

@@ -978,5 +978,6 @@
       "set": "ha impostato {field} su {value}",
       "cleared": "ha svuotato {field}"
     }
-  }
+  },
+  "activity_via_claude": "tramite Claude"
 }

@@ -65,6 +65,30 @@
       "title": "Conexiuni",
       "heading": "Conexiuni",
       "description": "Gestionează setările conexiunilor spațiului tău de lucru."
+    },
+    "connect_claude": {
+      "title": "Conectați Claude",
+      "description": "Permiteți aplicațiilor Claude Code și Claude Desktop să vă citească și să vă actualizeze sarcinile, cu propriile permisiuni.",
+      "validity": "Valabilitatea tokenului",
+      "validity_30": "30 de zile",
+      "validity_90": "90 de zile",
+      "validity_365": "1 an",
+      "validity_none": "Fără expirare",
+      "generate": "Generați un token",
+      "token_title": "Tokenul dumneavoastră Claude",
+      "token_warning": "Copiați-l acum: nu va mai fi afișat.",
+      "placeholder_hint": "Generați un token: va înlocui YOUR_TOKEN în comenzile de mai jos.",
+      "claude_code_description": "Rulați această comandă într-un terminal.",
+      "claude_desktop_description": "În setările pentru dezvoltatori din Claude Desktop, editați claude_desktop_config.json, adăugați acest server, apoi reporniți Claude Desktop. Node.js trebuie să fie instalat.",
+      "copy": "Copiați",
+      "copied": "Copiat în clipboard.",
+      "tokens": "Tokenuri Claude",
+      "no_tokens": "Niciun token Claude deocamdată.",
+      "expires_on": "Expiră pe {date}",
+      "expires_soon": "Expiră pe {date}: generați un token nou înainte de această dată.",
+      "never_expires": "Nu expiră niciodată",
+      "expired": "Expirat",
+      "revoke": "Revocați"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Activitate",
       "preferences": "Preferințe",
       "notifications": "Notificări",
+      "connect-claude": "Conectați Claude",
       "api-tokens": "Tokenuri de acces personale",
       "connections": "Conexiuni"
     },

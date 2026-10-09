@@ -978,5 +978,6 @@
       "set": "mengatur {field} menjadi {value}",
       "cleared": "mengosongkan {field}"
     }
-  }
+  },
+  "activity_via_claude": "melalui Claude"
 }

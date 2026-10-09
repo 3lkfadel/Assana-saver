@@ -978,5 +978,6 @@
       "set": "set {field} to {value}",
       "cleared": "cleared {field}"
     }
-  }
+  },
+  "activity_via_claude": "via Claude"
 }

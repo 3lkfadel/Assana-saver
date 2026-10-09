@@ -978,5 +978,6 @@
       "set": "đã đặt {field} thành {value}",
       "cleared": "đã xóa giá trị {field}"
     }
-  }
+  },
+  "activity_via_claude": "qua Claude"
 }

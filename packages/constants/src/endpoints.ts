@@ -23,6 +23,8 @@ export const LIVE_URL = encodeURI(`${LIVE_BASE_URL}${LIVE_BASE_PATH}`);
 export const WEB_BASE_URL = process.env.VITE_WEB_BASE_URL || "";
 export const WEB_BASE_PATH = process.env.VITE_WEB_BASE_PATH || "";
 export const WEB_URL = encodeURI(`${WEB_BASE_URL}${WEB_BASE_PATH}`);
+// MCP server Claude connects to (default: /mcp on the web app's origin)
+export const MCP_URL = process.env.VITE_MCP_URL || "";
 // public website url (none by default: the "Powered by" badge is then hidden)
 export const WEBSITE_URL = process.env.VITE_WEBSITE_URL || "";
 // support email (none by default: messages then point to the administrator)

@@ -3,6 +3,7 @@
 # See the LICENSE file for details.
 
 # Third party imports
+from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 
 # Module imports
@@ -36,6 +37,7 @@ class CustomFieldSerializer(BaseSerializer):
         ]
         read_only_fields = fields
 
+    @extend_schema_field(CustomFieldOptionSerializer(many=True))
     def get_options(self, field):
         # options are prefetched (non-deleted, ordered) by the views
         return CustomFieldOptionSerializer(field.options.all(), many=True).data

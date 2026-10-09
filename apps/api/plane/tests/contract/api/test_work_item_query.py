@@ -113,6 +113,14 @@ class TestWorkItemQuery:
         assert _names(api_key_client.get(URL, {"label": str(label.id)})) == ["Mettre à jour le budget"]
         assert _names(api_key_client.get(URL, {"search": "comité"})) == ["Préparer le comité"]
 
+    def test_subtasks_of_a_task(self, api_key_client, setup):
+        parent = setup["issues"]["late"]
+        child = _issue(setup["iat"], "Appeler le fournisseur")
+        child.parent = parent
+        child.save()
+
+        assert _names(api_key_client.get(URL, {"parent": str(parent.id)})) == ["Appeler le fournisseur"]
+
     def test_results_are_compact_and_readable(self, api_key_client, setup, create_user):
         item = api_key_client.get(URL, {"search": "fournisseur"}).json()["results"][0]
 

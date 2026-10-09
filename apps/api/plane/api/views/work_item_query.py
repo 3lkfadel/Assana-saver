@@ -162,6 +162,12 @@ class WorkspaceWorkItemQueryAPIEndpoint(BaseAPIView):
                 Exists(IssueLabel.objects.filter(issue_id=OuterRef("pk"), label_id__in=label_ids))
             )
 
+        if params.get("parent"):
+            parent_ids = _uuid_list(params["parent"])
+            if parent_ids is None or len(parent_ids) != 1:
+                return None, "parent must be a work item id."
+            queryset = queryset.filter(parent_id=parent_ids[0])
+
         search = params.get("search", "").strip()
         if search:
             condition = Q(name__icontains=search)
@@ -190,6 +196,7 @@ class WorkspaceWorkItemQueryAPIEndpoint(BaseAPIView):
             _filter_param("priority", "Comma-separated: urgent, high, medium, low, none"),
             _filter_param("state", "Comma-separated state ids"),
             _filter_param("label", "Comma-separated label ids"),
+            _filter_param("parent", "Subtasks of this work item id"),
             _filter_param("search", "Text in the name, or a sequence number"),
             _filter_param(
                 "order_by",

@@ -1,6 +1,7 @@
 """Compact, readable shapes for what the tools return, with links to the web app."""
 
 import re
+from html import escape
 from html.parser import HTMLParser
 from typing import Any
 
@@ -38,6 +39,8 @@ def html_to_text(html: str | None) -> str:
     text = re.sub(r"[ \t]+\n", "\n", "".join(parser.parts))
     # A list item wrapping a paragraph: keep the bullet on the paragraph's line
     text = re.sub(r"(^|\n)-\n+", r"\1- ", text)
+    # ...and no blank line between the items of a list
+    text = re.sub(r"(\n- [^\n]*)\n+(?=- )", r"\1\n", text)
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
@@ -98,3 +101,16 @@ def custom_field_value(field: dict, value: Any, people_by_id: dict[str, str]) ->
     if field["field_type"] == "people":
         return [people_by_id.get(user_id, user_id) for user_id in value or []]
     return value
+
+
+def text_to_html(text: str) -> str:
+    """Rich text from plain text: blank lines separate paragraphs, lines starting with '- ' make lists."""
+    blocks = []
+    for block in re.split(r"\n\s*\n", text.strip()):
+        lines = [line.rstrip() for line in block.splitlines() if line.strip()]
+        if lines and all(line.lstrip().startswith(("- ", "* ")) for line in lines):
+            items = "".join(f"<li><p>{escape(line.lstrip()[2:].strip())}</p></li>" for line in lines)
+            blocks.append(f"<ul>{items}</ul>")
+        elif lines:
+            blocks.append("<p>" + "<br>".join(escape(line) for line in lines) + "</p>")
+    return "".join(blocks) or "<p></p>"

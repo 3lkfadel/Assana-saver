@@ -21,6 +21,12 @@ export const getMcpUrl = (): string =>
 export const getClaudeCodeCommand = (mcpUrl: string, token: string): string =>
   `claude mcp add --transport http ${SERVER_NAME} ${mcpUrl} --header "Authorization: Bearer ${token}"`;
 
+/**
+ * Where Node.js usually lives on macOS (installer, Homebrew on Intel and Apple silicon) and Linux: Claude Desktop
+ * starts servers with a minimal PATH, without those folders, so npx would not be found.
+ */
+const DESKTOP_PATH = "/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin";
+
 /** Claude Desktop reaches a remote server through the mcp-remote bridge, which adds the token header. */
 export const getClaudeDesktopConfig = (mcpUrl: string, token: string): string =>
   JSON.stringify(
@@ -36,7 +42,7 @@ export const getClaudeDesktopConfig = (mcpUrl: string, token: string): string =>
             "--header",
             "Authorization:${AUTH_HEADER}",
           ],
-          env: { AUTH_HEADER: `Bearer ${token}` },
+          env: { AUTH_HEADER: `Bearer ${token}`, PATH: DESKTOP_PATH },
         },
       },
     },

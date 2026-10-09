@@ -228,6 +228,7 @@ def register_read_tools(mcp: FastMCP, deps: Deps) -> None:
         if include_comments:
             result["comments"] = [
                 {
+                    "id": comment["id"],
                     "author": members.get(comment.get("actor"), comment.get("actor")),
                     "date": comment.get("created_at"),
                     "text": formatting.html_to_text(comment.get("comment_html")),

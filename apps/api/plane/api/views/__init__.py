@@ -34,6 +34,7 @@ from .issue import (
 )
 
 from .work_item_bulk import WorkItemBulkAPIEndpoint
+from .work_item_query import WorkspaceWorkItemQueryAPIEndpoint
 
 from .custom_field import (
     CustomFieldListCreateAPIEndpoint,

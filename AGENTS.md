@@ -28,7 +28,7 @@ Installed by `pnpm install` (`prepare` script), defined in `.husky/`:
 
 - `pre-commit`: oxfmt and `oxlint --deny-warnings` on staged files (lint-staged); `check:sync` of `@plane/i18n` when a locale file is staged.
 - `commit-msg`: conventional commits via commitlint (`commitlint.config.mjs`), e.g. `feat(i18n): translate the sign-in headers`.
-- `pre-push`: `check:types` and `test` of the packages affected by the pushed commits (and their dependents); the API pytest suite in Docker when `apps/api/` changed (`SKIP_API_TESTS=1` to skip it).
+- `pre-push`: `check:types` and `test` of the packages affected by the pushed commits (and their dependents); the API pytest suite in Docker when `apps/api/` changed (`SKIP_API_TESTS=1` to skip it); the MCP server tests (`uv`) when `apps/mcp/` changed.
 
 `git push --no-verify` bypasses them; CI remains the gate.
 

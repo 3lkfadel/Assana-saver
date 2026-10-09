@@ -26,6 +26,7 @@ import {
   IssueCycleActivity,
   IssueModuleActivity,
   IssueCustomFieldActivity,
+  IssueSteeringActivity,
   IssueLabelActivity,
   IssueLinkActivity,
   IssueAttachmentActivity,
@@ -83,6 +84,8 @@ export const IssueActivityItem = observer(function IssueActivityItem(props: TIss
       return <IssueModuleActivity {...componentDefaultProps} />;
     case "custom_field":
       return <IssueCustomFieldActivity {...componentDefaultProps} />;
+    case "steering":
+      return <IssueSteeringActivity {...componentDefaultProps} />;
     case "labels":
       return <IssueLabelActivity {...componentDefaultProps} showIssue={false} />;
     case "link":

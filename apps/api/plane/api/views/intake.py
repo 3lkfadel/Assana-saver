@@ -210,6 +210,7 @@ class IntakeIssueListCreateAPIEndpoint(BaseAPIView):
         )
         # Create an Issue Activity
         issue_activity.delay(
+            via=self.activity_via,
             type="issue.activity.created",
             requested_data=json.dumps(request.data, cls=DjangoJSONEncoder),
             actor_id=str(request.user.id),
@@ -407,6 +408,7 @@ class IntakeIssueDetailAPIEndpoint(BaseAPIView):
             # Log all the updates
             requested_data = json.dumps(issue_data, cls=DjangoJSONEncoder)
             issue_activity.delay(
+                via=self.activity_via,
                 type="issue.activity.updated",
                 requested_data=requested_data,
                 actor_id=str(request.user.id),
@@ -428,6 +430,7 @@ class IntakeIssueDetailAPIEndpoint(BaseAPIView):
 
             # create a activity for status change
             issue_activity.delay(
+                via=self.activity_via,
                 type="intake.activity.created",
                 requested_data=json.dumps(request.data, cls=DjangoJSONEncoder),
                 actor_id=str(request.user.id),

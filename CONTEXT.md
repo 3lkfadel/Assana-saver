@@ -31,7 +31,7 @@ Une propriété ajoutée aux tâches d'un projet, d'un type donné (liste, liste
 _Éviter_ : propriété, custom property, attribut
 
 **Terminée** :
-L'état binaire d'une tâche, coché ou non. L'avancement détaillé passe par les sections ou par un champ personnalisé, pas par cet état.
+L'état binaire d'une tâche, coché ou non. L'avancement détaillé passe par le statut de pilotage, pas par cet état.
 _Éviter_ : état, state, statut (pour désigner la complétion)
 
 ### Organisation
@@ -59,6 +59,56 @@ _Éviter_ : colonne, état, statut, groupe
 **Appartenance** :
 Le lien entre une tâche et un projet. Une tâche a une appartenance par projet qui la contient, et chaque appartenance place la tâche dans une section de ce projet.
 _Éviter_ : multi-homing (en interface), lien, copie
+
+### Pilotage
+
+**Espace de pilotage** :
+Les écrans de lecture réservés au PDG, au Cabinet de la Présidence et aux responsables, qui suivent le travail de tout le Groupe par pôle et par entité.
+_Éviter_ : dashboard, tableau de bord (pour désigner l'ensemble)
+
+**Groupe** :
+Infinity Africa Group en tant que structure : ses pôles et ses entités. Il est décrit par le référentiel du Groupe ; l'organisation, elle, est l'espace de travail qui contient les projets.
+_Éviter_ : organisation (pour désigner la structure juridique)
+
+**Pôle** :
+Un regroupement d'entités du Groupe (Finance & Capital Markets, Immobilier, Fonctions Groupe…).
+_Éviter_ : branche, division, département
+
+**Entité** :
+Une filiale ou une fonction support du Groupe, rattachée à un seul pôle.
+_Éviter_ : équipe, société, département
+
+**Entité porteuse** :
+L'entité qui porte un projet. Chaque projet en a une seule.
+_Éviter_ : propriétaire, entité responsable
+
+**Catégorie** :
+La nature d'une tâche dans l'espace de pilotage (Agréments, Gouvernance, Partenariats, Développement…), tenue par le Cabinet.
+_Éviter_ : type, étiquette
+
+**Fiche de pilotage** :
+Les informations d'une tâche que lit l'espace de pilotage : entité, catégorie, superviseur, approbateur, statut, avancement, cause d'attente, risque, clôture et point de situation. Elle est incomplète tant qu'un champ obligatoire manque.
+_Éviter_ : formulaire, métadonnées
+
+**Statut** :
+L'étape d'une tâche dans l'espace de pilotage, parmi six valeurs fixes : À démarrer, En cours, En validation, En attente, Terminé, Annulé. Il ne dépend pas de la section où se trouve la tâche.
+_Éviter_ : état, section, colonne
+
+**Superviseur** :
+La personne qui suit l'exécution d'une tâche sans en être responsable.
+_Éviter_ : manager, collaborateur
+
+**Approbateur** :
+La personne qui valide une tâche ; c'est le PDG lorsque la tâche requiert sa décision.
+_Éviter_ : valideur, reviewer
+
+**Point de situation** :
+Un texte libre et daté qui résume où en est une tâche.
+_Éviter_ : commentaire, note, statut
+
+**Profil de pilotage** :
+Ce qu'une personne voit dans l'espace de pilotage : tout le Groupe (PDG, Cabinet de la Présidence), un pôle (directeur de pôle) ou une entité (responsable d'entité). Une personne peut en avoir plusieurs.
+_Éviter_ : rôle (réservé aux droits dans l'organisation et les projets)
 
 ### Personnes
 

@@ -17,7 +17,7 @@ done
 changed=$(echo "$changed" | grep -v '^$')
 [ -z "$changed" ] && exit 0
 
-if echo "$changed" | grep -qvE '^(apps/api/|docs/|.*\.md$)'; then
+if echo "$changed" | grep -qvE '^(apps/api/|apps/mcp/|docs/|.*\.md$)'; then
   echo "pre-push: type checks and unit tests of the affected packages"
   pnpm turbo run check:types test --filter="...[${base:-origin/main}]" --output-logs=errors-only || exit 1
 fi
@@ -29,4 +29,9 @@ if echo "$changed" | grep -q '^apps/api/' && [ "$SKIP_API_TESTS" != "1" ]; then
   status=$?
   $compose down -v --remove-orphans >/dev/null 2>&1
   [ $status -eq 0 ] || exit 1
+fi
+
+if echo "$changed" | grep -q '^apps/mcp/'; then
+  echo "pre-push: MCP server tests"
+  uv run --directory apps/mcp pytest -q -p no:cacheprovider || exit 1
 fi

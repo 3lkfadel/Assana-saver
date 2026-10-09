@@ -978,5 +978,133 @@
       "set": "nastavil(a) {field} na {value}",
       "cleared": "vymazal(a) {field}"
     }
-  }
+  },
+  "steering": {
+    "save": "Uložiť",
+    "rename": "Premenovať",
+    "delete_confirm": "Odstrániť „{name}“?",
+    "referential": {
+      "title": "Referenčné údaje skupiny",
+      "description": "Divízie, jednotky a kategórie skupiny a ľudia, ktorí čítajú riadiaci prehľad. Každý projekt nesie jedna jednotka.",
+      "empty": "Referenčné údaje sú prázdne.",
+      "bootstrap": "Načítať referenčné údaje skupiny",
+      "bootstrap_hint": "Vytvorí 8 divízií, 21 jednotiek a 4 kategórie zo zadávacej dokumentácie. Neskôr ich môžete upraviť.",
+      "bootstrapped": "Referenčné údaje skupiny boli načítané.",
+      "read_only": "Referenčné údaje môžu meniť iba generálny riaditeľ, kancelária predsedu a správcovia pracovného priestoru."
+    },
+    "branches": {
+      "title": "Divízie a jednotky",
+      "description": "Každá jednotka patrí do jednej divízie. Jednotku presuniete výberom inej divízie.",
+      "add": "Pridať divíziu",
+      "placeholder": "Nová divízia",
+      "entity_count": "{count, plural, one {# jednotka} few {# jednotky} many {# jednotky} other {# jednotiek}}"
+    },
+    "entities": {
+      "placeholder": "Nová jednotka",
+      "move": "Presunúť do inej divízie"
+    },
+    "categories": {
+      "title": "Kategórie",
+      "description": "Kategórie triedia pracovné položky v riadiacom prehľade.",
+      "add": "Pridať kategóriu",
+      "placeholder": "Nová kategória",
+      "empty": "Zatiaľ žiadna kategória."
+    },
+    "profiles": {
+      "title": "Riadiace profily",
+      "description": "Profil určuje, čo osoba v riadiacom prehľade vidí: celú skupinu, jednu divíziu alebo jednu jednotku.",
+      "empty": "Zatiaľ žiadny profil.",
+      "member": "Osoba",
+      "role": "Profil",
+      "scope": "Divízia alebo jednotka",
+      "add": "Pridať profil",
+      "whole_group": "Celá skupina",
+      "roles": {
+        "ceo": "Generálny riaditeľ",
+        "cabinet": "Kancelária predsedu",
+        "branch_director": "Riaditeľ divízie",
+        "entity_manager": "Vedúci jednotky"
+      }
+    },
+    "project_entity": {
+      "title": "Nosná jednotka",
+      "description": "Jednotka skupiny, ktorá nesie tento projekt v riadiacom prehľade.",
+      "placeholder": "Vyberte jednotku",
+      "saved": "Nosná jednotka bola uložená.",
+      "no_referential": "Najprv nastavte referenčné údaje skupiny."
+    },
+    "errors": {
+      "save": "Zmenu sa nepodarilo uložiť.",
+      "duplicate": "Tento názov sa už používa.",
+      "branch_not_empty": "Najprv presuňte alebo odstráňte jednotky tejto divízie.",
+      "entity_in_use": "Táto jednotka nesie projekty. Najprv ich priraďte inej jednotke.",
+      "profile": "Profil sa nepodarilo pridať. Táto osoba ho možno už má."
+    },
+    "task": {
+      "section": "Riadenie",
+      "incomplete": "Neúplný záznam: {fields}",
+      "empty": "Prázdne",
+      "project_entity": "{name} (jednotka projektu)",
+      "situation_placeholder": "Pridať stav veci",
+      "situation_updated": "Aktualizované {date}",
+      "fields": {
+        "entity": "Jednotka",
+        "category": "Kategória",
+        "assignee": "Zodpovedná osoba",
+        "supervisor": "Supervízor",
+        "approver": "Schvaľovateľ",
+        "priority": "Priorita",
+        "target_date": "Termín",
+        "status": "Stav",
+        "progress": "Postup",
+        "waiting_for": "Čaká na",
+        "waiting_since": "Čaká od",
+        "risk_nature": "Riziko pri zablokovaní",
+        "risk_effective_date": "Dátum účinnosti rizika",
+        "risk_description": "Popis rizika",
+        "closure": "Uzavretie",
+        "closure_date": "Dátum uzavretia",
+        "closure_comment": "Komentár k uzavretiu",
+        "situation": "Stav veci"
+      },
+      "status": {
+        "to_start": "Na začatie",
+        "in_progress": "Prebieha",
+        "in_validation": "V schvaľovaní",
+        "waiting": "Čaká",
+        "done": "Hotovo",
+        "cancelled": "Zrušené"
+      },
+      "waiting_for": {
+        "internal": "Interné",
+        "client_partner": "Klient / partner",
+        "regulatory": "Regulačné"
+      },
+      "risk": {
+        "financial": "Finančné",
+        "regulatory": "Regulačné",
+        "legal": "Právne",
+        "schedule": "Harmonogram",
+        "reputation": "Reputácia",
+        "governance": "Správa a riadenie",
+        "hr": "Ľudské zdroje",
+        "operational": "Prevádzkové"
+      },
+      "dialog": {
+        "waiting_title": "Odložiť pracovnú položku",
+        "waiting_description": "Uveďte, na čo pracovná položka čaká.",
+        "done_title": "Dokončiť pracovnú položku",
+        "done_description": "Uzavretie vyžaduje skutočný dátum a komentár. Postup sa nastaví na 100 %."
+      },
+      "activity": {
+        "set": "nastavil(a) {field} na {value}",
+        "cleared": "vymazal(a) {field}"
+      },
+      "errors": {
+        "save": "Riadiaci záznam sa nepodarilo uložiť.",
+        "progress": "Postup je celé číslo od 0 do 100."
+      }
+    }
+  },
+  "activity_via_claude": "cez Claude"
 }

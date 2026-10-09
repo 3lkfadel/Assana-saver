@@ -72,7 +72,7 @@ type TInlineInputProps = {
 };
 
 /** Text input that saves when it loses focus or on Enter, and restores the saved value on Escape. */
-function InlineInput(props: TInlineInputProps) {
+export function InlineInput(props: TInlineInputProps) {
   const { value, placeholder, disabled, inputMode = "text", ariaLabel, onCommit } = props;
   const [draft, setDraft] = useState(value);
 

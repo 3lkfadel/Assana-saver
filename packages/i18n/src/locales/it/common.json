@@ -978,5 +978,133 @@
       "set": "ha impostato {field} su {value}",
       "cleared": "ha svuotato {field}"
     }
-  }
+  },
+  "steering": {
+    "save": "Salva",
+    "rename": "Rinomina",
+    "delete_confirm": "Eliminare «{name}»?",
+    "referential": {
+      "title": "Referenziale del Gruppo",
+      "description": "Le divisioni, le entità e le categorie del Gruppo, e le persone che consultano lo spazio di controllo direzionale. Ogni progetto è gestito da un'entità.",
+      "empty": "Il referenziale è vuoto.",
+      "bootstrap": "Carica il referenziale del Gruppo",
+      "bootstrap_hint": "Crea le 8 divisioni, le 21 entità e le 4 categorie del capitolato. Potrà modificarle in seguito.",
+      "bootstrapped": "Referenziale del Gruppo caricato.",
+      "read_only": "Solo il CEO, il Gabinetto della Presidenza e gli amministratori dello spazio di lavoro possono modificare il referenziale."
+    },
+    "branches": {
+      "title": "Divisioni ed entità",
+      "description": "Ogni entità appartiene a una divisione. Per spostare un'entità, scelga un'altra divisione.",
+      "add": "Aggiungi divisione",
+      "placeholder": "Nuova divisione",
+      "entity_count": "{count, plural, one {# entità} many {# entità} other {# entità}}"
+    },
+    "entities": {
+      "placeholder": "Nuova entità",
+      "move": "Sposta in un'altra divisione"
+    },
+    "categories": {
+      "title": "Categorie",
+      "description": "Le categorie classificano gli elementi di lavoro nello spazio di controllo direzionale.",
+      "add": "Aggiungi categoria",
+      "placeholder": "Nuova categoria",
+      "empty": "Ancora nessuna categoria."
+    },
+    "profiles": {
+      "title": "Profili di controllo",
+      "description": "Un profilo definisce cosa vede una persona nello spazio di controllo direzionale: tutto il Gruppo, una divisione o un'entità.",
+      "empty": "Ancora nessun profilo.",
+      "member": "Persona",
+      "role": "Profilo",
+      "scope": "Divisione o entità",
+      "add": "Aggiungi profilo",
+      "whole_group": "Tutto il Gruppo",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Gabinetto della Presidenza",
+        "branch_director": "Direttore di divisione",
+        "entity_manager": "Responsabile di entità"
+      }
+    },
+    "project_entity": {
+      "title": "Entità responsabile",
+      "description": "L'entità del Gruppo che gestisce questo progetto nello spazio di controllo direzionale.",
+      "placeholder": "Scegli un'entità",
+      "saved": "Entità responsabile salvata.",
+      "no_referential": "Configuri prima il referenziale del Gruppo."
+    },
+    "errors": {
+      "save": "Non è stato possibile salvare la modifica.",
+      "duplicate": "Questo nome è già in uso.",
+      "branch_not_empty": "Sposti o elimini prima le entità di questa divisione.",
+      "entity_in_use": "Questa entità gestisce dei progetti. Li assegni prima a un'altra entità.",
+      "profile": "Non è stato possibile aggiungere il profilo. Questa persona potrebbe già averlo."
+    },
+    "task": {
+      "section": "Controllo",
+      "incomplete": "Scheda incompleta: {fields}",
+      "empty": "Vuoto",
+      "project_entity": "{name} (entità del progetto)",
+      "situation_placeholder": "Aggiungi un punto della situazione",
+      "situation_updated": "Aggiornato il {date}",
+      "fields": {
+        "entity": "Entità",
+        "category": "Categoria",
+        "assignee": "Responsabile",
+        "supervisor": "Supervisore",
+        "approver": "Approvatore",
+        "priority": "Priorità",
+        "target_date": "Scadenza",
+        "status": "Stato",
+        "progress": "Avanzamento",
+        "waiting_for": "In attesa di",
+        "waiting_since": "In attesa da",
+        "risk_nature": "Rischio in caso di blocco",
+        "risk_effective_date": "Data di effetto del rischio",
+        "risk_description": "Descrizione del rischio",
+        "closure": "Chiusura",
+        "closure_date": "Data di chiusura",
+        "closure_comment": "Commento di chiusura",
+        "situation": "Punto della situazione"
+      },
+      "status": {
+        "to_start": "Da avviare",
+        "in_progress": "In corso",
+        "in_validation": "In validazione",
+        "waiting": "In attesa",
+        "done": "Completato",
+        "cancelled": "Annullato"
+      },
+      "waiting_for": {
+        "internal": "Interno",
+        "client_partner": "Cliente / partner",
+        "regulatory": "Normativo"
+      },
+      "risk": {
+        "financial": "Finanziario",
+        "regulatory": "Normativo",
+        "legal": "Legale",
+        "schedule": "Tempistica",
+        "reputation": "Reputazione",
+        "governance": "Governance",
+        "hr": "Risorse umane",
+        "operational": "Operativo"
+      },
+      "dialog": {
+        "waiting_title": "Metti l'elemento di lavoro in attesa",
+        "waiting_description": "Indichi cosa attende l'elemento di lavoro.",
+        "done_title": "Completa l'elemento di lavoro",
+        "done_description": "La chiusura richiede la data effettiva e un commento. L'avanzamento passa al 100%."
+      },
+      "activity": {
+        "set": "ha impostato {field} su {value}",
+        "cleared": "ha svuotato {field}"
+      },
+      "errors": {
+        "save": "Non è stato possibile salvare la scheda di controllo.",
+        "progress": "L'avanzamento è un numero intero da 0 a 100."
+      }
+    }
+  },
+  "activity_via_claude": "tramite Claude"
 }

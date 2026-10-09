@@ -978,5 +978,133 @@
       "set": "set {field} to {value}",
       "cleared": "cleared {field}"
     }
-  }
+  },
+  "steering": {
+    "save": "Save",
+    "rename": "Rename",
+    "delete_confirm": "Delete \"{name}\"?",
+    "referential": {
+      "title": "Group referential",
+      "description": "The branches, entities and categories of the Group, and who reads the steering space. Every project is carried by one entity.",
+      "empty": "The referential is empty.",
+      "bootstrap": "Load the Group referential",
+      "bootstrap_hint": "Creates the 8 branches, 21 entities and 4 categories of the specification. You can change them afterwards.",
+      "bootstrapped": "Group referential loaded.",
+      "read_only": "Only the CEO, the Presidency Cabinet and workspace admins can change the referential."
+    },
+    "branches": {
+      "title": "Branches and entities",
+      "description": "Each entity belongs to one branch. To move an entity, choose another branch.",
+      "add": "Add branch",
+      "placeholder": "New branch",
+      "entity_count": "{count, plural, one {# entity} other {# entities}}"
+    },
+    "entities": {
+      "placeholder": "New entity",
+      "move": "Move to another branch"
+    },
+    "categories": {
+      "title": "Categories",
+      "description": "Categories classify work items in the steering space.",
+      "add": "Add category",
+      "placeholder": "New category",
+      "empty": "No category yet."
+    },
+    "profiles": {
+      "title": "Steering profiles",
+      "description": "A profile sets what a person sees in the steering space: the whole Group, one branch or one entity.",
+      "empty": "No profile yet.",
+      "member": "Person",
+      "role": "Profile",
+      "scope": "Branch or entity",
+      "add": "Add profile",
+      "whole_group": "Whole Group",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Presidency Cabinet",
+        "branch_director": "Branch director",
+        "entity_manager": "Entity manager"
+      }
+    },
+    "project_entity": {
+      "title": "Carrying entity",
+      "description": "The Group entity that carries this project in the steering space.",
+      "placeholder": "Choose an entity",
+      "saved": "Carrying entity saved.",
+      "no_referential": "Set up the Group referential first."
+    },
+    "errors": {
+      "save": "The change could not be saved.",
+      "duplicate": "This name is already used.",
+      "branch_not_empty": "Move or delete the entities of this branch first.",
+      "entity_in_use": "Projects are carried by this entity. Assign them to another entity first.",
+      "profile": "The profile could not be added. This person may already have it."
+    },
+    "task": {
+      "section": "Steering",
+      "incomplete": "Incomplete record: {fields}",
+      "empty": "Empty",
+      "project_entity": "{name} (project's entity)",
+      "situation_placeholder": "Add a status update",
+      "situation_updated": "Updated on {date}",
+      "fields": {
+        "entity": "Entity",
+        "category": "Category",
+        "assignee": "Assignee",
+        "supervisor": "Supervisor",
+        "approver": "Approver",
+        "priority": "Priority",
+        "target_date": "Deadline",
+        "status": "Status",
+        "progress": "Progress",
+        "waiting_for": "Waiting for",
+        "waiting_since": "Waiting since",
+        "risk_nature": "Risk if blocked",
+        "risk_effective_date": "Risk effective date",
+        "risk_description": "Risk description",
+        "closure": "Closure",
+        "closure_date": "Closure date",
+        "closure_comment": "Closure comment",
+        "situation": "Status update"
+      },
+      "status": {
+        "to_start": "To start",
+        "in_progress": "In progress",
+        "in_validation": "In validation",
+        "waiting": "Waiting",
+        "done": "Done",
+        "cancelled": "Cancelled"
+      },
+      "waiting_for": {
+        "internal": "Internal",
+        "client_partner": "Client / partner",
+        "regulatory": "Regulatory"
+      },
+      "risk": {
+        "financial": "Financial",
+        "regulatory": "Regulatory",
+        "legal": "Legal",
+        "schedule": "Schedule",
+        "reputation": "Reputation",
+        "governance": "Governance",
+        "hr": "HR",
+        "operational": "Operational"
+      },
+      "dialog": {
+        "waiting_title": "Put the work item on hold",
+        "waiting_description": "Say what the work item is waiting for.",
+        "done_title": "Close the work item",
+        "done_description": "A closure needs its effective date and a comment. Progress moves to 100%."
+      },
+      "activity": {
+        "set": "set {field} to {value}",
+        "cleared": "cleared {field}"
+      },
+      "errors": {
+        "save": "The steering record could not be saved.",
+        "progress": "Progress is a whole number from 0 to 100."
+      }
+    }
+  },
+  "activity_via_claude": "via Claude"
 }

@@ -978,5 +978,133 @@
       "set": "mengatur {field} menjadi {value}",
       "cleared": "mengosongkan {field}"
     }
-  }
+  },
+  "steering": {
+    "save": "Simpan",
+    "rename": "Ganti nama",
+    "delete_confirm": "Hapus \"{name}\"?",
+    "referential": {
+      "title": "Referensi Grup",
+      "description": "Divisi, entitas, dan kategori Grup, serta orang yang membaca ruang pemantauan. Setiap proyek dijalankan oleh satu entitas.",
+      "empty": "Referensi masih kosong.",
+      "bootstrap": "Muat referensi Grup",
+      "bootstrap_hint": "Membuat 8 divisi, 21 entitas, dan 4 kategori dari kerangka acuan. Anda dapat mengubahnya nanti.",
+      "bootstrapped": "Referensi Grup dimuat.",
+      "read_only": "Hanya CEO, Kabinet Presiden, dan admin ruang kerja yang dapat mengubah referensi."
+    },
+    "branches": {
+      "title": "Divisi dan entitas",
+      "description": "Setiap entitas termasuk dalam satu divisi. Untuk memindahkan entitas, pilih divisi lain.",
+      "add": "Tambah divisi",
+      "placeholder": "Divisi baru",
+      "entity_count": "{count, plural, one {# entitas} other {# entitas}}"
+    },
+    "entities": {
+      "placeholder": "Entitas baru",
+      "move": "Pindahkan ke divisi lain"
+    },
+    "categories": {
+      "title": "Kategori",
+      "description": "Kategori mengelompokkan item kerja di ruang pemantauan.",
+      "add": "Tambah kategori",
+      "placeholder": "Kategori baru",
+      "empty": "Belum ada kategori."
+    },
+    "profiles": {
+      "title": "Profil pemantauan",
+      "description": "Profil menentukan apa yang dilihat seseorang di ruang pemantauan: seluruh Grup, satu divisi, atau satu entitas.",
+      "empty": "Belum ada profil.",
+      "member": "Orang",
+      "role": "Profil",
+      "scope": "Divisi atau entitas",
+      "add": "Tambah profil",
+      "whole_group": "Seluruh Grup",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Kabinet Presiden",
+        "branch_director": "Direktur divisi",
+        "entity_manager": "Penanggung jawab entitas"
+      }
+    },
+    "project_entity": {
+      "title": "Entitas penanggung jawab",
+      "description": "Entitas Grup yang menjalankan proyek ini di ruang pemantauan.",
+      "placeholder": "Pilih entitas",
+      "saved": "Entitas penanggung jawab disimpan.",
+      "no_referential": "Siapkan referensi Grup terlebih dahulu."
+    },
+    "errors": {
+      "save": "Perubahan tidak dapat disimpan.",
+      "duplicate": "Nama ini sudah digunakan.",
+      "branch_not_empty": "Pindahkan atau hapus entitas di divisi ini terlebih dahulu.",
+      "entity_in_use": "Entitas ini menjalankan proyek. Tetapkan proyek tersebut ke entitas lain terlebih dahulu.",
+      "profile": "Profil tidak dapat ditambahkan. Orang ini mungkin sudah memilikinya."
+    },
+    "task": {
+      "section": "Pemantauan",
+      "incomplete": "Data belum lengkap: {fields}",
+      "empty": "Kosong",
+      "project_entity": "{name} (entitas proyek)",
+      "situation_placeholder": "Tambahkan perkembangan terkini",
+      "situation_updated": "Diperbarui pada {date}",
+      "fields": {
+        "entity": "Entitas",
+        "category": "Kategori",
+        "assignee": "Penanggung jawab",
+        "supervisor": "Supervisor",
+        "approver": "Pemberi persetujuan",
+        "priority": "Prioritas",
+        "target_date": "Tenggat",
+        "status": "Status",
+        "progress": "Kemajuan",
+        "waiting_for": "Menunggu",
+        "waiting_since": "Menunggu sejak",
+        "risk_nature": "Risiko jika terhambat",
+        "risk_effective_date": "Tanggal berlaku risiko",
+        "risk_description": "Deskripsi risiko",
+        "closure": "Penutupan",
+        "closure_date": "Tanggal penutupan",
+        "closure_comment": "Komentar penutupan",
+        "situation": "Perkembangan terkini"
+      },
+      "status": {
+        "to_start": "Belum dimulai",
+        "in_progress": "Sedang berjalan",
+        "in_validation": "Dalam validasi",
+        "waiting": "Menunggu",
+        "done": "Selesai",
+        "cancelled": "Dibatalkan"
+      },
+      "waiting_for": {
+        "internal": "Internal",
+        "client_partner": "Klien / mitra",
+        "regulatory": "Regulasi"
+      },
+      "risk": {
+        "financial": "Keuangan",
+        "regulatory": "Regulasi",
+        "legal": "Hukum",
+        "schedule": "Jadwal",
+        "reputation": "Reputasi",
+        "governance": "Tata kelola",
+        "hr": "SDM",
+        "operational": "Operasional"
+      },
+      "dialog": {
+        "waiting_title": "Tunda item kerja",
+        "waiting_description": "Sebutkan apa yang ditunggu item kerja.",
+        "done_title": "Selesaikan item kerja",
+        "done_description": "Penutupan memerlukan tanggal efektif dan komentar. Kemajuan menjadi 100%."
+      },
+      "activity": {
+        "set": "mengatur {field} menjadi {value}",
+        "cleared": "mengosongkan {field}"
+      },
+      "errors": {
+        "save": "Data pemantauan tidak dapat disimpan.",
+        "progress": "Kemajuan adalah bilangan bulat dari 0 sampai 100."
+      }
+    }
+  },
+  "activity_via_claude": "melalui Claude"
 }

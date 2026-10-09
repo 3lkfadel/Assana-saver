@@ -65,6 +65,30 @@
       "title": "Connections",
       "heading": "Connections",
       "description": "Manage your workspace connections settings."
+    },
+    "connect_claude": {
+      "title": "Connect Claude",
+      "description": "Let Claude Code and Claude Desktop read and update your tasks, with your own permissions.",
+      "validity": "Token validity",
+      "validity_30": "30 days",
+      "validity_90": "90 days",
+      "validity_365": "1 year",
+      "validity_none": "No expiry",
+      "generate": "Generate a token",
+      "token_title": "Your Claude token",
+      "token_warning": "Copy it now: it will not be shown again.",
+      "placeholder_hint": "Generate a token: it replaces YOUR_TOKEN in the commands below.",
+      "claude_code_description": "Run this command in a terminal.",
+      "claude_desktop_description": "In the developer settings of Claude Desktop, edit claude_desktop_config.json, add this server, then restart Claude Desktop. Node.js must be installed.",
+      "copy": "Copy",
+      "copied": "Copied to the clipboard.",
+      "tokens": "Claude tokens",
+      "no_tokens": "No Claude token yet.",
+      "expires_on": "Expires on {date}",
+      "expires_soon": "Expires on {date}: generate a new token before then.",
+      "never_expires": "Never expires",
+      "expired": "Expired",
+      "revoke": "Revoke"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Activity",
       "preferences": "Preferences",
       "notifications": "Notifications",
+      "connect-claude": "Connect Claude",
       "api-tokens": "Personal Access Tokens",
       "connections": "Connections"
     },

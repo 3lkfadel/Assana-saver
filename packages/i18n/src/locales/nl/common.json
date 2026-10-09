@@ -978,5 +978,133 @@
       "set": "heeft {field} ingesteld op {value}",
       "cleared": "heeft {field} gewist"
     }
-  }
+  },
+  "steering": {
+    "save": "Opslaan",
+    "rename": "Hernoemen",
+    "delete_confirm": "‘{name}’ verwijderen?",
+    "referential": {
+      "title": "Groepsreferentie",
+      "description": "De divisies, eenheden en categorieën van de Groep, en wie de sturingsomgeving raadpleegt. Elk project wordt gedragen door één eenheid.",
+      "empty": "De referentie is leeg.",
+      "bootstrap": "Groepsreferentie laden",
+      "bootstrap_hint": "Maakt de 8 divisies, 21 eenheden en 4 categorieën uit het lastenboek aan. U kunt ze daarna wijzigen.",
+      "bootstrapped": "Groepsreferentie geladen.",
+      "read_only": "Alleen de CEO, het Kabinet van de voorzitter en de beheerders van de werkruimte kunnen de referentie wijzigen."
+    },
+    "branches": {
+      "title": "Divisies en eenheden",
+      "description": "Elke eenheid hoort bij één divisie. Kies een andere divisie om een eenheid te verplaatsen.",
+      "add": "Divisie toevoegen",
+      "placeholder": "Nieuwe divisie",
+      "entity_count": "{count, plural, one {# eenheid} other {# eenheden}}"
+    },
+    "entities": {
+      "placeholder": "Nieuwe eenheid",
+      "move": "Naar een andere divisie verplaatsen"
+    },
+    "categories": {
+      "title": "Categorieën",
+      "description": "Categorieën delen de werkitems in de sturingsomgeving in.",
+      "add": "Categorie toevoegen",
+      "placeholder": "Nieuwe categorie",
+      "empty": "Nog geen categorie."
+    },
+    "profiles": {
+      "title": "Sturingsprofielen",
+      "description": "Een profiel bepaalt wat iemand in de sturingsomgeving ziet: de hele Groep, één divisie of één eenheid.",
+      "empty": "Nog geen profiel.",
+      "member": "Persoon",
+      "role": "Profiel",
+      "scope": "Divisie of eenheid",
+      "add": "Profiel toevoegen",
+      "whole_group": "Hele Groep",
+      "roles": {
+        "ceo": "CEO",
+        "cabinet": "Kabinet van de voorzitter",
+        "branch_director": "Divisiedirecteur",
+        "entity_manager": "Verantwoordelijke van de eenheid"
+      }
+    },
+    "project_entity": {
+      "title": "Dragende eenheid",
+      "description": "De eenheid van de Groep die dit project in de sturingsomgeving draagt.",
+      "placeholder": "Kies een eenheid",
+      "saved": "Dragende eenheid opgeslagen.",
+      "no_referential": "Stel eerst de groepsreferentie in."
+    },
+    "errors": {
+      "save": "De wijziging kon niet worden opgeslagen.",
+      "duplicate": "Deze naam is al in gebruik.",
+      "branch_not_empty": "Verplaats of verwijder eerst de eenheden van deze divisie.",
+      "entity_in_use": "Deze eenheid draagt projecten. Wijs ze eerst toe aan een andere eenheid.",
+      "profile": "Het profiel kon niet worden toegevoegd. Deze persoon heeft het misschien al."
+    },
+    "task": {
+      "section": "Sturing",
+      "incomplete": "Onvolledige fiche: {fields}",
+      "empty": "Leeg",
+      "project_entity": "{name} (eenheid van het project)",
+      "situation_placeholder": "Stand van zaken toevoegen",
+      "situation_updated": "Bijgewerkt op {date}",
+      "fields": {
+        "entity": "Eenheid",
+        "category": "Categorie",
+        "assignee": "Verantwoordelijke",
+        "supervisor": "Supervisor",
+        "approver": "Goedkeurder",
+        "priority": "Prioriteit",
+        "target_date": "Deadline",
+        "status": "Status",
+        "progress": "Voortgang",
+        "waiting_for": "Wacht op",
+        "waiting_since": "Wacht sinds",
+        "risk_nature": "Risico bij blokkade",
+        "risk_effective_date": "Ingangsdatum van het risico",
+        "risk_description": "Beschrijving van het risico",
+        "closure": "Afsluiting",
+        "closure_date": "Afsluitdatum",
+        "closure_comment": "Afsluitopmerking",
+        "situation": "Stand van zaken"
+      },
+      "status": {
+        "to_start": "Te starten",
+        "in_progress": "Bezig",
+        "in_validation": "In validatie",
+        "waiting": "Wachtend",
+        "done": "Afgerond",
+        "cancelled": "Geannuleerd"
+      },
+      "waiting_for": {
+        "internal": "Intern",
+        "client_partner": "Klant / partner",
+        "regulatory": "Regelgevend"
+      },
+      "risk": {
+        "financial": "Financieel",
+        "regulatory": "Regelgevend",
+        "legal": "Juridisch",
+        "schedule": "Planning",
+        "reputation": "Reputatie",
+        "governance": "Governance",
+        "hr": "HR",
+        "operational": "Operationeel"
+      },
+      "dialog": {
+        "waiting_title": "Werkitem in de wacht zetten",
+        "waiting_description": "Geef aan waarop het werkitem wacht.",
+        "done_title": "Werkitem afronden",
+        "done_description": "Een afsluiting vraagt de werkelijke datum en een opmerking. De voortgang gaat naar 100%."
+      },
+      "activity": {
+        "set": "heeft {field} ingesteld op {value}",
+        "cleared": "heeft {field} leeggemaakt"
+      },
+      "errors": {
+        "save": "De sturingsfiche kon niet worden opgeslagen.",
+        "progress": "De voortgang is een geheel getal van 0 tot 100."
+      }
+    }
+  },
+  "activity_via_claude": "via Claude"
 }

@@ -978,5 +978,133 @@
       "set": "将 {field} 设置为 {value}",
       "cleared": "清空了 {field}"
     }
-  }
+  },
+  "steering": {
+    "save": "保存",
+    "rename": "重命名",
+    "delete_confirm": "删除“{name}”？",
+    "referential": {
+      "title": "集团基础数据",
+      "description": "集团的业务板块、单位和类别，以及查看管理驾驶舱的人员。每个项目由一个单位负责。",
+      "empty": "基础数据为空。",
+      "bootstrap": "加载集团基础数据",
+      "bootstrap_hint": "创建需求说明书中的 8 个业务板块、21 个单位和 4 个类别。之后可以修改。",
+      "bootstrapped": "集团基础数据已加载。",
+      "read_only": "只有首席执行官、总裁办公室和工作区管理员可以修改基础数据。"
+    },
+    "branches": {
+      "title": "业务板块和单位",
+      "description": "每个单位属于一个业务板块。要移动单位，请选择其他业务板块。",
+      "add": "添加业务板块",
+      "placeholder": "新业务板块",
+      "entity_count": "{count, plural, one {# 个单位} other {# 个单位}}"
+    },
+    "entities": {
+      "placeholder": "新单位",
+      "move": "移至其他业务板块"
+    },
+    "categories": {
+      "title": "类别",
+      "description": "类别用于在管理驾驶舱中对工作项进行分类。",
+      "add": "添加类别",
+      "placeholder": "新类别",
+      "empty": "暂无类别。"
+    },
+    "profiles": {
+      "title": "管理角色",
+      "description": "角色决定一个人在管理驾驶舱中能看到的范围：整个集团、一个业务板块或一个单位。",
+      "empty": "暂无角色。",
+      "member": "人员",
+      "role": "角色",
+      "scope": "业务板块或单位",
+      "add": "添加角色",
+      "whole_group": "整个集团",
+      "roles": {
+        "ceo": "首席执行官",
+        "cabinet": "总裁办公室",
+        "branch_director": "板块负责人",
+        "entity_manager": "单位负责人"
+      }
+    },
+    "project_entity": {
+      "title": "负责单位",
+      "description": "在管理驾驶舱中负责此项目的集团单位。",
+      "placeholder": "选择单位",
+      "saved": "负责单位已保存。",
+      "no_referential": "请先设置集团基础数据。"
+    },
+    "errors": {
+      "save": "无法保存更改。",
+      "duplicate": "该名称已被使用。",
+      "branch_not_empty": "请先移动或删除该业务板块的单位。",
+      "entity_in_use": "该单位负责项目。请先将这些项目分配给其他单位。",
+      "profile": "无法添加角色。此人可能已拥有该角色。"
+    },
+    "task": {
+      "section": "经营管理",
+      "incomplete": "信息不完整：{fields}",
+      "empty": "空",
+      "project_entity": "{name}（项目所属单位）",
+      "situation_placeholder": "添加最新进展",
+      "situation_updated": "更新于 {date}",
+      "fields": {
+        "entity": "单位",
+        "category": "类别",
+        "assignee": "负责人",
+        "supervisor": "监督人",
+        "approver": "审批人",
+        "priority": "优先级",
+        "target_date": "截止日期",
+        "status": "状态",
+        "progress": "进度",
+        "waiting_for": "等待对象",
+        "waiting_since": "等待开始于",
+        "risk_nature": "受阻风险",
+        "risk_effective_date": "风险生效日期",
+        "risk_description": "风险描述",
+        "closure": "结项",
+        "closure_date": "结项日期",
+        "closure_comment": "结项说明",
+        "situation": "最新进展"
+      },
+      "status": {
+        "to_start": "待启动",
+        "in_progress": "进行中",
+        "in_validation": "审批中",
+        "waiting": "等待中",
+        "done": "已完成",
+        "cancelled": "已取消"
+      },
+      "waiting_for": {
+        "internal": "内部",
+        "client_partner": "客户 / 合作伙伴",
+        "regulatory": "监管"
+      },
+      "risk": {
+        "financial": "财务",
+        "regulatory": "监管",
+        "legal": "法律",
+        "schedule": "进度安排",
+        "reputation": "声誉",
+        "governance": "治理",
+        "hr": "人力资源",
+        "operational": "运营"
+      },
+      "dialog": {
+        "waiting_title": "将工作项设为等待",
+        "waiting_description": "请说明工作项在等待什么。",
+        "done_title": "完成工作项",
+        "done_description": "结项需要实际日期和说明。进度将变为 100%。"
+      },
+      "activity": {
+        "set": "将 {field} 设为 {value}",
+        "cleared": "清空了 {field}"
+      },
+      "errors": {
+        "save": "无法保存管理记录。",
+        "progress": "进度是 0 到 100 之间的整数。"
+      }
+    }
+  },
+  "activity_via_claude": "通过 Claude"
 }

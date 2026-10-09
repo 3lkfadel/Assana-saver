@@ -65,6 +65,30 @@
       "title": "Koneksi",
       "heading": "Koneksi",
       "description": "Kelola pengaturan koneksi ruang kerja Anda."
+    },
+    "connect_claude": {
+      "title": "Hubungkan Claude",
+      "description": "Izinkan Claude Code dan Claude Desktop membaca dan memperbarui tugas Anda, dengan izin Anda sendiri.",
+      "validity": "Masa berlaku token",
+      "validity_30": "30 hari",
+      "validity_90": "90 hari",
+      "validity_365": "1 tahun",
+      "validity_none": "Tanpa kedaluwarsa",
+      "generate": "Buat token",
+      "token_title": "Token Claude Anda",
+      "token_warning": "Salin sekarang: token tidak akan ditampilkan lagi.",
+      "placeholder_hint": "Buat token: token akan menggantikan YOUR_TOKEN pada perintah di bawah.",
+      "claude_code_description": "Jalankan perintah ini di terminal.",
+      "claude_desktop_description": "Di pengaturan pengembang Claude Desktop, edit claude_desktop_config.json, tambahkan server ini, lalu mulai ulang Claude Desktop. Node.js harus terpasang.",
+      "copy": "Salin",
+      "copied": "Disalin ke papan klip.",
+      "tokens": "Token Claude",
+      "no_tokens": "Belum ada token Claude.",
+      "expires_on": "Kedaluwarsa pada {date}",
+      "expires_soon": "Kedaluwarsa pada {date}: buat token baru sebelum tanggal tersebut.",
+      "never_expires": "Tidak pernah kedaluwarsa",
+      "expired": "Kedaluwarsa",
+      "revoke": "Cabut"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Aktivitas",
       "preferences": "Preferensi",
       "notifications": "Notifikasi",
+      "connect-claude": "Hubungkan Claude",
       "api-tokens": "Token Akses Personal",
       "connections": "Koneksi"
     },

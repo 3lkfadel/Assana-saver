@@ -268,6 +268,21 @@ def module_issue_docs(**kwargs):
     return extend_schema(**_merge_schema_options(defaults, kwargs))
 
 
+def custom_field_docs(**kwargs):
+    """Decorator for custom field endpoints (organisation library, projects and task values)"""
+    defaults = {
+        "tags": ["Custom Fields"],
+        "parameters": [WORKSPACE_SLUG_PARAMETER],
+        "responses": {
+            401: UNAUTHORIZED_RESPONSE,
+            403: FORBIDDEN_RESPONSE,
+            404: NOT_FOUND_RESPONSE,
+        },
+    }
+
+    return extend_schema(**_merge_schema_options(defaults, kwargs))
+
+
 def state_docs(**kwargs):
     """Decorator for state management endpoints"""
     defaults = {
@@ -298,6 +313,7 @@ def sticky_docs(**kwargs):
 
     return extend_schema(**_merge_schema_options(defaults, kwargs))
 
+
 def estimate_docs(**kwargs):
     """Decorator for estimate-related endpoints"""
     defaults = {
@@ -310,6 +326,7 @@ def estimate_docs(**kwargs):
         },
     }
     return extend_schema(**_merge_schema_options(defaults, kwargs))
+
 
 def estimate_point_docs(**kwargs):
     """Decorator for estimate point-related endpoints"""

@@ -3,7 +3,7 @@
 # See the LICENSE file for details.
 
 from .analytic import AnalyticView
-from .api import APIActivityLog, APIToken
+from .api import APIActivityLog, APIToken, APITokenClient
 from .asset import FileAsset
 from .base import BaseModel
 from .cycle import Cycle, CycleIssue, CycleUserProperties
@@ -84,6 +84,19 @@ from .issue_type import IssueType
 from .recent_visit import UserRecentVisit
 
 from .label import Label
+from .steering import (
+    CLOSED_STEERING_STATUSES,
+    Branch,
+    Entity,
+    IssueSteering,
+    ProjectSteering,
+    SteeringCategory,
+    SteeringProfile,
+    SteeringProfileRole,
+    SteeringRiskNature,
+    SteeringStatus,
+    SteeringWaitingFor,
+)
 from .custom_field import (
     CustomField,
     CustomFieldOption,

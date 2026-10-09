@@ -65,6 +65,30 @@
       "title": "连接",
       "heading": "连接",
       "description": "管理您的工作区连接设置。"
+    },
+    "connect_claude": {
+      "title": "连接 Claude",
+      "description": "允许 Claude Code 和 Claude Desktop 以您自己的权限查看和更新您的任务。",
+      "validity": "令牌有效期",
+      "validity_30": "30 天",
+      "validity_90": "90 天",
+      "validity_365": "1 年",
+      "validity_none": "永不过期",
+      "generate": "生成令牌",
+      "token_title": "您的 Claude 令牌",
+      "token_warning": "请立即复制：它不会再次显示。",
+      "placeholder_hint": "生成令牌后，它将替换下方命令中的 YOUR_TOKEN。",
+      "claude_code_description": "请在终端中运行此命令。",
+      "claude_desktop_description": "在 Claude Desktop 的开发者设置中编辑 claude_desktop_config.json，添加此服务器，然后重新启动 Claude Desktop。需要安装 Node.js。",
+      "copy": "复制",
+      "copied": "已复制到剪贴板。",
+      "tokens": "Claude 令牌",
+      "no_tokens": "暂无 Claude 令牌。",
+      "expires_on": "{date} 过期",
+      "expires_soon": "{date} 过期：请在此之前生成新令牌。",
+      "never_expires": "永不过期",
+      "expired": "已过期",
+      "revoke": "撤销"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "活动",
       "preferences": "偏好设置",
       "notifications": "通知",
+      "connect-claude": "连接 Claude",
       "api-tokens": "个人访问令牌",
       "connections": "连接"
     },

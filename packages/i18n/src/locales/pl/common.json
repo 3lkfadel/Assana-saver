@@ -978,5 +978,133 @@
       "set": "ustawił(a) {field} na {value}",
       "cleared": "wyczyścił(a) {field}"
     }
-  }
+  },
+  "steering": {
+    "save": "Zapisz",
+    "rename": "Zmień nazwę",
+    "delete_confirm": "Usunąć „{name}”?",
+    "referential": {
+      "title": "Dane referencyjne Grupy",
+      "description": "Piony, podmioty i kategorie Grupy oraz osoby, które przeglądają przestrzeń zarządczą. Każdy projekt jest prowadzony przez jeden podmiot.",
+      "empty": "Dane referencyjne są puste.",
+      "bootstrap": "Wczytaj dane referencyjne Grupy",
+      "bootstrap_hint": "Tworzy 8 pionów, 21 podmiotów i 4 kategorie ze specyfikacji. Możesz je później zmienić.",
+      "bootstrapped": "Dane referencyjne Grupy zostały wczytane.",
+      "read_only": "Dane referencyjne mogą zmieniać tylko Prezes, Gabinet Prezesa i administratorzy przestrzeni roboczej."
+    },
+    "branches": {
+      "title": "Piony i podmioty",
+      "description": "Każdy podmiot należy do jednego pionu. Aby przenieść podmiot, wybierz inny pion.",
+      "add": "Dodaj pion",
+      "placeholder": "Nowy pion",
+      "entity_count": "{count, plural, one {# podmiot} few {# podmioty} many {# podmiotów} other {# podmiotu}}"
+    },
+    "entities": {
+      "placeholder": "Nowy podmiot",
+      "move": "Przenieś do innego pionu"
+    },
+    "categories": {
+      "title": "Kategorie",
+      "description": "Kategorie porządkują elementy pracy w przestrzeni zarządczej.",
+      "add": "Dodaj kategorię",
+      "placeholder": "Nowa kategoria",
+      "empty": "Brak kategorii."
+    },
+    "profiles": {
+      "title": "Profile zarządcze",
+      "description": "Profil określa, co dana osoba widzi w przestrzeni zarządczej: całą Grupę, jeden pion lub jeden podmiot.",
+      "empty": "Brak profili.",
+      "member": "Osoba",
+      "role": "Profil",
+      "scope": "Pion lub podmiot",
+      "add": "Dodaj profil",
+      "whole_group": "Cała Grupa",
+      "roles": {
+        "ceo": "Prezes",
+        "cabinet": "Gabinet Prezesa",
+        "branch_director": "Dyrektor pionu",
+        "entity_manager": "Kierownik podmiotu"
+      }
+    },
+    "project_entity": {
+      "title": "Podmiot prowadzący",
+      "description": "Podmiot Grupy, który prowadzi ten projekt w przestrzeni zarządczej.",
+      "placeholder": "Wybierz podmiot",
+      "saved": "Podmiot prowadzący został zapisany.",
+      "no_referential": "Najpierw skonfiguruj dane referencyjne Grupy."
+    },
+    "errors": {
+      "save": "Nie udało się zapisać zmiany.",
+      "duplicate": "Ta nazwa jest już używana.",
+      "branch_not_empty": "Najpierw przenieś lub usuń podmioty tego pionu.",
+      "entity_in_use": "Ten podmiot prowadzi projekty. Najpierw przypisz je do innego podmiotu.",
+      "profile": "Nie udało się dodać profilu. Ta osoba może już go mieć."
+    },
+    "task": {
+      "section": "Zarządzanie",
+      "incomplete": "Niekompletna karta: {fields}",
+      "empty": "Puste",
+      "project_entity": "{name} (podmiot projektu)",
+      "situation_placeholder": "Dodaj stan sprawy",
+      "situation_updated": "Zaktualizowano {date}",
+      "fields": {
+        "entity": "Podmiot",
+        "category": "Kategoria",
+        "assignee": "Odpowiedzialny",
+        "supervisor": "Nadzorujący",
+        "approver": "Zatwierdzający",
+        "priority": "Priorytet",
+        "target_date": "Termin",
+        "status": "Status",
+        "progress": "Postęp",
+        "waiting_for": "Oczekuje na",
+        "waiting_since": "Oczekuje od",
+        "risk_nature": "Ryzyko w razie blokady",
+        "risk_effective_date": "Data wystąpienia ryzyka",
+        "risk_description": "Opis ryzyka",
+        "closure": "Zamknięcie",
+        "closure_date": "Data zamknięcia",
+        "closure_comment": "Komentarz do zamknięcia",
+        "situation": "Stan sprawy"
+      },
+      "status": {
+        "to_start": "Do rozpoczęcia",
+        "in_progress": "W toku",
+        "in_validation": "W zatwierdzaniu",
+        "waiting": "Oczekuje",
+        "done": "Zakończone",
+        "cancelled": "Anulowane"
+      },
+      "waiting_for": {
+        "internal": "Wewnętrzne",
+        "client_partner": "Klient / partner",
+        "regulatory": "Regulacyjne"
+      },
+      "risk": {
+        "financial": "Finansowe",
+        "regulatory": "Regulacyjne",
+        "legal": "Prawne",
+        "schedule": "Harmonogram",
+        "reputation": "Reputacja",
+        "governance": "Ład korporacyjny",
+        "hr": "Kadry",
+        "operational": "Operacyjne"
+      },
+      "dialog": {
+        "waiting_title": "Wstrzymaj element pracy",
+        "waiting_description": "Wskaż, na co czeka element pracy.",
+        "done_title": "Zakończ element pracy",
+        "done_description": "Zamknięcie wymaga faktycznej daty i komentarza. Postęp zmienia się na 100%."
+      },
+      "activity": {
+        "set": "ustawił(a) {field} na {value}",
+        "cleared": "wyczyścił(a) {field}"
+      },
+      "errors": {
+        "save": "Nie udało się zapisać karty zarządczej.",
+        "progress": "Postęp to liczba całkowita od 0 do 100."
+      }
+    }
+  },
+  "activity_via_claude": "przez Claude"
 }

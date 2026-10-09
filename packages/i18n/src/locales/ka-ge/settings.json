@@ -65,6 +65,30 @@
       "title": "Connections",
       "heading": "Connections",
       "description": "Manage your workspace connections settings."
+    },
+    "connect_claude": {
+      "title": "Claude-ის დაკავშირება",
+      "description": "მიეცით Claude Code-სა და Claude Desktop-ს საშუალება, თქვენი უფლებებით ნახონ და შეცვალონ თქვენი ამოცანები.",
+      "validity": "ტოკენის მოქმედების ვადა",
+      "validity_30": "30 დღე",
+      "validity_90": "90 დღე",
+      "validity_365": "1 წელი",
+      "validity_none": "ვადის გარეშე",
+      "generate": "ტოკენის გენერირება",
+      "token_title": "თქვენი Claude ტოკენი",
+      "token_warning": "დააკოპირეთ ახლავე: ის აღარ გამოჩნდება.",
+      "placeholder_hint": "დააგენერირეთ ტოკენი: ის ჩაანაცვლებს YOUR_TOKEN-ს ქვემოთ მოცემულ ბრძანებებში.",
+      "claude_code_description": "გაუშვით ეს ბრძანება ტერმინალში.",
+      "claude_desktop_description": "Claude Desktop-ის დეველოპერის პარამეტრებში შეცვალეთ claude_desktop_config.json, დაამატეთ ეს სერვერი და გადატვირთეთ Claude Desktop. საჭიროა Node.js-ის დაყენება.",
+      "copy": "კოპირება",
+      "copied": "დაკოპირდა ბუფერში.",
+      "tokens": "Claude ტოკენები",
+      "no_tokens": "Claude ტოკენები ჯერ არ არის.",
+      "expires_on": "ვადა იწურება {date}",
+      "expires_soon": "ვადა იწურება {date}: მანამდე დააგენერირეთ ახალი ტოკენი.",
+      "never_expires": "ვადა არ იწურება",
+      "expired": "ვადაგასულია",
+      "revoke": "გაუქმება"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "აქტივობა",
       "preferences": "პრეფერენციები",
       "notifications": "შეტყობინებები",
+      "connect-claude": "Claude-ის დაკავშირება",
       "api-tokens": "პერსონალური წვდომის ტოკენები",
       "connections": "Connections"
     },

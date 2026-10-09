@@ -65,6 +65,30 @@
       "title": "Connexions",
       "heading": "Connexions",
       "description": "Gérez les paramètres de connexion de votre espace de travail."
+    },
+    "connect_claude": {
+      "title": "Connecter Claude",
+      "description": "Permettez à Claude Code et à Claude Desktop de consulter et de modifier vos tâches, avec vos propres droits.",
+      "validity": "Validité du jeton",
+      "validity_30": "30 jours",
+      "validity_90": "90 jours",
+      "validity_365": "1 an",
+      "validity_none": "Sans expiration",
+      "generate": "Générer un jeton",
+      "token_title": "Votre jeton Claude",
+      "token_warning": "Copiez-le maintenant : il ne sera plus affiché.",
+      "placeholder_hint": "Générez un jeton : il remplacera YOUR_TOKEN dans les commandes ci-dessous.",
+      "claude_code_description": "Exécutez cette commande dans un terminal.",
+      "claude_desktop_description": "Dans les paramètres développeur de Claude Desktop, modifiez claude_desktop_config.json, ajoutez ce serveur, puis redémarrez Claude Desktop. Node.js doit être installé.",
+      "copy": "Copier",
+      "copied": "Copié dans le presse-papiers.",
+      "tokens": "Jetons Claude",
+      "no_tokens": "Aucun jeton Claude pour l’instant.",
+      "expires_on": "Expire le {date}",
+      "expires_soon": "Expire le {date} : générez un nouveau jeton d’ici là.",
+      "never_expires": "N’expire jamais",
+      "expired": "Expiré",
+      "revoke": "Révoquer"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Activité",
       "preferences": "Préférences",
       "notifications": "Notifications",
+      "connect-claude": "Connecter Claude",
       "api-tokens": "Jetons d’accès personnel",
       "connections": "Connexions"
     },

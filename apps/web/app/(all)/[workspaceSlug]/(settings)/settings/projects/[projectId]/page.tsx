@@ -12,6 +12,7 @@ import { PageHead } from "@/components/core/page-title";
 import { ProjectDetailsForm } from "@/components/project/form";
 import { ProjectDetailsFormLoader } from "@/components/project/form-loader";
 import { SettingsContentWrapper } from "@/components/settings/content-wrapper";
+import { ProjectEntitySetting } from "@/components/steering";
 // hooks
 import { useProject } from "@/hooks/store/use-project";
 import { useUserPermissions } from "@/hooks/store/user";
@@ -45,6 +46,7 @@ function ProjectSettingsPage({ params }: Route.ComponentProps) {
         ) : (
           <ProjectDetailsFormLoader />
         )}
+        <ProjectEntitySetting workspaceSlug={workspaceSlug} projectId={projectId} isAdmin={isAdmin} />
         {isAdmin && <GeneralProjectSettingsControlSection projectId={projectId} />}
       </div>
     </SettingsContentWrapper>

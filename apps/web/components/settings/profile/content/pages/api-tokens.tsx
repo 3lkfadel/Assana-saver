@@ -26,7 +26,9 @@ export const APITokensProfileSettings = observer(function APITokensProfileSettin
   // states
   const [isCreateTokenModalOpen, setIsCreateTokenModalOpen] = useState(false);
   // store hooks
-  const { data: tokens } = useSWR(API_TOKENS_LIST, () => apiTokenService.list());
+  const { data: allTokens } = useSWR(API_TOKENS_LIST, () => apiTokenService.list());
+  // Claude tokens are managed on the "Connect Claude" page
+  const tokens = allTokens?.filter((token) => !token.client);
   // translation
   const { t } = useTranslation();
 

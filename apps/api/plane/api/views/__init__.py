@@ -33,6 +33,18 @@ from .issue import (
     IssueRelationListCreateAPIEndpoint,
 )
 
+from .work_item_bulk import WorkItemBulkAPIEndpoint
+from .work_item_query import WorkspaceWorkItemQueryAPIEndpoint
+
+from .custom_field import (
+    CustomFieldListCreateAPIEndpoint,
+    CustomFieldDetailAPIEndpoint,
+    ProjectCustomFieldListCreateAPIEndpoint,
+    ProjectCustomFieldDetailAPIEndpoint,
+    ProjectCustomFieldValueListAPIEndpoint,
+    WorkItemCustomFieldValueAPIEndpoint,
+)
+
 from .cycle import (
     CycleListCreateAPIEndpoint,
     CycleListLiteAPIEndpoint,

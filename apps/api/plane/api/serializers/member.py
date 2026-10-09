@@ -81,5 +81,10 @@ class WorkspaceMemberLiteAPISerializer(BaseMemberLiteAPISerializer):
 class ProjectMemberLiteAPISerializer(BaseMemberLiteAPISerializer):
     """Minimal ProjectMember representation for paginated member pickers/directories."""
 
+    # The membership itself, for the project member detail endpoint (`id` is the user's)
+    membership_id = serializers.UUIDField(source="pk", read_only=True)
+
     class Meta(BaseMemberLiteAPISerializer.Meta):
         model = ProjectMember
+        fields = [*BaseMemberLiteAPISerializer.Meta.fields, "membership_id"]
+        read_only_fields = fields

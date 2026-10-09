@@ -7,6 +7,8 @@
 import Link from "next/link";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
+// local imports
+import { ActivityVia } from "./activity-via";
 
 type TIssueUser = {
   activityId: string;
@@ -36,6 +38,7 @@ export function IssueUser(props: TIssueUser) {
           {activity.actor_detail?.display_name}
         </Link>
       )}
+      <ActivityVia via={activity.via} />
     </>
   );
 }

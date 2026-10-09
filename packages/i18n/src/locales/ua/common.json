@@ -1105,5 +1105,6 @@
         "progress": "Прогрес — ціле число від 0 до 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "через Claude"
 }

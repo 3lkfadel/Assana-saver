@@ -8,7 +8,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("db", "0125_infinity_custom_fields"),
+        ("db", "0126_infinity_mcp_token"),
     ]
 
     operations = [

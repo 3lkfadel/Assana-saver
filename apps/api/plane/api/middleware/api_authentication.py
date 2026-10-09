@@ -26,7 +26,7 @@ class APIKeyAuthentication(authentication.BaseAuthentication):
     def get_api_token(self, request):
         return request.headers.get(self.auth_header_name)
 
-    def validate_api_token(self, token):
+    def get_valid_api_token(self, token):
         try:
             api_token = APIToken.objects.get(
                 Q(Q(expired_at__gt=timezone.now()) | Q(expired_at__isnull=True)),
@@ -40,6 +40,10 @@ class APIKeyAuthentication(authentication.BaseAuthentication):
         # save api token last used
         api_token.last_used = timezone.now()
         api_token.save(update_fields=["last_used"])
+        return api_token
+
+    def validate_api_token(self, token):
+        api_token = self.get_valid_api_token(token)
         return (api_token.user, api_token.token)
 
     def authenticate(self, request):
@@ -47,6 +51,7 @@ class APIKeyAuthentication(authentication.BaseAuthentication):
         if not token:
             return None
 
-        # Validate the API token
-        user, token = self.validate_api_token(token)
-        return user, token
+        # Validate the API token, and keep it on the request for the throttle and the activity "via"
+        api_token = self.get_valid_api_token(token)
+        request.api_token = api_token
+        return api_token.user, api_token.token

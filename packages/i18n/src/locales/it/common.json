@@ -1105,5 +1105,6 @@
         "progress": "L'avanzamento è un numero intero da 0 a 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "tramite Claude"
 }

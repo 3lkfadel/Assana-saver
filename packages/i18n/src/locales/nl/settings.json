@@ -65,6 +65,30 @@
       "title": "Verbindingen",
       "heading": "Verbindingen",
       "description": "Beheer de verbindingsinstellingen van je werkruimte."
+    },
+    "connect_claude": {
+      "title": "Claude koppelen",
+      "description": "Laat Claude Code en Claude Desktop uw taken bekijken en bijwerken, met uw eigen rechten.",
+      "validity": "Geldigheid van het token",
+      "validity_30": "30 dagen",
+      "validity_90": "90 dagen",
+      "validity_365": "1 jaar",
+      "validity_none": "Verloopt niet",
+      "generate": "Token genereren",
+      "token_title": "Uw Claude-token",
+      "token_warning": "Kopieer het nu: het wordt niet opnieuw getoond.",
+      "placeholder_hint": "Genereer een token: het vervangt YOUR_TOKEN in de onderstaande opdrachten.",
+      "claude_code_description": "Voer deze opdracht uit in een terminal.",
+      "claude_desktop_description": "Bewerk in de ontwikkelaarsinstellingen van Claude Desktop het bestand claude_desktop_config.json, voeg deze server toe en start Claude Desktop opnieuw. Node.js moet geïnstalleerd zijn.",
+      "copy": "Kopiëren",
+      "copied": "Gekopieerd naar het klembord.",
+      "tokens": "Claude-tokens",
+      "no_tokens": "Nog geen Claude-token.",
+      "expires_on": "Verloopt op {date}",
+      "expires_soon": "Verloopt op {date}: genereer vóór die datum een nieuw token.",
+      "never_expires": "Verloopt nooit",
+      "expired": "Verlopen",
+      "revoke": "Intrekken"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Activiteit",
       "preferences": "Voorkeuren",
       "notifications": "Meldingen",
+      "connect-claude": "Claude koppelen",
       "api-tokens": "Persoonlijke toegangstokens",
       "connections": "Verbindingen"
     },

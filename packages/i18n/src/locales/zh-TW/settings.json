@@ -65,6 +65,30 @@
       "title": "連接",
       "heading": "連接",
       "description": "管理您的工作區連接設定。"
+    },
+    "connect_claude": {
+      "title": "連結 Claude",
+      "description": "允許 Claude Code 和 Claude Desktop 以您自己的權限檢視和更新您的任務。",
+      "validity": "權杖有效期",
+      "validity_30": "30 天",
+      "validity_90": "90 天",
+      "validity_365": "1 年",
+      "validity_none": "永不過期",
+      "generate": "產生權杖",
+      "token_title": "您的 Claude 權杖",
+      "token_warning": "請立即複製：它不會再次顯示。",
+      "placeholder_hint": "產生權杖後，它將取代下方指令中的 YOUR_TOKEN。",
+      "claude_code_description": "請在終端機中執行此指令。",
+      "claude_desktop_description": "在 Claude Desktop 的開發人員設定中編輯 claude_desktop_config.json，新增此伺服器，然後重新啟動 Claude Desktop。需要安裝 Node.js。",
+      "copy": "複製",
+      "copied": "已複製到剪貼簿。",
+      "tokens": "Claude 權杖",
+      "no_tokens": "尚無 Claude 權杖。",
+      "expires_on": "{date} 到期",
+      "expires_soon": "{date} 到期：請在此之前產生新權杖。",
+      "never_expires": "永不過期",
+      "expired": "已過期",
+      "revoke": "撤銷"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "活動",
       "preferences": "偏好設定",
       "notifications": "通知",
+      "connect-claude": "連結 Claude",
       "api-tokens": "個人存取權杖",
       "connections": "連接"
     },

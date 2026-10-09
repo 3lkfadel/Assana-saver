@@ -65,6 +65,30 @@
       "title": "Kết nối",
       "heading": "Kết nối",
       "description": "Quản lý cài đặt kết nối không gian làm việc của bạn."
+    },
+    "connect_claude": {
+      "title": "Kết nối Claude",
+      "description": "Cho phép Claude Code và Claude Desktop xem và cập nhật công việc của bạn, với quyền của chính bạn.",
+      "validity": "Thời hạn token",
+      "validity_30": "30 ngày",
+      "validity_90": "90 ngày",
+      "validity_365": "1 năm",
+      "validity_none": "Không hết hạn",
+      "generate": "Tạo token",
+      "token_title": "Token Claude của bạn",
+      "token_warning": "Hãy sao chép ngay: token sẽ không hiển thị lại.",
+      "placeholder_hint": "Hãy tạo token: token sẽ thay thế YOUR_TOKEN trong các lệnh bên dưới.",
+      "claude_code_description": "Chạy lệnh này trong terminal.",
+      "claude_desktop_description": "Trong cài đặt dành cho nhà phát triển của Claude Desktop, chỉnh sửa claude_desktop_config.json, thêm máy chủ này rồi khởi động lại Claude Desktop. Cần cài đặt Node.js.",
+      "copy": "Sao chép",
+      "copied": "Đã sao chép vào bộ nhớ tạm.",
+      "tokens": "Token Claude",
+      "no_tokens": "Chưa có token Claude nào.",
+      "expires_on": "Hết hạn vào {date}",
+      "expires_soon": "Hết hạn vào {date}: hãy tạo token mới trước ngày đó.",
+      "never_expires": "Không bao giờ hết hạn",
+      "expired": "Đã hết hạn",
+      "revoke": "Thu hồi"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Hoạt động",
       "preferences": "Tùy chọn",
       "notifications": "Thông báo",
+      "connect-claude": "Kết nối Claude",
       "api-tokens": "Mã truy cập cá nhân",
       "connections": "Kết nối"
     },

@@ -1105,5 +1105,6 @@
         "progress": "Progress is a whole number from 0 to 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "via Claude"
 }

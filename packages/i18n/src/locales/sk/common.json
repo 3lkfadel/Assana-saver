@@ -1105,5 +1105,6 @@
         "progress": "Postup je celé číslo od 0 do 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "cez Claude"
 }

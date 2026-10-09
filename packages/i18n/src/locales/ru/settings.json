@@ -65,6 +65,30 @@
       "title": "Соединения",
       "heading": "Соединения",
       "description": "Управляйте настройками соединений вашего рабочего пространства."
+    },
+    "connect_claude": {
+      "title": "Подключить Claude",
+      "description": "Разрешите Claude Code и Claude Desktop просматривать и изменять Ваши задачи с Вашими правами.",
+      "validity": "Срок действия токена",
+      "validity_30": "30 дней",
+      "validity_90": "90 дней",
+      "validity_365": "1 год",
+      "validity_none": "Бессрочно",
+      "generate": "Создать токен",
+      "token_title": "Ваш токен Claude",
+      "token_warning": "Скопируйте его сейчас: он больше не будет показан.",
+      "placeholder_hint": "Создайте токен: он заменит YOUR_TOKEN в командах ниже.",
+      "claude_code_description": "Выполните эту команду в терминале.",
+      "claude_desktop_description": "В настройках разработчика Claude Desktop отредактируйте claude_desktop_config.json, добавьте этот сервер и перезапустите Claude Desktop. Необходимо установить Node.js.",
+      "copy": "Копировать",
+      "copied": "Скопировано в буфер обмена.",
+      "tokens": "Токены Claude",
+      "no_tokens": "Токенов Claude пока нет.",
+      "expires_on": "Истекает {date}",
+      "expires_soon": "Истекает {date}: создайте новый токен до этой даты.",
+      "never_expires": "Бессрочный",
+      "expired": "Истёк",
+      "revoke": "Отозвать"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Активность",
       "preferences": "Настройки",
       "notifications": "Уведомления",
+      "connect-claude": "Подключить Claude",
       "api-tokens": "Личные токены доступа",
       "connections": "Соединения"
     },

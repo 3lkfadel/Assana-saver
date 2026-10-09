@@ -436,6 +436,8 @@ class IssueActivity(ProjectBaseModel):
     old_identifier = models.UUIDField(null=True)
     new_identifier = models.UUIDField(null=True)
     epoch = models.FloatField(null=True)
+    # Client the change was made through (see APITokenClient), empty for the app itself
+    via = models.CharField(max_length=50, blank=True, default="")
 
     class Meta:
         verbose_name = "Issue Activity"

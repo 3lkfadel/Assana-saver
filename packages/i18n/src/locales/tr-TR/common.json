@@ -1105,5 +1105,6 @@
         "progress": "İlerleme 0 ile 100 arasında bir tam sayıdır."
       }
     }
-  }
+  },
+  "activity_via_claude": "Claude üzerinden"
 }

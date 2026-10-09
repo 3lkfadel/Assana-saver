@@ -140,6 +140,12 @@ class BaseAPIView(TimezoneMixin, GenericAPIView, ReadReplicaControlMixin, BasePa
         return self.kwargs.get("slug", None)
 
     @property
+    def activity_via(self):
+        """Client of the API token (e.g. "claude"), recorded on the task history; empty otherwise."""
+        api_token = getattr(getattr(self, "request", None), "api_token", None)
+        return api_token.client if api_token is not None else ""
+
+    @property
     def project_id(self):
         project_id = self.kwargs.get("project_id", None)
         if project_id:

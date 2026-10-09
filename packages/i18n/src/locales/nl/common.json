@@ -1105,5 +1105,6 @@
         "progress": "De voortgang is een geheel getal van 0 tot 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "via Claude"
 }

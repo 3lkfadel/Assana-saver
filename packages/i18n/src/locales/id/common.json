@@ -1105,5 +1105,6 @@
         "progress": "Kemajuan adalah bilangan bulat dari 0 sampai 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "melalui Claude"
 }

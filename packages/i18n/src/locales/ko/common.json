@@ -1105,5 +1105,6 @@
         "progress": "진행률은 0부터 100까지의 정수입니다."
       }
     }
-  }
+  },
+  "activity_via_claude": "Claude를 통해"
 }

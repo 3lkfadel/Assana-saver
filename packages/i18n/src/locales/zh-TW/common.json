@@ -1105,5 +1105,6 @@
         "progress": "進度是 0 到 100 之間的整數。"
       }
     }
-  }
+  },
+  "activity_via_claude": "透過 Claude"
 }

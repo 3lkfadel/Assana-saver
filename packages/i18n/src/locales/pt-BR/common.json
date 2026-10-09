@@ -1105,5 +1105,6 @@
         "progress": "O andamento é um número inteiro de 0 a 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "via Claude"
 }

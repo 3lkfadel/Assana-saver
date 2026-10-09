@@ -8,7 +8,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("db", "0126_infinity_steering_referential"),
+        ("db", "0127_infinity_steering_referential"),
     ]
 
     operations = [

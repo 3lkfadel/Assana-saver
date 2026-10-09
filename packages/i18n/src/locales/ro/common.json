@@ -1105,5 +1105,6 @@
         "progress": "Progresul este un număr întreg de la 0 la 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "prin Claude"
 }

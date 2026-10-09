@@ -1105,5 +1105,6 @@
         "progress": "Postęp to liczba całkowita od 0 do 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "przez Claude"
 }

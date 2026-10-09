@@ -1105,5 +1105,6 @@
         "progress": "Tiến độ là số nguyên từ 0 đến 100."
       }
     }
-  }
+  },
+  "activity_via_claude": "qua Claude"
 }

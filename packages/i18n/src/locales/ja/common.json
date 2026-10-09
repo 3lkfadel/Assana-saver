@@ -1105,5 +1105,6 @@
         "progress": "進捗は 0 から 100 の整数です。"
       }
     }
-  }
+  },
+  "activity_via_claude": "Claude 経由"
 }

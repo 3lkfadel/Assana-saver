@@ -65,6 +65,30 @@
       "title": "Коннекшнс",
       "heading": "Коннекшнс",
       "description": "Керуйте налаштуваннями підключень вашого робочого простору."
+    },
+    "connect_claude": {
+      "title": "Під’єднати Claude",
+      "description": "Дозвольте Claude Code і Claude Desktop переглядати та змінювати ваші завдання з вашими правами.",
+      "validity": "Термін дії токена",
+      "validity_30": "30 днів",
+      "validity_90": "90 днів",
+      "validity_365": "1 рік",
+      "validity_none": "Безстроково",
+      "generate": "Створити токен",
+      "token_title": "Ваш токен Claude",
+      "token_warning": "Скопіюйте його зараз: він більше не відображатиметься.",
+      "placeholder_hint": "Створіть токен: він замінить YOUR_TOKEN у командах нижче.",
+      "claude_code_description": "Виконайте цю команду в терміналі.",
+      "claude_desktop_description": "У налаштуваннях розробника Claude Desktop відредагуйте claude_desktop_config.json, додайте цей сервер і перезапустіть Claude Desktop. Потрібно встановити Node.js.",
+      "copy": "Копіювати",
+      "copied": "Скопійовано в буфер обміну.",
+      "tokens": "Токени Claude",
+      "no_tokens": "Токенів Claude ще немає.",
+      "expires_on": "Спливає {date}",
+      "expires_soon": "Спливає {date}: створіть новий токен до цієї дати.",
+      "never_expires": "Безстроковий",
+      "expired": "Сплив",
+      "revoke": "Відкликати"
     }
   },
   "profile": {
@@ -102,6 +126,7 @@
       "activity": "Активність",
       "preferences": "Налаштування",
       "notifications": "Сповіщення",
+      "connect-claude": "Під’єднати Claude",
       "api-tokens": "Особисті токени доступу",
       "connections": "Коннекшнс"
     },

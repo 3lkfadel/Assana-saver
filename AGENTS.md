@@ -43,3 +43,7 @@ Prereq (once): `./setup.sh` — generates `apps/api/.env` from `.env.example`.
 - Teardown: `docker compose -f docker-compose-test.yml down -v`
 
 See `apps/api/tests/RUNNING_TESTS.md` for the full walkthrough and troubleshooting; see `apps/api/tests/TESTING_GUIDE.md` for test conventions and fixtures.
+
+## Deployment (Coolify)
+
+`docker-compose.coolify.yml` builds the whole stack from this repository for Coolify's Docker Compose build pack: one public `proxy` service (Caddy, `deployments/coolify/proxy`) routes by path to web, admin, space, live, the API and the MCP server; Coolify generates the secrets. Walkthrough (French): `docs/deploiement-coolify.md`.

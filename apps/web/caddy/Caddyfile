@@ -9,14 +9,18 @@
 :3000 {
 	root * /usr/share/caddy/html
 
-	# Per-client-IP rate limiting for static asset requests
+	# Per-client-IP rate limiting for static asset requests. A first load fetches about 250 files:
+	# raise STATIC_RATE_LIMIT_EVENTS when many people share one public IP (an office behind NAT).
 	rate_limit {
 		zone static {
 			key {client_ip}
-			events 300
+			events {$STATIC_RATE_LIMIT_EVENTS:300}
 			window 1m
 		}
 	}
+
+	# Vite fingerprints the files under /assets: browsers can keep them instead of revalidating.
+	header /assets/* Cache-Control "public, max-age=31536000, immutable"
 
 	# Security headers (HSTS is set at the TLS terminator)
 	header {

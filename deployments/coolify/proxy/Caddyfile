@@ -1,0 +1,37 @@
+# Single entry point of Infinity Planning on Coolify: Coolify's proxy (Traefik) terminates HTTPS
+# and forwards every request here on port 80; Caddy dispatches by path, as Plane's own proxy does.
+{
+	auto_https off
+	servers {
+		max_header_size 25MB
+		# Keep Traefik's X-Forwarded-Proto (https) so Django builds https URLs.
+		trusted_proxies static private_ranges
+		client_ip_headers X-Forwarded-For X-Real-IP
+	}
+}
+
+:80 {
+	request_body {
+		max_size {$FILE_SIZE_LIMIT:5242880}
+	}
+
+	redir /spaces /spaces/ permanent
+	reverse_proxy /spaces/* space:3000
+
+	redir /god-mode /god-mode/ permanent
+	reverse_proxy /god-mode/* admin:3000
+
+	reverse_proxy /live/* live:3000
+
+	reverse_proxy /api/* api:8000
+	reverse_proxy /auth/* api:8000
+	reverse_proxy /static/* api:8000
+
+	# MCP server for Claude (Profile settings > Connect Claude points to /mcp on this origin).
+	reverse_proxy /mcp* mcp:8211
+
+	reverse_proxy /{$BUCKET_NAME:uploads}/* plane-minio:9000
+	reverse_proxy /{$BUCKET_NAME:uploads} plane-minio:9000
+
+	reverse_proxy /* web:3000
+}

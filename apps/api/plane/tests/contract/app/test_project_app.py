@@ -227,6 +227,9 @@ class TestProjectAPIPost(TestProjectBase):
         response_data = response.json()
         assert response_data["description"] == project_data["description"]
         assert response_data["network"] == project_data["network"]
+        # Infinity Planning has no cycles or modules: the API ignores both flags.
+        assert response_data["cycle_view"] is False
+        assert response_data["module_view"] is False
 
 
 @pytest.mark.contract
@@ -383,7 +386,7 @@ class TestProjectAPIPatchDelete(TestProjectBase):
             "name": "Updated Project",
             "description": "Updated description",
             "cycle_view": True,
-            "module_view": False,
+            "module_view": True,
         }
 
         response = session_client.patch(url, update_data, format="json")
@@ -394,7 +397,8 @@ class TestProjectAPIPatchDelete(TestProjectBase):
         project.refresh_from_db()
         assert project.name == "Updated Project"
         assert project.description == "Updated description"
-        assert project.cycle_view is True
+        # Infinity Planning has no cycles or modules: the API ignores both flags.
+        assert project.cycle_view is False
         assert project.module_view is False
 
     @pytest.mark.django_db

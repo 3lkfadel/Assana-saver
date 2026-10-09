@@ -245,7 +245,7 @@
   "full_changelog": "Full changelog",
   "support": "Support",
   "forum": "Forum",
-  "powered_by_plane_pages": "Powered by Plane Pages",
+  "powered_by_plane_pages": "Powered by Infinity Planning Pages",
   "please_select_at_least_one_invitation": "Please select at least one invitation.",
   "please_select_at_least_one_invitation_description": "Please select at least one invitation to join the workspace.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "We see that someone has invited you to join a workspace",
@@ -826,7 +826,7 @@
     "edited_by": "Edited by"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane didn't start up. This could be because one or more Plane services failed to start.",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning didn't start up. This could be because one or more Infinity Planning services failed to start.",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "Choose View Logs from setup.sh and Docker logs to be sure."
   },
   "customize_navigation": "Customize navigation",
@@ -838,7 +838,7 @@
   "pin": "Pin",
   "unpin": "Unpin",
   "workspace_dashboards": "Dashboards",
-  "pi_chat": "Plane AI",
+  "pi_chat": "Infinity Planning AI",
   "in_app": "In-app",
   "forms": "Forms",
   "milestones": "Milestones",
@@ -874,5 +874,63 @@
       "short_description": "Export as json"
     }
   },
-  "labels_count": "{count, plural, one {# label} other {# labels}}"
+  "labels_count": "{count, plural, one {# label} other {# labels}}",
+  "infinity": {
+    "more": "More",
+    "hide": "Hide",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "auth": {
+      "sign_in_header": "Welcome back.",
+      "sign_in_sub_header": "Sign in to Infinity Planning.",
+      "sign_up_header": "Welcome.",
+      "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "AI assistant",
+    "open": "Open the AI assistant",
+    "subtitle": "Ask about progress, deadlines and workload in your projects.",
+    "placeholder": "Ask a question about your projects…",
+    "send": "Send",
+    "stop": "Stop",
+    "new_conversation": "New conversation",
+    "close": "Close",
+    "read_only_note": "Read-only: the assistant consults your projects but never changes them.",
+    "context_work_item": "About this work item",
+    "context_project": "About this project",
+    "suggestions": {
+      "overdue": "Which work items are overdue?",
+      "workload": "Who has the most open work items?",
+      "projects": "Give me a status update on my projects."
+    },
+    "actions": {
+      "work_item": "Ask AI",
+      "project": "AI delay report"
+    },
+    "prompts": {
+      "work_item": "What is the status of this work item? Has it met its deadline?",
+      "project": "Give me a status update on this project: progress, delays and the people concerned."
+    },
+    "tools": {
+      "list_projects": "Listing your projects…",
+      "search_work_items": "Searching work items…",
+      "get_work_item": "Reading the work item…",
+      "project_progress": "Computing project progress…",
+      "deadline_report": "Checking deadlines…",
+      "member_workload": "Measuring workload…",
+      "default": "Looking up your data…"
+    },
+    "errors": {
+      "refusal": "The assistant declined this request. Try rephrasing it.",
+      "truncated": "The answer was too long and was cut off. Ask a narrower question.",
+      "too_many_steps": "The question required too many lookups. Ask a narrower question.",
+      "invalid_api_key": "The Anthropic API key is invalid. Ask an instance admin to update it.",
+      "permission_denied": "The Anthropic API key does not have access to this model.",
+      "model_not_found": "The configured Claude model does not exist. Ask an instance admin to check it.",
+      "rate_limited": "Too many requests to Claude right now. Try again in a moment.",
+      "connection_error": "Could not reach Claude. Check the server's internet connection.",
+      "generic": "Something went wrong. Try again."
+    }
+  }
 }

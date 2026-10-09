@@ -55,7 +55,7 @@ export const CreateUpdateWorkspaceViewModal = observer(function CreateUpdateWork
       const res = await createGlobalView(workspaceSlug, payloadData);
       setToast({
         type: "success",
-        title: "Success!",
+        title: t("toast.success"),
         message: "View created successfully.",
       });
       router.push(`/${workspaceSlug}/workspace-views/${res.id}`);
@@ -63,7 +63,7 @@ export const CreateUpdateWorkspaceViewModal = observer(function CreateUpdateWork
     } catch (_error) {
       setToast({
         type: "error",
-        title: "Error!",
+        title: t("toast.error"),
         message: "View could not be created. Please try again.",
       });
     }
@@ -84,7 +84,7 @@ export const CreateUpdateWorkspaceViewModal = observer(function CreateUpdateWork
         resetExpression(EIssuesStoreType.GLOBAL, data.id, res.rich_filters);
         setToast({
           type: "success",
-          title: "Success!",
+          title: t("toast.success"),
           message: "View updated successfully.",
         });
         handleClose();
@@ -92,7 +92,7 @@ export const CreateUpdateWorkspaceViewModal = observer(function CreateUpdateWork
     } catch (_error) {
       setToast({
         type: "error",
-        title: "Error!",
+        title: t("toast.error"),
         message: "View could not be updated. Please try again.",
       });
     }

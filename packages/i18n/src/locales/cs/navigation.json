@@ -25,10 +25,24 @@
     "favorites": "Oblíbené",
     "pro": "Pro",
     "upgrade": "Upgrade",
-    "pi_chat": "Plane AI",
+    "pi_chat": "Infinity Planning AI",
     "epics": "Epiky",
     "upgrade_plan": "Plán upgradu",
-    "plane_pro": "Plane Pro",
-    "business": "Byznys"
+    "plane_pro": "Infinity Planning Pro",
+    "business": "Byznys",
+    "rename_folder": "Přejmenovat složku"
+  },
+  "top_navigation": {
+    "search_commands": "Hledat příkazy..."
+  },
+  "app_rail": {
+    "icon_only": "Pouze ikona",
+    "icon_with_name": "Ikona s názvem",
+    "dock": "Ukotvit panel aplikací",
+    "undock": "Uvolnit panel aplikací"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Skrýt v nabídce Další",
+    "show": "Zobrazit"
   }
 }

@@ -6,7 +6,11 @@
 
 import type { TLanguage, ILanguageOption } from "../types";
 
+/** Language of the keys a locale is missing. */
 export const FALLBACK_LANGUAGE: TLanguage = "en";
+
+/** Infinity Planning is used in French: language before the user picks one, and after sign-out. */
+export const DEFAULT_LANGUAGE: TLanguage = "fr";
 
 export const SUPPORTED_LANGUAGES: ILanguageOption[] = [
   { label: "English", value: "en" },

@@ -5,7 +5,7 @@
       "not_right_now": "ახლა არა",
       "create_project": {
         "title": "პროექტის შექმნა",
-        "description": "ყველაფერი იწყება პროექტით Plane-ში.",
+        "description": "ყველაფერი იწყება პროექტით Infinity Planning-ში.",
         "cta": "დაწყება"
       },
       "invite_team": {
@@ -19,7 +19,7 @@
         "cta": "ამ სამუშაო სივრცის კონფიგურაცია"
       },
       "personalize_account": {
-        "title": "გახადეთ Plane თქვენი.",
+        "title": "გახადეთ Infinity Planning თქვენი.",
         "description": "აირჩიეთ თქვენი სურათი, ფერები და სხვა.",
         "cta": "ახლავე მოარგეთ"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "ახალი Plane-ში"
+      "title": "ახალი Infinity Planning-ში"
     },
     "quick_tutorial": {
       "title": "სწრაფი გაკვეთილი"
@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Trial ends in {days, plural, one {# day} other {# days}}",
       "start_subscription": "Start subscription",
       "explore_business_features": "Explore Business features"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

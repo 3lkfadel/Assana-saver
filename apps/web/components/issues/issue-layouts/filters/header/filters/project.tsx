@@ -7,6 +7,7 @@
 import React, { useMemo, useState } from "react";
 import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
+import { useTranslation } from "@plane/i18n";
 // ui
 import { Logo } from "@plane/blocks/emoji-icon-picker";
 import { Loader } from "@plane/blocks/skeleton";
@@ -22,6 +23,7 @@ type Props = {
 };
 
 export const FilterProjects = observer(function FilterProjects(props: Props) {
+  const { t } = useTranslation();
   const { appliedFilters, handleUpdate, searchQuery } = props;
   // states
   const [itemsToRender, setItemsToRender] = useState(5);
@@ -65,7 +67,7 @@ export const FilterProjects = observer(function FilterProjects(props: Props) {
                 {sortedOptions.slice(0, itemsToRender).map((project) => (
                   <FilterOption
                     key={`project-${project.id}`}
-                    isChecked={appliedFilters?.includes(project.id) ? true : false}
+                    isChecked={Boolean(appliedFilters?.includes(project.id))}
                     onClick={() => handleUpdate(project.id)}
                     icon={
                       <span className="grid h-4 w-4 flex-shrink-0 place-items-center">
@@ -86,7 +88,7 @@ export const FilterProjects = observer(function FilterProjects(props: Props) {
                 )}
               </>
             ) : (
-              <p className="text-11 text-placeholder italic">No matches found</p>
+              <p className="text-11 text-placeholder italic">{t("common.search.no_matches_found")}</p>
             )
           ) : (
             <Loader className="space-y-2">

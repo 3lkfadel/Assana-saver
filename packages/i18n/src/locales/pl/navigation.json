@@ -29,6 +29,20 @@
     "epics": "Epiki",
     "upgrade_plan": "Apgrejduj plan",
     "plane_pro": "Plejn Pro",
-    "business": "Biznes"
+    "business": "Biznes",
+    "rename_folder": "Zmień nazwę folderu"
+  },
+  "top_navigation": {
+    "search_commands": "Szukaj poleceń..."
+  },
+  "app_rail": {
+    "icon_only": "Tylko ikona",
+    "icon_with_name": "Ikona z nazwą",
+    "dock": "Przypnij pasek aplikacji",
+    "undock": "Odepnij pasek aplikacji"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Ukryj w menu Więcej",
+    "show": "Pokaż"
   }
 }

@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Afișează sub-activitățile",
         "show_empty_groups": "Afișează grupurile goale"
-      }
+      },
+      "sub_group_by": "Subgrupați după"
     },
     "layouts": {
       "ordered_by_label": "Această vizualizare este ordonată după",
@@ -81,6 +82,14 @@
         "calendar": "Vizualizare tip Calendar",
         "spreadsheet": "Vizualizare tip Tabel",
         "gantt": "Vizualizare tip Cronologic"
+      },
+      "board_columns": {
+        "add_column": "Adăugați o coloană",
+        "column_name": "Numele coloanei",
+        "category": "Categorie",
+        "created": "Coloana a fost creată.",
+        "already_exists": "Există deja o coloană cu acest nume.",
+        "create_error": "Coloana nu a putut fi creată. Vă rugăm să încercați din nou."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "Clic pentru a vota negativ",
       "click_to_view_upvotes": "Clic pentru a vedea voturile pozitive",
       "click_to_view_downvotes": "Clic pentru a vedea voturile negative"
+    },
+    "view_not_found": {
+      "title": "Vizualizarea nu există",
+      "description": "Vizualizarea căutată nu există sau nu aveți permisiunea de a o vedea."
     }
   },
   "sub_work_item": {

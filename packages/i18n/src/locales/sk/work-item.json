@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Zobraziť podriadené položky",
         "show_empty_groups": "Zobraziť prázdne skupiny"
-      }
+      },
+      "sub_group_by": "Podzoskupiť podľa"
     },
     "layouts": {
       "ordered_by_label": "Toto rozloženie je triedené podľa",
@@ -81,6 +82,14 @@
         "calendar": "Kalendárové rozloženie",
         "spreadsheet": "Tabuľkové rozloženie",
         "gantt": "Rozloženie časovej osi"
+      },
+      "board_columns": {
+        "add_column": "Pridať stĺpec",
+        "column_name": "Názov stĺpca",
+        "category": "Kategória",
+        "created": "Stĺpec bol vytvorený.",
+        "already_exists": "Stĺpec s týmto názvom už existuje.",
+        "create_error": "Stĺpec sa nepodarilo vytvoriť. Skúste to prosím znova."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "Kliknite pre hlasovanie dole",
       "click_to_view_upvotes": "Kliknite pre zobrazenie hlasov hore",
       "click_to_view_downvotes": "Kliknite pre zobrazenie hlasov dole"
+    },
+    "view_not_found": {
+      "title": "Zobrazenie neexistuje",
+      "description": "Hľadané zobrazenie neexistuje alebo k nemu nemáte oprávnenie."
     }
   },
   "sub_work_item": {

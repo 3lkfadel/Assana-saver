@@ -15,15 +15,15 @@ import { useInstance } from "@/hooks/store/use-instance";
 
 const authContentMap = {
   [EAuthModes.SIGN_IN]: {
-    pageTitle: "Sign up",
+    pageTitle: "infinity.sign_up",
     text: "auth.common.new_to_plane",
-    linkText: "Sign up",
+    linkText: "infinity.sign_up",
     linkHref: "/sign-up",
   },
   [EAuthModes.SIGN_UP]: {
-    pageTitle: "Sign in",
+    pageTitle: "infinity.sign_in",
     text: "auth.common.already_have_an_account",
-    linkText: "Sign in",
+    linkText: "infinity.sign_in",
     linkHref: "/sign-in",
   },
 };
@@ -68,10 +68,11 @@ export function AuthHeaderBase(props: TAuthHeaderBase) {
   const { pageTitle, additionalAction } = props;
   return (
     <>
-      <PageHead title={pageTitle + " - Plane"} />
-      <div className="sticky top-0 flex w-full flex-shrink-0 items-center justify-between gap-6">
-        <Link href="/">
-          <PlaneLockup height={20} width={95} className="text-primary" />
+      <PageHead title={pageTitle + " - Infinity Planning"} />
+      <div className="sticky top-0 flex w-full flex-shrink-0 items-center justify-between gap-6 lg:justify-end">
+        {/* On wide screens the brand panel shows the logo. */}
+        <Link href="/" className="lg:hidden">
+          <PlaneLockup height={30} width={125} className="text-primary" />
         </Link>
         {additionalAction}
       </div>

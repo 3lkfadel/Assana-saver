@@ -43,6 +43,7 @@ import { useAppRouter } from "@/hooks/use-app-router";
 import { useIssueStoreType } from "@/hooks/use-issue-layout-store";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 // local components
+import { IssueLabelChips } from "./label-chips";
 import { IssuePropertyLabels } from "./labels";
 import { WithDisplayPropertiesHOC } from "./with-display-properties-HOC";
 
@@ -54,10 +55,23 @@ export interface IIssueProperties {
   className: string;
   activeLayout: string;
   isEpic?: boolean;
+  /** Board cards: hide properties that have no value and show labels as individual colored chips. */
+  compact?: boolean;
+  /** Hide the state pill, e.g. when the card already sits in its state's column. */
+  hideState?: boolean;
 }
 
 export const IssueProperties = observer(function IssueProperties(props: IIssueProperties) {
-  const { issue, updateIssue, displayProperties, isReadOnly, className, isEpic = false } = props;
+  const {
+    issue,
+    updateIssue,
+    displayProperties,
+    isReadOnly,
+    className,
+    isEpic = false,
+    compact = false,
+    hideState = false,
+  } = props;
   // i18n
   const { t } = useTranslation();
   // store hooks
@@ -82,6 +96,8 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
 
   // derived values
   const stateDetails = getStateById(issue.state_id);
+  // in compact mode a property is only rendered when it holds a value
+  const hasValueOrNotCompact = (hasValue: boolean) => !compact || hasValue;
   const subIssueCount = issue?.sub_issues_count ?? 0;
 
   const issueOperations = useMemo(
@@ -207,7 +223,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
     <div className={className}>
       {/* basic properties */}
       {/* state */}
-      <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="state">
+      <WithDisplayPropertiesHOC
+        displayProperties={displayProperties}
+        displayPropertyKey="state"
+        shouldRenderProperty={() => !hideState}
+      >
         {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
         <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
           <StateSelect
@@ -222,7 +242,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
       </WithDisplayPropertiesHOC>
 
       {/* priority */}
-      <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="priority">
+      <WithDisplayPropertiesHOC
+        displayProperties={displayProperties}
+        displayPropertyKey="priority"
+        shouldRenderProperty={() => hasValueOrNotCompact(!!issue.priority && issue.priority !== "none")}
+      >
         {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
         <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
           <PrioritySelect
@@ -239,7 +263,9 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
       <WithDisplayPropertiesHOC
         displayProperties={displayProperties}
         displayPropertyKey={["start_date", "due_date"]}
-        shouldRenderProperty={() => isDateRangeEnabled}
+        shouldRenderProperty={() =>
+          isDateRangeEnabled && hasValueOrNotCompact(!!issue.start_date || !!issue.target_date)
+        }
       >
         {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
         <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
@@ -268,7 +294,7 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
       <WithDisplayPropertiesHOC
         displayProperties={displayProperties}
         displayPropertyKey="start_date"
-        shouldRenderProperty={() => !isDateRangeEnabled}
+        shouldRenderProperty={() => !isDateRangeEnabled && hasValueOrNotCompact(!!issue.start_date)}
       >
         {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
         <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
@@ -292,7 +318,7 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
       <WithDisplayPropertiesHOC
         displayProperties={displayProperties}
         displayPropertyKey="due_date"
-        shouldRenderProperty={() => !isDateRangeEnabled}
+        shouldRenderProperty={() => !isDateRangeEnabled && hasValueOrNotCompact(!!issue.target_date)}
       >
         {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
         <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
@@ -316,7 +342,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
       </WithDisplayPropertiesHOC>
 
       {/* assignee */}
-      <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="assignee">
+      <WithDisplayPropertiesHOC
+        displayProperties={displayProperties}
+        displayPropertyKey="assignee"
+        shouldRenderProperty={() => hasValueOrNotCompact(!!issue.assignee_ids?.length)}
+      >
         {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
         <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
           <MemberSelect
@@ -337,7 +367,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
           <>
             {/* modules */}
             {projectDetails?.module_view && (
-              <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="modules">
+              <WithDisplayPropertiesHOC
+                displayProperties={displayProperties}
+                displayPropertyKey="modules"
+                shouldRenderProperty={() => hasValueOrNotCompact(!!issue.module_ids?.length)}
+              >
                 {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
                 <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
                   <ModuleSelect
@@ -355,7 +389,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
 
             {/* cycles */}
             {projectDetails?.cycle_view && (
-              <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="cycle">
+              <WithDisplayPropertiesHOC
+                displayProperties={displayProperties}
+                displayPropertyKey="cycle"
+                shouldRenderProperty={() => hasValueOrNotCompact(!!issue.cycle_id)}
+              >
                 {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
                 <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
                   <CycleSelect
@@ -375,7 +413,11 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
 
       {/* estimates */}
       {projectId && areEstimateEnabledByProjectId(projectId?.toString()) && (
-        <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="estimate">
+        <WithDisplayPropertiesHOC
+          displayProperties={displayProperties}
+          displayPropertyKey="estimate"
+          shouldRenderProperty={() => hasValueOrNotCompact(!!issue.estimate_point)}
+        >
           {/* oxlint-disable-next-line jsx_a11y/click-events-have-key-events oxlint-disable-next-line jsx_a11y/no-static-element-interactions */}
           <div className="h-5" onFocus={handleEventPropagation} onClick={handleEventPropagation}>
             <EstimateSelect
@@ -460,17 +502,25 @@ export const IssueProperties = observer(function IssueProperties(props: IIssuePr
       </WithDisplayPropertiesHOC>
 
       {/* label */}
-      <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="labels">
-        <IssuePropertyLabels
-          projectId={issue?.project_id || null}
-          value={issue?.label_ids || []}
-          defaultOptions={defaultLabelOptions}
-          onChange={handleLabel}
-          disabled={isReadOnly}
-          renderByDefault={isMobile}
-          hideDropdownArrow
-          maxRender={3}
-        />
+      <WithDisplayPropertiesHOC
+        displayProperties={displayProperties}
+        displayPropertyKey="labels"
+        shouldRenderProperty={() => hasValueOrNotCompact(!!issue.label_ids?.length)}
+      >
+        {compact ? (
+          <IssueLabelChips labelIds={issue.label_ids ?? []} />
+        ) : (
+          <IssuePropertyLabels
+            projectId={issue?.project_id || null}
+            value={issue?.label_ids || []}
+            defaultOptions={defaultLabelOptions}
+            onChange={handleLabel}
+            disabled={isReadOnly}
+            renderByDefault={isMobile}
+            hideDropdownArrow
+            maxRender={3}
+          />
+        )}
       </WithDisplayPropertiesHOC>
     </div>
   );

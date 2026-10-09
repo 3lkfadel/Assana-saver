@@ -245,7 +245,7 @@
   "full_changelog": "სრული ცვლილებების ჟურნალი",
   "support": "მხარდაჭერა",
   "forum": "Forum",
-  "powered_by_plane_pages": "Plane Pages-ის მხარდაჭერით",
+  "powered_by_plane_pages": "Infinity Planning Pages-ის მხარდაჭერით",
   "please_select_at_least_one_invitation": "გთხოვთ, აირჩიოთ მინიმუმ ერთი მოწვევა.",
   "please_select_at_least_one_invitation_description": "გთხოვთ, აირჩიოთ მინიმუმ ერთი მოწვევა სამუშაო სივრცეში შესაერთებლად.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "ჩვენ ვხედავთ, რომ ვიღაცამ მოგიწვიათ სამუშაო სივრცეში შესაერთებლად",
@@ -826,7 +826,7 @@
     "edited_by": "დარედაქტირებულია"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane არ გაუშვია. ეს შეიძლება იყოს იმის გამო, რომ ერთი ან მეტი Plane სერვისი ვერ გაუშვეს.",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning არ გაუშვია. ეს შეიძლება იყოს იმის გამო, რომ ერთი ან მეტი Infinity Planning სერვისი ვერ გაუშვეს.",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "აირჩიეთ ლოგების ნახვა setup.sh-დან და Docker ლოგებიდან დასარწმუნებლად."
   },
   "customize_navigation": "Customize navigation",
@@ -838,7 +838,7 @@
   "pin": "Pin",
   "unpin": "Unpin",
   "workspace_dashboards": "Dashboards",
-  "pi_chat": "Plane AI",
+  "pi_chat": "Infinity Planning AI",
   "in_app": "In-app",
   "forms": "Forms",
   "milestones": "Milestones",
@@ -874,5 +874,63 @@
       "short_description": "ექსპორტი json-ად"
     }
   },
-  "labels_count": "{count, plural, one {# იარლიყი} other {# იარლიყი}}"
+  "labels_count": "{count, plural, one {# იარლიყი} other {# იარლიყი}}",
+  "infinity": {
+    "more": "More",
+    "hide": "Hide",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "auth": {
+      "sign_in_header": "Welcome back.",
+      "sign_in_sub_header": "Sign in to Infinity Planning.",
+      "sign_up_header": "Welcome.",
+      "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "AI ასისტენტი",
+    "open": "AI ასისტენტის გახსნა",
+    "subtitle": "დასვით კითხვები თქვენი პროექტების პროგრესის, ვადებისა და დატვირთვის შესახებ.",
+    "placeholder": "დასვით კითხვა თქვენი პროექტების შესახებ…",
+    "send": "გაგზავნა",
+    "stop": "შეჩერება",
+    "new_conversation": "ახალი საუბარი",
+    "close": "დახურვა",
+    "read_only_note": "მხოლოდ წაკითხვა: ასისტენტი ათვალიერებს თქვენს პროექტებს, მაგრამ არასდროს ცვლის მათ.",
+    "context_work_item": "ამ სამუშაო ელემენტის შესახებ",
+    "context_project": "ამ პროექტის შესახებ",
+    "suggestions": {
+      "overdue": "რომელი სამუშაო ელემენტებია ვადაგადაცილებული?",
+      "workload": "ვის აქვს ყველაზე მეტი ღია სამუშაო ელემენტი?",
+      "projects": "შემიჯამეთ ჩემი პროექტების მდგომარეობა."
+    },
+    "actions": {
+      "work_item": "ჰკითხეთ AI-ს",
+      "project": "დაგვიანებების ანგარიში (AI)"
+    },
+    "prompts": {
+      "work_item": "როგორია ამ სამუშაო ელემენტის მდგომარეობა? დაცულია თუ არა ვადა?",
+      "project": "შემიჯამეთ ამ პროექტის მდგომარეობა: პროგრესი, დაგვიანებები და შესაბამისი პირები."
+    },
+    "tools": {
+      "list_projects": "იტვირთება თქვენი პროექტები…",
+      "search_work_items": "მიმდინარეობს სამუშაო ელემენტების ძიება…",
+      "get_work_item": "იკითხება სამუშაო ელემენტი…",
+      "project_progress": "ითვლება პროექტის პროგრესი…",
+      "deadline_report": "მოწმდება ვადები…",
+      "member_workload": "იზომება დატვირთვა…",
+      "default": "მიმდინარეობს მონაცემების ძიება…"
+    },
+    "errors": {
+      "refusal": "ასისტენტმა უარყო ეს მოთხოვნა. სცადეთ მისი სხვაგვარად ჩამოყალიბება.",
+      "truncated": "პასუხი ძალიან გრძელი იყო და შემოკლდა. დასვით უფრო კონკრეტული კითხვა.",
+      "too_many_steps": "კითხვას ძალიან ბევრი ძიება დასჭირდა. დასვით უფრო კონკრეტული კითხვა.",
+      "invalid_api_key": "Anthropic-ის API გასაღები არასწორია. სთხოვეთ ინსტანციის ადმინისტრატორს მისი განახლება.",
+      "permission_denied": "Anthropic-ის API გასაღებს არ აქვს წვდომა ამ მოდელზე.",
+      "model_not_found": "კონფიგურირებული Claude მოდელი არ არსებობს. სთხოვეთ ინსტანციის ადმინისტრატორს შემოწმება.",
+      "rate_limited": "Claude-ზე ამჟამად ძალიან ბევრი მოთხოვნაა. სცადეთ ცოტა ხანში.",
+      "connection_error": "Claude-თან დაკავშირება ვერ მოხერხდა. შეამოწმეთ სერვერის ინტერნეტ-კავშირი.",
+      "generic": "რაღაც შეცდომა მოხდა. სცადეთ ხელახლა."
+    }
+  }
 }

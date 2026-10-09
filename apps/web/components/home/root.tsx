@@ -11,9 +11,7 @@ import useSWR from "swr";
 import { ContentWrapper } from "@plane/blocks/layout";
 // hooks
 import { useHome } from "@/hooks/store/use-home";
-import { useUserProfile, useUser } from "@/hooks/store/user";
-// plane web imports
-import { TourRoot } from "@/components/onboarding/tour/root";
+import { useUser } from "@/hooks/store/user";
 // local imports
 import { DashboardWidgets } from "./home-dashboard-widgets";
 import { UserGreetingsView } from "./user-greetings";
@@ -23,7 +21,6 @@ export const WorkspaceHomeView = observer(function WorkspaceHomeView() {
   // store hooks
   const { workspaceSlug } = useParams();
   const { data: currentUser } = useUser();
-  const { data: currentUserProfile, updateTourCompleted } = useUserProfile();
   const { fetchWidgets } = useHome();
 
   useSWR(
@@ -36,31 +33,16 @@ export const WorkspaceHomeView = observer(function WorkspaceHomeView() {
     }
   );
 
-  const handleTourCompleted = async () => {
-    try {
-      await updateTourCompleted();
-    } catch (error) {
-      console.error("Error updating tour completed", error);
-    }
-  };
-
-  // TODO: refactor loader implementation
+  // Plane's product tour is not shown: it presents cycles and modules, which Infinity Planning hides.
   return (
     <>
-      {currentUserProfile && !currentUserProfile.is_tour_completed && (
-        <div className="fixed top-0 left-0 z-20 grid h-full w-full place-items-center overflow-y-auto bg-backdrop transition-opacity">
-          <TourRoot onComplete={handleTourCompleted} />
+      <HomePeekOverviewsRoot />
+      <ContentWrapper className="mx-auto scrollbar-hide gap-6 bg-surface-1 px-page-x">
+        <div className="mx-auto w-full max-w-[800px]">
+          {currentUser && <UserGreetingsView user={currentUser} />}
+          <DashboardWidgets />
         </div>
-      )}
-      <>
-        <HomePeekOverviewsRoot />
-        <ContentWrapper className="mx-auto scrollbar-hide gap-6 bg-surface-1 px-page-x">
-          <div className="mx-auto w-full max-w-[800px]">
-            {currentUser && <UserGreetingsView user={currentUser} />}
-            <DashboardWidgets />
-          </div>
-        </ContentWrapper>
-      </>
+      </ContentWrapper>
     </>
   );
 });

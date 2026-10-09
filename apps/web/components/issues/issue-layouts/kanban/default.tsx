@@ -4,8 +4,12 @@
  * See the LICENSE file for details.
  */
 
+import { useCallback } from "react";
 import type { MutableRefObject } from "react";
 import { observer } from "mobx-react";
+import { useParams } from "next/navigation";
+import { EUserPermissionsLevel } from "@plane/constants";
+import { EUserProjectRoles } from "@plane/types";
 import type {
   GroupByColumnTypes,
   IGroupByColumn,
@@ -20,11 +24,14 @@ import type {
 } from "@plane/types";
 // constants
 import { ContentWrapper } from "@plane/blocks/layout";
+import { getCurrentStateSequence } from "@plane/utils";
 // components
 import RenderIfVisible from "@/components/core/render-if-visible-HOC";
 import { KanbanColumnLoader } from "@/components/ui/loader/layouts/kanban-layout-loader";
 // hooks
 import { useKanbanView } from "@/hooks/store/use-kanban-view";
+import { useProjectState } from "@/hooks/store/use-project-state";
+import { useUserPermissions } from "@/hooks/store/user";
 import { useIssueStoreType } from "@/hooks/use-issue-layout-store";
 // types
 // parent components
@@ -33,6 +40,9 @@ import type { TRenderQuickActions } from "../list/list-view-types";
 import type { GroupDropLocation } from "../utils";
 import { getGroupByColumns, isWorkspaceLevel, getApproximateCardHeight } from "../utils";
 // components
+import { KanbanAddColumn } from "./add-column";
+import { DraggableKanbanColumn } from "./draggable-column";
+import type { TKanbanColumnDropEdge } from "./draggable-column";
 import { HeaderGroupByCard } from "./headers/group-by-card";
 import { KanbanGroup } from "./kanban-group";
 
@@ -105,6 +115,54 @@ export const KanBan = observer(function KanBan(props: IKanBan) {
   const isDragDisabled = !issueKanBanView?.getCanUserDragDrop(group_by, sub_group_by);
 
   const { getIsWorkflowWorkItemCreationDisabled } = useWorkFlowFDragNDrop(group_by, sub_group_by);
+  const { workspaceSlug: routerWorkspaceSlug, projectId: routerProjectId } = useParams();
+  const { getProjectStates, getStateById, moveStatePosition } = useProjectState();
+  const { allowPermissions } = useUserPermissions();
+  const workspaceSlug = routerWorkspaceSlug?.toString();
+  const projectId = routerProjectId?.toString();
+  // Columns of a project board grouped by state are the project's states: project admins can reorder and add them.
+  const canManageColumns =
+    group_by === "state" &&
+    !sub_group_by &&
+    !isEpic &&
+    !isWorkspaceLevel(storeType) &&
+    !!workspaceSlug &&
+    !!projectId &&
+    allowPermissions([EUserProjectRoles.ADMIN], EUserPermissionsLevel.PROJECT, workspaceSlug, projectId);
+
+  const handleColumnReorder = useCallback(
+    (sourceStateId: string, targetStateId: string, edge: TKanbanColumnDropEdge) => {
+      if (!workspaceSlug || !projectId) return;
+      const sourceState = getStateById(sourceStateId);
+      const columns = (getProjectStates(projectId) ?? []).filter((state) => state.id !== sourceStateId);
+      const targetIndex = columns.findIndex((state) => state.id === targetStateId);
+      if (!sourceState || targetIndex === -1) return;
+
+      // States are ordered by category first, so the slot between two categories can be reached from either side.
+      // Prefer the side that keeps the moved column in its current category.
+      let anchorIndex = targetIndex;
+      let anchorEdge = edge;
+      if (columns[targetIndex].group !== sourceState.group) {
+        const neighbourIndex = edge === "left" ? targetIndex - 1 : targetIndex + 1;
+        if (columns[neighbourIndex]?.group === sourceState.group) {
+          anchorIndex = neighbourIndex;
+          anchorEdge = edge === "left" ? "right" : "left";
+        }
+      }
+      const anchor = columns[anchorIndex];
+      const sequence = getCurrentStateSequence(
+        columns.filter((state) => state.group === anchor.group),
+        { groupKey: anchor.group, id: anchor.id },
+        anchorEdge === "left" ? "top" : "bottom"
+      );
+      void moveStatePosition(workspaceSlug, projectId, sourceStateId, {
+        id: sourceStateId,
+        group: anchor.group,
+        sequence,
+      });
+    },
+    [workspaceSlug, projectId, getStateById, getProjectStates, moveStatePosition]
+  );
 
   const list = getGroupByColumns({
     groupBy: group_by as GroupByColumnTypes,
@@ -159,14 +217,17 @@ export const KanBan = observer(function KanBan(props: IKanBan) {
           const groupHeight = issueLength * approximateCardHeight;
 
           return (
-            <div
+            <DraggableKanbanColumn
               key={subList.id}
+              columnId={subList.id}
+              isEnabled={canManageColumns}
+              onReorder={handleColumnReorder}
               className={`group relative flex flex-shrink-0 flex-col ${
                 groupByVisibilityToggle.showIssues ? `w-[350px]` : ``
               } `}
-            >
-              {sub_group_by === null && (
-                <div className="sticky top-0 z-[2] w-full flex-shrink-0 bg-surface-2 py-1">
+              headerClassName="sticky top-0 z-[2] w-full flex-shrink-0 bg-surface-2 py-1"
+              header={
+                sub_group_by === null && (
                   <HeaderGroupByCard
                     sub_group_by={sub_group_by}
                     group_by={group_by}
@@ -185,9 +246,9 @@ export const KanBan = observer(function KanBan(props: IKanBan) {
                     handleCollapsedGroups={handleCollapsedGroups}
                     isEpic={isEpic}
                   />
-                </div>
-              )}
-
+                )
+              }
+            >
               {groupByVisibilityToggle.showIssues && (
                 <RenderIfVisible
                   verticalOffset={100}
@@ -231,9 +292,12 @@ export const KanBan = observer(function KanBan(props: IKanBan) {
                   />
                 </RenderIfVisible>
               )}
-            </div>
+            </DraggableKanbanColumn>
           );
         })}
+      {canManageColumns && workspaceSlug && projectId && (
+        <KanbanAddColumn workspaceSlug={workspaceSlug} projectId={projectId} />
+      )}
     </ContentWrapper>
   );
 });

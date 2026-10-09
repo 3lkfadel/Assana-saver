@@ -1,12 +1,12 @@
 {
-  "theme_color": "#3579f6",
-  "background_color": "#ffffff",
+  "theme_color": "#2A2D2F",
+  "background_color": "#F5F9FA",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Plane | Accelerate software development with peace.",
-  "short_name": "Plane",
-  "description": "Plane accelerated the software development by order of magnitude for agencies and product companies.",
+  "name": "Infinity Planning",
+  "short_name": "Infinity Planning",
+  "description": "Gestion des tâches et des projets d'Infinity Africa Group.",
   "icons": [
     {
       "src": "/icon-192x192.png",

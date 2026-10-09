@@ -5,7 +5,7 @@
       "not_right_now": "Agora não",
       "create_project": {
         "title": "Criar um projeto",
-        "description": "A maioria das coisas começa com um projeto no Plane.",
+        "description": "A maioria das coisas começa com um projeto no Infinity Planning.",
         "cta": "Começar"
       },
       "invite_team": {
@@ -19,7 +19,7 @@
         "cta": "Configurar este espaço de trabalho"
       },
       "personalize_account": {
-        "title": "Personalize o Plane.",
+        "title": "Personalize o Infinity Planning.",
         "description": "Escolha sua foto, cores e muito mais.",
         "cta": "Personalizar agora"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "Novidades no Plane"
+      "title": "Novidades no Infinity Planning"
     },
     "quick_tutorial": {
       "title": "Tutorial rápido"
@@ -72,6 +72,11 @@
       "trial_ends_in_days": "O teste termina em {days, plural, one {# dia} other {# dias}}",
       "start_subscription": "Iniciar assinatura",
       "explore_business_features": "Explorar recursos Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

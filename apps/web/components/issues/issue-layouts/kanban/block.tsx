@@ -25,6 +25,7 @@ import { cn, generateWorkItemLink } from "@plane/utils";
 // components
 import RenderIfVisible from "@/components/core/render-if-visible-HOC";
 import { HIGHLIGHT_CLASS, getIssueBlockId } from "@/components/issues/issue-layouts/utils";
+import { isKanbanColumnDrag } from "./draggable-column";
 import { IssueIdentifier } from "@/components/issues/issue-detail/issue-identifier";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
@@ -56,6 +57,7 @@ interface IssueBlockProps {
 interface IssueDetailsBlockProps {
   cardRef: React.RefObject<HTMLElement | null>;
   issue: TIssue;
+  groupId: string;
   displayProperties: IIssueDisplayProperties | undefined;
   updateIssue: ((projectId: string | null, issueId: string, data: Partial<TIssue>) => Promise<void>) | undefined;
   quickActions: TRenderQuickActions;
@@ -64,7 +66,7 @@ interface IssueDetailsBlockProps {
 }
 
 const KanbanIssueDetailsBlock = observer(function KanbanIssueDetailsBlock(props: IssueDetailsBlockProps) {
-  const { cardRef, issue, updateIssue, quickActions, isReadOnly, displayProperties, isEpic = false } = props;
+  const { cardRef, issue, groupId, updateIssue, quickActions, isReadOnly, displayProperties, isEpic = false } = props;
   // refs
   const menuActionRef = useRef<HTMLButtonElement | null>(null);
   // states
@@ -124,7 +126,7 @@ const KanbanIssueDetailsBlock = observer(function KanbanIssueDetailsBlock(props:
       </div>
 
       <Tooltip label={issue.name} layout="stacked" disabled={isMobile}>
-        <div className="line-clamp-1 w-full text-body-sm-medium text-primary">
+        <div className="line-clamp-2 w-full text-body-sm-medium text-primary">
           <span>{issue.name}</span>
         </div>
       </Tooltip>
@@ -137,6 +139,9 @@ const KanbanIssueDetailsBlock = observer(function KanbanIssueDetailsBlock(props:
         updateIssue={updateIssue}
         isReadOnly={isReadOnly}
         isEpic={isEpic}
+        compact
+        // the column header already names the state when the board is grouped by state
+        hideState={issue.state_id === groupId}
       />
     </>
   );
@@ -222,7 +227,8 @@ export const KanbanIssueBlock = observer(function KanbanIssueBlock(props: IssueB
       }),
       dropTargetForElements({
         element,
-        canDrop: ({ source }) => source?.data?.id !== issue?.id && canDropOverIssue,
+        canDrop: ({ source }) =>
+          !isKanbanColumnDrag(source?.data) && source?.data?.id !== issue?.id && canDropOverIssue,
         getData: () => ({ id: issue?.id, type: "ISSUE" }),
         onDragEnter: () => {
           setIsDraggingOverBlock(true);
@@ -284,6 +290,7 @@ export const KanbanIssueBlock = observer(function KanbanIssueBlock(props: IssueB
             <KanbanIssueDetailsBlock
               cardRef={cardRef}
               issue={issue}
+              groupId={groupId}
               displayProperties={displayProperties}
               updateIssue={updateIssue}
               quickActions={quickActions}

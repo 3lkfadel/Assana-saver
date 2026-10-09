@@ -245,7 +245,7 @@
   "full_changelog": "完整更新日誌",
   "support": "支援",
   "forum": "Forum",
-  "powered_by_plane_pages": "由 Plane Pages 提供",
+  "powered_by_plane_pages": "由 Infinity Planning Pages 提供",
   "please_select_at_least_one_invitation": "請至少選擇一個邀請。",
   "please_select_at_least_one_invitation_description": "請至少選擇一個邀請加入工作區。",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "我們發現有人邀請您加入工作區",
@@ -826,7 +826,7 @@
     "edited_by": "編輯者"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane 未能啟動。這可能是因為一個或多個 Plane 服務啟動失敗。",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning 未能啟動。這可能是因為一個或多個 Infinity Planning 服務啟動失敗。",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "從 setup.sh 和 Docker 日誌中選擇 View Logs 來確認。"
   },
   "customize_navigation": "自訂導覽",
@@ -874,5 +874,63 @@
       "short_description": "匯出為 JSON"
     }
   },
-  "labels_count": "{count, plural, one {# 個標籤} other {# 個標籤}}"
+  "labels_count": "{count, plural, one {# 個標籤} other {# 個標籤}}",
+  "infinity": {
+    "more": "More",
+    "hide": "Hide",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "auth": {
+      "sign_in_header": "Welcome back.",
+      "sign_in_sub_header": "Sign in to Infinity Planning.",
+      "sign_up_header": "Welcome.",
+      "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "AI 助理",
+    "open": "開啟 AI 助理",
+    "subtitle": "詢問專案的進度、截止日期與工作量。",
+    "placeholder": "就您的專案提出問題…",
+    "send": "傳送",
+    "stop": "停止",
+    "new_conversation": "新對話",
+    "close": "關閉",
+    "read_only_note": "唯讀：助理只會檢視您的專案，不會進行任何修改。",
+    "context_work_item": "關於此工作事項",
+    "context_project": "關於此專案",
+    "suggestions": {
+      "overdue": "哪些工作事項已逾期？",
+      "workload": "誰的未完成工作事項最多？",
+      "projects": "請為我總結專案的現況。"
+    },
+    "actions": {
+      "work_item": "詢問 AI",
+      "project": "延遲報告（AI）"
+    },
+    "prompts": {
+      "work_item": "此工作事項的進展如何？是否如期完成？",
+      "project": "請總結此專案的現況：進度、延遲情形及相關人員。"
+    },
+    "tools": {
+      "list_projects": "正在列出您的專案…",
+      "search_work_items": "正在搜尋工作事項…",
+      "get_work_item": "正在讀取工作事項…",
+      "project_progress": "正在計算專案進度…",
+      "deadline_report": "正在檢查截止日期…",
+      "member_workload": "正在統計工作量…",
+      "default": "正在查詢您的資料…"
+    },
+    "errors": {
+      "refusal": "助理拒絕了此請求，請嘗試換個說法。",
+      "truncated": "回答過長已被截斷，請提出更具體的問題。",
+      "too_many_steps": "此問題需要的查詢過多，請提出更具體的問題。",
+      "invalid_api_key": "Anthropic API 金鑰無效，請聯絡執行個體管理員更新。",
+      "permission_denied": "Anthropic API 金鑰無權存取此模型。",
+      "model_not_found": "所設定的 Claude 模型不存在，請聯絡執行個體管理員檢查。",
+      "rate_limited": "目前對 Claude 的請求過多，請稍後再試。",
+      "connection_error": "無法連線到 Claude，請檢查伺服器的網路連線。",
+      "generic": "發生錯誤，請再試一次。"
+    }
+  }
 }

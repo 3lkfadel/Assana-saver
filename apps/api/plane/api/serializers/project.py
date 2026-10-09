@@ -13,6 +13,7 @@ import re
 # Module imports
 from plane.db.models import Project, ProjectIdentifier, WorkspaceMember, State, Estimate
 
+from plane.utils.disabled_features import DISABLED_PROJECT_FIELDS
 from plane.utils.content_validator import (
     validate_html_content,
 )
@@ -102,6 +103,7 @@ class ProjectCreateSerializer(BaseSerializer):
             "created_by",
             "updated_by",
             "logo_props",
+            *DISABLED_PROJECT_FIELDS,
         ]
 
     def validate(self, data):

@@ -28,7 +28,21 @@
     "pi_chat": "인공지능 챗",
     "epics": "에픽스",
     "upgrade_plan": "업그레이드 플랜",
-    "plane_pro": "플레인 프로",
-    "business": "비즈니스"
+    "plane_pro": "Infinity Planning 프로",
+    "business": "비즈니스",
+    "rename_folder": "폴더 이름 변경"
+  },
+  "top_navigation": {
+    "search_commands": "명령 검색..."
+  },
+  "app_rail": {
+    "icon_only": "아이콘만",
+    "icon_with_name": "아이콘과 이름",
+    "dock": "앱 레일 고정",
+    "undock": "앱 레일 고정 해제"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "더보기 메뉴에 숨기기",
+    "show": "표시"
   }
 }

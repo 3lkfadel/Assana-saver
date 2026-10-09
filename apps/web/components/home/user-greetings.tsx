@@ -7,7 +7,6 @@
 // plane types
 import { useTranslation } from "@plane/i18n";
 import type { IUser } from "@plane/types";
-// plane ui
 // hooks
 import { useCurrentTime } from "@/hooks/use-current-time";
 
@@ -15,47 +14,38 @@ export interface IUserGreetingsView {
   user: IUser;
 }
 
+/** The greeting of the home page, in Jost, with the date in the language of the interface. */
 export function UserGreetingsView(props: IUserGreetingsView) {
   const { user } = props;
   // current time hook
   const { currentTime } = useCurrentTime();
   // store hooks
-  const { t } = useTranslation();
+  const { t, currentLocale } = useTranslation();
 
-  const hour = new Intl.DateTimeFormat("en-US", {
-    hour12: false,
-    hour: "numeric",
-  }).format(currentTime);
+  const timeZone = user?.user_timezone || undefined;
+  const hour = Number(
+    new Intl.DateTimeFormat("en-US", { timeZone, hour: "numeric", hourCycle: "h23" }).format(currentTime)
+  );
+  const greeting = hour < 12 ? "morning" : hour < 18 ? "afternoon" : "evening";
 
-  const date = new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-  }).format(currentTime);
-
-  const weekDay = new Intl.DateTimeFormat("en-US", {
+  const day = new Intl.DateTimeFormat(currentLocale, {
+    timeZone,
     weekday: "long",
+    day: "numeric",
+    month: "long",
   }).format(currentTime);
-
-  const timeString = new Intl.DateTimeFormat("en-US", {
-    timeZone: user?.user_timezone,
-    hour12: false, // Use 24-hour format
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(currentTime);
-
-  const greeting = parseInt(hour, 10) < 12 ? "morning" : parseInt(hour, 10) < 18 ? "afternoon" : "evening";
+  const time = new Intl.DateTimeFormat(currentLocale, { timeZone, hour: "2-digit", minute: "2-digit" }).format(
+    currentTime
+  );
 
   return (
-    <div className="my-6 flex flex-col items-center">
-      <h2 className="text-center text-20 font-semibold">
-        {t("good")} {t(greeting)}, {user?.first_name} {user?.last_name}
+    <div className="mt-10 mb-8 flex flex-col gap-1">
+      <p className="text-body-sm-medium text-tertiary first-letter:uppercase">
+        {day}, {time}
+      </p>
+      <h2 className="font-heading text-32 leading-tight font-medium tracking-tight text-primary">
+        {t(`home.greeting.${greeting}`, { name: user?.first_name || user?.display_name })}
       </h2>
-      <h5 className="flex items-center gap-2 font-medium text-placeholder">
-        <div>{greeting === "morning" ? "🌤️" : greeting === "afternoon" ? "🌥️" : "🌙️"}</div>
-        <div>
-          {weekDay}, {date} {timeString}
-        </div>
-      </h5>
     </div>
   );
 }

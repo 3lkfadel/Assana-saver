@@ -7,6 +7,7 @@
 import React, { useMemo, useState } from "react";
 import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
+import { useTranslation } from "@plane/i18n";
 import type { IIssueLabel } from "@plane/types";
 // components
 import { Loader } from "@plane/blocks/skeleton";
@@ -27,6 +28,7 @@ type Props = {
 };
 
 export const FilterLabels = observer(function FilterLabels(props: Props) {
+  const { t } = useTranslation();
   const { appliedFilters, handleUpdate, labels, searchQuery } = props;
 
   const [itemsToRender, setItemsToRender] = useState(5);
@@ -68,7 +70,7 @@ export const FilterLabels = observer(function FilterLabels(props: Props) {
                 {sortedOptions.slice(0, itemsToRender).map((label) => (
                   <FilterOption
                     key={label?.id}
-                    isChecked={appliedFilters?.includes(label?.id) ? true : false}
+                    isChecked={Boolean(appliedFilters?.includes(label?.id))}
                     onClick={() => handleUpdate(label?.id)}
                     icon={<LabelIcons color={label.color} />}
                     title={label.name}
@@ -85,7 +87,7 @@ export const FilterLabels = observer(function FilterLabels(props: Props) {
                 )}
               </>
             ) : (
-              <p className="text-11 text-placeholder italic">No matches found</p>
+              <p className="text-11 text-placeholder italic">{t("common.search.no_matches_found")}</p>
             )
           ) : (
             <Loader className="space-y-2">

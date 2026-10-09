@@ -245,7 +245,7 @@
   "full_changelog": "Journal des modifications complet",
   "support": "Support",
   "forum": "Forum",
-  "powered_by_plane_pages": "Propulsé par Plane Pages",
+  "powered_by_plane_pages": "Propulsé par Infinity Planning",
   "please_select_at_least_one_invitation": "Veuillez sélectionner au moins une invitation.",
   "please_select_at_least_one_invitation_description": "Veuillez sélectionner au moins une invitation pour rejoindre l’espace de travail.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "Nous voyons que quelqu’un vous a invité à rejoindre un espace de travail",
@@ -296,8 +296,8 @@
   "medium": "Moyen",
   "low": "Faible",
   "members": "Membres",
-  "assignee": "Acteur",
-  "assignees": "Acteurs",
+  "assignee": "Responsable",
+  "assignees": "Responsables",
   "subscriber": "{count, plural, one{# Abonné} other{# Abonnés}}",
   "you": "Vous",
   "labels": "Étiquettes",
@@ -440,8 +440,8 @@
     "admins": "Administrateurs",
     "users": "Utilisateurs",
     "guests": "Invités",
-    "assignees": "Acteurs",
-    "assignee": "Acteur",
+    "assignees": "Responsables",
+    "assignee": "Responsable",
     "created_by": "Créé par",
     "none": "Aucun",
     "link": "Lien",
@@ -826,7 +826,7 @@
     "edited_by": "Modifié par"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane n’a pas démarré. Cela pourrait être dû au fait qu’un ou plusieurs services Plane ont échoué à démarrer.",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning n’a pas démarré. Cela pourrait être dû au fait qu’un ou plusieurs services Infinity Planning ont échoué à démarrer.",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "Choisissez View Logs depuis setup.sh et les logs Docker pour en être sûr."
   },
   "customize_navigation": "Personnaliser la navigation",
@@ -838,7 +838,7 @@
   "pin": "Épingler",
   "unpin": "Désépingler",
   "workspace_dashboards": "Tableaux de bord",
-  "pi_chat": "Plane AI",
+  "pi_chat": "Infinity Planning AI",
   "in_app": "Dans l'application",
   "forms": "Formulaires",
   "milestones": "Jalons",
@@ -874,5 +874,63 @@
       "short_description": "Exporter en json"
     }
   },
-  "labels_count": "{count, plural, one {# étiquette} many {# étiquettes} other {# étiquettes}}"
+  "labels_count": "{count, plural, one {# étiquette} many {# étiquettes} other {# étiquettes}}",
+  "infinity": {
+    "more": "Plus",
+    "hide": "Masquer",
+    "sign_in": "Se connecter",
+    "sign_up": "S’inscrire",
+    "auth": {
+      "sign_in_header": "Bon retour.",
+      "sign_in_sub_header": "Connectez-vous à Infinity Planning.",
+      "sign_up_header": "Bienvenue.",
+      "sign_up_sub_header": "Créez votre compte Infinity Planning."
+    }
+  },
+  "assistant": {
+    "title": "Assistant IA",
+    "open": "Ouvrir l'assistant IA",
+    "subtitle": "Posez vos questions sur l'avancement, les échéances et la charge de vos projets.",
+    "placeholder": "Posez une question sur vos projets…",
+    "send": "Envoyer",
+    "stop": "Arrêter",
+    "new_conversation": "Nouvelle conversation",
+    "close": "Fermer",
+    "read_only_note": "Lecture seule : l'assistant consulte vos projets mais ne les modifie jamais.",
+    "context_work_item": "À propos de cet élément de travail",
+    "context_project": "À propos de ce projet",
+    "suggestions": {
+      "overdue": "Quels éléments de travail sont en retard ?",
+      "workload": "Qui a le plus d'éléments de travail ouverts ?",
+      "projects": "Faites-moi un point sur mes projets."
+    },
+    "actions": {
+      "work_item": "Demander à l'IA",
+      "project": "Rapport des retards (IA)"
+    },
+    "prompts": {
+      "work_item": "Où en est cet élément de travail ? A-t-il respecté son échéance ?",
+      "project": "Faites le point sur ce projet : avancement, retards et personnes concernées."
+    },
+    "tools": {
+      "list_projects": "Liste de vos projets…",
+      "search_work_items": "Recherche des éléments de travail…",
+      "get_work_item": "Lecture de l'élément de travail…",
+      "project_progress": "Calcul de l'avancement du projet…",
+      "deadline_report": "Vérification des échéances…",
+      "member_workload": "Mesure de la charge de travail…",
+      "default": "Recherche dans vos données…"
+    },
+    "errors": {
+      "refusal": "L'assistant a refusé cette demande. Essayez de la reformuler.",
+      "truncated": "La réponse était trop longue et a été coupée. Posez une question plus précise.",
+      "too_many_steps": "La question a nécessité trop de recherches. Posez une question plus précise.",
+      "invalid_api_key": "La clé API Anthropic n'est pas valide. Demandez à un administrateur de l'instance de la mettre à jour.",
+      "permission_denied": "La clé API Anthropic n'a pas accès à ce modèle.",
+      "model_not_found": "Le modèle Claude configuré n'existe pas. Demandez à un administrateur de l'instance de le vérifier.",
+      "rate_limited": "Trop de requêtes vers Claude pour le moment. Réessayez dans un instant.",
+      "connection_error": "Impossible de joindre Claude. Vérifiez la connexion Internet du serveur.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  }
 }

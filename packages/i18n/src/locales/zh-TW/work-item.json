@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "顯示子工作事項",
         "show_empty_groups": "顯示空群組"
-      }
+      },
+      "sub_group_by": "子分組依據"
     },
     "layouts": {
       "ordered_by_label": "此版面配置依據以下條件排序",
@@ -81,6 +82,14 @@
         "calendar": "日曆版面配置",
         "spreadsheet": "試算表版面配置",
         "gantt": "甘特圖版面配置"
+      },
+      "board_columns": {
+        "add_column": "新增欄",
+        "column_name": "欄名稱",
+        "category": "類別",
+        "created": "已建立欄。",
+        "already_exists": "已存在同名的欄。",
+        "create_error": "無法建立欄，請再試一次。"
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "點擊反對",
       "click_to_view_upvotes": "點擊查看贊成票",
       "click_to_view_downvotes": "點擊查看反對票"
+    },
+    "view_not_found": {
+      "title": "檢視不存在",
+      "description": "您尋找的檢視不存在，或您沒有檢視權限。"
     }
   },
   "sub_work_item": {

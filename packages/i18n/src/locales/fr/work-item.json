@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Afficher les sous-éléments",
         "show_empty_groups": "Afficher les groupes vides"
-      }
+      },
+      "sub_group_by": "Sous-grouper par"
     },
     "layouts": {
       "ordered_by_label": "Cette disposition est triée par",
@@ -81,6 +82,14 @@
         "calendar": "Disposition en calendrier",
         "spreadsheet": "Disposition en tableau",
         "gantt": "Disposition en chronologie"
+      },
+      "board_columns": {
+        "add_column": "Ajouter une colonne",
+        "column_name": "Nom de la colonne",
+        "category": "Catégorie",
+        "created": "Colonne créée.",
+        "already_exists": "Une colonne portant ce nom existe déjà.",
+        "create_error": "Impossible de créer la colonne. Veuillez réessayer."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "Cliquez pour voter contre",
       "click_to_view_upvotes": "Cliquez pour voir les votes pour",
       "click_to_view_downvotes": "Cliquez pour voir les votes contre"
+    },
+    "view_not_found": {
+      "title": "Cette vue n’existe pas",
+      "description": "La vue que vous cherchez n’existe pas ou vous n’avez pas l’autorisation de la consulter."
     }
   },
   "sub_work_item": {

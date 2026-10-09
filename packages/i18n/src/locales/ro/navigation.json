@@ -25,10 +25,24 @@
     "favorites": "Favorite",
     "pro": "Pro",
     "upgrade": "Treci la versiunea superioară",
-    "pi_chat": "Plane AI",
+    "pi_chat": "Infinity Planning AI",
     "epics": "Epice",
     "upgrade_plan": "Actualizare plan",
-    "plane_pro": "Plane Pro",
-    "business": "Business"
+    "plane_pro": "Infinity Planning Pro",
+    "business": "Business",
+    "rename_folder": "Redenumiți dosarul"
+  },
+  "top_navigation": {
+    "search_commands": "Căutați comenzi..."
+  },
+  "app_rail": {
+    "icon_only": "Doar pictogramă",
+    "icon_with_name": "Pictogramă cu nume",
+    "dock": "Andocați bara de aplicații",
+    "undock": "Detașați bara de aplicații"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Ascundeți în meniul Mai mult",
+    "show": "Afișați"
   }
 }

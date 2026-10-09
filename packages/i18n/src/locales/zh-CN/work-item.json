@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "显示子工作项",
         "show_empty_groups": "显示空组"
-      }
+      },
+      "sub_group_by": "子分组依据"
     },
     "layouts": {
       "ordered_by_label": "此布局按以下方式排序",
@@ -81,6 +82,14 @@
         "calendar": "日历布局",
         "spreadsheet": "表格布局",
         "gantt": "时间线布局"
+      },
+      "board_columns": {
+        "add_column": "添加列",
+        "column_name": "列名称",
+        "category": "类别",
+        "created": "列已创建。",
+        "already_exists": "已存在同名的列。",
+        "create_error": "无法创建列，请重试。"
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "点击反对",
       "click_to_view_upvotes": "点击查看赞成票",
       "click_to_view_downvotes": "点击查看反对票"
+    },
+    "view_not_found": {
+      "title": "视图不存在",
+      "description": "您查找的视图不存在，或您没有查看权限。"
     }
   },
   "sub_work_item": {

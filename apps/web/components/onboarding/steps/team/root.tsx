@@ -20,7 +20,7 @@ import { AddOutline, CloseCircleOutline } from "@makeplane/propel/icons";
 import { Field } from "@makeplane/propel/components/field";
 import { Input, InputGroup } from "@makeplane/propel/components/input";
 import type { EUserPermissions } from "@plane/constants";
-import { ROLE, ROLE_DETAILS } from "@plane/constants";
+import { ROLE, ROLE_DETAILS, ASSIGNABLE_ROLE } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 import { Button } from "@makeplane/propel/components/button";
 import { Button as ButtonElement } from "@makeplane/propel/elements/button";
@@ -68,11 +68,13 @@ type TRoleOption = { key: EUserPermissions; i18n_title: string; i18n_description
 
 // services
 const workspaceService = new WorkspaceService();
-const roleOptions: TRoleOption[] = Object.entries(ROLE_DETAILS).map(([key, details]) => ({
-  key: parseInt(key) as EUserPermissions,
-  i18n_title: details.i18n_title,
-  i18n_description: details.i18n_description,
-}));
+const roleOptions: TRoleOption[] = Object.entries(ROLE_DETAILS)
+  .filter(([key]) => key in ASSIGNABLE_ROLE)
+  .map(([key, details]) => ({
+    key: parseInt(key) as EUserPermissions,
+    i18n_title: details.i18n_title,
+    i18n_description: details.i18n_description,
+  }));
 // legacy role picker opened at bottom-end (right-column trigger), so align the panel to its end edge
 const ROLE_SELECT_PLACEMENT = { side: "bottom", align: "end" } as const;
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -222,6 +224,7 @@ const InviteMemberInput = observer(function InviteMemberInput(props: InviteMembe
 });
 
 export const InviteTeamStep = observer(function InviteTeamStep(props: Props) {
+  const { t } = useTranslation();
   const { handleStepChange } = props;
 
   const [isInvitationDisabled, setIsInvitationDisabled] = useState(true);
@@ -264,15 +267,16 @@ export const InviteTeamStep = observer(function InviteTeamStep(props: Props) {
       .then(async () => {
         setToast({
           type: "success",
-          title: "Success!",
+          title: t("toast.success"),
           message: "Invitations sent successfully.",
         });
         await nextStep();
+        return undefined;
       })
       .catch((err) => {
         setToast({
           type: "error",
-          title: "Error!",
+          title: t("toast.error"),
           message: err?.error,
         });
       });
@@ -307,7 +311,7 @@ export const InviteTeamStep = observer(function InviteTeamStep(props: Props) {
     >
       <CommonOnboardingHeader
         title="Invite your teammates"
-        description="Work in plane happens best with your team. Invite them now to use Plane to its potential."
+        description="Work in Infinity Planning happens best with your team. Invite them now to use Infinity Planning to its potential."
       />
       <div className="w-full py-4 text-13">
         <div className="group relative mx-8 grid grid-cols-10 gap-4 py-2">

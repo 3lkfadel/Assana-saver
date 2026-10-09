@@ -35,6 +35,7 @@ from plane.db.models import (
 )
 from plane.db.models.project import ProjectNetwork
 from plane.utils.host import base_host
+from plane.utils.disabled_features import DEFAULT_MEMBER_ROLE, GUEST_ROLE_DISABLED_ERROR, is_guest_role
 
 
 class ProjectInvitationsViewset(BaseViewSet):
@@ -61,12 +62,15 @@ class ProjectInvitationsViewset(BaseViewSet):
         if not emails:
             return Response({"error": "Emails are required"}, status=status.HTTP_400_BAD_REQUEST)
 
+        if any(is_guest_role(email.get("role")) for email in emails):
+            return Response({"error": GUEST_ROLE_DISABLED_ERROR}, status=status.HTTP_400_BAD_REQUEST)
+
         for email in emails:
             workspace_role = WorkspaceMember.objects.filter(
                 workspace__slug=slug, member__email=email.get("email"), is_active=True
             ).role
 
-            if workspace_role in [5, 20] and workspace_role != email.get("role", 5):
+            if workspace_role in [5, 20] and workspace_role != email.get("role", DEFAULT_MEMBER_ROLE):
                 return Response({"error": "You cannot invite a user with different role than workspace role"})
 
         workspace = Workspace.objects.get(slug=slug)
@@ -85,7 +89,7 @@ class ProjectInvitationsViewset(BaseViewSet):
                             settings.SECRET_KEY,
                             algorithm="HS256",
                         ),
-                        role=email.get("role", 5),
+                        role=email.get("role", DEFAULT_MEMBER_ROLE),
                         created_by=request.user,
                     )
                 )

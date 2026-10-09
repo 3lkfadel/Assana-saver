@@ -306,7 +306,7 @@ function Breadcrumbs(props: BreadcrumbsProps) {
   };
 
   return (
-    <div className={cn("flex min-w-0 flex-grow items-center overflow-hidden", className)}>
+    <div className={cn("flex min-w-0 flex-grow items-center overflow-hidden font-heading", className)}>
       <Breadcrumb aria-label={trailLabel}>
         <BreadcrumbList>
           {!isCollapsed &&

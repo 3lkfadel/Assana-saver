@@ -2,8 +2,6 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 # See the LICENSE file for details.
 
-import random
-import string
 import json
 
 # Django imports
@@ -23,12 +21,8 @@ from plane.app.serializers import (
     EstimateReadSerializer,
 )
 from plane.utils.cache import invalidate_cache
+from plane.utils.disabled_features import ESTIMATES_DISABLED_ERROR
 from plane.bgtasks.issue_activities_task import issue_activity
-
-
-def generate_random_name(length=10):
-    letters = string.ascii_lowercase
-    return "".join(random.choice(letters) for i in range(length))
 
 
 class ProjectEstimatePointEndpoint(BaseAPIView):
@@ -62,43 +56,8 @@ class BulkEstimatePointEndpoint(BaseViewSet):
 
     @invalidate_cache(path="/api/workspaces/:slug/estimates/", url_params=True, user=False)
     def create(self, request, slug, project_id):
-        estimate = request.data.get("estimate")
-        estimate_name = estimate.get("name", generate_random_name())
-        estimate_type = estimate.get("type", "categories")
-        last_used = estimate.get("last_used", False)
-        estimate = Estimate.objects.create(
-            name=estimate_name,
-            project_id=project_id,
-            last_used=last_used,
-            type=estimate_type,
-        )
-
-        estimate_points = request.data.get("estimate_points", [])
-
-        serializer = EstimatePointSerializer(data=request.data.get("estimate_points"), many=True)
-        if not serializer.is_valid():
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        estimate_points = EstimatePoint.objects.bulk_create(
-            [
-                EstimatePoint(
-                    estimate=estimate,
-                    key=estimate_point.get("key", 0),
-                    value=estimate_point.get("value", ""),
-                    description=estimate_point.get("description", ""),
-                    project_id=project_id,
-                    workspace_id=estimate.workspace_id,
-                    created_by=request.user,
-                    updated_by=request.user,
-                )
-                for estimate_point in estimate_points
-            ],
-            batch_size=10,
-            ignore_conflicts=True,
-        )
-
-        serializer = EstimateReadSerializer(estimate)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        # Infinity Planning has no estimates: a project can never get one.
+        return Response({"error": ESTIMATES_DISABLED_ERROR}, status=status.HTTP_400_BAD_REQUEST)
 
     def retrieve(self, request, slug, project_id, estimate_id):
         estimate = Estimate.objects.get(pk=estimate_id, workspace__slug=slug, project_id=project_id)

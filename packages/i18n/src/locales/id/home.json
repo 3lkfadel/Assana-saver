@@ -5,7 +5,7 @@
       "not_right_now": "Tidak sekarang",
       "create_project": {
         "title": "Buat proyek",
-        "description": "Sebagian besar hal dimulai dengan proyek di Plane.",
+        "description": "Sebagian besar hal dimulai dengan proyek di Infinity Planning.",
         "cta": "Mulai sekarang"
       },
       "invite_team": {
@@ -19,7 +19,7 @@
         "cta": "Konfigurasi ruang kerja ini"
       },
       "personalize_account": {
-        "title": "Jadikan Plane milik Anda.",
+        "title": "Jadikan Infinity Planning milik Anda.",
         "description": "Pilih gambar Anda, warna, dan lainnya.",
         "cta": "Personalisasi sekarang"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "Baru di Plane"
+      "title": "Baru di Infinity Planning"
     },
     "quick_tutorial": {
       "title": "Tutorial cepat"
@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Uji coba berakhir dalam {days} hari",
       "start_subscription": "Mulai berlangganan",
       "explore_business_features": "Jelajahi fitur Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

@@ -4,10 +4,14 @@
  * See the LICENSE file for details.
  */
 
-import { initPromise } from "@plane/i18n";
+import { initPromise, onLanguageChange } from "@plane/i18n";
+import { setDateLocale } from "@plane/utils";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { HydratedRouter } from "react-router/dom";
+
+// Dates follow the interface language.
+onLanguageChange(setDateLocale);
 
 // Initialize i18n before hydrating (the remix-i18next pattern for React
 // Router: await init, then hydrateRoot). The server renders with an
@@ -25,4 +29,5 @@ void initPromise
         </StrictMode>
       );
     });
+    return undefined;
   });

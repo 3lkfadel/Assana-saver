@@ -25,10 +25,24 @@
     "favorites": "Favorit",
     "pro": "Pro",
     "upgrade": "Upgrade",
-    "pi_chat": "Plane AI",
+    "pi_chat": "Infinity Planning AI",
     "epics": "Epics",
     "upgrade_plan": "Tingkatkan paket",
-    "plane_pro": "Plane Pro",
-    "business": "Bisnis"
+    "plane_pro": "Infinity Planning Pro",
+    "business": "Bisnis",
+    "rename_folder": "Ganti nama folder"
+  },
+  "top_navigation": {
+    "search_commands": "Cari perintah..."
+  },
+  "app_rail": {
+    "icon_only": "Hanya ikon",
+    "icon_with_name": "Ikon dengan nama",
+    "dock": "Sematkan bilah aplikasi",
+    "undock": "Lepas sematan bilah aplikasi"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Sembunyikan di menu Lainnya",
+    "show": "Tampilkan"
   }
 }

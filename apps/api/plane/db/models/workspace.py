@@ -202,7 +202,7 @@ class WorkspaceMember(BaseModel):
         on_delete=models.CASCADE,
         related_name="member_workspace",
     )
-    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, default=5)
+    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, default=15)
     company_role = models.TextField(null=True, blank=True)
     view_props = models.JSONField(default=get_default_props)
     default_props = models.JSONField(default=get_default_props)
@@ -238,7 +238,7 @@ class WorkspaceMemberInvite(BaseModel):
     token = models.CharField(max_length=255)
     message = models.TextField(null=True)
     responded_at = models.DateTimeField(null=True)
-    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, default=5)
+    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, default=15)
 
     class Meta:
         unique_together = ["email", "workspace", "deleted_at"]

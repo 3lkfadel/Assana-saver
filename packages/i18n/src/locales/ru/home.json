@@ -5,7 +5,7 @@
       "not_right_now": "Не сейчас",
       "create_project": {
         "title": "Создать проект",
-        "description": "Большинство вещей начинаются с проекта в Plane.",
+        "description": "Большинство вещей начинаются с проекта в Infinity Planning.",
         "cta": "Начать"
       },
       "invite_team": {
@@ -19,7 +19,7 @@
         "cta": "Настроить"
       },
       "personalize_account": {
-        "title": "Персонализируйте Plane",
+        "title": "Персонализируйте Infinity Planning",
         "description": "Выберите изображение, цвета и другие параметры.",
         "cta": "Настроить сейчас"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "Новое в Plane"
+      "title": "Новое в Infinity Planning"
     },
     "quick_tutorial": {
       "title": "Быстрое обучение"
@@ -72,6 +72,11 @@
       "trial_ends_in_days": "Пробный период заканчивается через {days, plural, one {# день} few {# дня} other {# дней}}",
       "start_subscription": "Оформить подписку",
       "explore_business_features": "Изучить функции Business"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

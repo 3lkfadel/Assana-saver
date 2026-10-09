@@ -11,6 +11,8 @@ import { Button } from "@makeplane/propel/components/button";
 import { Icon } from "@makeplane/propel/components/icon";
 // utils
 import { cn } from "@plane/utils";
+// local imports
+import { InfinityEmptyMark } from "./infinity-empty-mark";
 
 type EmptyStateSize = "sm" | "base" | "lg";
 
@@ -99,11 +101,11 @@ export const DetailedEmptyState = observer(function DetailedEmptyState(props: Pr
     >
       <div className={cn("flex flex-col gap-5", sizeClasses[size])}>
         <div className="flex shrink-0 flex-col gap-1.5">
-          <h3 className={cn("text-18 font-semibold", { "font-medium": !description })}>{title}</h3>
+          <h3 className="font-heading text-20 font-medium tracking-tight">{title}</h3>
           {description && <p className="text-13">{description}</p>}
         </div>
 
-        {assetPath && <img src={assetPath} alt={title} className="h-auto w-full" loading="lazy" />}
+        {assetPath && <InfinityEmptyMark variant="panel" />}
 
         {hasButtons && (
           <div className="relative flex w-full flex-shrink-0 items-center justify-center gap-2">

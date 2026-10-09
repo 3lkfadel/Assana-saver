@@ -302,7 +302,7 @@ export const SidebarProjectsListItem = observer(function SidebarProjectsListItem
               "group/project-item relative flex w-full items-center rounded-md px-2 py-1.5 text-primary hover:bg-layer-transparent-hover",
               {
                 "bg-surface-2": isMenuActive,
-                "bg-layer-transparent-active": shouldHighlightProject,
+                "ip-nav-on bg-(--ip-nav-on) shadow-raised-100 hover:bg-(--ip-nav-on)": shouldHighlightProject,
               }
             )}
             id={`${project?.id}`}

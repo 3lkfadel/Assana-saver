@@ -28,7 +28,21 @@
     "pi_chat": "Chat AI",
     "epics": "Épicos",
     "upgrade_plan": "Atualizar plano",
-    "plane_pro": "Plane Pro",
-    "business": "Business"
+    "plane_pro": "Infinity Planning Pro",
+    "business": "Business",
+    "rename_folder": "Renomear pasta"
+  },
+  "top_navigation": {
+    "search_commands": "Pesquisar comandos..."
+  },
+  "app_rail": {
+    "icon_only": "Somente ícone",
+    "icon_with_name": "Ícone com nome",
+    "dock": "Fixar a barra de aplicativos",
+    "undock": "Desafixar a barra de aplicativos"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Ocultar no menu Mais",
+    "show": "Mostrar"
   }
 }

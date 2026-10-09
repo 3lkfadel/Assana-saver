@@ -245,7 +245,7 @@
   "full_changelog": "Nhật ký thay đổi đầy đủ",
   "support": "Hỗ trợ",
   "forum": "Forum",
-  "powered_by_plane_pages": "Được hỗ trợ bởi Plane Pages",
+  "powered_by_plane_pages": "Được hỗ trợ bởi Infinity Planning Pages",
   "please_select_at_least_one_invitation": "Vui lòng chọn ít nhất một lời mời.",
   "please_select_at_least_one_invitation_description": "Vui lòng chọn ít nhất một lời mời để tham gia không gian làm việc.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "Chúng tôi thấy có người đã mời bạn tham gia không gian làm việc",
@@ -826,7 +826,7 @@
     "edited_by": "Được chỉnh sửa bởi"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane không khởi động được. Điều này có thể do một hoặc nhiều dịch vụ Plane không khởi động được.",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning không khởi động được. Điều này có thể do một hoặc nhiều dịch vụ Infinity Planning không khởi động được.",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "Chọn View Logs từ setup.sh và log Docker để chắc chắn."
   },
   "customize_navigation": "Tùy chỉnh điều hướng",
@@ -838,7 +838,7 @@
   "pin": "Ghim",
   "unpin": "Bỏ ghim",
   "workspace_dashboards": "Bảng điều khiển",
-  "pi_chat": "Plane AI",
+  "pi_chat": "Infinity Planning AI",
   "in_app": "Trong ứng dụng",
   "forms": "Biểu mẫu",
   "milestones": "Cột mốc",
@@ -874,5 +874,63 @@
       "short_description": "Xuất sang JSON"
     }
   },
-  "labels_count": "{count, plural, one {# nhãn} other {# nhãn}}"
+  "labels_count": "{count, plural, one {# nhãn} other {# nhãn}}",
+  "infinity": {
+    "more": "More",
+    "hide": "Hide",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "auth": {
+      "sign_in_header": "Welcome back.",
+      "sign_in_sub_header": "Sign in to Infinity Planning.",
+      "sign_up_header": "Welcome.",
+      "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "Trợ lý AI",
+    "open": "Mở trợ lý AI",
+    "subtitle": "Hỏi về tiến độ, thời hạn và khối lượng công việc trong các dự án của bạn.",
+    "placeholder": "Đặt câu hỏi về các dự án của bạn…",
+    "send": "Gửi",
+    "stop": "Dừng",
+    "new_conversation": "Cuộc trò chuyện mới",
+    "close": "Đóng",
+    "read_only_note": "Chỉ đọc: trợ lý xem các dự án của bạn nhưng không bao giờ thay đổi chúng.",
+    "context_work_item": "Về mục công việc này",
+    "context_project": "Về dự án này",
+    "suggestions": {
+      "overdue": "Những mục công việc nào đang trễ hạn?",
+      "workload": "Ai có nhiều mục công việc đang mở nhất?",
+      "projects": "Tóm tắt tình trạng các dự án của tôi."
+    },
+    "actions": {
+      "work_item": "Hỏi AI",
+      "project": "Báo cáo trễ hạn (AI)"
+    },
+    "prompts": {
+      "work_item": "Tình trạng của mục công việc này thế nào? Có đúng hạn không?",
+      "project": "Tóm tắt tình trạng dự án này: tiến độ, các mục trễ hạn và những người liên quan."
+    },
+    "tools": {
+      "list_projects": "Đang liệt kê các dự án của bạn…",
+      "search_work_items": "Đang tìm mục công việc…",
+      "get_work_item": "Đang đọc mục công việc…",
+      "project_progress": "Đang tính tiến độ dự án…",
+      "deadline_report": "Đang kiểm tra thời hạn…",
+      "member_workload": "Đang đo khối lượng công việc…",
+      "default": "Đang tra cứu dữ liệu của bạn…"
+    },
+    "errors": {
+      "refusal": "Trợ lý đã từ chối yêu cầu này. Hãy thử diễn đạt lại.",
+      "truncated": "Câu trả lời quá dài và đã bị cắt. Hãy đặt câu hỏi cụ thể hơn.",
+      "too_many_steps": "Câu hỏi cần quá nhiều lượt tra cứu. Hãy đặt câu hỏi cụ thể hơn.",
+      "invalid_api_key": "Khóa API Anthropic không hợp lệ. Hãy yêu cầu quản trị viên phiên bản cập nhật khóa.",
+      "permission_denied": "Khóa API Anthropic không có quyền truy cập mô hình này.",
+      "model_not_found": "Mô hình Claude đã cấu hình không tồn tại. Hãy yêu cầu quản trị viên phiên bản kiểm tra.",
+      "rate_limited": "Hiện có quá nhiều yêu cầu gửi tới Claude. Vui lòng thử lại sau giây lát.",
+      "connection_error": "Không thể kết nối tới Claude. Hãy kiểm tra kết nối Internet của máy chủ.",
+      "generic": "Đã xảy ra lỗi. Vui lòng thử lại."
+    }
+  }
 }

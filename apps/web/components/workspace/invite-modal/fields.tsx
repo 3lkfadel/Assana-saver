@@ -10,7 +10,7 @@ import { Controller } from "react-hook-form";
 // plane imports
 import { Field } from "@makeplane/propel/components/field";
 import { Input, InputGroup } from "@makeplane/propel/components/input";
-import { ROLE } from "@plane/constants";
+import { ROLE, ASSIGNABLE_ROLE } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 import { CloseOutline } from "@makeplane/propel/icons";
 import { Select } from "@plane/blocks/select";
@@ -46,7 +46,7 @@ export const InvitationFields = observer(function InvitationFields(props: TInvit
   // derived values
   const currentWorkspaceRole = workspaceInfoBySlug(workspaceSlug.toString())?.role;
   // A member can only invite at or below their own role.
-  const roleOptions: TRoleOption[] = Object.entries(ROLE)
+  const roleOptions: TRoleOption[] = Object.entries(ASSIGNABLE_ROLE)
     .map(([key, label]) => ({ key: parseInt(key), label }))
     .filter((role) => !!currentWorkspaceRole && currentWorkspaceRole >= role.key);
 

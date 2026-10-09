@@ -5,7 +5,7 @@
       "not_right_now": "今はしない",
       "create_project": {
         "title": "プロジェクトを作成",
-        "description": "Planeのほとんどはプロジェクトから始まります。",
+        "description": "Infinity Planningのほとんどはプロジェクトから始まります。",
         "cta": "始める"
       },
       "invite_team": {
@@ -19,7 +19,7 @@
         "cta": "このワークスペースを設定"
       },
       "personalize_account": {
-        "title": "Planeを自分好みにカスタマイズ",
+        "title": "Infinity Planningを自分好みにカスタマイズ",
         "description": "プロフィール画像、カラー、その他の設定を選択してください。",
         "cta": "今すぐパーソナライズ"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "Planeの新機能"
+      "title": "Infinity Planningの新機能"
     },
     "quick_tutorial": {
       "title": "クイックチュートリアル"
@@ -72,6 +72,11 @@
       "trial_ends_in_days": "トライアル終了まであと{days}日",
       "start_subscription": "サブスクリプションを開始",
       "explore_business_features": "Business機能を探索"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

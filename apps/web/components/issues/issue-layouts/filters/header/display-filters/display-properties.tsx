@@ -47,9 +47,14 @@ export const FilterDisplayProperties = observer(function FilterDisplayProperties
         return !cycleViewDisabled;
       case "modules":
         return !moduleViewDisabled;
+      // Infinity Planning has no estimates.
+      case "estimate":
+        return false;
       default:
         return true;
     }
+    // The spread copies the shared constant instead of mutating it.
+    // oxlint-disable-next-line oxc/no-map-spread
   }).map((property) => {
     if (isEpic && property.key === "sub_issue_count") {
       return { ...property, titleTranslationKey: "issue.display.properties.work_item_count" };

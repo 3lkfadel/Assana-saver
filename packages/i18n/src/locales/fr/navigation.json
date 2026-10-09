@@ -25,10 +25,24 @@
     "favorites": "Favoris",
     "pro": "Pro",
     "upgrade": "Mettre à niveau",
-    "pi_chat": "Plane AI",
+    "pi_chat": "Infinity Planning AI",
     "epics": "Epics",
     "upgrade_plan": "Mettre à niveau",
-    "plane_pro": "Plane Pro",
-    "business": "Business"
+    "plane_pro": "Infinity Planning",
+    "business": "Business",
+    "rename_folder": "Renommer le dossier"
+  },
+  "top_navigation": {
+    "search_commands": "Rechercher des commandes…"
+  },
+  "app_rail": {
+    "icon_only": "Icône seule",
+    "icon_with_name": "Icône et nom",
+    "dock": "Ancrer la barre d’applications",
+    "undock": "Détacher la barre d’applications"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "Masquer dans le menu Plus",
+    "show": "Afficher"
   }
 }

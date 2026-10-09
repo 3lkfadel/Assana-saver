@@ -245,7 +245,7 @@
   "full_changelog": "Полный журнал изменений",
   "support": "Поддержка",
   "forum": "Forum",
-  "powered_by_plane_pages": "Работает на Plane Pages",
+  "powered_by_plane_pages": "Работает на Infinity Planning Pages",
   "please_select_at_least_one_invitation": "Пожалуйста, выберите хотя бы одно приглашение.",
   "please_select_at_least_one_invitation_description": "Для присоединения к рабочему пространству выберите хотя бы одно приглашение.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "Вы получили приглашение присоединиться к рабочему пространству",
@@ -826,7 +826,7 @@
     "edited_by": "Отредактировано"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane не запустился. Это может быть из-за того, что один или несколько сервисов Plane не смогли запуститься.",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning не запустился. Это может быть из-за того, что один или несколько сервисов Infinity Planning не смогли запуститься.",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "Выберите View Logs из setup.sh и логов Docker, чтобы убедиться."
   },
   "customize_navigation": "Настроить навигацию",
@@ -874,5 +874,63 @@
       "short_description": "Экспорт в json"
     }
   },
-  "labels_count": "{count, plural, one {# метка} few {# метки} many {# меток} other {# метки}}"
+  "labels_count": "{count, plural, one {# метка} few {# метки} many {# меток} other {# метки}}",
+  "infinity": {
+    "more": "More",
+    "hide": "Hide",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "auth": {
+      "sign_in_header": "Welcome back.",
+      "sign_in_sub_header": "Sign in to Infinity Planning.",
+      "sign_up_header": "Welcome.",
+      "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "ИИ-ассистент",
+    "open": "Открыть ИИ-ассистента",
+    "subtitle": "Задавайте вопросы о ходе работ, сроках и загрузке в Ваших проектах.",
+    "placeholder": "Задайте вопрос о Ваших проектах…",
+    "send": "Отправить",
+    "stop": "Остановить",
+    "new_conversation": "Новый разговор",
+    "close": "Закрыть",
+    "read_only_note": "Только чтение: ассистент просматривает Ваши проекты, но никогда их не изменяет.",
+    "context_work_item": "Об этом рабочем элементе",
+    "context_project": "Об этом проекте",
+    "suggestions": {
+      "overdue": "Какие рабочие элементы просрочены?",
+      "workload": "У кого больше всего открытых рабочих элементов?",
+      "projects": "Кратко опишите состояние моих проектов."
+    },
+    "actions": {
+      "work_item": "Спросить ИИ",
+      "project": "Отчёт о задержках (ИИ)"
+    },
+    "prompts": {
+      "work_item": "Каково состояние этого рабочего элемента? Соблюдён ли срок?",
+      "project": "Кратко опишите состояние этого проекта: ход работ, задержки и причастные сотрудники."
+    },
+    "tools": {
+      "list_projects": "Получение списка проектов…",
+      "search_work_items": "Поиск рабочих элементов…",
+      "get_work_item": "Чтение рабочего элемента…",
+      "project_progress": "Расчёт хода проекта…",
+      "deadline_report": "Проверка сроков…",
+      "member_workload": "Оценка загрузки…",
+      "default": "Поиск данных…"
+    },
+    "errors": {
+      "refusal": "Ассистент отклонил этот запрос. Попробуйте переформулировать его.",
+      "truncated": "Ответ оказался слишком длинным и был обрезан. Задайте более конкретный вопрос.",
+      "too_many_steps": "Для ответа потребовалось слишком много запросов. Задайте более конкретный вопрос.",
+      "invalid_api_key": "Ключ API Anthropic недействителен. Попросите администратора экземпляра обновить его.",
+      "permission_denied": "У ключа API Anthropic нет доступа к этой модели.",
+      "model_not_found": "Указанная модель Claude не существует. Попросите администратора экземпляра проверить настройки.",
+      "rate_limited": "Слишком много запросов к Claude. Повторите попытку через некоторое время.",
+      "connection_error": "Не удалось подключиться к Claude. Проверьте подключение сервера к интернету.",
+      "generic": "Что-то пошло не так. Повторите попытку."
+    }
+  }
 }

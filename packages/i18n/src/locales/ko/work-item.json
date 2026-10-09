@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "하위 작업 항목 표시",
         "show_empty_groups": "빈 그룹 표시"
-      }
+      },
+      "sub_group_by": "하위 그룹 기준"
     },
     "layouts": {
       "ordered_by_label": "이 레이아웃은 다음 기준으로 정렬됩니다",
@@ -81,6 +82,14 @@
         "calendar": "캘린더 레이아웃",
         "spreadsheet": "테이블 레이아웃",
         "gantt": "타임라인 레이아웃"
+      },
+      "board_columns": {
+        "add_column": "열 추가",
+        "column_name": "열 이름",
+        "category": "카테고리",
+        "created": "열이 생성되었습니다.",
+        "already_exists": "이 이름의 열이 이미 존재합니다.",
+        "create_error": "열을 생성할 수 없습니다. 다시 시도해 주십시오."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "클릭하여 비추천",
       "click_to_view_upvotes": "클릭하여 추천 목록 보기",
       "click_to_view_downvotes": "클릭하여 비추천 목록 보기"
+    },
+    "view_not_found": {
+      "title": "보기가 존재하지 않습니다",
+      "description": "찾고 있는 보기가 존재하지 않거나 볼 수 있는 권한이 없습니다."
     }
   },
   "sub_work_item": {

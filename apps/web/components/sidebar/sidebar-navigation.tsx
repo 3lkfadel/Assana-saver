@@ -19,7 +19,8 @@ export function SidebarNavItem(props: TSidebarNavItem) {
       className={cn(
         "group relative flex w-full cursor-pointer items-center justify-between gap-1.5 rounded-md px-2 py-1 outline-none",
         {
-          "!bg-layer-transparent-active text-primary": isActive,
+          // The active item is a frost white pill on the anthracite navigation (infinity-nav.css).
+          "ip-nav-on !bg-(--ip-nav-on) text-primary shadow-raised-100": isActive,
           "text-secondary hover:bg-layer-transparent-hover active:bg-layer-transparent-active": !isActive,
         },
         className

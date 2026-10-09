@@ -4,4 +4,4 @@
  * See the LICENSE file for details.
  */
 
-export type TInstanceAIConfigurationKeys = "LLM_API_KEY" | "LLM_MODEL";
+export type TInstanceAIConfigurationKeys = "LLM_API_KEY" | "LLM_MODEL" | "ANTHROPIC_API_KEY" | "ANTHROPIC_MODEL";

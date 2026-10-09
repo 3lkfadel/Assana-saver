@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Mostrar sub-elementos",
         "show_empty_groups": "Mostrar grupos vacíos"
-      }
+      },
+      "sub_group_by": "Subagrupar por"
     },
     "layouts": {
       "ordered_by_label": "Este diseño está ordenado por",
@@ -81,6 +82,14 @@
         "calendar": "Diseño de calendario",
         "spreadsheet": "Diseño de tabla",
         "gantt": "Diseño de línea de tiempo"
+      },
+      "board_columns": {
+        "add_column": "Agregar columna",
+        "column_name": "Nombre de la columna",
+        "category": "Categoría",
+        "created": "Columna creada.",
+        "already_exists": "Ya existe una columna con este nombre.",
+        "create_error": "No se pudo crear la columna. Inténtelo de nuevo."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "Haz clic para votar en contra",
       "click_to_view_upvotes": "Haz clic para ver los votos a favor",
       "click_to_view_downvotes": "Haz clic para ver los votos en contra"
+    },
+    "view_not_found": {
+      "title": "La vista no existe",
+      "description": "La vista que busca no existe o no tiene permiso para verla."
     }
   },
   "sub_work_item": {

@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "Subwerkitems tonen",
         "show_empty_groups": "Lege groepen tonen"
-      }
+      },
+      "sub_group_by": "Subgroeperen op"
     },
     "layouts": {
       "ordered_by_label": "Deze weergave is gesorteerd op",
@@ -81,6 +82,14 @@
         "calendar": "Agendaweergave",
         "spreadsheet": "Tabelweergave",
         "gantt": "Tijdlijnweergave"
+      },
+      "board_columns": {
+        "add_column": "Kolom toevoegen",
+        "column_name": "Kolomnaam",
+        "category": "Categorie",
+        "created": "Kolom aangemaakt.",
+        "already_exists": "Er bestaat al een kolom met deze naam.",
+        "create_error": "De kolom kon niet worden aangemaakt. Probeer het opnieuw."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "Klik om omlaag te stemmen",
       "click_to_view_upvotes": "Klik om positieve stemmen te bekijken",
       "click_to_view_downvotes": "Klik om negatieve stemmen te bekijken"
+    },
+    "view_not_found": {
+      "title": "Weergave bestaat niet",
+      "description": "De weergave die u zoekt bestaat niet of u hebt geen toestemming om deze te bekijken."
     }
   },
   "sub_work_item": {

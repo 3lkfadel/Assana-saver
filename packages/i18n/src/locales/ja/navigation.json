@@ -28,7 +28,21 @@
     "pi_chat": "AIチャット",
     "epics": "エピック",
     "upgrade_plan": "プランをアップグレード",
-    "plane_pro": "Plane Pro",
-    "business": "ビジネス"
+    "plane_pro": "Infinity Planning Pro",
+    "business": "ビジネス",
+    "rename_folder": "フォルダー名を変更"
+  },
+  "top_navigation": {
+    "search_commands": "コマンドを検索……"
+  },
+  "app_rail": {
+    "icon_only": "アイコンのみ",
+    "icon_with_name": "アイコンと名前",
+    "dock": "アプリレールを固定",
+    "undock": "アプリレールの固定を解除"
+  },
+  "tab_navigation": {
+    "hide_in_more_menu": "「その他」メニューに隠す",
+    "show": "表示"
   }
 }

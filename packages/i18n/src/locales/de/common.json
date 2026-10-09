@@ -245,7 +245,7 @@
   "full_changelog": "Vollständiges Änderungsprotokoll",
   "support": "Support",
   "forum": "Forum",
-  "powered_by_plane_pages": "Bereitgestellt von Plane Pages",
+  "powered_by_plane_pages": "Bereitgestellt von Infinity Planning Pages",
   "please_select_at_least_one_invitation": "Bitte wählen Sie mindestens eine Einladung aus.",
   "please_select_at_least_one_invitation_description": "Wählen Sie mindestens eine Einladung aus, um dem Arbeitsbereich beizutreten.",
   "we_see_that_someone_has_invited_you_to_join_a_workspace": "Wir sehen, dass Sie jemand in einen Arbeitsbereich eingeladen hat",
@@ -826,7 +826,7 @@
     "edited_by": "Bearbeitet von"
   },
   "self_hosted_maintenance_message": {
-    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Plane ist nicht gestartet. Dies könnte daran liegen, dass einer oder mehrere Plane-Services nicht starten konnten.",
+    "plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start": "Infinity Planning ist nicht gestartet. Dies könnte daran liegen, dass einer oder mehrere Infinity Planning-Services nicht starten konnten.",
     "choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure": "Wählen Sie View Logs aus setup.sh und Docker-Logs, um sicherzugehen."
   },
   "customize_navigation": "Navigation anpassen",
@@ -838,7 +838,7 @@
   "pin": "Anheften",
   "unpin": "Lösen",
   "workspace_dashboards": "Dashboards",
-  "pi_chat": "Plane AI",
+  "pi_chat": "Infinity Planning AI",
   "in_app": "In-App",
   "forms": "Forms",
   "milestones": "Meilensteine",
@@ -874,5 +874,63 @@
       "short_description": "Als JSON exportieren"
     }
   },
-  "labels_count": "{count, plural, one {# Label} other {# Labels}}"
+  "labels_count": "{count, plural, one {# Label} other {# Labels}}",
+  "infinity": {
+    "more": "More",
+    "hide": "Hide",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "auth": {
+      "sign_in_header": "Welcome back.",
+      "sign_in_sub_header": "Sign in to Infinity Planning.",
+      "sign_up_header": "Welcome.",
+      "sign_up_sub_header": "Create your Infinity Planning account."
+    }
+  },
+  "assistant": {
+    "title": "KI-Assistent",
+    "open": "KI-Assistent öffnen",
+    "subtitle": "Fragen zu Fortschritt, Fristen und Auslastung Ihrer Projekte stellen.",
+    "placeholder": "Eine Frage zu Ihren Projekten stellen…",
+    "send": "Senden",
+    "stop": "Stoppen",
+    "new_conversation": "Neue Unterhaltung",
+    "close": "Schließen",
+    "read_only_note": "Nur Lesezugriff: Der Assistent liest Ihre Projekte, ändert sie aber nie.",
+    "context_work_item": "Zu diesem Arbeitselement",
+    "context_project": "Zu diesem Projekt",
+    "suggestions": {
+      "overdue": "Welche Arbeitselemente sind überfällig?",
+      "workload": "Wer hat die meisten offenen Arbeitselemente?",
+      "projects": "Geben Sie mir einen Statusbericht zu meinen Projekten."
+    },
+    "actions": {
+      "work_item": "KI fragen",
+      "project": "KI-Verzugsbericht"
+    },
+    "prompts": {
+      "work_item": "Wie ist der Stand dieses Arbeitselements? Wurde die Frist eingehalten?",
+      "project": "Geben Sie mir einen Statusbericht zu diesem Projekt: Fortschritt, Verzögerungen und betroffene Personen."
+    },
+    "tools": {
+      "list_projects": "Projekte werden aufgelistet…",
+      "search_work_items": "Arbeitselemente werden gesucht…",
+      "get_work_item": "Arbeitselement wird gelesen…",
+      "project_progress": "Projektfortschritt wird berechnet…",
+      "deadline_report": "Fristen werden geprüft…",
+      "member_workload": "Auslastung wird ermittelt…",
+      "default": "Daten werden abgerufen…"
+    },
+    "errors": {
+      "refusal": "Der Assistent hat diese Anfrage abgelehnt. Bitte formulieren Sie sie um.",
+      "truncated": "Die Antwort war zu lang und wurde abgeschnitten. Bitte stellen Sie eine genauere Frage.",
+      "too_many_steps": "Die Frage erforderte zu viele Abfragen. Bitte stellen Sie eine genauere Frage.",
+      "invalid_api_key": "Der Anthropic-API-Schlüssel ist ungültig. Bitten Sie einen Instanzadministrator, ihn zu aktualisieren.",
+      "permission_denied": "Der Anthropic-API-Schlüssel hat keinen Zugriff auf dieses Modell.",
+      "model_not_found": "Das konfigurierte Claude-Modell existiert nicht. Bitten Sie einen Instanzadministrator, es zu prüfen.",
+      "rate_limited": "Zu viele Anfragen an Claude. Bitte versuchen Sie es gleich noch einmal.",
+      "connection_error": "Claude ist nicht erreichbar. Bitte prüfen Sie die Internetverbindung des Servers.",
+      "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  }
 }

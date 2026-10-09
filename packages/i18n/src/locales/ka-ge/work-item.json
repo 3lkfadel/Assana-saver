@@ -66,7 +66,8 @@
       "extra": {
         "show_sub_issues": "ქვე-სამუშაო ელემენტების ჩვენება",
         "show_empty_groups": "ცარიელი ჯგუფების ჩვენება"
-      }
+      },
+      "sub_group_by": "ქვეჯგუფება"
     },
     "layouts": {
       "ordered_by_label": "ეს განლაგება დალაგებულია",
@@ -81,6 +82,14 @@
         "calendar": "კალენდრის განლაგება",
         "spreadsheet": "ცხრილის განლაგება",
         "gantt": "დროის ხაზის განლაგება"
+      },
+      "board_columns": {
+        "add_column": "სვეტის დამატება",
+        "column_name": "სვეტის სახელი",
+        "category": "კატეგორია",
+        "created": "სვეტი შეიქმნა.",
+        "already_exists": "ამ სახელით სვეტი უკვე არსებობს.",
+        "create_error": "სვეტის შექმნა ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა."
       }
     },
     "states": {
@@ -268,6 +277,10 @@
       "click_to_downvote": "Click to downvote",
       "click_to_view_upvotes": "Click to view upvotes",
       "click_to_view_downvotes": "Click to view downvotes"
+    },
+    "view_not_found": {
+      "title": "ხედი არ არსებობს",
+      "description": "თქვენ მიერ მოძებნილი ხედი არ არსებობს ან მისი ნახვის უფლება არ გაქვთ."
     }
   },
   "sub_work_item": {

@@ -16,6 +16,7 @@ import {
   ContextMenuTrigger,
 } from "@makeplane/propel/components/context-menu";
 import { cn } from "@plane/utils";
+import { useTranslation } from "@plane/i18n";
 // components
 import { AppSidebarItem } from "@/components/sidebar/sidebar-item";
 // hooks
@@ -25,6 +26,7 @@ import { useAppRailVisibility } from "@/lib/app-rail/context";
 import { AppSidebarItemsRoot } from "./items-root";
 
 export const AppRailRoot = observer(() => {
+  const { t } = useTranslation();
   // router
   const { workspaceSlug, projectId } = useParams();
   const pathname = usePathname();
@@ -38,7 +40,7 @@ export const AppRailRoot = observer(() => {
 
   return (
     <div
-      className="z-[26] h-full flex-shrink-0 bg-canvas transition-all duration-300 ease-in-out"
+      className="ip-nav z-[26] h-full flex-shrink-0 bg-canvas transition-all duration-300 ease-in-out"
       style={{
         width: railWidth,
         display: "block",
@@ -70,16 +72,16 @@ export const AppRailRoot = observer(() => {
         <ContextMenuContent>
           <ContextMenuItem
             onClick={() => updateDisplayMode("icon_only")}
-            label="Icon only"
+            label={t("app_rail.icon_only")}
             selected={preferences.displayMode === "icon_only"}
           />
           <ContextMenuItem
             onClick={() => updateDisplayMode("icon_with_label")}
-            label="Icon with name"
+            label={t("app_rail.icon_with_name")}
             selected={preferences.displayMode === "icon_with_label"}
           />
           <ContextMenuSeparator />
-          <ContextMenuItem onClick={toggleAppRail} label={isCollapsed ? "Dock App Rail" : "Undock App Rail"} />
+          <ContextMenuItem onClick={toggleAppRail} label={isCollapsed ? t("app_rail.dock") : t("app_rail.undock")} />
         </ContextMenuContent>
       </ContextMenu>
     </div>

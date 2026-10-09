@@ -5,7 +5,7 @@
       "not_right_now": "지금은 안 함",
       "create_project": {
         "title": "프로젝트 생성",
-        "description": "Plane에서 대부분의 작업은 프로젝트로 시작됩니다.",
+        "description": "Infinity Planning에서 대부분의 작업은 프로젝트로 시작됩니다.",
         "cta": "시작하기"
       },
       "invite_team": {
@@ -19,7 +19,7 @@
         "cta": "이 작업 공간 설정"
       },
       "personalize_account": {
-        "title": "Plane을 개인화하세요.",
+        "title": "Infinity Planning을 개인화하세요.",
         "description": "사진, 색상 등을 선택하세요.",
         "cta": "지금 개인화"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "Plane의 새로운 기능"
+      "title": "Infinity Planning의 새로운 기능"
     },
     "quick_tutorial": {
       "title": "빠른 튜토리얼"
@@ -72,6 +72,11 @@
       "trial_ends_in_days": "체험판 종료까지 {days}일 남음",
       "start_subscription": "구독 시작",
       "explore_business_features": "Business 기능 살펴보기"
+    },
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
     }
   }
 }

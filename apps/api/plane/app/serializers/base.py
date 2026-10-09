@@ -5,6 +5,9 @@
 from django.db import models
 from rest_framework import serializers
 
+# Module imports
+from plane.utils.disabled_features import GUEST_ROLE_DISABLED_ERROR, is_guest_role
+
 
 # Distinguishes "the instance has no such attribute" from "the attribute is None".
 _MISSING = object()
@@ -82,6 +85,15 @@ def get_expansion_mapper():
         "issue_link": IssueLinkLiteSerializer,
         "sub_issues": IssueLiteSerializer,
     }
+
+
+class NoGuestRoleMixin:
+    """Refuse the Guest role, which Infinity Planning does not have."""
+
+    def validate_role(self, role):
+        if is_guest_role(role):
+            raise serializers.ValidationError(GUEST_ROLE_DISABLED_ERROR)
+        return role
 
 
 class BaseSerializer(serializers.ModelSerializer):
